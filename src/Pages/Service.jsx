@@ -226,16 +226,11 @@ export default function ServicesOffered() {
         className="relative min-h-screen w-full flex items-center justify-end overflow-hidden bg-black"
       >
         {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/service-bg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+       <img
+  src="/service-1.jpeg"
+  alt="Services Background"
+  className="absolute top-0 left-0 w-full h-full object-cover"
+/>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
