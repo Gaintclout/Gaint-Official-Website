@@ -304,11 +304,11 @@ export default function InternsAppPage() {
             {
               title: "Free Tools",
               links: [
-                ["AI Text Generator", "#"],
-                ["Resume Builder", "#"],
-                ["File Converter", "#"],
-                ["Data Formatter", "#"],
-                ["PDF Split & Merge", "#"],
+                ["AI Text Generator", "https://chatgpt.com/"],
+                ["Resume Builder", "https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab"],
+                ["File Converter", "https://www.ilovepdf.com/"],
+                ["Data Formatter", "https://jsonformatter.org/"],
+                ["PDF Split & Merge", "https://www.smallpdf.com/split-pdf"],
               ],
             },
             {
