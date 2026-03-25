@@ -1,0 +1,444 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Shield, Lock, Cpu, Globe } from "lucide-react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+const pqcData = [
+  { year: 2022, India: 20, Global: 35 },
+  { year: 2023, India: 40, Global: 50 },
+  { year: 2024, India: 65, Global: 70 },
+  { year: 2025, India: 80, Global: 85 },
+];
+
+export default function PQCProductPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+  <div className="font-sans text-gray-800 scroll-smooth">
+      {/* ================= HEADER ================= */}
+       <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
+                 <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
+                 {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
+                 <nav className="hidden md:block">
+                   <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[390px]">
+                     {/* Regular Links */}
+         
+                     <a href="/" className="hover:text-[#4285F4] transition duration-300">
+                       Home
+                     </a>
+         
+         
+                     <li>
+                       <Link to="/about" className="hover:text-[#4285F4] transition duration-300">
+                         About
+                       </Link>
+                     </li>
+         
+         
+                     {/* Services Dropdown */}
+                     <li>
+                       <Link to="/service" className="hover:text-[#4285F4] transition duration-300">
+                         Services
+                       </Link>
+                     </li>
+         
+         
+         
+         
+                     {/* Products Dropdown */}
+                     <li className="relative group">
+                       <a
+                         href="#products"
+                         className="hover:text-[#4285F4] transition flex items-center gap-1"
+         
+                       >
+                         Products ▾
+                       </a>
+         
+                       {/* Dropdown Menu */}
+                       <ul className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-200 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out w-60 z-50 text-lg">
+                         {[
+                           { name: "DonorGO", link: "/Donorgo" },
+                           { name: "GAINTInternsHub", link: "/internsapp" },
+                           { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                           { name: "WellNest AI Station", link: "/wellnest" },
+                           { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
+                           { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
+         
+         
+         
+                         ].map((product, i) => (
+                           <li key={i}>
+                             <a
+                               href={product.link}
+                               target={product.link.startsWith("http") ? "_blank" : "_self"}
+                               rel={product.link.startsWith("http") ? "noopener noreferrer" : ""}
+                               className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-blue-600 rounded-lg transition"
+                             >
+                               {product.name}
+                             </a>
+                           </li>
+                         ))}
+                       </ul>
+                     </li>
+         
+                     <li>
+                       <a
+                         href="/contact"
+                         className="relative hover:text-[#4285F4] transition duration-300 "
+                       >
+                         Contact
+                       </a>
+         
+                     </li>
+                   </ul>
+                 </nav>
+         
+         
+                 {/* Mobile Nav */}
+                 <button
+                   onClick={() => setMenuOpen(!menuOpen)}
+                   className="md:hidden p-2 rounded-md border border-gray-300 text-white"
+                 >
+                   {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
+                 </button>
+                 {menuOpen && (
+                   <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
+                     {[
+                       { name: "Home", link: "/" },
+                       { name: "About", link: "/about" },
+                       { name: "Services", link: "/service" },
+                     ].map(({ name, link }) => (
+                       <a
+                         key={name}
+                         href={link}
+                         onClick={() => setMenuOpen(false)}
+                         className="block py-2 text-gray-900 hover:text-blue-600 transition"
+                       >
+                         {name}
+                       </a>
+                     ))}
+         
+                     {/* Products Dropdown (hover/tap reveal) */}
+                     <div className="relative group">
+                       <button className="block w-full py-2 text-gray-900 hover:text-blue-600 focus:outline-none">
+                         Products ▾
+                       </button>
+                       <div className="absolute left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                         {[
+                           { name: "DonorGO", link: "/Donorgo" },
+                           { name: "GAINTInternsHub", link: "/internsapp" },
+                           { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                           { name: "WellNest AI Station", link: "/wellnest" },
+                           { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
+                           { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
+                         ].map(({ name, link }) => (
+                           <a
+                             key={name}
+                             href={link}
+                             onClick={() => setMenuOpen(false)}
+                             className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition"
+                           >
+                             {name}
+                           </a>
+                         ))}
+                       </div>
+                     </div>
+         
+                     <a
+                       href="/contact"
+                       onClick={() => setMenuOpen(false)}
+                       className="block py-2 text-gray-900 hover:text-blue-600 transition"
+                     >
+                       Contact
+                     </a>
+                   </div>
+                 )}
+         
+               </header>
+
+      {/* ================= HERO ================= */}
+      <section
+        className="relative text-center py-32 px-6 bg-cover bg-center h-[110vh] mt-24"
+        style={{ backgroundImage: "url('/Web.jpg')" }}
+      >
+        <div className="relative z-10">
+          <motion.h1
+            className="text-5xl md:text-6xl mb-6 text-cyan-400"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            GAINT PQC — Post-Quantum Cryptography
+          </motion.h1>
+
+    <motion.p
+      className="max-w-3xl mx-auto text-4xl text-gray-300"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+    >
+      GAINT’s PQC initiative secures the digital world against future quantum
+      threats by building next-generation cryptographic frameworks — scalable,
+      AI-assisted, and globally interoperable.
+    </motion.p>
+  </div>
+   <h2 className="text-4xl font-semibold text-center text-cyan-400 mb-1 absolute bottom-[400px] left-[590px] ">PQC vs QKD — The Future of Quantum Security</h2>
+     <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto absolute top-[690px] left-[400px]">
+          <div className="p-6 bg-gray-900/70 rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
+            <h3 className="text-2xl  mb-3 text-cyan-300">🔐 Post-Quantum Cryptography (PQC)</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Software-based security using classical networks.</li>
+              <li>Relies on mathematically hard lattice-based algorithms.</li>
+              <li>Scalable and deployable on existing internet infrastructure.</li>
+              <li>Ideal for commercial, banking, and cloud environments.</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gray-900/70 rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
+            <h3 className="text-2xl  mb-3 text-violet-300">⚛️ Quantum Key Distribution (QKD)</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Hardware-based physical layer encryption using quantum photons.</li>
+              <li>Offers information-theoretic security — unhackable by physics.</li>
+              <li>Requires quantum communication channels (fiber/satellite).</li>
+              <li>Ideal for defense, space, and critical national networks.</li>
+            </ul>
+          </div>
+        </div>
+</section>
+
+
+      {/* COMPARISON SECTION */}
+      {/* <section className="py-16 px-6 bg-[#0a0f1c]/80 backdrop-blur-lg">
+        <h2 className="text-3xl font-semibold text-center text-cyan-400 mb-12">PQC vs QKD — The Future of Quantum Security</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="p-6 bg-gray-900/70 rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
+            <h3 className="text-2xl font-bold mb-3 text-cyan-300">🔐 Post-Quantum Cryptography (PQC)</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Software-based security using classical networks.</li>
+              <li>Relies on mathematically hard lattice-based algorithms.</li>
+              <li>Scalable and deployable on existing internet infrastructure.</li>
+              <li>Ideal for commercial, banking, and cloud environments.</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gray-900/70 rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
+            <h3 className="text-2xl font-bold mb-3 text-violet-300">⚛️ Quantum Key Distribution (QKD)</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Hardware-based physical layer encryption using quantum photons.</li>
+              <li>Offers information-theoretic security — unhackable by physics.</li>
+              <li>Requires quantum communication channels (fiber/satellite).</li>
+              <li>Ideal for defense, space, and critical national networks.</li>
+            </ul>
+          </div>
+        </div>
+      </section> */}
+
+      {/* R&D ROADMAP */}
+<section className="py-16 px-6 max-w-6xl mx-auto">
+  <h2 className="text-4xl font-semibold text-center text-cyan-400 mb-12">
+    GAINT PQC R&D & Product Roadmap
+  </h2>
+
+  <div className="grid md:grid-cols-4 gap-6">
+    {[
+      {
+        title: "Phase 1: Research",
+        desc: "Quantum-safe cryptographic algorithms, AI-assisted optimization, and hybrid encryption studies.",
+      },
+      {
+        title: "Phase 2: Prototype",
+        desc: "Develop lattice-based PQC libraries and integrate with existing GAINT security framework.",
+      },
+      {
+        title: "Phase 3: Pilot",
+        desc: "Deploy PQC modules in real enterprise and banking networks in collaboration with government.",
+      },
+      {
+        title: "Phase 4: QaaS",
+        desc: "Launch 'Quantum Security-as-a-Service' integrating PQC + QKD hybrid defense.",
+      },
+    ].map((phase, i) => (
+      <motion.div
+        key={i}
+        className="group relative p-6 bg-gray-900/80 border border-cyan-800 rounded-2xl shadow-lg
+                   transition-all duration-500 ease-in-out 
+                   hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_35px_rgba(6,182,212,0.6)]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.2 }}
+      >
+        {/* Glowing Border on Hover */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/30 to-blue-500/30 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-xl font-bold text-cyan-300 mb-2">{phase.title}</h3>
+          <p className="text-gray-300 leading-relaxed">{phase.desc}</p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
+      {/* FUNDING & CHARTS */}
+      <section className="py-20 bg-[#040b18]/90 border-t border-cyan-800">
+        <h2 className="text-3xl font-semibold text-center text-cyan-400 mb-8">Funding & Global PQC Adoption</h2>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6">
+          <div>
+            <h3 className="text-2xl font-semibold mb-4 text-cyan-300">Government & R&D Initiatives</h3>
+            <ul className="list-disc list-inside text-gray-300 space-y-3">
+              <li>India’s Quantum Mission — National Quantum Communication Network.</li>
+              <li>NIST PQC Standardization (Kyber, Dilithium).</li>
+              <li>Collaboration with MEITY, DRDO, ISRO & academic institutions.</li>
+              <li>GAINT PQC Labs: Hyderabad (India) — Prototype & Simulation Hub.</li>
+            </ul>
+          </div>
+          <div className="h-64 bg-gray-900/60 p-4 rounded-xl border border-cyan-700">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={pqcData}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+                <XAxis dataKey="year" stroke="#94a3b8" />
+                <YAxis stroke="#94a3b8" />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="India" stroke="#06b6d4" strokeWidth={3} />
+                <Line type="monotone" dataKey="Global" stroke="#a855f7" strokeWidth={3} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 text-center bg-gradient-to-r from-cyan-900/30 via-violet-900/20 to-black">
+        <h2 className="text-3xl md:text-4xl font-bold text-cyan-100 mb-6">
+          Partner with GAINT — Build India’s Quantum-Secure Future
+        </h2>
+        <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
+          Collaborate with us in advancing PQC research, integration, and deployment across national and global security networks.
+        </p>
+        <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-400/30 transition">
+          Connect with GAINT R&D
+        </button>
+      </section>
+
+      {/* FOOTER */}
+    <footer className="relative w-full bg-black/80 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
+           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
+             {[
+               {
+                 title: "Popular Links",
+                 links: [
+                   ["Career in AI", "https://www.guvi.in/blog/ai-and-ml-job-opportunities-in-india/"],
+                   ["Quantum Computing", "https://www.techtarget.com/whatis/definition/quantum-computing"],
+                   ["Machine Learning", "https://www.stxnext.com/blog/best-machine-learning-blogs-resources"],
+                   ["Cloud Computing", "https://learn.rumie.org/jR/bytes/learn-the-basics-of-cloud-computing-in-3-minutes"],
+                   ["Contact Us", "/contact"],
+                 ],
+               },
+               {
+                 title: "Free Tools",
+                 links: [
+                   ["AI Text Generator", "#"],
+                   ["Resume Builder", "#"],
+                   ["File Converter", "#"],
+                   ["Data Formatter", "#"],
+                   ["PDF Split & Merge", "#"],
+                 ],
+               },
+               {
+                 title: "Company",
+                 links: [
+                   ["About Us", "/About"],
+                   ["Services", "/Service"],
+                   ["Products", "/"],
+                   ["Careers", "/Career"],
+                   ["Contact", "/Contact"],
+                 ],
+               },
+               {
+                 title: "Services",
+                 links: [
+                   ["Website Design", "#"],
+                   ["App Development", "#"],
+                   ["AI & ML Solutions", "#"],
+                   ["Cloud Integration", "#"],
+                   ["IT Consulting", "#"],
+                 ],
+               },
+             ].map((col, i) => (
+               <div key={i}>
+                 <h3 className="text-white font-semibold mb-4 text-lg">{col.title}</h3>
+                 <ul className="space-y-2">
+                   {col.links.map(([name, href], j) => (
+                     <li key={j}>
+                       <a
+                         href={href}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="hover:text-[#007BFF]"
+                       >
+                         {name}
+                       </a>
+                     </li>
+                   ))}
+                 </ul>
+               </div>
+             ))}
+           </div>
+   
+           {/* Social Icons */}
+           <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
+             {[
+               { Icon: FaFacebookF, link: "https://www.facebook.com/GaintCloutTechnologies" },
+               { Icon: FaInstagram, link: "https://www.instagram.com/gaintclout/" },
+               { Icon: FaXTwitter, link: "https://x.com/Gaintclout" },
+               { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/gaintclouttechnologies/" },
+             ].map(({ Icon, link }, i) => (
+               <a
+                 key={i}
+                 href={link}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-gray-200 hover:text-[#007BFF] transition transform hover:scale-110"
+               >
+                 <Icon />
+               </a>
+             ))}
+           </div>
+   
+           {/* Footer Bottom */}
+           <div className="text-center mt-10">
+             <img
+               src="/gaint-logo.png"
+               alt="GAINT Clout Logo"
+               className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
+             />
+             <p className="text-gray-400 text-sm">
+               © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+             </p>
+   
+             <div className="mt-3 flex justify-center gap-6 text-xs text-gray-500">
+               <a href="#" className="hover:text-[#007BFF]">Privacy Policy</a>
+               <a href="#" className="hover:text-[#007BFF]">Terms & Conditions</a>
+               {/* <a href="#" className="hover:text-[#007BFF]">Refund Policy</a> */}
+             </div>
+           </div>
+   
+           <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#007BFF]/40 to-transparent"></div>
+         </footer>
+    </div>
+  );
+}
