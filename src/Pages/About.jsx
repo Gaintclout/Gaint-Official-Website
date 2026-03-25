@@ -23,7 +23,6 @@ import {
   Hand,
   Heart,
   Quote,
-  Globe,
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -124,55 +123,80 @@ export default function About() {
     <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
            <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
            {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
-        <nav className="hidden md:flex justify-center w-full">
-         <ul className="
-           flex items-center 
-           gap-4 md:gap-6 lg:gap-10
-           text-sm md:text-base lg:text-xl
-           bg-gray-100 
-           px-4 md:px-6 lg:px-12 
-           py-2 md:py-3 lg:py-4
-           rounded-full 
-           shadow-lg
-           max-w-fit
-         ">
-       
-           <li><a href="/">Home</a></li>
-           <li><Link to="/about">About</Link></li>
-           <li><Link to="/service">Services</Link></li>
-       
-           <li className="relative group">
-             <span className="flex items-center gap-1 cursor-pointer">
-               Products ▾
-             </span>
-       
-             <ul className="
-               absolute left-1/2 transform -translate-x-1/2
-               mt-2 bg-white shadow-xl border rounded-2xl
-               opacity-0 invisible group-hover:opacity-100 group-hover:visible
-               transition-all duration-300 w-60 z-50 text-sm md:text-lg
-             ">
-               {[
-                 { name: "DonorGO", link: "/Donorgo" },
-                 { name: "GAINTInternsHub", link: "/internsapp" },
-                 { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-                 { name: "WellNest AI Station", link: "/wellnest" },
-                 { name: "QKD", link: "/qkd" },
-                 { name: "PQC", link: "/pqc" },
-               ].map((product, i) => (
-                 <li key={i}>
-                   <a href={product.link} className="block px-4 py-2 hover:bg-gray-100">
-                     {product.name}
-                   </a>
-                 </li>
-               ))}
+           <nav className="hidden md:block">
+             <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[390px]">
+               {/* Regular Links */}
+   
+               <a href="/" className="hover:text-[#4285F4] transition duration-300">
+                 Home
+               </a>
+   
+   
+               <li>
+                 <Link to="/about" className="hover:text-[#4285F4] transition duration-300">
+                   About
+                 </Link>
+               </li>
+   
+   
+               {/* Services Dropdown */}
+               <li>
+                 <Link to="/service" className="hover:text-[#4285F4] transition duration-300">
+                   Services
+                 </Link>
+               </li>
+   
+   
+   
+   
+               {/* Products Dropdown */}
+               <li className="relative group">
+                 <a
+                   href="#products"
+                   className="hover:text-[#4285F4] transition flex items-center gap-1"
+   
+                 >
+                   Products ▾
+                 </a>
+   
+                 {/* Dropdown Menu */}
+                 <ul className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-200 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out w-60 z-50 text-lg">
+                   {[
+                     { name: "DonorGO", link: "/Donorgo" },
+                     { name: "GAINTInternsHub", link: "/internsapp" },
+                     { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                     { name: "WellNest AI Station", link: "/wellnest" },
+                     { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
+                     { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
+   
+   
+   
+                   ].map((product, i) => (
+                     <li key={i}>
+                       <a
+                         href={product.link}
+                         target={product.link.startsWith("http") ? "_blank" : "_self"}
+                         rel={product.link.startsWith("http") ? "noopener noreferrer" : ""}
+                         className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-blue-600 rounded-lg transition"
+                       >
+                         {product.name}
+                       </a>
+                     </li>
+                   ))}
+                 </ul>
+               </li>
+   
+               <li>
+                 <a
+                   href="/contact"
+                   className="relative hover:text-[#4285F4] transition duration-300 "
+                 >
+                   Contact
+                 </a>
+   
+               </li>
              </ul>
-           </li>
-       
-           <li><a href="/contact">Contact</a></li>
-       
-         </ul>
-       </nav>
+           </nav>
    
    
            {/* Mobile Nav */}
@@ -180,7 +204,7 @@ export default function About() {
              onClick={() => setMenuOpen(!menuOpen)}
              className="md:hidden p-2 rounded-md border border-gray-300 text-white"
            >
-             {menuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+             {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
            </button>
            {menuOpen && (
              <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
@@ -265,7 +289,7 @@ export default function About() {
     drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
   "
 >
-  THE BEST AI SOLUTION 
+  THE BEST AI SOLUTION - GAINT CLOUT TECHNOLOGIES
 </h1>
 
 <p
@@ -448,7 +472,7 @@ export default function About() {
                 </div>
               </div>
               
-              <h2 className="text-5xl font-bold text-[#34A853]">
+              <h2 className="text-6xl font-bold text-[#2e7d32]">
                
               Future Plans of GAINT
               </h2>
@@ -467,26 +491,14 @@ export default function About() {
                 },
                 {
                   icon: <Rocket className="w-6 h-6 text-[#EA4335]" />,
-                  q: "Year 2: Innovation, Productization & Expansion",
-                  a: "Focus Areas: Build AI-based products, Start PQC prototype development, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
+                  q: "Year 2: Expansion & Innovation?",
+                  a: "Focus Areas: Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
                 },
                 {
                   icon: <GraduationCap className="w-6 h-6 text-[#FBBC05]" />,
                   q: "Year 3: Market Leadership & Diversification?",
                   a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion Al Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
                 },
-             {
-  icon: <Atom className="w-6 h-6 text-[#4285F4]" />,
-  q: "Year 4: R&D Strength National Leadership",
-  a: "Focus Areas: Become known for AI + Quantum Security, Establish GAINT R&D Lab (AI + PQC + QC), Start PQC pilot projects, Work with government / defense / enterprises, Telecom, Research institutions.",
-},
-                   
-{
-  icon: <Globe className="w-6 h-6 text-[#34A853]" />,
-  q: "Year 5: Global Expansion Ecosystem",
-  a: "Focus Areas: Enter International market, Middle East, Southeast Asia, Enterprise Quantum-Safe Security Suite.",
-},    
-                
                 // {
                 //   icon: <Handshake className="w-6 h-6 text-[#4285F4]" />,
                 //   q: "How can colleges or organizations collaborate with GAINT CLOUT?",
@@ -615,7 +627,7 @@ export default function About() {
             {/* Right Side */}
       <div className="flex flex-col items-start gap-10 text-2xl">
   {[
-    "A Flexible Pricing Model ",
+    "A Flexible Pricing Model Flexible",
     "Standardize And Automate Processes",
     "Enhance Public Service Delivery",
     "Empower Staff With Knowledge",
@@ -952,16 +964,36 @@ export default function About() {
         </div>
 
         {/* ===== Column 2 ===== */}
-       <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
-            <ul className="space-y-2">
-              <li><a href="https://chatgpt.com/" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
-              <li><a href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab" className="hover:text-[#c5a77b]">Resume Builder</a></li>
-              <li><a href="https://www.ilovepdf.com/" className="hover:text-[#c5a77b]">File Converter</a></li>
-              <li><a href="https://jsonformatter.org/" className="hover:text-[#c5a77b]">Data Formatter</a></li>
-              <li><a href="https://www.smallpdf.com/split-pdf" className="hover:text-[#c5a77b]">PDF Split & Merge</a></li>
-            </ul>
-          </div>
+        <div>
+          <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="hover:text-[#c5a77b]">
+                AI Text Generator
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-[#c5a77b]">
+                Resume Builder
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-[#c5a77b]">
+                File Converter
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-[#c5a77b]">
+                Data Formatter
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-[#c5a77b]">
+                PDF Split & Merge
+              </a>
+            </li>
+          </ul>
+        </div>
 
         {/* ===== Column 3 ===== */}
         <div>
