@@ -652,11 +652,11 @@ export default function Home() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Resume Builder</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">File Converter</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Data Formatter</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">PDF Split & Merge</a></li>
+              <li><a href="https://chatgpt.com/" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
+              <li><a href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab" className="hover:text-[#c5a77b]">Resume Builder</a></li>
+              <li><a href="https://www.ilovepdf.com/" className="hover:text-[#c5a77b]">File Converter</a></li>
+              <li><a href="https://jsonformatter.org/" className="hover:text-[#c5a77b]">Data Formatter</a></li>
+              <li><a href="https://www.smallpdf.com/split-pdf" className="hover:text-[#c5a77b]">PDF Split & Merge</a></li>
             </ul>
           </div>
 
