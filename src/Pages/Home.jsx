@@ -98,7 +98,7 @@ export default function Home() {
         <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
         {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
         <nav className="hidden md:block">
-          <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[360px]">
+          <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[160px]">
             {/* Regular Links */}
 
             <a href="/" className="hover:text-[#4285F4] transition duration-300">
