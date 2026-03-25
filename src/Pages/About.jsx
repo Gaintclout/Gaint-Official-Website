@@ -640,7 +640,7 @@ export default function About() {
             {/* Right Side */}
       <div className="flex flex-col items-start gap-10 text-2xl">
   {[
-    "A Flexible Pricing Model Flexible",
+    "A Flexible Pricing Model ",
     "Standardize And Automate Processes",
     "Enhance Public Service Delivery",
     "Empower Staff With Knowledge",
