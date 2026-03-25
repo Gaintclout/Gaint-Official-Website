@@ -333,6 +333,8 @@ export default function ImmuneIQ() {
               <li><a href="#" className="hover:text-purple-400">AI & ML Solutions</a></li>
               <li><a href="#" className="hover:text-purple-400">Cloud Integration</a></li>
               <li><a href="#" className="hover:text-purple-400">IT Consulting</a></li>
+              <li><a href="#" className="hover:text-purple-400">Data Analytics</a></li>
+              <li><a href="#" className="hover:text-purple-400">GIS</a></li>
             </ul>
           </div>
         </div>

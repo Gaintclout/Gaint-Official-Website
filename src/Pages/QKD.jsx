@@ -429,6 +429,8 @@ export default function QKDPage() {
               <li><a href="#" className="hover:text-[#c5a77b]">AI & ML Solutions</a></li>
               <li><a href="#" className="hover:text-[#c5a77b]">Cloud Integration</a></li>
               <li><a href="#" className="hover:text-[#c5a77b]">IT Consulting</a></li>
+              <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
+              <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
             </ul>
           </div>
         </div>

@@ -376,6 +376,8 @@ export default function PQCProductPage() {
                    ["AI & ML Solutions", "#"],
                    ["Cloud Integration", "#"],
                    ["IT Consulting", "#"],
+                    ["Data Analytics", "#"],
+                    ["GIS", "#"],
                  ],
                },
              ].map((col, i) => (

@@ -163,7 +163,7 @@ export default function InternsAppPage() {
 
       {/* ---------------- HERO SECTION ---------------- */}
       <section className="bg-gradient-to-r from-[#007BFF] to-[#00A8E8] text-white py-32 px-6 text-center mt-24">
-        <h1 className="text-6xl md:text-7xl mb-4">GAINT Interns Hub</h1>
+        <h1 className="text-6xl md:text-7xl mb-4">GAINT InternsHub</h1>
         <p className="text-2xl md:text-4xl mb-6 max-w-2xl mx-auto">
           Smart Internship Management Platform for Students
         </p>
@@ -329,6 +329,8 @@ export default function InternsAppPage() {
                 ["AI & ML Solutions", "#"],
                 ["Cloud Integration", "#"],
                 ["IT Consulting", "#"],
+                ["Data Analytics", "#"],
+                ["GIS", "#"]
               ],
             },
           ].map((col, i) => (
