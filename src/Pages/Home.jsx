@@ -23,20 +23,12 @@ import {
   Building2,
   ShoppingBag,
   LineChart,
-
   Map,
-
-
-
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { Atom } from "lucide-react";
-
-
-
-
 
 // ✅ Animated Counter Hook
 function useCounter(target, duration = 2000) {
@@ -79,8 +71,9 @@ export default function Home() {
   const projects = useCounter(9);
   const awards = useCounter(2);
 
-
-  {/* Scrolling logos */ }
+  {
+    /* Scrolling logos */
+  }
   const logos = [
     "/public/Aims.png",
     "/Public/btb.png",
@@ -89,16 +82,20 @@ export default function Home() {
     "/public/xsdata.png",
     "/public/vedha.png",
     "/public/trust.png",
-
   ];
   return (
     <div className="font-century gothic text-gray-800 scroll-smooth">
       {/* ---------------- HEADER ---------------- */}
       <header className="fixed top-0   w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
-        <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
+        <img
+          src="/gaint-logo.png"
+          alt="GAINT Clout Technologies"
+          className="w-32 h-auto"
+        />
         {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
         <nav className="hidden md:flex justify-center w-full">
-          <ul className="
+          <ul
+            className="
     flex items-center 
     gap-4 md:gap-6 lg:gap-10
     text-sm md:text-base lg:text-xl
@@ -108,23 +105,31 @@ export default function Home() {
     rounded-full 
     shadow-lg
     max-w-fit
-  ">
-
-            <li><a href="/">Home</a></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/service">Services</Link></li>
+  "
+          >
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/service">Services</Link>
+            </li>
 
             <li className="relative group">
               <span className="flex items-center gap-1 cursor-pointer">
                 Products ▾
               </span>
 
-              <ul className="
+              <ul
+                className="
         absolute left-1/2 transform -translate-x-1/2
         mt-2 bg-white shadow-xl border rounded-2xl
         opacity-0 invisible group-hover:opacity-100 group-hover:visible
         transition-all duration-300 w-60 z-50 text-sm md:text-lg
-      ">
+      "
+              >
                 {[
                   { name: "DonorGO", link: "/Donorgo" },
                   { name: "GAINTInternsHub", link: "/internsapp" },
@@ -134,7 +139,10 @@ export default function Home() {
                   { name: "PQC", link: "/pqc" },
                 ].map((product, i) => (
                   <li key={i}>
-                    <a href={product.link} className="block px-4 py-2 hover:bg-gray-100">
+                    <a
+                      href={product.link}
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
                       {product.name}
                     </a>
                   </li>
@@ -142,8 +150,9 @@ export default function Home() {
               </ul>
             </li>
 
-            <li><a href="/contact">Contact</a></li>
-
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
         </nav>
         {/* Mobile Nav */}
@@ -151,7 +160,11 @@ export default function Home() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-md border border-gray-300 text-white"
         >
-          {menuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+          {menuOpen ? (
+            <X className="w-6 h-6 text-white" />
+          ) : (
+            <Menu className="w-6 h-6 text-white" />
+          )}
         </button>
         {menuOpen && (
           <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
@@ -205,7 +218,6 @@ export default function Home() {
             </a>
           </div>
         )}
-
       </header>
 
       {/* ---------------- HERO / ABOUT ---------------- */}
@@ -232,11 +244,10 @@ export default function Home() {
         {/* 🔹 Right-aligned text overlay */}
         <div className="relative z-10 flex flex-col items-end text-left text-white px-8 md:px-24 max-w-4xl">
           {/* Glassmorphic Transparent Card */}
-          <div className="bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-10 md:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] ">
-
+          <div className="mt-10 bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-10 md:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] ">
             {/* Heading */}
             <h1
-              className=" 
+              className="
         font-semibold leading-none mb-6 animate-fadeInUp
         bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
         text-[100px] sm:text-[150px] md:text-[180px] lg:text-[200px] xl:text-[120px]
@@ -247,7 +258,8 @@ export default function Home() {
             </h1>
 
             {/* Subtext */}
-            <p className="
+            <p
+              className="
   text-xl sm:text-2xl md:text-4xl lg:text-5xl
   bg-gradient-to-r from-[#ffffff] to-[#ffff00]
   bg-clip-text text-transparent
@@ -256,32 +268,22 @@ export default function Home() {
   tracking-wide
   animate-fadeIn
   font-extrabold italic
-">
+"
+            >
               Driving the Next <br />
-
               <span>
                 Generation Through <br />
               </span>
-
               <span>
                 INNOVATION in <br />
               </span>
-
               <span className="bg-gradient-to-r from-[#ffffff] to-[#ffff00] bg-clip-text text-transparent whitespace-nowrap century gothic">
                 AI <span className="mx-0">&</span> Quantum Computing
               </span>
             </p>
-
           </div>
         </div>
-
       </section>
-
-
-
-
-
-
 
       {/* ---------------- COUNTERS ---------------- */}
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16 text-center h-50">
@@ -304,106 +306,126 @@ export default function Home() {
 
       {/* ---------------- SERVICES ---------------- */}
       {/* ---------------- INDUSTRIES WE SERVICE (BLUE THEME) ---------------- */}
-     <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
-  {/* Heading */}
-  <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
-    <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-      Industries We Service
-    </h3>
-    <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
-      Empowering every sector through AI-driven transformation and automation.
-    </p>
-  </div>
+      <section
+        id="services"
+        className="py-12 md:py-20 bg-transparent backdrop-blur-0"
+      >
+        {/* Heading */}
+        <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+            Industries We Service
+          </h3>
+          <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
+            Empowering every sector through AI-driven transformation and
+            automation.
+          </p>
+        </div>
 
-  {/* Industries Grid */}
-  {/* Responsive Breakdown:
+        {/* Industries Grid */}
+        {/* Responsive Breakdown:
       - Default: 1 column (mobile)
       - sm: 2 columns (tablets)
       - lg: 3 columns (small laptops)
       - xl: 5 columns (large desktops)
   */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
-    {[
-      {
-        icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Education",
-        desc: "AI-powered learning platforms, adaptive assessments, and smart academic analytics.",
-      },
-      {
-        icon: <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Healthcare & Pharma",
-        desc: "AI diagnostics, telemedicine, predictive analytics, and connected medical ecosystems.",
-      },
-      {
-        icon: <Landmark className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Public Sector",
-        desc: "Smart governance, digital citizen services, and policy analytics using AI.",
-      },
-      {
-        icon: <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "GIS",
-        desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
-      },
-      {
-        icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Data Analytics",
-        desc: "Advanced data insights, BI dashboards, and decision automation.",
-      },
-      {
-        icon: <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Professional Services",
-        desc: "Workflow optimization, document AI, and smart client management systems.",
-      },
-      {
-        icon: <Clapperboard className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Media & Entertainment",
-        desc: "Content recommendation, media automation, and AI-driven audience insights.",
-      },
-      {
-        icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Retail",
-        desc: "AI-driven personalization, inventory forecasting, and sentiment engagement.",
-      },
-      {
-        icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Real Estate",
-        desc: "AI property valuation, virtual tours, and predictive real estate analytics.",
-      },
-      {
-        icon: <Factory className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Manufacturing",
-        desc: "Smart factory automation, robotics integration, and predictive maintenance.",
-      }
-    ].map((industry, i) => (
-      <div
-        key={i}
-        data-aos="fade-up"
-        data-aos-delay={i * 50}
-        className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
-      >
-        {/* Blue Glow Layer */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
+          {[
+            {
+              icon: (
+                <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Education",
+              desc: "AI-powered learning platforms, adaptive assessments, and smart academic analytics.",
+            },
+            {
+              icon: (
+                <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Healthcare & Pharma",
+              desc: "AI diagnostics, telemedicine, predictive analytics, and connected medical ecosystems.",
+            },
+            {
+              icon: (
+                <Landmark className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Public Sector",
+              desc: "Smart governance, digital citizen services, and policy analytics using AI.",
+            },
+            {
+              icon: (
+                <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "GIS",
+              desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
+            },
+            {
+              icon: (
+                <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Data Analytics",
+              desc: "Advanced data insights, BI dashboards, and decision automation.",
+            },
+            {
+              icon: (
+                <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Professional Services",
+              desc: "Workflow optimization, document AI, and smart client management systems.",
+            },
+            {
+              icon: (
+                <Clapperboard className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Media & Entertainment",
+              desc: "Content recommendation, media automation, and AI-driven audience insights.",
+            },
+            {
+              icon: (
+                <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Retail",
+              desc: "AI-driven personalization, inventory forecasting, and sentiment engagement.",
+            },
+            {
+              icon: (
+                <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Real Estate",
+              desc: "AI property valuation, virtual tours, and predictive real estate analytics.",
+            },
+            {
+              icon: (
+                <Factory className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />
+              ),
+              title: "Manufacturing",
+              desc: "Smart factory automation, robotics integration, and predictive maintenance.",
+            },
+          ].map((industry, i) => (
+            <div
+              key={i}
+              data-aos="fade-up"
+              data-aos-delay={i * 50}
+              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
+            >
+              {/* Blue Glow Layer */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
 
-        {/* Icon */}
-        <div className="flex justify-center mb-4 relative z-10">
-          {industry.icon}
+              {/* Icon */}
+              <div className="flex justify-center mb-4 relative z-10">
+                {industry.icon}
+              </div>
+
+              {/* Content */}
+              <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
+                {industry.title}
+              </h4>
+              <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
+                {industry.desc}
+              </p>
+            </div>
+          ))}
         </div>
-
-        {/* Content */}
-        <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
-          {industry.title}
-        </h4>
-        <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
-          {industry.desc}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
-
-
-
-
+      </section>
 
       {/* ---------------- PRODUCTS ---------------- */}
       <section id="products" className="py-20 bg-transparent backdrop-blur-0">
@@ -417,7 +439,6 @@ export default function Home() {
 
         {/* Products Grid */}
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 px-6 md:px-20">
-
           {/* 👉 FIRST 3 CARDS */}
           {[
             {
@@ -466,7 +487,6 @@ export default function Home() {
 
           {/* 👉 LAST 2 CENTERED */}
           <div className="md:col-span-3 flex justify-center gap-20">
-
             {[
               {
                 icon: (
@@ -507,12 +527,9 @@ export default function Home() {
                 </p>
               </a>
             ))}
-
           </div>
-
         </div>
       </section>
-
 
       {/* ---------------- TESTIMONIALS ---------------- */}
       {/* <section id="testimonials" className="py-20 bg-gray-50">
@@ -565,7 +582,6 @@ export default function Home() {
 
       </section> */}
 
-
       {/* Scrolling logos */}
 
       <section className="bg-white py-10 overflow-hidden">
@@ -605,58 +621,175 @@ export default function Home() {
       `}</style>
       </section>
 
-
-
-
       {/* ---------------- FOOTER ---------------- */}
       {/* <footer className="relative w-full bg-black/70 backdrop-blur-lg text-gray-300 border-t border-gray-800"> */}
       <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
         {/* ========= Top Grid ========= */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>
+            <h3 className="text-white font-semibold mb-4 text-lg">
+              Popular Links
+            </h3>
             <ul className="space-y-2">
-              <li><a href="https://www.guvi.in/blog/ai-and-ml-job-opportunities-in-india/" target="blank" className="hover:text-[#c5a77b]">Career in AI</a></li>
-              <li><a href="https://www.techtarget.com/whatis/definition/quantum-computing" target="blank" className="hover:text-[#c5a77b]">Quantum Computing</a></li>
-              <li><a href="https://www.stxnext.com/blog/best-machine-learning-blogs-resources" target="blank" className="hover:text-[#c5a77b]">Machine Learning</a></li>
-              <li><a href="https://learn.rumie.org/jR/bytes/learn-the-basics-of-cloud-computing-in-3-minutes/?gad_source=1&gclid=EAIaIQobChMI59vHyq-QiwMVsKtmAh0Anjd0EAAYBCAAEgI_CfD_BwE" target="blank" className="hover:text-[#c5a77b]">Cloud Computing</a></li>
-              <li><a href="/contact" className="hover:text-[#c5a77b]">Contact Us</a></li>
+              <li>
+                <a
+                  href="https://www.guvi.in/blog/ai-and-ml-job-opportunities-in-india/"
+                  target="blank"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Career in AI
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.techtarget.com/whatis/definition/quantum-computing"
+                  target="blank"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Quantum Computing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.stxnext.com/blog/best-machine-learning-blogs-resources"
+                  target="blank"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Machine Learning
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://learn.rumie.org/jR/bytes/learn-the-basics-of-cloud-computing-in-3-minutes/?gad_source=1&gclid=EAIaIQobChMI59vHyq-QiwMVsKtmAh0Anjd0EAAYBCAAEgI_CfD_BwE"
+                  target="blank"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Cloud Computing
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-[#c5a77b]">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
+            <h3 className="text-white font-semibold mb-4 text-lg">
+              Free Tools
+            </h3>
             <ul className="space-y-2">
-              <li><a href="https://chatgpt.com/" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
-              <li><a href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab" className="hover:text-[#c5a77b]">Resume Builder</a></li>
-              <li><a href="https://www.ilovepdf.com/" className="hover:text-[#c5a77b]">File Converter</a></li>
-              <li><a href="https://jsonformatter.org/" className="hover:text-[#c5a77b]">Data Formatter</a></li>
-              <li><a href="https://www.smallpdf.com/split-pdf" className="hover:text-[#c5a77b]">PDF Split & Merge</a></li>
+              <li>
+                <a href="https://chatgpt.com/" className="hover:text-[#c5a77b]">
+                  AI Text Generator
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Resume Builder
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ilovepdf.com/"
+                  className="hover:text-[#c5a77b]"
+                >
+                  File Converter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://jsonformatter.org/"
+                  className="hover:text-[#c5a77b]"
+                >
+                  Data Formatter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.smallpdf.com/split-pdf"
+                  className="hover:text-[#c5a77b]"
+                >
+                  PDF Split & Merge
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
-              <li><a href="/About" className="hover:text-[#c5a77b]">About Us</a></li>
-              <li><a href="/Service" className="hover:text-[#c5a77b]">Services</a></li>
-              <li><a href="/" className="hover:text-[#c5a77b]">Products</a></li>
-              <li><a href="/Career" className="hover:text-[#c5a77b]">Careers</a></li>
-              <li><a href="/Contact" className="hover:text-[#c5a77b]">Contact</a></li>
+              <li>
+                <a href="/About" className="hover:text-[#c5a77b]">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/Service" className="hover:text-[#c5a77b]">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/" className="hover:text-[#c5a77b]">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="/Career" className="hover:text-[#c5a77b]">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="/Contact" className="hover:text-[#c5a77b]">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#c5a77b]">Website Design</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">App Development</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">AI & ML Solutions</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Cloud Integration</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">IT Consulting</a></li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Website Design
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  App Development
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  AI & ML Solutions
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Cloud Integration
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  IT Consulting
+                </a>
+              </li>
 
-              <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Gis</a></li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Data Analytics
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Gis
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -664,10 +797,19 @@ export default function Home() {
         {/* ========= Social Icons ========= */}
         <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
           {[
-            { Icon: FaFacebookF, link: "https://www.facebook.com/GaintCloutTechnologies" },
-            { Icon: FaInstagram, link: "https://www.instagram.com/gaintclout/" },
+            {
+              Icon: FaFacebookF,
+              link: "https://www.facebook.com/GaintCloutTechnologies",
+            },
+            {
+              Icon: FaInstagram,
+              link: "https://www.instagram.com/gaintclout/",
+            },
             { Icon: FaXTwitter, link: "https://x.com/Gaintclout" },
-            { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/gaintclouttechnologies/" },
+            {
+              Icon: FaLinkedinIn,
+              link: "https://www.linkedin.com/in/gaintclouttechnologies/",
+            },
           ].map(({ Icon, link }, i) => (
             <a
               key={i}
@@ -681,7 +823,6 @@ export default function Home() {
           ))}
         </div>
 
-
         {/* ========= Logo Section ========= */}
         <div className="text-center mt-10">
           <img
@@ -690,12 +831,17 @@ export default function Home() {
             className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
           />
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All
+            rights reserved.
           </p>
 
           <div className="mt-3 flex justify-center gap-6 text-xs text-gray-100">
-            <a href="#" className="hover:text-[#c5a77b]">Privacy Policy</a>
-            <a href="#" className="hover:text-[#c5a77b]">Terms & Conditions</a>
+            <a href="#" className="hover:text-[#c5a77b]">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-[#c5a77b]">
+              Terms & Conditions
+            </a>
             {/* <a href="#" className="hover:text-[#c5a77b]">Refund Policy</a> */}
           </div>
         </div>
