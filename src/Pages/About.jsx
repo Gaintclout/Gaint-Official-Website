@@ -281,20 +281,29 @@ export default function About() {
  {/* Text Overlay */}
 <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 md:px-16 max-w-4xl mx-auto">
 
-  <h1
-    className="
-      leading-tight mb-6 animate-fadeInUp
-      text-white font-semibold
-      text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl
-      drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
-    "
-  >
-    THE BEST AI SOLUTION - GAINT CLOUT TECHNOLOGIES
-  </h1>
+<h1
+  className="
+    leading-tight mb-6 animate-fadeInUp
+    text-white font-semibold
+    text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl
+    drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
+  "
+>
+  THE BEST AI SOLUTION - GAINT CLOUT TECHNOLOGIES
+</h1>
 
-  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-[700px] leading-relaxed animate-fadeIn font-[Century_Gothic]">
-    FOUNDED IN 2024, GAINT IS AN AI-DRIVEN STARTUP BASED IN INDIA. WE DESIGN AND BUILD INTELLIGENT SYSTEMS THAT AUTOMATE WORKFLOWS, AUGMENT DECISION-MAKING, AND UNLOCK MEASURABLE GROWTH ACROSS INDUSTRIES.
-  </p>
+<p
+  className="
+    text-lg sm:text-xl md:text-2xl lg:text-3xl
+    text-gray-200
+    max-w-[700px]
+    leading-relaxed
+    animate-fadeIn
+    font-[Century_Gothic]
+  "
+>
+  FOUNDED IN 2024, GAINT IS AN AI-DRIVEN STARTUP BASED IN INDIA. WE DESIGN AND BUILD INTELLIGENT SYSTEMS THAT AUTOMATE WORKFLOWS, AUGMENT DECISION-MAKING, AND UNLOCK MEASURABLE GROWTH ACROSS INDUSTRIES.
+</p>
 
 </div>
 </section>
