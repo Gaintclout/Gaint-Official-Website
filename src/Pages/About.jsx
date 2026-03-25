@@ -842,7 +842,7 @@ export default function About() {
 >
   With over a decade of experience in the IT industry, I bring a unique blend of
   technical expertise, leadership, and a futuristic vision to the table. I hold
-  a <b>B.Tech</b> and <b>M.Tech</b> in Computer Science & Engineering and have
+  a <b>B.Tech</b> and <b>M.Tech</b> in <b>Computer Science & Engineering</b> and have
   strengthened my knowledge through global certifications in:
   <br /><br />
   • Data Science - IIT Madras
@@ -851,10 +851,15 @@ export default function About() {
   <br />
   • Data Analytics - Google
   <br />
-  • Quantum Computing (Qiskit) - IBM
-  <br /><br />
-  Driven by a deep passion for artificial intelligence, my focus is to lead
-  innovation in AI until 2030 and beyond. From AI-driven healthcare platforms to
+  • Quantum Computing (Qiskit) - IBM &
+  <br />
+  • Membership In <b>International Association of Engineers (IAENG) Member Number -557555 </b>
+  <br />
+  <br />
+
+
+  Driven by a deep passion for Artificial Intelligence, my focus is to lead
+  Innovation in AI until <b>2030</b> and beyond. From AI-driven healthcare platforms to
   agentic AI systems and quantum computing-based research, I am committed to
   building technologies that create real-world impact.
   <br /><br />
