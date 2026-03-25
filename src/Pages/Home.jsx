@@ -257,13 +257,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/20"></div>
 
         {/* 🔹 Right-aligned text overlay */}
-        <div className="relative z-10 flex flex-col items-end text-right text-white px-8 md:px-24 max-w-4xl">
+        <div className="relative z-10 flex flex-col items-end text-left text-white px-8 md:px-24 max-w-4xl">
           {/* Glassmorphic Transparent Card */}
           <div className="bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-10 md:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] ">
 
             {/* Heading */}
             <h1
-              className="
+              className=" 
         font-semibold leading-none mb-6 animate-fadeInUp
         bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
         text-[100px] sm:text-[150px] md:text-[180px] lg:text-[200px] xl:text-[120px]
@@ -274,35 +274,29 @@ export default function Home() {
             </h1>
 
             {/* Subtext */}
-            <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-yellow-400 max-w-[700px] leading-tight animate-fadeIn font-[Century_Gothic]">
-              DRIVING NEXT<br></br>
-              <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent font-extrabold italic">
-                THROUGH<br />
+            <p className="
+  text-xl sm:text-2xl md:text-4xl lg:text-5xl
+  bg-gradient-to-r from-[#ffffff] to-[#ffff00]
+  bg-clip-text text-transparent
+  max-w-[700px]
+  leading-[1.3] md:leading-[1.2]
+  tracking-wide
+  animate-fadeIn
+  font-extrabold italic
+">
+              Driving the Next <br />
+
+              <span>
+                Generation Through <br />
               </span>
 
-              <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent font-extrabold">
-                GENERATION  <br></br>
-              </span>{" "}
-              <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent font-extrabold italic">
-                WITH <br></br>
-              </span>{" "}
-              <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent font-extrabold">
-                INNOVATION<br></br>
-              </span>{" "}
-              <span className="bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent font-extrabold italic">
-                IN<br></br>
+              <span>
+                INNOVATION in <br />
               </span>
 
-              {/*     
-      <span className="bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent font-extrabold">
-       AI & QUANTUM COMPUTING
-      </span> */}
-              <span className="bg-gradient-to-r from-[#2563eb] to-[#2563eb] bg-clip-text text-transparent font-extrabold whitespace-nowrap">
-                AI   <span className="bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent font-extrabold italic">
-                  &
-                </span> QUANTUM COMPUTING
+              <span className="bg-gradient-to-r from-[#ffffff] to-[#ffff00] bg-clip-text text-transparent whitespace-nowrap century gothic">
+                AI <span className="mx-0">&</span> Quantum Computing
               </span>
-
             </p>
 
           </div>
@@ -362,25 +356,35 @@ export default function Home() {
               title: "Healthcare & Pharma",
               desc: "AI diagnostics  telemedicine  predictive analytics  and connected medical ecosystems",
             },
-            {
-              icon: <Factory className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Manufacturing",
-              desc: "Smart factory automation  robotics integration  and predictive maintenance ",
+                {
+              icon: <Landmark className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Public Sector",
+              desc: "Smart governance  digital citizen services  and policy analytics using AI ",
             },
-            {
-              icon: <Clapperboard className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Media & Entertainment",
-              desc: "Content recommendation  media automation  and AI-driven audience insights ",
+              {
+              icon: <Map className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "GIS",
+              desc: "AI-driven exploration, pipeline monitoring, predictive maintenance, and energy optimization systems",
             },
-            {
+             {
+              icon: <BarChart className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Data Analytics",
+              desc: "Advanced data insights, business intelligence dashboards, predictive analytics, and decision automation",
+            },
+               {
               icon: <Briefcase className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               title: "Professional Services",
               desc: "Workflow optimization  document AI and smart client management systems ",
             },
-            {
-              icon: <Landmark className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Public Sector",
-              desc: "Smart governance  digital citizen services  and policy analytics using AI ",
+             {
+              icon: <Clapperboard className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Media & Entertainment",
+              desc: "Content recommendation  media automation  and AI-driven audience insights ",
+            },
+          {
+              icon: <ShoppingBag className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Retail",
+              desc: "AI-driven personalization  inventory forecasting  and sentiment-based engagement ",
             },
             {
               icon: <Building2 className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
@@ -388,20 +392,15 @@ export default function Home() {
               desc: "AI property valuation  virtual tours  and predictive real estate analytics ",
             },
             {
-              icon: <ShoppingBag className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Retail",
-              desc: "AI-driven personalization  inventory forecasting  and sentiment-based engagement ",
-            },
-            {
-              icon: <Map className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "GIS",
-              desc: "AI-driven exploration, pipeline monitoring, predictive maintenance, and energy optimization systems",
-            },
-            {
-              icon: <BarChart className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Data Analytics",
-              desc: "Advanced data insights, business intelligence dashboards, predictive analytics, and decision automation",
+              icon: <Factory className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Manufacturing",
+              desc: "Smart factory automation  robotics integration  and predictive maintenance ",
             }
+           
+        
+            
+          
+           
           ].map((industry, i) => (
             <div
               key={i}
@@ -432,112 +431,112 @@ export default function Home() {
 
 
       {/* ---------------- PRODUCTS ---------------- */}
-    <section id="products" className="py-20 bg-transparent backdrop-blur-0">
-  {/* Heading */}
-  <div className="text-center mb-12" data-aos="fade-up">
-    <h3 className="text-6xl text-gray-800 mb-3">Our Products</h3>
-    <p className="text-gray-500 text-4xl">
-      Innovations developed by GAINT
-    </p>
-  </div>
-
-  {/* Products Grid */}
-  <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 px-6 md:px-20">
-
-    {/* 👉 FIRST 3 CARDS */}
-    {[
-      {
-        icon: <Heart className="w-12 h-12 text-[#4285F4]" />,
-        name: "DonorGO",
-        desc: "Smart blood donation and emergency request system integrating donors, hospitals, and NGOs.",
-        link: "/donorgo",
-      },
-      {
-        icon: <GraduationCap className="w-12 h-12 text-[#4285F4]" />,
-        name: "GAINT InternHub",
-        desc: "AI-driven internship & training platform with projects, code evaluation, and job placement.",
-        link: "/internsapp",
-      },
-      {
-        icon: (
-          <LineChart className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-        ),
-        name: "GAINT ImmuneIQ",
-        desc: "AI-fintech dashboard for investment analytics, trading insights, and market prediction.",
-        link: "/Immuneiq",
-      },
-    ].map((product, i) => (
-      <a
-        key={i}
-        href={product.link}
-        data-aos="zoom-in"
-        data-aos-delay={i * 150}
-        className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
-
-        <div className="flex justify-center mb-4 relative z-10 animate-float">
-          {product.icon}
+      <section id="products" className="py-20 bg-transparent backdrop-blur-0">
+        {/* Heading */}
+        <div className="text-center mb-12" data-aos="fade-up">
+          <h3 className="text-6xl text-gray-800 mb-3">Our Products</h3>
+          <p className="text-gray-500 text-4xl">
+            Innovations developed by GAINT
+          </p>
         </div>
 
-        <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
-          {product.name}
-        </h4>
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 px-6 md:px-20">
 
-        <p className="text-gray-700 text-xl relative z-10 text-century gothic">
-          {product.desc}
-        </p>
-      </a>
-    ))}
+          {/* 👉 FIRST 3 CARDS */}
+          {[
+            {
+              icon: <Heart className="w-12 h-12 text-[#4285F4]" />,
+              name: "DonorGO",
+              desc: "Smart blood donation and emergency request system integrating donors, hospitals, and NGOs.",
+              link: "/donorgo",
+            },
+            {
+              icon: <GraduationCap className="w-12 h-12 text-[#4285F4]" />,
+              name: "GAINT InternHub",
+              desc: "AI-driven internship & training platform with projects, code evaluation, and job placement.",
+              link: "/internsapp",
+            },
+            {
+              icon: (
+                <LineChart className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
+              ),
+              name: "GAINT ImmuneIQ",
+              desc: "AI-fintech dashboard for investment analytics, trading insights, and market prediction.",
+              link: "/Immuneiq",
+            },
+          ].map((product, i) => (
+            <a
+              key={i}
+              href={product.link}
+              data-aos="zoom-in"
+              data-aos-delay={i * 150}
+              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
 
-    {/* 👉 LAST 2 CENTERED */}
-    <div className="md:col-span-3 flex justify-center gap-20">
+              <div className="flex justify-center mb-4 relative z-10 animate-float">
+                {product.icon}
+              </div>
 
-      {[
-        {
-          icon: (
-            <HeartPulse className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-          ),
-          name: "WellNest AI Station",
-          desc: "AI-powered smart healthcare kiosk integrating vitals monitoring, telemedicine, and real-time diagnostics for rural and urban health ecosystems.",
-          link: "/wellnestai",
-        },
-        {
-          icon: (
-            <Building2 className="w-12 h-12 text-[#4285F4] animate-bounce drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-          ),
-          name: "UNIPS",
-          desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
-          link: "/unips",
-        },
-      ].map((product, i) => (
-        <a
-          key={i}
-          href={product.link}
-          data-aos="zoom-in"
-          data-aos-delay={i * 150}
-          className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden w-full max-w-sm"
-        >
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
+              <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
+                {product.name}
+              </h4>
 
-          <div className="flex justify-center mb-4 relative z-10 animate-float">
-            {product.icon}
+              <p className="text-gray-700 text-xl relative z-10 text-century gothic">
+                {product.desc}
+              </p>
+            </a>
+          ))}
+
+          {/* 👉 LAST 2 CENTERED */}
+          <div className="md:col-span-3 flex justify-center gap-20">
+
+            {[
+              {
+                icon: (
+                  <HeartPulse className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
+                ),
+                name: "WellNest AI Station",
+                desc: "AI-powered smart healthcare kiosk integrating vitals monitoring, telemedicine, and real-time diagnostics for rural and urban health ecosystems.",
+                link: "/wellnestai",
+              },
+              {
+                icon: (
+                  <Building2 className="w-12 h-12 text-[#4285F4] animate-bounce drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
+                ),
+                name: "UNIPS",
+                desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
+                link: "/unips",
+              },
+            ].map((product, i) => (
+              <a
+                key={i}
+                href={product.link}
+                data-aos="zoom-in"
+                data-aos-delay={i * 150}
+                className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden w-full max-w-sm"
+              >
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
+
+                <div className="flex justify-center mb-4 relative z-10 animate-float">
+                  {product.icon}
+                </div>
+
+                <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
+                  {product.name}
+                </h4>
+
+                <p className="text-gray-700 text-xl relative z-10 text-century gothic">
+                  {product.desc}
+                </p>
+              </a>
+            ))}
+
           </div>
 
-          <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
-            {product.name}
-          </h4>
-
-          <p className="text-gray-700 text-xl relative z-10 text-century gothic">
-            {product.desc}
-          </p>
-        </a>
-      ))}
-
-    </div>
-
-  </div>
-</section>
+        </div>
+      </section>
 
 
       {/* ---------------- TESTIMONIALS ---------------- */}
