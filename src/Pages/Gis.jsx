@@ -180,39 +180,76 @@ export default function GISPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-black text-gray-300 py-10 sm:py-12">
+   <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
 
-          <div>
-            <h4 className="text-white mb-3">Company</h4>
-            <p className="text-sm">AI-driven innovation company.</p>
-          </div>
+    {/* Popular Links */}
+    <div>
+      <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>
+      <ul className="space-y-2">
+        <li><a href="#" className="hover:text-[#c5a77b]">Career in AI</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Quantum Computing</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Machine Learning</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Cloud Computing</a></li>
+        <li><a href="/contact" className="hover:text-[#c5a77b]">Contact Us</a></li>
+      </ul>
+    </div>
 
-          <div>
-            <h4 className="text-white mb-3">Services</h4>
-            <p className="text-sm">AI, GIS, Cloud</p>
-          </div>
+    {/* Tools */}
+    <div>
+      <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
+      <ul className="space-y-2">
+        <li><a href="#" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Resume Builder</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">File Converter</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Data Formatter</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">PDF Tools</a></li>
+      </ul>
+    </div>
 
-          <div>
-            <h4 className="text-white mb-3">Contact</h4>
-            <p className="text-sm">Hyderabad, India</p>
-          </div>
+    {/* Company */}
+    <div>
+      <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
+      <ul className="space-y-2">
+        <li><a href="/about" className="hover:text-[#c5a77b]">About Us</a></li>
+        <li><a href="/service" className="hover:text-[#c5a77b]">Services</a></li>
+        <li><a href="/" className="hover:text-[#c5a77b]">Products</a></li>
+        <li><a href="/career" className="hover:text-[#c5a77b]">Careers</a></li>
+        <li><a href="/contact" className="hover:text-[#c5a77b]">Contact</a></li>
+      </ul>
+    </div>
 
-          <div className="flex gap-4 text-xl justify-center sm:justify-start">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaLinkedinIn />
-            <FaXTwitter />
-          </div>
+    {/* Services */}
+    <div>
+      <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
+      <ul className="space-y-2">
+        <li><a href="#" className="hover:text-[#c5a77b]">Website Design</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">App Development</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">AI & ML</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">Cloud</a></li>
+        <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
+      </ul>
+    </div>
 
-        </div>
+  </div>
 
-        <p className="text-center mt-6 text-sm">
-          © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES
-        </p>
+  {/* Social Icons */}
+  <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
+    {[FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn].map((Icon, i) => (
+      <Icon key={i} className="hover:text-[#c5a77b] cursor-pointer transition" />
+    ))}
+  </div>
 
-      </footer>
+  {/* Logo */}
+  <div className="text-center mt-10">
+    <img src="/gaint-logo.png" className="mx-auto h-12 mb-4" />
+    <p className="text-gray-400 text-sm">
+      © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES
+    </p>
+  </div>
+
+</footer>
 
     </div>
   );
