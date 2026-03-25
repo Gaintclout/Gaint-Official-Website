@@ -331,100 +331,102 @@ export default function Home() {
 
       {/* ---------------- SERVICES ---------------- */}
       {/* ---------------- INDUSTRIES WE SERVICE (BLUE THEME) ---------------- */}
-      <section id="services" className="py-20 bg-transparent backdrop-blur-0">
-        {/* Heading */}
-        <div className="text-center mb-12" data-aos="fade-up">
-          <h3 className="text-5xl  text-gray-800 mb-3">
-            Industries We Service
+      <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
+  {/* Heading */}
+  <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
+    <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+      Industries We Service
+    </h3>
+    <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
+      Empowering every sector through AI-driven transformation and automation.
+    </p>
+  </div>
 
-          </h3>
-          <p className="text-gray-500 text-3xl">
-            Empowering every sector through AI-driven transformation and automation.
-          </p>
+  {/* Industries Grid */}
+  {/* Responsive Breakdown:
+      - Default: 1 column (mobile)
+      - sm: 2 columns (tablets)
+      - lg: 3 columns (small laptops)
+      - xl: 5 columns (large desktops)
+  */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
+    {[
+      {
+        icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Education",
+        desc: "AI-powered learning platforms, adaptive assessments, and smart academic analytics.",
+      },
+      {
+        icon: <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Healthcare & Pharma",
+        desc: "AI diagnostics, telemedicine, predictive analytics, and connected medical ecosystems.",
+      },
+      {
+        icon: <Landmark className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Public Sector",
+        desc: "Smart governance, digital citizen services, and policy analytics using AI.",
+      },
+      {
+        icon: <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "GIS",
+        desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
+      },
+      {
+        icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Data Analytics",
+        desc: "Advanced data insights, BI dashboards, and decision automation.",
+      },
+      {
+        icon: <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Professional Services",
+        desc: "Workflow optimization, document AI, and smart client management systems.",
+      },
+      {
+        icon: <Clapperboard className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Media & Entertainment",
+        desc: "Content recommendation, media automation, and AI-driven audience insights.",
+      },
+      {
+        icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Retail",
+        desc: "AI-driven personalization, inventory forecasting, and sentiment engagement.",
+      },
+      {
+        icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Real Estate",
+        desc: "AI property valuation, virtual tours, and predictive real estate analytics.",
+      },
+      {
+        icon: <Factory className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+        title: "Manufacturing",
+        desc: "Smart factory automation, robotics integration, and predictive maintenance.",
+      }
+    ].map((industry, i) => (
+      <div
+        key={i}
+        data-aos="fade-up"
+        data-aos-delay={i * 50}
+        className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
+      >
+        {/* Blue Glow Layer */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
+
+        {/* Icon */}
+        <div className="flex justify-center mb-4 relative z-10">
+          {industry.icon}
         </div>
 
-        {/* Industries Grid - 4 per row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 px-6 md:px-20 place-items-center">
-          {[
-            {
-              icon: <GraduationCap className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500  " />,
-              title: "Education",
-              desc: "AI-powered learning platforms adaptive assessments  and smart academic analytics",
-            },
-            {
-              icon: <HeartPulse className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Healthcare & Pharma",
-              desc: "AI diagnostics  telemedicine  predictive analytics  and connected medical ecosystems",
-            },
-                {
-              icon: <Landmark className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Public Sector",
-              desc: "Smart governance  digital citizen services  and policy analytics using AI ",
-            },
-              {
-              icon: <Map className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "GIS",
-              desc: "AI-driven exploration, pipeline monitoring, predictive maintenance, and energy optimization systems",
-            },
-             {
-              icon: <BarChart className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Data Analytics",
-              desc: "Advanced data insights, business intelligence dashboards, predictive analytics, and decision automation",
-            },
-               {
-              icon: <Briefcase className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Professional Services",
-              desc: "Workflow optimization  document AI and smart client management systems ",
-            },
-             {
-              icon: <Clapperboard className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Media & Entertainment",
-              desc: "Content recommendation  media automation  and AI-driven audience insights ",
-            },
-          {
-              icon: <ShoppingBag className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Retail",
-              desc: "AI-driven personalization  inventory forecasting  and sentiment-based engagement ",
-            },
-            {
-              icon: <Building2 className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Real Estate",
-              desc: "AI property valuation  virtual tours  and predictive real estate analytics ",
-            },
-            {
-              icon: <Factory className="w-12 h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              title: "Manufacturing",
-              desc: "Smart factory automation  robotics integration  and predictive maintenance ",
-            }
-           
-        
-            
-          
-           
-          ].map((industry, i) => (
-            <div
-              key={i}
-              data-aos="fade-up"
-              data-aos-delay={i * 100}
-              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-72 text-center p-8 hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden"
-            >
-              {/* Blue Glow Layer */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
-
-              {/* Icon */}
-              <div className="flex justify-center mb-4 relative z-10 animate-float">
-                {industry.icon}
-              </div>
-
-              {/* Content */}
-              <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
-                {industry.title}
-              </h4>
-              <p className="text-gray-700 text-xl relative z-10 text-century gothic">{industry.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* Content */}
+        <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
+          {industry.title}
+        </h4>
+        <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
+          {industry.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
 
 
