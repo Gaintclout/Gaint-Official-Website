@@ -53,81 +53,55 @@ ${name}`
         <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
              <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
              {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
-             <nav className="hidden md:block">
-               <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[360px]">
-                 {/* Regular Links */}
-     
-                 <a href="/" className="hover:text-[#4285F4] transition duration-300">
-                   Home
-                 </a>
-     
-     
-                 <li>
-                   <Link to="/about" className="hover:text-[#4285F4] transition duration-300">
-                     About
-                   </Link>
-                 </li>
-     
-     
-                 {/* Services Dropdown */}
-                 <li>
-                   <Link to="/service" className="hover:text-[#4285F4] transition duration-300">
-                     Services
-                   </Link>
-                 </li>
-     
-     
-     
-     
-                 {/* Products Dropdown */}
-                 <li className="relative group">
-                   <a
-                     href="#products"
-                     className="hover:text-[#4285F4] transition flex items-center gap-1"
-     
-                   >
-                     Products ▾
-                   </a>
-     
-                   {/* Dropdown Menu */}
-                   <ul className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-200 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out w-60 z-50 text-lg">
-                     {[
-                       { name: "DonorGO", link: "/Donorgo" },
-                       { name: "GAINTInternsHub", link: "/internsapp" },
-                       { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-                       { name: "WellNest AI Station", link: "/wellnest" },
-                       { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
-                       { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
-     
-     
-     
-                     ].map((product, i) => (
-                       <li key={i}>
-                         <a
-                           href={product.link}
-                           target={product.link.startsWith("http") ? "_blank" : "_self"}
-                           rel={product.link.startsWith("http") ? "noopener noreferrer" : ""}
-                           className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-blue-600 rounded-lg transition"
-                         >
-                           {product.name}
-                         </a>
-                       </li>
-                     ))}
-                   </ul>
-                 </li>
-     
-                 <li>
-                   <a
-                     href="/contact"
-                     className="relative hover:text-[#4285F4] transition duration-300 "
-                   >
-                     Contact
-                   </a>
-     
-                 </li>
-               </ul>
-             </nav>
-     
+            <nav className="hidden md:flex justify-center w-full">
+             <ul className="
+               flex items-center 
+               gap-4 md:gap-6 lg:gap-10
+               text-sm md:text-base lg:text-xl
+               bg-gray-100 
+               px-4 md:px-6 lg:px-12 
+               py-2 md:py-3 lg:py-4
+               rounded-full 
+               shadow-lg
+               max-w-fit
+             ">
+           
+               <li><a href="/">Home</a></li>
+               <li><Link to="/about">About</Link></li>
+               <li><Link to="/service">Services</Link></li>
+           
+               <li className="relative group">
+                 <span className="flex items-center gap-1 cursor-pointer">
+                   Products ▾
+                 </span>
+           
+                 <ul className="
+                   absolute left-1/2 transform -translate-x-1/2
+                   mt-2 bg-white shadow-xl border rounded-2xl
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   transition-all duration-300 w-60 z-50 text-sm md:text-lg
+                 ">
+                   {[
+                     { name: "DonorGO", link: "/Donorgo" },
+                     { name: "GAINTInternsHub", link: "/internsapp" },
+                     { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                     { name: "WellNest AI Station", link: "/wellnest" },
+                     { name: "QKD", link: "/qkd" },
+                     { name: "PQC", link: "/pqc" },
+                   ].map((product, i) => (
+                     <li key={i}>
+                       <a href={product.link} className="block px-4 py-2 hover:bg-gray-100">
+                         {product.name}
+                       </a>
+                     </li>
+                   ))}
+                 </ul>
+               </li>
+           
+               <li><a href="/contact">Contact</a></li>
+           
+             </ul>
+           </nav>
      
              {/* Mobile Nav */}
              <button
