@@ -1005,7 +1005,7 @@ export default function About() {
               </a>
             </li>
              <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Gis</a></li>
+              <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
           </ul>
         </div>
       </div>

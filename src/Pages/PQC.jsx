@@ -16,6 +16,8 @@ import {
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import { Atom, Sparkles } from "lucide-react";
+
 const pqcData = [
   { year: 2022, India: 20, Global: 35 },
   { year: 2023, India: 40, Global: 50 },
@@ -146,21 +148,27 @@ export default function PQCProductPage() {
                </header>
 
       {/* ================= HERO ================= */}
-      <section
-        className="relative text-center py-32 px-6 bg-cover bg-center h-[110vh] mt-24"
-        style={{ backgroundImage: "url('/Web.jpg')" }}
-      >
-        <div className="relative z-10">
-          <motion.h1
-            className="text-5xl md:text-6xl mb-6 text-cyan-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            GAINT PQC — Post-Quantum Cryptography
-          </motion.h1>
+     <section
+  className="relative text-center py-20 md:py-28 px-4 md:px-6 bg-cover bg-center mt-20"
+  style={{ backgroundImage: "url('/Web.jpg')" }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
 
+  <div className="relative z-10 max-w-6xl mx-auto">
+
+    {/* Heading */}
+    <motion.h1
+      className="text-3xl sm:text-4xl md:text-6xl mb-6 text-cyan-400"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      GAINT PQC — Post-Quantum Cryptography
+    </motion.h1>
+
+    {/* Description */}
     <motion.p
-      className="max-w-3xl mx-auto text-4xl text-gray-300"
+      className="max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
@@ -169,28 +177,49 @@ export default function PQCProductPage() {
       threats by building next-generation cryptographic frameworks — scalable,
       AI-assisted, and globally interoperable.
     </motion.p>
+
+    {/* Section Title */}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cyan-400 mt-16 mb-10">
+      PQC vs QKD — The Future of Quantum Security
+    </h2>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+      {/* PQC Card */}
+      <div className="p-6 bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
+
+        <h3 className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-cyan-300">
+          <Atom className="w-6 h-6 text-cyan-300 drop-shadow-[0_0_8px_#06b6d4]" />
+          Post-Quantum Cryptography (PQC)
+        </h3>
+
+        <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
+          <li>Software-based security using classical networks.</li>
+          <li>Relies on mathematically hard lattice-based algorithms.</li>
+          <li>Scalable and deployable on existing internet infrastructure.</li>
+          <li>Ideal for commercial, banking, and cloud environments.</li>
+        </ul>
+      </div>
+
+      {/* QKD Card */}
+      <div className="p-6 bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
+
+        <h3 className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-violet-300">
+          <Sparkles className="w-6 h-6 text-violet-300 drop-shadow-[0_0_8px_#a855f7]" />
+          Quantum Key Distribution (QKD)
+        </h3>
+
+        <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
+          <li>Hardware-based physical layer encryption using quantum photons.</li>
+          <li>Offers information-theoretic security — unhackable by physics.</li>
+          <li>Requires quantum communication channels (fiber/satellite).</li>
+          <li>Ideal for defense, space, and critical national networks.</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
-   <h2 className="text-4xl font-semibold text-center text-cyan-400 mb-1 absolute bottom-[400px] left-[590px] ">PQC vs QKD — The Future of Quantum Security</h2>
-     <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto absolute top-[690px] left-[400px]">
-          <div className="p-6 bg-gray-900/70 rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
-            <h3 className="text-2xl  mb-3 text-cyan-300">🔐 Post-Quantum Cryptography (PQC)</h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Software-based security using classical networks.</li>
-              <li>Relies on mathematically hard lattice-based algorithms.</li>
-              <li>Scalable and deployable on existing internet infrastructure.</li>
-              <li>Ideal for commercial, banking, and cloud environments.</li>
-            </ul>
-          </div>
-          <div className="p-6 bg-gray-900/70 rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
-            <h3 className="text-2xl  mb-3 text-violet-300">⚛️ Quantum Key Distribution (QKD)</h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Hardware-based physical layer encryption using quantum photons.</li>
-              <li>Offers information-theoretic security — unhackable by physics.</li>
-              <li>Requires quantum communication channels (fiber/satellite).</li>
-              <li>Ideal for defense, space, and critical national networks.</li>
-            </ul>
-          </div>
-        </div>
 </section>
 
 

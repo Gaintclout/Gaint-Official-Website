@@ -12,6 +12,8 @@ import Demo from "./Pages/Home.jsx";
 import InternsAppPage from "./Pages/InternsAppPage.jsx";
 import QKDPage from "./Pages/Qkd.jsx";   
 import PQC from "./Pages/PQC.jsx"; 
+import GIS from "./Pages/Gis";
+
 
 
 
@@ -33,6 +35,8 @@ function App() {
       <Route path ="/internsapp" element={<InternsAppPage/>} />
       <Route path="/qkd" element={<QKDPage />} />
       <Route path="/pqc" element={<PQC />} />
+      <Route path="/gis" element={<GIS />} />
+      
     </Routes>
   );
 }

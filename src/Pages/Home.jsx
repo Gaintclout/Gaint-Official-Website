@@ -33,6 +33,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { Atom } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -97,33 +98,85 @@ export default function Home() {
       <header className="fixed top-0   w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
         <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
         {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
-        <nav className="hidden md:flex justify-center w-full">
+        <nav className="hidden md:flex justify-center w-full mt-4">
           <ul className="
     flex items-center 
     gap-4 md:gap-6 lg:gap-10
     text-sm md:text-base lg:text-xl
-    bg-gray-100 
-    px-4 md:px-6 lg:px-12 
-    py-2 md:py-3 lg:py-4
+    bg-white/10 backdrop-blur-xl
+    border border-white/20
+    px-6 md:px-8 lg:px-12 
+    py-3 md:py-4
     rounded-full 
-    shadow-lg
+    shadow-[0_8px_30px_rgba(0,0,0,0.3)]
     max-w-fit
   ">
 
-            <li><a href="/">Home</a></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/service">Services</Link></li>
+            {/* Home */}
+            <li className="group">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `relative px-2 py-1 transition duration-300
+          ${isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"}`
+                }
+              >
+                Home
 
+                {/* Glow underline */}
+                <span className="
+          absolute left-0 -bottom-1 h-[2px]
+          bg-[#4285F4]
+          w-0 group-hover:w-full
+          transition-all duration-300
+          shadow-[0_0_10px_#4285F4]
+        "></span>
+              </NavLink>
+            </li>
+
+            {/* About */}
+            <li className="group">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `relative px-2 py-1 transition duration-300
+          ${isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"}`
+                }
+              >
+                About
+                <span className="absolute left-0 -bottom-1 h-[2px] bg-[#4285F4] w-0 group-hover:w-full transition-all duration-300 shadow-[0_0_10px_#4285F4]"></span>
+              </NavLink>
+            </li>
+
+            {/* Services */}
+            <li className="group">
+              <NavLink
+                to="/service"
+                className={({ isActive }) =>
+                  `relative px-2 py-1 transition duration-300
+          ${isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"}`
+                }
+              >
+                Services
+                <span className="absolute left-0 -bottom-1 h-[2px] bg-[#4285F4] w-0 group-hover:w-full transition-all duration-300 shadow-[0_0_10px_#4285F4]"></span>
+              </NavLink>
+            </li>
+
+            {/* Products */}
             <li className="relative group">
-              <span className="flex items-center gap-1 cursor-pointer">
+              <span className="flex items-center gap-1 cursor-pointer text-white hover:text-[#4285F4] transition duration-300">
                 Products ▾
               </span>
 
               <ul className="
         absolute left-1/2 transform -translate-x-1/2
-        mt-2 bg-white shadow-xl border rounded-2xl
-        opacity-0 invisible group-hover:opacity-100 group-hover:visible
-        transition-all duration-300 w-60 z-50 text-sm md:text-lg
+        mt-3 bg-white/90 backdrop-blur-lg
+        border border-gray-200
+        shadow-xl rounded-2xl
+        opacity-0 invisible
+        group-hover:opacity-100 group-hover:visible
+        transition-all duration-300
+        w-64 z-50 text-sm md:text-lg
       ">
                 {[
                   { name: "DonorGO", link: "/Donorgo" },
@@ -134,18 +187,37 @@ export default function Home() {
                   { name: "PQC", link: "/pqc" },
                 ].map((product, i) => (
                   <li key={i}>
-                    <a href={product.link} className="block px-4 py-2 hover:bg-gray-100">
+                    <NavLink
+                      to={product.link}
+                      className={({ isActive }) =>
+                        `block px-5 py-3 rounded-lg transition
+                ${isActive ? "text-[#4285F4] bg-gray-100" : "hover:bg-gray-100 hover:text-[#4285F4]"}`
+                      }
+                    >
                       {product.name}
-                    </a>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
             </li>
 
-            <li><a href="/contact">Contact</a></li>
+            {/* Contact */}
+            <li className="group">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `relative px-2 py-1 transition duration-300
+          ${isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"}`
+                }
+              >
+                Contact
+                <span className="absolute left-0 -bottom-1 h-[2px] bg-[#4285F4] w-0 group-hover:w-full transition-all duration-300 shadow-[0_0_10px_#4285F4]"></span>
+              </NavLink>
+            </li>
 
           </ul>
         </nav>
+
         {/* Mobile Nav */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -304,102 +376,102 @@ export default function Home() {
 
       {/* ---------------- SERVICES ---------------- */}
       {/* ---------------- INDUSTRIES WE SERVICE (BLUE THEME) ---------------- */}
-     <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
-  {/* Heading */}
-  <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
-    <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-      Industries We Service
-    </h3>
-    <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
-      Empowering every sector through AI-driven transformation and automation.
-    </p>
-  </div>
+      <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
+        {/* Heading */}
+        <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+            Industries We Service
+          </h3>
+          <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
+            Empowering every sector through AI-driven transformation and automation.
+          </p>
+        </div>
 
-  {/* Industries Grid */}
-  {/* Responsive Breakdown:
+        {/* Industries Grid */}
+        {/* Responsive Breakdown:
       - Default: 1 column (mobile)
       - sm: 2 columns (tablets)
       - lg: 3 columns (small laptops)
       - xl: 5 columns (large desktops)
   */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
-    {[
-      {
-        icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Education",
-        desc: "AI-powered learning platforms, adaptive assessments, and smart academic analytics.",
-      },
-      {
-        icon: <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Healthcare & Pharma",
-        desc: "AI diagnostics, telemedicine, predictive analytics, and connected medical ecosystems.",
-      },
-      {
-        icon: <Landmark className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Public Sector",
-        desc: "Smart governance, digital citizen services, and policy analytics using AI.",
-      },
-      {
-        icon: <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "GIS",
-        desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
-      },
-      {
-        icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Data Analytics",
-        desc: "Advanced data insights, BI dashboards, and decision automation.",
-      },
-      {
-        icon: <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Professional Services",
-        desc: "Workflow optimization, document AI, and smart client management systems.",
-      },
-      {
-        icon: <Clapperboard className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Media & Entertainment",
-        desc: "Content recommendation, media automation, and AI-driven audience insights.",
-      },
-      {
-        icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Retail",
-        desc: "AI-driven personalization, inventory forecasting, and sentiment engagement.",
-      },
-      {
-        icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Real Estate",
-        desc: "AI property valuation, virtual tours, and predictive real estate analytics.",
-      },
-      {
-        icon: <Factory className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-        title: "Manufacturing",
-        desc: "Smart factory automation, robotics integration, and predictive maintenance.",
-      }
-    ].map((industry, i) => (
-      <div
-        key={i}
-        data-aos="fade-up"
-        data-aos-delay={i * 50}
-        className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
-      >
-        {/* Blue Glow Layer */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
+          {[
+            {
+              icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Education",
+              desc: "AI-powered learning platforms, adaptive assessments, and smart academic analytics.",
+            },
+            {
+              icon: <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Healthcare & Pharma",
+              desc: "AI diagnostics, telemedicine, predictive analytics, and connected medical ecosystems.",
+            },
+            {
+              icon: <Landmark className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Public Sector",
+              desc: "Smart governance, digital citizen services, and policy analytics using AI.",
+            },
+            {
+              icon: <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "GIS",
+              desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
+            },
+            {
+              icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Data Analytics",
+              desc: "Advanced data insights, BI dashboards, and decision automation.",
+            },
+            {
+              icon: <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Professional Services",
+              desc: "Workflow optimization, document AI, and smart client management systems.",
+            },
+            {
+              icon: <Clapperboard className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Media & Entertainment",
+              desc: "Content recommendation, media automation, and AI-driven audience insights.",
+            },
+            {
+              icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Retail",
+              desc: "AI-driven personalization, inventory forecasting, and sentiment engagement.",
+            },
+            {
+              icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Real Estate",
+              desc: "AI property valuation, virtual tours, and predictive real estate analytics.",
+            },
+            {
+              icon: <Factory className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              title: "Manufacturing",
+              desc: "Smart factory automation, robotics integration, and predictive maintenance.",
+            }
+          ].map((industry, i) => (
+            <div
+              key={i}
+              data-aos="fade-up"
+              data-aos-delay={i * 50}
+              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
+            >
+              {/* Blue Glow Layer */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
 
-        {/* Icon */}
-        <div className="flex justify-center mb-4 relative z-10">
-          {industry.icon}
+              {/* Icon */}
+              <div className="flex justify-center mb-4 relative z-10">
+                {industry.icon}
+              </div>
+
+              {/* Content */}
+              <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
+                {industry.title}
+              </h4>
+              <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
+                {industry.desc}
+              </p>
+            </div>
+          ))}
         </div>
-
-        {/* Content */}
-        <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
-          {industry.title}
-        </h4>
-        <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
-          {industry.desc}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
 
 
@@ -656,7 +728,7 @@ export default function Home() {
               <li><a href="#" className="hover:text-[#c5a77b]">IT Consulting</a></li>
 
               <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Gis</a></li>
+              <li><a href="/gis" className="hover:text-[#c5a77b]">GIS</a></li>
             </ul>
           </div>
         </div>
