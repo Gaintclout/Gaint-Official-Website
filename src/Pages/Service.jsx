@@ -161,7 +161,7 @@ export default function ServicesOffered() {
              onClick={() => setMenuOpen(!menuOpen)}
              className="md:hidden p-2 rounded-md border border-gray-300 text-white"
            >
-             {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
+             {menuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
            </button>
            {menuOpen && (
              <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">

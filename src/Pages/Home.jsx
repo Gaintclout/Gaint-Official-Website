@@ -92,148 +92,148 @@ export default function Home() {
 
   ];
   return (
-    <div className="font-sans text-gray-800 scroll-smooth">
+    <div className="font-century gothic text-gray-800 scroll-smooth">
       {/* ---------------- HEADER ---------------- */}
       <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
-        <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
-        {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
-        <nav className="hidden md:block">
-          <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[160px]">
-            {/* Regular Links */}
-
-            <a href="/" className="hover:text-[#4285F4] transition duration-300">
-              Home
-            </a>
-
-
-            <li>
-              <Link to="/about" className="hover:text-[#4285F4] transition duration-300">
-                About
-              </Link>
-            </li>
-
-
-            {/* Services Dropdown */}
-            <li>
-              <Link to="/service" className="hover:text-[#4285F4] transition duration-300">
-                Services
-              </Link>
-            </li>
-
-
-
-
-            {/* Products Dropdown */}
-            <li className="relative group">
-              <a
-                href="#products"
-                className="hover:text-[#4285F4] transition flex items-center gap-1"
-
-              >
-                Products ▾
-              </a>
-
-              {/* Dropdown Menu */}
-              <ul className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-200 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out w-60 z-50 text-lg">
-                {[
-                  { name: "DonorGO", link: "/Donorgo" },
-                  { name: "GAINTInternsHub", link: "/internsapp" },
-                  { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-                  { name: "WellNest AI Station", link: "/wellnest" },
-                  { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
-                  { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
-
-
-
-                ].map((product, i) => (
-                  <li key={i}>
-                    <a
-                      href={product.link}
-                      target={product.link.startsWith("http") ? "_blank" : "_self"}
-                      rel={product.link.startsWith("http") ? "noopener noreferrer" : ""}
-                      className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-blue-600 rounded-lg transition"
-                    >
-                      {product.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </li>
-
-            <li>
-              <a
-                href="/contact"
-                className="relative hover:text-[#4285F4] transition duration-300 "
-              >
-                Contact
-              </a>
-
-            </li>
-          </ul>
-        </nav>
-
-
-        {/* Mobile Nav */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 rounded-md border border-gray-300 text-white"
-        >
-          {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
-        </button>
-        {menuOpen && (
-          <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
-            {[
-              { name: "Home", link: "/" },
-              { name: "About", link: "/about" },
-              { name: "Services", link: "/service" },
-            ].map(({ name, link }) => (
-              <a
-                key={name}
-                href={link}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 text-gray-900 hover:text-blue-600 transition"
-              >
-                {name}
-              </a>
-            ))}
-
-            {/* Products Dropdown (hover/tap reveal) */}
-            <div className="relative group">
-              <button className="block w-full py-2 text-gray-900 hover:text-blue-600 focus:outline-none">
-                Products ▾
-              </button>
-              <div className="absolute left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                {[
-                  { name: "DonorGO", link: "/Donorgo" },
-                  { name: "GAINTInternsHub", link: "/internsapp" },
-                  { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-                  { name: "WellNest AI Station", link: "/wellnest" },
-                  { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
-                  { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
-                ].map(({ name, link }) => (
-                  <a
-                    key={name}
-                    href={link}
-                    onClick={() => setMenuOpen(false)}
-                    className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition"
-                  >
-                    {name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <a
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="block py-2 text-gray-900 hover:text-blue-600 transition"
-            >
-              Contact
-            </a>
-          </div>
-        )}
-
-      </header>
+               <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
+               {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
+               <nav className="hidden md:block">
+                 <ul className="flex justify-center gap-8 text-3xl  items-center bg-gray-100 w-[800px]  h-20   rounded-[60px] px-6 mr-[390px]">
+                   {/* Regular Links */}
+       
+                   <a href="/" className="hover:text-[#4285F4] transition duration-300">
+                     Home
+                   </a>
+       
+       
+                   <li>
+                     <Link to="/about" className="hover:text-[#4285F4] transition duration-300">
+                       About
+                     </Link>
+                   </li>
+       
+       
+                   {/* Services Dropdown */}
+                   <li>
+                     <Link to="/service" className="hover:text-[#4285F4] transition duration-300">
+                       Services
+                     </Link>
+                   </li>
+       
+       
+       
+       
+                   {/* Products Dropdown */}
+                   <li className="relative group">
+                     <a
+                       href="#products"
+                       className="hover:text-[#4285F4] transition flex items-center gap-1"
+       
+                     >
+                       Products ▾
+                     </a>
+       
+                     {/* Dropdown Menu */}
+                     <ul className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-200 rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out w-60 z-50 text-lg">
+                       {[
+                         { name: "DonorGO", link: "/Donorgo" },
+                         { name: "GAINTInternsHub", link: "/internsapp" },
+                         { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                         { name: "WellNest AI Station", link: "/wellnest" },
+                         { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
+                         { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
+       
+       
+       
+                       ].map((product, i) => (
+                         <li key={i}>
+                           <a
+                             href={product.link}
+                             target={product.link.startsWith("http") ? "_blank" : "_self"}
+                             rel={product.link.startsWith("http") ? "noopener noreferrer" : ""}
+                             className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-blue-600 rounded-lg transition"
+                           >
+                             {product.name}
+                           </a>
+                         </li>
+                       ))}
+                     </ul>
+                   </li>
+       
+                   <li>
+                     <a
+                       href="/contact"
+                       className="relative hover:text-[#4285F4] transition duration-300 "
+                     >
+                       Contact
+                     </a>
+       
+                   </li>
+                 </ul>
+               </nav>
+       
+       
+               {/* Mobile Nav */}
+               <button
+                 onClick={() => setMenuOpen(!menuOpen)}
+                 className="md:hidden p-2 rounded-md border border-gray-300 text-white"
+               >
+                 {menuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
+               </button>
+               {menuOpen && (
+                 <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
+                   {[
+                     { name: "Home", link: "/" },
+                     { name: "About", link: "/about" },
+                     { name: "Services", link: "/service" },
+                   ].map(({ name, link }) => (
+                     <a
+                       key={name}
+                       href={link}
+                       onClick={() => setMenuOpen(false)}
+                       className="block py-2 text-gray-900 hover:text-blue-600 transition"
+                     >
+                       {name}
+                     </a>
+                   ))}
+       
+                   {/* Products Dropdown (hover/tap reveal) */}
+                   <div className="relative group">
+                     <button className="block w-full py-2 text-gray-900 hover:text-blue-600 focus:outline-none">
+                       Products ▾
+                     </button>
+                     <div className="absolute left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                       {[
+                         { name: "DonorGO", link: "/Donorgo" },
+                         { name: "GAINTInternsHub", link: "/internsapp" },
+                         { name: "GAINTImmuneIQ", link: "/Immuneiq" },
+                         { name: "WellNest AI Station", link: "/wellnest" },
+                         { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
+                         { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
+                       ].map(({ name, link }) => (
+                         <a
+                           key={name}
+                           href={link}
+                           onClick={() => setMenuOpen(false)}
+                           className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition"
+                         >
+                           {name}
+                         </a>
+                       ))}
+                     </div>
+                   </div>
+       
+                   <a
+                     href="/contact"
+                     onClick={() => setMenuOpen(false)}
+                     className="block py-2 text-gray-900 hover:text-blue-600 transition"
+                   >
+                     Contact
+                   </a>
+                 </div>
+               )}
+       
+             </header>
 
       {/* ---------------- HERO / ABOUT ---------------- */}
       <section
