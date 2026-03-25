@@ -23,6 +23,7 @@ import {
   Hand,
   Heart,
   Quote,
+  Globe,
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -289,7 +290,7 @@ export default function About() {
     drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
   "
 >
-  THE BEST AI SOLUTION - GAINT CLOUT TECHNOLOGIES
+  THE BEST AI SOLUTION 
 </h1>
 
 <p
@@ -472,7 +473,7 @@ export default function About() {
                 </div>
               </div>
               
-              <h2 className="text-6xl font-bold text-[#2e7d32]">
+              <h2 className="text-5xl font-bold text-[#34A853]">
                
               Future Plans of GAINT
               </h2>
@@ -491,14 +492,26 @@ export default function About() {
                 },
                 {
                   icon: <Rocket className="w-6 h-6 text-[#EA4335]" />,
-                  q: "Year 2: Expansion & Innovation?",
-                  a: "Focus Areas: Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
+                  q: "Year 2: Innovation, Productization & Expansion",
+                  a: "Focus Areas: Build AI-based products, Start PQC prototype development, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
                 },
                 {
                   icon: <GraduationCap className="w-6 h-6 text-[#FBBC05]" />,
                   q: "Year 3: Market Leadership & Diversification?",
                   a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion Al Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
                 },
+             {
+  icon: <Atom className="w-6 h-6 text-[#4285F4]" />,
+  q: "Year 4: R&D Strength National Leadership",
+  a: "Focus Areas: Become known for AI + Quantum Security, Establish GAINT R&D Lab (AI + PQC + QC), Start PQC pilot projects, Work with government / defense / enterprises, Telecom, Research institutions.",
+},
+                   
+{
+  icon: <Globe className="w-6 h-6 text-[#34A853]" />,
+  q: "Year 5: Global Expansion Ecosystem",
+  a: "Focus Areas: Enter International market, Middle East, Southeast Asia, Enterprise Quantum-Safe Security Suite.",
+},    
+                
                 // {
                 //   icon: <Handshake className="w-6 h-6 text-[#4285F4]" />,
                 //   q: "How can colleges or organizations collaborate with GAINT CLOUT?",
@@ -627,7 +640,7 @@ export default function About() {
             {/* Right Side */}
       <div className="flex flex-col items-start gap-10 text-2xl">
   {[
-    "A Flexible Pricing Model Flexible",
+    "A Flexible Pricing Model ",
     "Standardize And Automate Processes",
     "Enhance Public Service Delivery",
     "Empower Staff With Knowledge",

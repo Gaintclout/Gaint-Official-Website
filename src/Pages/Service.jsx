@@ -237,16 +237,16 @@ export default function ServicesOffered() {
 
         {/* Text Overlay */}
         <div className="relative z-10 flex flex-col items-end text-right text-white px-8 md:px-24 max-w-4xl">
-          <h1
-            className="
-               leading-none mb-6 animate-fadeInUp
-              bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent
-              text-[100px] sm:text-[140px] md:text-[180px] lg:text-[200px] xl:text-[150px]
-              drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
-            "
-          >
-            GAINT
-          </h1>
+       <h1
+              className=" 
+        font-semibold leading-none mb-6 animate-fadeInUp
+        bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
+        text-[100px] sm:text-[150px] md:text-[180px] lg:text-[200px] xl:text-[120px]
+        drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
+      "
+            >
+              GAINT
+            </h1>
 
           <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-gray-200 max-w-[700px] leading-tight animate-fadeIn font-[Century Gothic]">
             Transform Your
