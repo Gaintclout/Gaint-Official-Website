@@ -318,19 +318,26 @@ export default function About() {
         
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
         <div className="relative z-10 text-center mb-20">
-      <h2 className="text-5xl md:text-6xl font-bold text-center text-black tracking-tight">
-    Our Core Foundation
-  </h2>
+ <h2 className="
+  text-3xl sm:text-4xl md:text-5xl lg:text-5xl
+  font-bold text-center text-black tracking-tight
+">
+  Our Core Foundation
+</h2>
          <div className="flex items-center gap-2">
     {/* <Cpu className="w-8 h-8 text-[#34A853] animate-pulse" /> */}
     <BrainCircuit className="w-8 h-8 text-[#EA4335] animate-bounce " />
   </div>
   
 
-          <p className="text-black/80 mt-4 max-w-2xl mx-auto text-3xl">
-            BUILDING A SUSTAINABLE, INTELLIGENT, AND INCLUSIVE INDIA THROUGH
-            INNOVATION.
-          </p>
+       <p className="
+  text-black/80 mt-4 max-w-2xl mx-auto
+  text-xl sm:text-2xl md:text-3xl lg:text-4xl
+  leading-relaxed tracking-wide text-center
+">
+  BUILDING A SUSTAINABLE, INTELLIGENT, AND INCLUSIVE INDIA THROUGH
+  INNOVATION.
+</p>
         </div>
 
        <div className="relative z-10 grid md:grid-cols-3 gap-10 px-10 lg:px-24">
@@ -421,7 +428,7 @@ export default function About() {
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex items-center gap-3 mb-8">
         <ShieldCheck className="w-14 h-14 text-[#4285F4]" />
-          <h2 className="text-2xl md:text-6xl font-bold">Our Strengths</h2>
+          <h2 className="text-2xl md:text-5xl font-bold">Our Strengths</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6 ">
           {strengths.map((s, i) => (
@@ -467,7 +474,7 @@ export default function About() {
               
               <h2 className="text-6xl font-bold text-[#2e7d32]">
                
-              FUTURE PLANS OF GAINT
+              Future Plans of GAINT
               </h2>
               {/* <p className="text-gray-600 mt-3 text-3xl">
           
