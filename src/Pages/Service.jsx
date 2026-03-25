@@ -223,10 +223,10 @@ export default function ServicesOffered() {
       <section
         id="about"
         ref={heroRef}
-        className="relative min-h-screen w-full flex items-center justify-end overflow-hidden bg-black"
+        className="relative h-[500px] md:h-[500px] w-full flex items-center justify-end overflow-hidden bg-black"
       >
         {/* Background Video */}
-       <img
+      <img
   src="/service-1.jpeg"
   alt="Services Background"
   className="absolute top-0 left-0 w-full h-full object-cover"
