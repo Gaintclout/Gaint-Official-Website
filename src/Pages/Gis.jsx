@@ -1,354 +1,1124 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import Header from "../Components/Header";
+import Header from "../components/Header";
+import { Flame, Repeat, AlertTriangle } from "lucide-react";
+import { Calendar, Target, FileText } from "lucide-react";
+import {
+  Building2,
+  Landmark,
+  Shield,
+  Factory,
+  LayoutDashboard,
+} from "lucide-react";
 
-export default function GISPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
 
-   {/* ================= GIS VS ================= */}
-  const contents = [
-  "The Problem",
-  "Why Noise is a Governance Problem",
-  "Our Solution",
-  "Solution Domains",
-  "System Architecture",
-  'The AI "Brain"',
-  "Accuracy & Validation",
-  "Day vs Night Noise Maps",
-  "Heatmaps & Hotspots",
-  "Prediction Maps",
-  "Who Will Pay",
-  "Decision Support Examples",
-  "Why GAINT",
+const points = [
+  "Cities rely on manual or reactive noise monitoring",
+  "No visibility of future noise hotspots",
+  "Enforcement happens after complaints",
+  "No scientific accuracy validation",
 ];
 
- {/* ================= USE CASES ================= */}
+const cards = [
+  {
+    title: "Health impact",
+    desc: "Sleep disruption and stress",
+  },
+  {
+    title: "Law & order",
+    desc: "Night disturbances",
+  },
+  {
+    title: "Festival & traffic noise",
+    desc: "Seasonal spikes",
+  },
+  {
+    title: "Court cases & citizen complaints",
+    desc: "Legal implications",
+  },
+];
 
- const points = [
-    "Cities rely on manual or reactive noise monitoring",
-    "No visibility of future noise hotspots",
-    "Enforcement happens after complaints",
-    "No scientific accuracy validation",
-  ];
-
-  {/* ================= governance section ================= */}
-    const cards = [
-    {
-      title: "Health impact",
-      desc: "Sleep disruption and stress",
-    },
-    {
-      title: "Law & order",
-      desc: "Night disturbances",
-    },
-    {
-      title: "Festival & traffic noise",
-      desc: "Seasonal spikes",
-    },
-    {
-      title: "Court cases & citizen complaints",
-      desc: "Legal implications",
-    },
-  ];
-
+export default function Gis() {
+  const heroRef = useRef(null);
 
   return (
-    <div className="font-sans text-gray-800">
-
-      {/* ================= HEADER ================= */}
- 
-        <Header />
-      {/* ================= HERO ================= */}
+    <div className="font-sans text-gray-800 scroll-smooth">
+      <Header />
+/*--------------------------------- Hero Section ----------------------------------*/
       <section
-        className="relative text-center py-16 sm:py-20 md:py-28 px-4 bg-cover bg-center mt-16 md:mt-20 h-[100vh] flex items-center justify-center"
-        style={{ backgroundImage: "url('/gis-bg-image.png')" }}
+        id="about"
+        ref={heroRef}
+        className="relative flex h-[500px] w-full items-center justify-end overflow-hidden bg-black md:h-[500px]"
       >
+        <img
+          src="/gis-bg-image.png"
+          alt="Services Background"
+          className="absolute top-0 left-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
-
+        <div className="relative z-10 mx-auto max-w-4xl">
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-6xl lg:text-6xl text-green-400 mb-4 md:mb-6"
+            className="mb-4 text-4xl text-green-400 sm:text-3xl md:mb-6 md:text-6xl lg:text-6xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            GAINT GIS — Geographic Information Systems
+            GAINT GIS - Geographic Information Systems
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-xl md:text-xl lg:text-3xl text-gray-300 leading-relaxed"
+            className="text-2xl leading-relaxed text-gray-300 sm:text-xl md:text-3xl lg:text-3xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
             Empowering spatial intelligence with AI-driven geospatial solutions
             for smart cities, disaster management, and infrastructure planning.
           </motion.p>
-
         </div>
       </section>
 
-      {/* ================= GIS VS ================= */}
-       <section className="w-full 
-bg-gradient-to-br from-black via-[#020617] to-[#020024] 
-text-white 
-px-4 sm:px-6 md:px-12 lg:px-16 
-py-10 md:py-16 lg:py-20 
-flex flex-col md:flex-row items-start justify-between">
-
-  {/* LEFT SIDE */}
-  <div className="w-full md:w-1/2 mb-8 md:mb-0">
-    <h1 className="text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] 
-    font-light leading-tight tracking-wide text-gray-200">
-      TABLE OF <br /> CONTENTS
-    </h1>
-  </div>
-
-  {/* RIGHT SIDE */}
-  <div className="w-full md:w-1/2 flex gap-4 md:gap-6">
-
-    {/* LINE */}
-    <div className="w-[2px] bg-white/30 mt-1 hidden md:block"></div>
-
-    {/* CONTENT LIST */}
-    <div className="w-full">
-      {contents.map((item, index) => (
-        <div
-          key={index}
-          className="flex justify-between items-center 
-          py-1.5 sm:py-2 md:py-3 
-          text-xs sm:text-sm md:text-lg lg:text-xl 
-          text-gray-300 hover:text-white 
-          transition duration-300"
-        >
-          <span className="pr-4">{item}</span>
-          <span className="text-gray-500 text-xs sm:text-sm md:text-base">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/*  ============governance section ==============  */}
-
-     <section className="w-full bg-gradient-to-b from-black via-[#020617] to-[#020024] text-white px-6 md:px-16 py-14 md:py-20">
-
-      {/* TITLE */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-200 mb-6 text-center md:text-left">
-        Why Noise is a Governance Problem
-      </h1>
-
-      {/* SUBTITLE */}
-      <p className="text-lg sm:text-xl md:text-2xl text-orange-400 font-medium mb-10 text-center md:text-left">
-        Noise is not just pollution - it's a governance, health, and law-and-order issue.
-      </p>
-
-      {/* CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-indigo-900/70 backdrop-blur-lg border border-indigo-500/20 
-            rounded-xl p-6 
-            shadow-[0_10px_30px_rgba(0,0,0,0.5)] 
-            hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] 
-            transition duration-300"
-          >
-            {/* TITLE */}
-            <h3 className="text-lg md:text-xl font-semibold text-gray-200 mb-3">
-              {card.title}
-            </h3>
-
-            {/* DESC */}
-            <p className="text-gray-400 text-sm md:text-base">
-              {card.desc}
-            </p>
-          </div>
-        ))}
-
-      </div>
-    </section>
-
-      {/* ================= USE CASES ================= */}
-
-         <section className="w-full min-h-[80vh] relative text-white overflow-hidden">
+{/*===========Problem Section =================*/}
+       <section className="relative min-h-[80vh] w-full overflow-hidden text-white">
 
       {/* BACKGROUND IMAGE */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/city-bg.jpg')", // 🔁 replace with your image
-        }}
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{ backgroundImage: "url('/the-problem.png')" }}
       />
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+      {/* FRONT BLUR */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
       {/* CONTENT */}
-      <div className="relative z-10 px-6 sm:px-10 md:px-16 py-12 md:py-20 flex flex-col md:flex-row items-start justify-between">
+      <div className="relative z-10 flex items-center justify-end px-4 sm:px-6 md:px-12 lg:px-16 py-10 md:py-16">
 
-        {/* LEFT SIDE */}
-        <div className="w-full md:w-1/2">
+        {/* RIGHT SIDE BOX */}
+        <div className="w-full md:w-[55%] lg:w-[45%] 
+        bg-white/10 backdrop-blur-md 
+        border border-white/10 
+        rounded-2xl p-6 sm:p-8 md:p-10 
+        shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
 
           {/* TITLE */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-200 mb-6">
+          <h1 className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-light text-gray-200">
             The Problem
           </h1>
 
           {/* SUBTITLE */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-orange-400 font-medium mb-8 leading-relaxed">
+          <p className="mb-6 text-md sm:text-base md:text-2xl lg:text-xl text-orange-400 font-medium leading-relaxed">
             Current systems only tell what happened, not what will happen.
           </p>
 
           {/* POINTS */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {points.map((point, index) => (
-              <div key={index} className="flex items-start gap-4">
+              <div key={index} className="flex items-start gap-3">
 
-                {/* BOX */}
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md 
-                bg-indigo-600/80 
-                shadow-[0_0_15px_rgba(99,102,241,0.5)] 
-                flex-shrink-0 mt-1"></div>
+                {/* BULLET */}
+                <div className="mt-1 h-4 w-4 sm:h-5 sm:w-5 rounded-md 
+                bg-indigo-500/80 
+                shadow-[0_0_12px_rgba(99,102,241,0.5)] flex-shrink-0"></div>
 
                 {/* TEXT */}
-                <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-xl text-gray-200 leading-relaxed">
                   {point}
                 </p>
+
               </div>
             ))}
           </div>
-        </div>
 
-        {/* RIGHT SIDE (OPTIONAL EMPTY FOR IMAGE VISIBILITY) */}
-        <div className="hidden md:block md:w-1/2"></div>
+        </div>
       </div>
     </section>
+      {/*===========Why Noise is a Governance Problem Section  =================*/}
+      
 
-      {/* <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      <section className="w-full bg-gradient-to-b from-black via-[#020617] to-[#020024] px-6 py-14 text-white md:px-16 md:py-20">
+        <h1 className="mb-6 text-center text-3xl font-light text-gray-200 sm:text-4xl md:text-left md:text-5xl lg:text-6xl">
+          Why Noise is a Governance Problem
+        </h1>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-green-400 mb-8 md:mb-10">
-          GIS Applications
-        </h2>
+        <p className="mb-10 text-center text-lg font-medium text-orange-400 sm:text-xl md:text-left md:text-2xl">
+          Noise is not just pollution - it&apos;s a governance, health, and
+          law-and-order issue.
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[
-            "Smart Cities",
-            "Flood Prediction",
-            "Agriculture",
-            "Logistics",
-            "Environment",
-            "Defense",
-          ].map((item, i) => (
-            <div key={i} className="p-5 sm:p-6 bg-gray-900 text-white rounded-xl text-center">
-              {item}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="rounded-xl border border-indigo-500/20 bg-indigo-900/70 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)]"
+            >
+              <h3 className="mb-3 text-lg font-semibold text-gray-200 md:text-xl">
+                {card.title}
+              </h3>
+
+              <p className="text-sm text-gray-400 md:text-base">{card.desc}</p>
             </div>
           ))}
         </div>
-
-      </section> */}
-
-      {/* ================= governance section ================= */}
+      </section>
+{/*===========Our Solution Section  =================*/}
 
 
-      
-      {/* <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+     <section className="relative w-full min-h-[80vh] overflow-hidden text-white">
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-green-400 mb-8 md:mb-10">
-          GIS Roadmap
+      {/* BACKGROUND */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{ backgroundImage: "url('/map.png')" }}
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60"></div>
+
+      {/* GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020024]/95 via-black/90 to-black/70"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-20 w-full px-6 md:px-16 py-16">
+
+        {/* TOP TITLE */}
+        <h2 className="text-3xl md:text-5xl text-gray-200 mb-4">
+          Our Solution
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {["Data Collection", "AI Integration", "Deployment", "GaaS"].map(
-            (phase, i) => (
-              <div key={i} className="p-5 sm:p-6 bg-gray-900 text-white rounded-xl text-center">
-                {phase}
+        {/* BIG HEADING */}
+        <h1 className="text-4xl md:text-7xl text-orange-400 font-light leading-tight mb-10">
+          From noise data to actionable intelligence
+        </h1>
+
+        {/* SUBTITLE */}
+        <p className="text-yellow-300 text-2xl mb-8">
+          UNIPS provides:
+        </p>
+
+        {/* 🔥 GRID (IMPORTANT FIX) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-yellow-300">
+
+          {/* LEFT SIDE */}
+          <ul className="space-y-6 text-lg md:text-2xl">
+            <li className="flex items-center gap-4">
+              <span className="text-yellow-400 text-3xl">•</span>
+              Predictive noise intelligence
+            </li>
+
+            <li className="flex items-center gap-4">
+              <span className="text-yellow-400 text-3xl">•</span>
+              Day vs Night analysis
+            </li>
+
+            <li className="flex items-center gap-4">
+              <span className="text-yellow-400 text-3xl">•</span>
+              Hotspot identification
+            </li>
+          </ul>
+
+          {/* RIGHT SIDE */}
+          <ul className="space-y-6 text-lg md:text-2xl">
+            <li className="flex items-center gap-4">
+              <span className="text-yellow-400 text-3xl">•</span>
+              Accuracy-validated AI predictions
+            </li>
+
+            <li className="flex items-center gap-4">
+              <span className="text-yellow-400 text-3xl">•</span>
+              GIS-ready decision maps
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+{/*===========pipeline/architecture =================*/}
+
+ <section className="relative w-full min-h-[90vh] overflow-hidden text-white">
+
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105 opacity-30"
+        style={{ backgroundImage: "url('/architecture-bg.png')" }} // replace image
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0b0f2a] to-[#1a1f4a]"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 px-6 md:px-16 py-16">
+
+        {/* TITLE */}
+        <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-3">
+          UNIPS System Architecture
+        </h1>
+
+        <p className="text-orange-400 text-lg md:text-xl mb-14">
+          AI is the brain, GIS is the face.
+        </p>
+
+        {/* PIPELINE */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+
+          {/* STEP 1 */}
+          <div className="flex flex-col items-center relative">
+
+            {/* TOP DOT */}
+            <div className="w-4 h-4 bg-indigo-400 rounded-full mb-2"></div>
+
+            {/* CARD */}
+            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
+            rounded-2xl p-6 w-full text-center">
+
+              <h3 className="text-xl font-semibold mb-2">
+                Historical Noise
+              </h3>
+
+              <p className="text-gray-300 text-sm">
+                Raw sensor and archive data
+              </p>
+            </div>
+
+            {/* LINE */}
+            <div className="w-[2px] h-20 bg-indigo-400 mt-2"></div>
+
+            {/* BOTTOM */}
+            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
+            rounded-2xl p-6 w-full text-center">
+
+              <h3 className="text-lg font-semibold">
+                Python AI Brain
+              </h3>
+
+              <p className="text-gray-400 text-sm">
+                Data processing and modeling
+              </p>
+            </div>
+          </div>
+
+          {/* STEP 2 */}
+          <div className="flex flex-col items-center relative">
+
+            {/* CARD */}
+            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
+            rounded-2xl p-6 w-full text-center">
+
+              <h3 className="text-xl font-semibold mb-2">
+                Prediction Engine
+              </h3>
+
+              <p className="text-gray-300 text-sm">
+                Generate forecasts and scores
+              </p>
+            </div>
+
+            {/* ARROW */}
+            <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 
+              border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
+            </div>
+
+            {/* BOTTOM */}
+            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
+            rounded-2xl p-6 w-full text-center">
+
+              <h3 className="text-lg font-semibold">
+                GIS Maps (QGIS)
+              </h3>
+
+              <p className="text-gray-400 text-sm">
+                Visualize spatial predictions
+              </p>
+            </div>
+          </div>
+
+          {/* STEP 3 */}
+          <div className="flex flex-col items-center relative">
+
+            {/* CARD */}
+            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
+            rounded-2xl p-6 w-full text-center">
+
+              <h3 className="text-xl font-semibold mb-2">
+                Decisions & Planning
+              </h3>
+
+              <p className="text-gray-300 text-sm">
+                Inform policy and enforcement
+              </p>
+            </div>
+
+            {/* LINE */}
+            <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 
+              border-l-4 border-r-4 border-b-4 border-transparent border-b-indigo-400"></div>
+            </div>
+
+            {/* DOT */}
+            <div className="w-4 h-4 bg-indigo-400 rounded-full mt-2"></div>
+          </div>
+
+        </div>
+
+        {/* FOOT TEXT */}
+        <p className="text-gray-400 text-sm md:text-base mt-16 max-w-4xl">
+          The system transforms raw noise data into predictive intelligence through AI processing and visualizes it in actionable GIS maps for urban planning and enforcement decisions.
+        </p>
+
+      </div>
+    </section>
+
+{/*===========graph  =================*/}
+
+     <section className="relative w-full min-h-[85vh] overflow-hidden text-white">
+
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105 opacity-60"
+    style={{ backgroundImage: "url('/graph-bg.png')" }}
+  />
+
+  {/* LIGHT GRADIENT (FIXED) */}
+  <div className="absolute inset-0 bg-gradient-to-b 
+  from-[#2a254d]/70 via-[#3b3560]/60 to-[#cbb9a5]/60"></div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 px-6 md:px-16 py-14 flex flex-col md:flex-row gap-10">
+
+    {/* LEFT SIDE */}
+    <div className="w-full md:w-1/2">
+
+      <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
+        The AI "Brain"
+      </h1>
+
+      <p className="text-orange-400 text-lg md:text-xl mb-6">
+        Key Differentiator
+      </p>
+
+      <p className="text-gray-300 text-lg md:text-xl mb-8">
+        Learns from the years of data
+      </p>
+
+      {/* CARDS */}
+      <div className="flex flex-col sm:flex-row gap-6">
+
+        {/* CARD 1 */}
+        <div className="bg-teal-300/20 backdrop-blur-md border border-teal-200/20 
+        rounded-xl p-5 w-full">
+
+          <h3 className="text-lg font-semibold mb-3">Understands</h3>
+          <ul className="space-y-2 text-gray-200">
+            <li>• Time</li>
+            <li>• Location</li>
+            <li>• Day vs Night</li>
+          </ul>
+        </div>
+
+        {/* CARD 2 */}
+        <div className="bg-green-300/20 backdrop-blur-md border border-green-200/20 
+        rounded-xl p-5 w-full">
+
+          <h3 className="text-lg font-semibold mb-3">Predicts</h3>
+          <ul className="space-y-2 text-gray-200">
+            <li>• 30 days</li>
+            <li>• 90 days</li>
+            <li>• 180 days</li>
+          </ul>
+        </div>
+
+      </div>
+
+      {/* FOOT TEXT */}
+      <div className="mt-10 text-gray-300">
+        <p>Explainable AI</p>
+        <p>Govt-safe models</p>
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE EMPTY (FOR GRAPH VISIBILITY) */}
+    <div className="hidden md:block md:w-1/2"></div>
+
+  </div>
+</section>
+
+
+
+{/*===========Accuracy & Validation  =================*/}
+
+  <section className="relative w-full min-h-[90vh] overflow-hidden text-white">
+
+      {/* BACKGROUND GRAPH */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105 opacity-40"
+        style={{ backgroundImage: "url('/graph-bg.png')" }}
+      />
+
+      {/* DARK + BLUE GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#020617] to-[#020024]"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 px-6 md:px-20 py-16 flex flex-col md:flex-row justify-between gap-10">
+
+        {/* LEFT SIDE */}
+        <div className="w-full md:w-[55%]">
+
+          {/* TITLE */}
+          <h1 className="text-4xl md:text-6xl font-light text-gray-200 mb-6">
+            Accuracy & Validation
+          </h1>
+
+          {/* SUBTITLE */}
+          <p className="text-orange-400 text-xl md:text-2xl mb-8">
+            We don't guess - we validate.
+          </p>
+
+          {/* DESC */}
+          <p className="text-gray-300 text-lg md:text-xl mb-8">
+            Real back-testing on historical data
+          </p>
+
+          {/* METRICS */}
+          <div>
+            <p className="text-gray-400 text-lg mb-4">
+              Accuracy metrics:
+            </p>
+
+            <ul className="space-y-4 text-lg md:text-xl text-gray-300">
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 bg-white rounded-full"></span> MAE
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 bg-white rounded-full"></span> RMSE
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-2 h-2 bg-white rounded-full"></span> Accuracy %
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* RIGHT SIDE (FLOATING TABLE) */}
+        <div className="w-full md:w-[40%] flex justify-center md:justify-end items-start">
+
+          <div className="w-full max-w-md bg-black/60 backdrop-blur-md 
+          border border-white/10 rounded-xl overflow-hidden shadow-xl">
+
+            {/* HEADER */}
+            <div className="grid grid-cols-2 text-gray-300 text-sm md:text-base font-semibold bg-black/80">
+              <div className="p-4 border-r border-white/10">Horizon</div>
+              <div className="p-4">Accuracy</div>
+            </div>
+
+            {/* ROWS */}
+            <div className="text-gray-300">
+
+              <div className="grid grid-cols-2 p-4 border-t border-white/10">
+                <div>30 Days</div>
+                <div>90–95%</div>
               </div>
+
+              <div className="grid grid-cols-2 p-4 border-t border-white/10 bg-white/5">
+                <div>90 Days</div>
+                <div>85–90%</div>
+              </div>
+
+              <div className="grid grid-cols-2 p-4 border-t border-white/10">
+                <div>180 Days</div>
+                <div>80–85%</div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    
+{/*===========Night Noise Maps  =================*/}
+
+
+<section className="relative w-full min-h-[90vh] bg-black text-white px-6 md:px-16 py-16">
+
+      {/* TITLE */}
+      <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
+        Day vs Night Noise Maps
+      </h1>
+
+      {/* SUBTITLE */}
+      <p className="text-orange-400 text-lg md:text-xl mb-12">
+        Same noise value, different meaning - day and night are treated differently.
+      </p>
+
+      {/* HEADERS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
+
+        <div>
+          <div className="h-[2px] bg-indigo-500 mb-4"></div>
+          <h3 className="text-gray-300 text-lg md:text-xl">
+            Day noise patterns
+          </h3>
+        </div>
+
+        <div>
+          <div className="h-[2px] bg-indigo-500 mb-4"></div>
+          <h3 className="text-gray-300 text-lg md:text-xl">
+            Night violation zones
+          </h3>
+        </div>
+
+        <div>
+          <div className="h-[2px] bg-indigo-500 mb-4"></div>
+          <h3 className="text-gray-300 text-lg md:text-xl">
+            Residential vs commercial impact
+          </h3>
+        </div>
+
+      </div>
+
+      {/* CARDS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* CARD 1 */}
+        <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
+
+          <img
+            src="/map-day.png"
+            alt="day map"
+            className="w-full h-[350px] object-cover"
+          />
+
+          {/* DOTS */}
+          <div className="absolute inset-0">
+            <div className="absolute top-[55%] left-[50%] w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute top-[45%] left-[48%] w-3 h-3 bg-orange-400 rounded-full"></div>
+            <div className="absolute top-[50%] left-[55%] w-3 h-3 bg-yellow-400 rounded-full"></div>
+          </div>
+
+        </div>
+
+        {/* CARD 2 */}
+        <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
+
+          <img
+            src="/map-night.png"
+            alt="night map"
+            className="w-full h-[350px] object-cover brightness-75"
+          />
+
+          {/* DOTS */}
+          <div className="absolute inset-0">
+            <div className="absolute top-[60%] left-[52%] w-3 h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute top-[45%] left-[48%] w-3 h-3 bg-yellow-400 rounded-full"></div>
+            <div className="absolute top-[40%] left-[50%] w-3 h-3 bg-yellow-400 rounded-full"></div>
+          </div>
+
+        </div>
+
+        {/* CARD 3 */}
+        <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
+
+          <img
+            src="/map-impact.png"
+            alt="impact map"
+            className="w-full h-[350px] object-cover brightness-75"
+          />
+
+          {/* LEGEND */}
+          <div className="absolute top-3 right-3 bg-black/70 px-3 py-2 rounded-md text-xs">
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 bg-blue-500 rounded-full"></span> Residential
+            </div>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="w-3 h-3 bg-orange-400 rounded-sm"></span> Commercial
+            </div>
+          </div>
+
+          {/* DOTS */}
+          <div className="absolute inset-0">
+            <div className="absolute top-[50%] left-[48%] w-3 h-3 bg-blue-500 rounded-full"></div>
+            <div className="absolute top-[55%] left-[52%] w-3 h-3 bg-orange-400 rounded-sm"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+   
+    {/*===========Heatmaps & Hotspots =================*/}
+    <section className="w-full min-h-[100vh] bg-black text-white px-6 md:px-16 py-16">
+
+      {/* TITLE */}
+      <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
+        Heatmaps & Hotspots
+      </h1>
+
+      {/* SUBTITLE */}
+      <p className="text-orange-400 text-lg md:text-xl mb-12">
+        This tells where enforcement should focus - not everywhere.
+      </p>
+
+      {/* TOP CARDS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+        {/* CARD 1 */}
+        <div className="bg-indigo-900/60 rounded-xl p-6 flex items-center gap-4 border border-indigo-400/20">
+          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-500/30">
+            <Flame className="text-indigo-300" />
+          </div>
+          <h3 className="text-lg md:text-xl text-gray-200">
+            Chronic noise zones
+          </h3>
+        </div>
+
+        {/* CARD 2 */}
+        <div className="bg-indigo-900/60 rounded-xl p-6 flex items-center gap-4 border border-indigo-400/20">
+          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-500/30">
+            <Repeat className="text-indigo-300" />
+          </div>
+          <h3 className="text-lg md:text-xl text-gray-200">
+            Repeated offenders
+          </h3>
+        </div>
+
+        {/* CARD 3 */}
+        <div className="bg-indigo-900/60 rounded-xl p-6 flex items-center gap-4 border border-indigo-400/20">
+          <div className="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-500/30">
+            <AlertTriangle className="text-indigo-300" />
+          </div>
+          <h3 className="text-lg md:text-xl text-gray-200">
+            High-risk areas
+          </h3>
+        </div>
+
+      </div>
+
+      {/* BOTTOM MAP CARDS */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        {/* MAP 1 */}
+        <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
+          <img
+            src="/Hotspots-1.jpg"
+            alt="hotspots"
+            className="w-full h-[300px] object-cover"
+          />
+        </div>
+
+        {/* MAP 2 */}
+        <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
+          <img
+            src="/Hotspots-2.jpg"
+            alt="hotspots"
+            className="w-full h-[300px] object-cover"
+          />
+        </div>
+
+        {/* MAP 3 */}
+        <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
+          <img
+            src="/Hotspots-3.jpg"
+            alt="hotspots"
+            className="w-full h-[300px] object-cover"
+          />
+        </div>
+
+      </div>
+
+    </section>
+
+{/*=========== Noise Range db for Governance Solution  =========*/}
+ <section className="relative w-full min-h-[90vh] overflow-hidden text-white">
+
+      {/* MAP BACKGROUND */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{ backgroundImage: "url('/map.png')" }}
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* TITLE */}
+      <div className="relative z-10 px-6 md:px-16 py-12">
+
+        <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
+          Noise Range db for Governance Solution
+        </h1>
+
+        <p className="text-gray-300 text-lg font-semibold">
+          Hyderabad Telangana
+        </p>
+
+      </div>
+
+      {/* 🔴🟡 HOTSPOTS */}
+      <div className="absolute inset-0 z-10">
+
+        {/* RED */}
+        <div className="absolute top-[58%] left-[55%] w-4 h-4 bg-red-500 rounded-full border-2 border-black"></div>
+        <div className="absolute top-[62%] left-[58%] w-4 h-4 bg-red-500 rounded-full border-2 border-black"></div>
+
+        {/* YELLOW */}
+        <div className="absolute top-[45%] left-[50%] w-4 h-4 bg-yellow-400 rounded-full border-2 border-black"></div>
+        <div className="absolute top-[48%] left-[53%] w-4 h-4 bg-yellow-400 rounded-full border-2 border-black"></div>
+        <div className="absolute top-[50%] left-[47%] w-4 h-4 bg-yellow-400 rounded-full border-2 border-black"></div>
+
+      </div>
+
+      {/* ⚪ LEFT PANEL (IMPORTANT PART) */}
+      <div className="absolute bottom-0 left-0 z-20 
+      w-full md:w-[45%] h-[40%] 
+      bg-white/80 text-black 
+      p-6 md:p-8">
+
+        <h3 className="text-sm font-semibold mb-3">
+          UNIPS db range — hyd with_noise_db
+        </h3>
+
+        <ul className="space-y-2 text-sm">
+
+          <li className="flex items-center gap-2">
+            <input type="checkbox" checked readOnly />
+            Very Low (&lt;50 dB)
+          </li>
+
+          <li className="flex items-center gap-2">
+            <input type="checkbox" checked readOnly />
+            Low (50–60 dB)
+          </li>
+
+          <li className="flex items-center gap-2">
+            <input type="checkbox" checked readOnly />
+            Moderate (60–70 dB)
+          </li>
+
+          <li className="flex items-center gap-2">
+            <input type="checkbox" checked readOnly />
+            High (70–80 dB)
+          </li>
+
+          <li className="flex items-center gap-2">
+            <input type="checkbox" checked readOnly />
+            Very High (&gt;80 dB)
+          </li>
+
+        </ul>
+
+        <div className="mt-4 text-xs text-gray-700">
+          <p>Noise_Heatmap_Day</p>
+          <p>Noise_Violation_Heatmap</p>
+          <p>Noise_Heatmap_Night</p>
+          <p>OpenStreetMap</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    {/*===========Prediction Maps =================*/}
+<section className="relative w-full h-screen overflow-hidden text-white">
+
+      {/* BACKGROUND */}
+      <div
+        className="absolute inset-0 bg-cover bg-center scale-105"
+        style={{ backgroundImage: "url('/map.png')" }}
+      />
+
+      {/* DARK OVERLAY (VERY IMPORTANT) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-[#020617]/85 to-[#020024]/90"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-20 px-6 md:px-16 pt-20">
+
+        {/* TITLE */}
+        <h2 className="text-3xl md:text-5xl text-gray-200 mb-4">
+          Prediction Maps
+        </h2>
+
+        {/* MAIN TEXT */}
+        <h1 className="text-4xl md:text-6xl text-orange-400 font-light leading-tight mb-16 max-w-4xl">
+          This map shows tomorrow's problems - today
+        </h1>
+
+        {/* 🔥 ARROW FLOW */}
+        <div className="flex items-center">
+
+          {/* STEP 1 */}
+          <div className="arrow">
+            <Calendar className="icon" />
+          </div>
+
+          {/* CONNECTOR GAP FIX */}
+          <div className="arrow gap-fix">
+            <Target className="icon" />
+          </div>
+
+          {/* LAST */}
+          <div className="arrow last">
+            <FileText className="icon" />
+          </div>
+
+        </div>
+
+        {/* TEXT BELOW */}
+        <div className="flex mt-4 text-gray-300 text-sm md:text-lg">
+
+          <p className="w-1/3 text-left">
+            30-days prediction map
+          </p>
+
+          <p className="w-1/3 text-center">
+            Hotspots before they occur
+          </p>
+
+          <p className="w-1/3 text-right pr-6">
+            Policy-ready insights
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+{/*==========Who Will Pay =================*/}
+<section className="w-full min-h-screen bg-gradient-to-b from-black to-[#020024] text-white px-6 md:px-16 py-16">
+
+      {/* TITLE */}
+      <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
+        Who Will Pay
+      </h1>
+
+      {/* SUBTITLE */}
+      <p className="text-gray-400 mb-12 text-sm md:text-lg max-w-2xl">
+        Key municipal stakeholders ready to invest in urban intelligence solutions.
+      </p>
+
+      {/* GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        {/* CARD */}
+        <div className="custom-card">
+          <div className="icon-box">
+            <LayoutDashboard size={20} />
+          </div>
+          <h3>Smart City Command Centers</h3>
+          <p>
+            Centralized operations hubs coordinating city-wide initiatives and
+            emergency response.
+          </p>
+        </div>
+
+        {/* CARD */}
+        <div className="custom-card">
+          <div className="icon-box">
+            <Building2 size={20} />
+          </div>
+          <h3>Municipal Corporations</h3>
+          <p>
+            Local government bodies managing infrastructure, services and urban
+            development.
+          </p>
+        </div>
+
+        {/* CARD */}
+        <div className="custom-card">
+          <div className="icon-box">
+            <Shield size={20} />
+          </div>
+          <h3>Traffic & Police Departments</h3>
+          <p>
+            Law enforcement and traffic management agencies ensuring public safety
+            and mobility.
+          </p>
+        </div>
+
+        {/* BOTTOM LEFT */}
+        <div className="custom-card md:col-span-1">
+          <div className="icon-box">
+            <Factory size={20} />
+          </div>
+          <h3>Pollution Control Boards</h3>
+          <p>
+            Environmental agencies monitoring air quality and enforcing
+            environmental regulations.
+          </p>
+        </div>
+
+        {/* BOTTOM RIGHT */}
+        <div className="custom-card md:col-span-2">
+          <div className="icon-box">
+            <Landmark size={20} />
+          </div>
+          <h3>Urban Planning Authorities</h3>
+          <p>
+            Planning commissions designing future city layouts and zoning regulations.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+{/*===========footer section  =================*/}
+      <footer className="relative w-full overflow-hidden border-t border-gray-700 bg-black/60 py-16 text-gray-300 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 text-sm sm:grid-cols-2 md:grid-cols-4">
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">
+              Popular Links
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Career in AI
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Quantum Computing
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Machine Learning
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Cloud Computing
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-[#c5a77b]">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">
+              Free Tools
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  AI Text Generator
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Resume Builder
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  File Converter
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Data Formatter
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  PDF Tools
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/about" className="hover:text-[#c5a77b]">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/service" className="hover:text-[#c5a77b]">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/" className="hover:text-[#c5a77b]">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="/career" className="hover:text-[#c5a77b]">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-[#c5a77b]">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Website Design
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  App Development
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  AI & ML
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  Cloud
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#c5a77b]">
+                  GIS
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 flex justify-center gap-8 border-t border-gray-700 pt-8 text-2xl">
+          {[FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn].map(
+            (Icon, index) => (
+              <Icon
+                key={index}
+                className="cursor-pointer transition hover:text-[#c5a77b]"
+              />
             )
           )}
         </div>
 
-      </section> */}
-
-      {/* ================= FOOTER ================= */}
-   <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
-
-  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
-
-    {/* Popular Links */}
-    <div>
-      <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>
-      <ul className="space-y-2">
-        <li><a href="#" className="hover:text-[#c5a77b]">Career in AI</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Quantum Computing</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Machine Learning</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Cloud Computing</a></li>
-        <li><a href="/contact" className="hover:text-[#c5a77b]">Contact Us</a></li>
-      </ul>
-    </div>
-
-    {/* Tools */}
-    <div>
-      <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
-      <ul className="space-y-2">
-        <li><a href="#" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Resume Builder</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">File Converter</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Data Formatter</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">PDF Tools</a></li>
-      </ul>
-    </div>
-
-    {/* Company */}
-    <div>
-      <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
-      <ul className="space-y-2">
-        <li><a href="/about" className="hover:text-[#c5a77b]">About Us</a></li>
-        <li><a href="/service" className="hover:text-[#c5a77b]">Services</a></li>
-        <li><a href="/" className="hover:text-[#c5a77b]">Products</a></li>
-        <li><a href="/career" className="hover:text-[#c5a77b]">Careers</a></li>
-        <li><a href="/contact" className="hover:text-[#c5a77b]">Contact</a></li>
-      </ul>
-    </div>
-
-    {/* Services */}
-    <div>
-      <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
-      <ul className="space-y-2">
-        <li><a href="#" className="hover:text-[#c5a77b]">Website Design</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">App Development</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">AI & ML</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">Cloud</a></li>
-        <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  {/* Social Icons */}
-  <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
-    {[FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn].map((Icon, i) => (
-      <Icon key={i} className="hover:text-[#c5a77b] cursor-pointer transition" />
-    ))}
-  </div>
-
-  {/* Logo */}
-  <div className="text-center mt-10">
-    <img src="/gaint-logo.png" className="mx-auto h-12 mb-4" />
-    <p className="text-gray-400 text-sm">
-      © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES
-    </p>
-  </div>
-
-</footer>
-
+        <div className="mt-10 text-center">
+          <img src="/gaint-logo.png" alt="GAINT logo" className="mx-auto mb-4 h-12" />
+          <p className="text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
