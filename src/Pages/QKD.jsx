@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { CheckCircle, Menu, X } from "lucide-react";
@@ -11,121 +12,11 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function QKDPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
  <div className="font-sans text-gray-800 scroll-smooth">
          {/* ---------------- HEADER ---------------- */}
-         <header className="fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-12 py-4 /70 backdrop-blur-md shadow-sm z-50">
-           <img src="/gaint-logo.png" alt="GAINT Clout Technologies" className="w-32 h-auto" />
-       {/* ---------------- NAVBAR (Animated Dropdown) ---------------- */}
-           <nav className="hidden md:flex justify-center w-full">
-            <ul className="
-              flex items-center 
-              gap-4 md:gap-6 lg:gap-10
-              text-sm md:text-base lg:text-xl
-              bg-gray-100 
-              px-4 md:px-6 lg:px-12 
-              py-2 md:py-3 lg:py-4
-              rounded-full 
-              shadow-lg
-              max-w-fit
-            ">
-          
-              <li><a href="/">Home</a></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/service">Services</Link></li>
-          
-              <li className="relative group">
-                <span className="flex items-center gap-1 cursor-pointer">
-                  Products ▾
-                </span>
-          
-                <ul className="
-                  absolute left-1/2 transform -translate-x-1/2
-                  mt-2 bg-white shadow-xl border rounded-2xl
-                  opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                  transition-all duration-300 w-60 z-50 text-sm md:text-lg
-                ">
-                  {[
-                    { name: "DonorGO", link: "/Donorgo" },
-                    { name: "GAINTInternsHub", link: "/internsapp" },
-                    { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-                    { name: "WellNest AI Station", link: "/wellnest" },
-                    { name: "QKD", link: "/qkd" },
-                    { name: "PQC", link: "/pqc" },
-                  ].map((product, i) => (
-                    <li key={i}>
-                      <a href={product.link} className="block px-4 py-2 hover:bg-gray-100">
-                        {product.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-          
-              <li><a href="/contact">Contact</a></li>
-          
-            </ul>
-          </nav>
-   
-                   {/* Mobile Nav */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-2 rounded-md border border-gray-300">
-                     {menuOpen ? <X /> : <Menu />}
-                   </button>
-                     {menuOpen && (
-                       <div className="absolute top-16 right-4 bg-white shadow-lg rounded-xl w-56 text-center py-4 animate-fadeIn z-50">
-                         {[
-                           { name: "Home", link: "/" },
-                           { name: "About", link: "/about" },
-                           { name: "Services", link: "/service" },
-                         ].map(({ name, link }) => (
-                           <a
-                             key={name}
-                             href={link}
-                             onClick={() => setMenuOpen(false)}
-                             className="block py-2 text-gray-900 hover:text-blue-600 transition"
-                           >
-                             {name}
-                           </a>
-                         ))}
-           
-                           {/* Products Dropdown (hover/tap reveal) */}
-                           <div className="relative group">
-                             <button className="block w-full py-2 text-gray-900 hover:text-blue-600 focus:outline-none">
-                               Products ▾
-                             </button>
-                             <div className="absolute left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                               {[
-                                 { name: "WellNest AI Station", link: "/wellnestai" },
-                                 { name: "GAINTImmuneIQ", link: "/immuneiq" },
-                                 { name: "DonorGO", link: "/donorgo" },
-                                 { name: "GAINTInternsHub", link: "/internsapp" },
-                                 { name: "Quantum Key Distribution (QKD)", link: "/QKD" },
-                               ].map(({ name, link }) => (
-                                 <a
-                                   key={name}
-                                   href={link}
-                                   onClick={() => setMenuOpen(false)}
-                                   className="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition"
-                                 >
-                                   {name}
-                                 </a>
-                               ))}
-                             </div>
-                           </div>
-           
-               <a
-                 href="/contact"
-                 onClick={() => setMenuOpen(false)}
-                 className="block py-2 text-gray-900 hover:text-blue-600 transition"
-               >
-                 Contact
-               </a>
-             </div>
-   
-           )}
-         </header>
+      <Header />
 
       {/* ================= HERO SECTION ================= */}
       <section className="text-center py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white mt-24">
@@ -456,3 +347,6 @@ export default function QKDPage() {
     </div>
   );
 }
+
+
+
