@@ -18,6 +18,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Globe2 } from "lucide-react";
 
 // -------------------- Services Data --------------------
 const services = [
@@ -41,6 +42,20 @@ const services = [
     title: "Cyber Security",
     desc: "Encryption, Firewalls, Threat Detection, Penetration Testing, Authentication, Malware Protection, Forensics, Risk Management, and Compliance.",
   },
+    {
+  icon: <Atom className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
+  title: "R&D On Post-Quantum Cryptography & Quantum Key Distribution",
+  desc: "Research and development focused on quantum-safe encryption methods and QKD to ensure next-generation cybersecurity resilience in the post-quantum era.",
+},
+{
+  icon: (
+    <Globe2 className="w-12 h-12 text-indigo-600 animate-spin-slow" />
+  ),
+  title: "Geographic Information System (GIS)",
+  desc: "Advanced GIS platform for spatial data analysis, mapping, and real-time decision-making. Enables smart city planning, land management, disaster monitoring, and geospatial intelligence for enterprises and governments.",
+  link: "/gis",
+},
+
   {
     icon: <Database className="w-12 h-12 text-indigo-600 animate-pulse" />,
     title: "Creative Designing",
@@ -60,11 +75,6 @@ const services = [
 
 
 
-  {
-  icon: <Atom className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
-  title: "R&D On Post-Quantum Cryptography & Quantum Key Distribution",
-  desc: "Research and development focused on quantum-safe encryption methods and QKD to ensure next-generation cybersecurity resilience in the post-quantum era.",
-},
 
 ];
 

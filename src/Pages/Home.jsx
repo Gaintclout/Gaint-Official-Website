@@ -28,6 +28,7 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { Atom } from "lucide-react";
 import Header from "@/components/Header";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -362,9 +363,10 @@ export default function Home() {
                 icon: (
                   <Building2 className="w-12 h-12 text-[#4285F4] animate-bounce drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
                 ),
-                name: "UNIPS",
+                
+                name: "Unips",
                 desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
-                link: "/unips",
+                link: "/gis",
               },
             ].map((product, i) => (
               <a

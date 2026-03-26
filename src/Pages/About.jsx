@@ -354,7 +354,7 @@ export default function About() {
                 {
                   icon: <Rocket className="w-6 h-6 text-[#EA4335]" />,
                   q: "Year 2: Innovation, Productization & Expansion",
-                  a: "Focus Areas: Build AI-based products, Start PQC prototype development, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
+                  a: "Focus Areas: Build AI-based products, Start PQC prototype development, GIS for Smart Cities Using AI Intelligence, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
                 },
                 {
                   icon: <GraduationCap className="w-6 h-6 text-[#FBBC05]" />,

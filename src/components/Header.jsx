@@ -59,7 +59,7 @@ export default function Header() {
                 Products <ChevronDown className="w-4 h-4" />
               </span>
 
-              <ul className="invisible absolute left-1/2 z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-white/10 bg-black/90 text-sm opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100 md:text-lg">
+              <ul className="invisible absolute left-1/2 z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/90 text-sm opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100 md:text-lg  ">
                 {products.map((product) => (
                   <li key={product.name}>
                     <NavLink
@@ -68,7 +68,7 @@ export default function Header() {
                         `block rounded-lg px-5 py-3 transition ${
                           isActive
                             ? "bg-white/10 text-[#4285F4]"
-                            : "text-white hover:bg-white/10 hover:text-[#4285F4]"
+                            : "text-black hover:bg-white/10 hover:text-[#4285F4]"
                         }`
                       }
                     >
@@ -108,13 +108,13 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="absolute left-4 right-4 top-20 z-50 overflow-hidden rounded-2xl bg-black/95 border border-white/10 py-4 text-center shadow-2xl md:hidden">
+        <div className="absolute left-4 right-4 top-20 z-50 overflow-hidden rounded-2xl bg-white/90  border border-white/10 py-4 text-center shadow-2xl md:hidden ">
           {navLinks.slice(0, 3).map(({ name, link }) => (
             <NavLink
               key={name}
               to={link}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-white transition hover:text-[#4285F4]"
+              className="block py-3 text-black transition hover:text-[#4285F4]"
             >
               {name}
             </NavLink>
@@ -124,7 +124,7 @@ export default function Header() {
           <div className="border-y border-white/10">
             <button
               onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-              className="flex w-full items-center justify-center gap-2 py-3 font-semibold text-white transition hover:text-[#4285F4]"
+              className="flex w-full items-center justify-center gap-2 py-3  text-black transition hover:text-[#4285F4]"
             >
               Products
               <ChevronDown className={`w-4 h-4 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
@@ -137,7 +137,7 @@ export default function Header() {
                     key={product.name}
                     to={product.link}
                     onClick={() => setMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-gray-300 transition hover:text-[#4285F4]"
+                    className="block px-4 py-2 text-sm text-black transition hover:text-[#4285F4]"
                   >
                     {product.name}
                   </NavLink>
@@ -149,7 +149,7 @@ export default function Header() {
           <NavLink
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="block py-3 text-white transition hover:text-[#4285F4]"
+            className="block py-3 text-black transition hover:text-[#4285F4]"
           >
             Contact
           </NavLink>

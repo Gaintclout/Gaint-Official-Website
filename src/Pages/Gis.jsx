@@ -4,90 +4,76 @@ import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Header from "../Components/Header";
 
 export default function GISPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+
+   {/* ================= GIS VS ================= */}
+  const contents = [
+  "The Problem",
+  "Why Noise is a Governance Problem",
+  "Our Solution",
+  "Solution Domains",
+  "System Architecture",
+  'The AI "Brain"',
+  "Accuracy & Validation",
+  "Day vs Night Noise Maps",
+  "Heatmaps & Hotspots",
+  "Prediction Maps",
+  "Who Will Pay",
+  "Decision Support Examples",
+  "Why GAINT",
+];
+
+ {/* ================= USE CASES ================= */}
+
+ const points = [
+    "Cities rely on manual or reactive noise monitoring",
+    "No visibility of future noise hotspots",
+    "Enforcement happens after complaints",
+    "No scientific accuracy validation",
+  ];
+
+  {/* ================= governance section ================= */}
+    const cards = [
+    {
+      title: "Health impact",
+      desc: "Sleep disruption and stress",
+    },
+    {
+      title: "Law & order",
+      desc: "Night disturbances",
+    },
+    {
+      title: "Festival & traffic noise",
+      desc: "Seasonal spikes",
+    },
+    {
+      title: "Court cases & citizen complaints",
+      desc: "Legal implications",
+    },
+  ];
+
 
   return (
     <div className="font-sans text-gray-800">
 
       {/* ================= HEADER ================= */}
-      <header className="fixed top-0 left-0 w-full flex justify-between items-center px-4 sm:px-6 md:px-12 py-3 md:py-4 backdrop-blur-md z-50">
-
-        <img src="/gaint-logo.png" className="w-24 sm:w-28 md:w-32" />
-
-        {/* DESKTOP NAV */}
-        <nav className="hidden md:flex justify-center w-full">
-          <ul className="flex items-center gap-4 md:gap-6 lg:gap-10 text-sm md:text-base lg:text-lg bg-gray-100 px-4 md:px-6 lg:px-10 py-2 md:py-3 rounded-full shadow-lg max-w-fit">
-
-            {[
-              { name: "Home", path: "/" },
-              { name: "About", path: "/about" },
-              { name: "Services", path: "/service" },
-              { name: "GIS", path: "/gis" },
-              { name: "Contact", path: "/contact" },
-            ].map((item, i) => (
-              <li key={i}>
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `transition duration-300 ${
-                      isActive
-                        ? "text-[#4285F4] font-semibold"
-                        : "hover:text-[#4285F4]"
-                    }`
-                  }
-                >
-                  {item.name}
-                </NavLink>
-              </li>
-            ))}
-
-          </ul>
-        </nav>
-
-        {/* MOBILE BUTTON */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden"
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
-
-        {/* MOBILE MENU */}
-        {menuOpen && (
-          <div className="absolute top-16 right-4 bg-white rounded-xl shadow-lg w-56 p-4 md:hidden">
-            {[
-              { name: "Home", path: "/" },
-              { name: "About", path: "/about" },
-              { name: "Services", path: "/service" },
-              { name: "GIS", path: "/gis" },
-              { name: "Contact", path: "/contact" },
-            ].map((item, i) => (
-              <NavLink
-                key={i}
-                to={item.path}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 hover:text-blue-500"
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </div>
-        )}
-      </header>
-
+ 
+        <Header />
       {/* ================= HERO ================= */}
       <section
-        className="relative text-center py-16 sm:py-20 md:py-28 px-4 bg-cover bg-center mt-16 md:mt-20"
-        style={{ backgroundImage: "url('/Web.jpg')" }}
+        className="relative text-center py-16 sm:py-20 md:py-28 px-4 bg-cover bg-center mt-16 md:mt-20 h-[100vh] flex items-center justify-center"
+        style={{ backgroundImage: "url('/gis-bg-image.png')" }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
 
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-green-400 mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-6xl lg:text-6xl text-green-400 mb-4 md:mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -95,7 +81,7 @@ export default function GISPage() {
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed"
+            className="text-sm sm:text-xl md:text-xl lg:text-3xl text-gray-300 leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -107,37 +93,146 @@ export default function GISPage() {
       </section>
 
       {/* ================= GIS VS ================= */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+       <section className="w-full 
+bg-gradient-to-br from-black via-[#020617] to-[#020024] 
+text-white 
+px-4 sm:px-6 md:px-12 lg:px-16 
+py-10 md:py-16 lg:py-20 
+flex flex-col md:flex-row items-start justify-between">
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-green-400 mb-8 md:mb-10">
-          GIS vs Traditional Systems
-        </h2>
+  {/* LEFT SIDE */}
+  <div className="w-full md:w-1/2 mb-8 md:mb-0">
+    <h1 className="text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] 
+    font-light leading-tight tracking-wide text-gray-200">
+      TABLE OF <br /> CONTENTS
+    </h1>
+  </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* RIGHT SIDE */}
+  <div className="w-full md:w-1/2 flex gap-4 md:gap-6">
 
-          <div className="p-5 sm:p-6 bg-gray-900 text-white rounded-xl">
-            <h3 className="text-lg sm:text-xl mb-3">🌍 GIS</h3>
-            <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-              <li>Real-time mapping</li>
-              <li>Location intelligence</li>
-              <li>AI analytics</li>
-            </ul>
-          </div>
+    {/* LINE */}
+    <div className="w-[2px] bg-white/30 mt-1 hidden md:block"></div>
 
-          <div className="p-5 sm:p-6 bg-gray-900 text-white rounded-xl">
-            <h3 className="text-lg sm:text-xl mb-3">📊 Traditional</h3>
-            <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
-              <li>No spatial data</li>
-              <li>Limited insights</li>
-              <li>Static reports</li>
-            </ul>
-          </div>
-
+    {/* CONTENT LIST */}
+    <div className="w-full">
+      {contents.map((item, index) => (
+        <div
+          key={index}
+          className="flex justify-between items-center 
+          py-1.5 sm:py-2 md:py-3 
+          text-xs sm:text-sm md:text-lg lg:text-xl 
+          text-gray-300 hover:text-white 
+          transition duration-300"
+        >
+          <span className="pr-4">{item}</span>
+          <span className="text-gray-500 text-xs sm:text-sm md:text-base">
+            {String(index + 1).padStart(2, "0")}
+          </span>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/*  ============governance section ==============  */}
+
+     <section className="w-full bg-gradient-to-b from-black via-[#020617] to-[#020024] text-white px-6 md:px-16 py-14 md:py-20">
+
+      {/* TITLE */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-200 mb-6 text-center md:text-left">
+        Why Noise is a Governance Problem
+      </h1>
+
+      {/* SUBTITLE */}
+      <p className="text-lg sm:text-xl md:text-2xl text-orange-400 font-medium mb-10 text-center md:text-left">
+        Noise is not just pollution - it's a governance, health, and law-and-order issue.
+      </p>
+
+      {/* CARDS */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="bg-indigo-900/70 backdrop-blur-lg border border-indigo-500/20 
+            rounded-xl p-6 
+            shadow-[0_10px_30px_rgba(0,0,0,0.5)] 
+            hover:scale-105 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] 
+            transition duration-300"
+          >
+            {/* TITLE */}
+            <h3 className="text-lg md:text-xl font-semibold text-gray-200 mb-3">
+              {card.title}
+            </h3>
+
+            {/* DESC */}
+            <p className="text-gray-400 text-sm md:text-base">
+              {card.desc}
+            </p>
+          </div>
+        ))}
+
+      </div>
+    </section>
 
       {/* ================= USE CASES ================= */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+
+         <section className="w-full min-h-[80vh] relative text-white overflow-hidden">
+
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/city-bg.jpg')", // 🔁 replace with your image
+        }}
+      />
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 px-6 sm:px-10 md:px-16 py-12 md:py-20 flex flex-col md:flex-row items-start justify-between">
+
+        {/* LEFT SIDE */}
+        <div className="w-full md:w-1/2">
+
+          {/* TITLE */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-200 mb-6">
+            The Problem
+          </h1>
+
+          {/* SUBTITLE */}
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-orange-400 font-medium mb-8 leading-relaxed">
+            Current systems only tell what happened, not what will happen.
+          </p>
+
+          {/* POINTS */}
+          <div className="space-y-5">
+            {points.map((point, index) => (
+              <div key={index} className="flex items-start gap-4">
+
+                {/* BOX */}
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md 
+                bg-indigo-600/80 
+                shadow-[0_0_15px_rgba(99,102,241,0.5)] 
+                flex-shrink-0 mt-1"></div>
+
+                {/* TEXT */}
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                  {point}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* RIGHT SIDE (OPTIONAL EMPTY FOR IMAGE VISIBILITY) */}
+        <div className="hidden md:block md:w-1/2"></div>
+      </div>
+    </section>
+
+      {/* <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-green-400 mb-8 md:mb-10">
           GIS Applications
@@ -158,10 +253,13 @@ export default function GISPage() {
           ))}
         </div>
 
-      </section>
+      </section> */}
 
-      {/* ================= ROADMAP ================= */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
+      {/* ================= governance section ================= */}
+
+
+      
+      {/* <section className="py-12 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
 
         <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-green-400 mb-8 md:mb-10">
           GIS Roadmap
@@ -177,7 +275,7 @@ export default function GISPage() {
           )}
         </div>
 
-      </section>
+      </section> */}
 
       {/* ================= FOOTER ================= */}
    <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
