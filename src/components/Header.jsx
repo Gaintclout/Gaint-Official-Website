@@ -7,6 +7,7 @@ const products = [
   { name: "GAINTInternsHub", link: "/internsapp" },
   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
   { name: "WellNest AI Station", link: "/wellnest" },
+  { name: "GIS", link: "/gis" },
   { name: "QKD", link: "/qkd" },
   { name: "PQC", link: "/pqc" },
 ];
