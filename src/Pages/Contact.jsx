@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 
 import {
@@ -14,9 +13,7 @@ import {
 
 
 export default function ContactPage() {
-  const [showProducts, setShowProducts] = useState(false);
   const [message, setMessage] = useState("");
-  const [isWhiteBg, setIsWhiteBg] = useState(false);
   
 
   const handleSubmit = (e) => {
@@ -53,12 +50,12 @@ ${name}`
       <Header />
 
       {/* ======= HERO SECTION ======= */}
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-32 px-6 text-center mt-32">
+      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-24 md:mt-32">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl md:text-6xl mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl mb-4"
         >
           Get in Touch
         </motion.h1>
@@ -66,7 +63,7 @@ ${name}`
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-3xl max-w-2xl mx-auto"
+          className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto"
         >
           Let’s collaborate to create cutting-edge AI and Quantum-driven
           innovations that redefine the future.
@@ -74,7 +71,7 @@ ${name}`
       </section>
 
       {/* ======= CONTACT SECTION ======= */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Info Cards */}
           <motion.div
@@ -84,7 +81,7 @@ ${name}`
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Contact Information
             </h2>
 
@@ -95,7 +92,7 @@ ${name}`
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Email Us</h4>
-                <p className="text-gray-600 text-sm">info@gaintclout.com</p>
+                <p className="text-gray-600 text-sm sm:text-base">info@gaintclout.com</p>
               </div>
             </div>
 
@@ -106,7 +103,7 @@ ${name}`
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Call Us</h4>
-                <p className="text-gray-600 text-sm">+91 88972 38849</p>
+                <p className="text-gray-600 text-sm sm:text-base">+91 88972 38849</p>
               </div>
             </div>
 
@@ -117,7 +114,7 @@ ${name}`
               </div>
               <div>
                 <h4 className="font-semibold text-gray-900">Visit Us</h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm sm:text-base">
                   Awfis Elite 4th Floor, Orbit Building, Knowledge City,
                   Hyderabad
                 </p>
@@ -131,9 +128,9 @@ ${name}`
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white shadow-lg rounded-2xl p-8"
+            className="bg-white shadow-lg rounded-2xl p-6 sm:p-8"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Send us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -187,7 +184,7 @@ ${name}`
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="w-full h-[400px] mt-8 mb-16"
+        className="w-full h-[260px] sm:h-[320px] md:h-[400px] mt-8 mb-16 px-4 sm:px-6"
       >
         <iframe
           title="Orbit by Auro Realty Hyderabad"

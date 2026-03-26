@@ -29,7 +29,7 @@ export default function Header() {
           <img
             src="/gaint-logo.png"
             alt="GAINT Clout Technologies"
-            className="h-auto w-32 invert" // Ensures logo is visible on black if it was dark
+            className="h-auto w-32" // Ensures logo is visible on black if it was dark
           />
         </NavLink>
 
