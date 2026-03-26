@@ -179,6 +179,7 @@ export default function Home() {
                   { name: "GAINTInternsHub", link: "/internsapp" },
                   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
                   { name: "WellNest AI Station", link: "/wellnest" },
+                  { name: "GIS", link: "/gis" },
                   { name: "QKD", link: "/qkd" },
                   { name: "PQC", link: "/pqc" },
                 ].map((product, i) => (
@@ -249,6 +250,7 @@ export default function Home() {
                   { name: "GAINTInternsHub", link: "/internsapp" },
                   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
                   { name: "WellNest AI Station", link: "/wellnest" },
+                  { name: "GIS", link: "/gis" },
                   { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
                   { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
                 ].map(({ name, link }) => (
