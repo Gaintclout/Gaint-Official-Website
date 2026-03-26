@@ -250,7 +250,7 @@ export default function Home() {
                   { name: "GAINTInternsHub", link: "/internsapp" },
                   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
                   { name: "WellNest AI Station", link: "/wellnest" },
-                  { name: "GIS", link: "/gis" },
+                  { name: "UNIPS", link: "/unips" },
                   { name: "Quantum Key Distribution (QKD)", link: "/qkd" },
                   { name: "Post-Quantum Cryptography (PQC)", link: "/pqc" },
                 ].map(({ name, link }) => (
@@ -300,7 +300,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/20"></div>
 
         {/* 🔹 Right-aligned text overlay */}
-        <div className="relative z-10 flex flex-col items-center md:items-end text-center md:text-left text-white px-6 md:px-24 max-w-4xl">
+        <div className="relative z-10 flex flex-col items-end text-left text-white px-8 md:px-24 max-w-4xl">
           {/* Glassmorphic Transparent Card */}
           <div className="bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-10 md:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] ">
 
@@ -309,7 +309,7 @@ export default function Home() {
               className=" 
         font-semibold leading-none mb-6 animate-fadeInUp
         bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
-        text-[clamp(56px,12vw,200px)]
+        text-[100px] sm:text-[150px] md:text-[180px] lg:text-[200px] xl:text-[120px]
         drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
       "
             >
@@ -318,7 +318,7 @@ export default function Home() {
 
             {/* Subtext */}
             <p className="
-  text-base sm:text-xl md:text-3xl lg:text-4xl
+  text-xl sm:text-2xl md:text-4xl lg:text-5xl
   bg-gradient-to-r from-[#ffffff] to-[#ffff00]
   bg-clip-text text-transparent
   max-w-[700px]
@@ -354,20 +354,20 @@ export default function Home() {
 
 
       {/* ---------------- COUNTERS ---------------- */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-10 md:py-16 text-center">
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16 text-center h-50">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div data-aos="fade-up">
-            <h3 className="text-5xl sm:text-7xl md:text-[100px] font-extrabold mb-2">{clients}+</h3>
-            <p className="text-lg sm:text-2xl">Happy Clients</p>
+            <h3 className="text-[100px] font-extrabold mb-2">{clients}+</h3>
+            <p className="text-[28px]">Happy Clients</p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200">
-            <h3 className="text-5xl sm:text-7xl md:text-[100px] font-bold mb-2">{projects}+</h3>
-            <p className="text-lg sm:text-2xl">AI Projects Delivered</p>
+            <h3 className="text-[100px] font-bold mb-2">{projects}+</h3>
+            <p className="text-[28px]">AI Projects Delivered</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
-            <h3 className="text-5xl sm:text-7xl md:text-[100px] font-bold mb-2">{awards}</h3>
-            <p className="text-lg sm:text-2xl">Awards & Recognitions</p>
+            <h3 className="text-[100px] font-bold mb-2">{awards}</h3>
+            <p className="text-[28px]">Awards & Recognitions</p>
           </div>
         </div>
       </section>
@@ -479,8 +479,8 @@ export default function Home() {
       <section id="products" className="py-20 bg-transparent backdrop-blur-0">
         {/* Heading */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 mb-3">Our Products</h3>
-          <p className="text-gray-500 text-lg sm:text-2xl md:text-3xl">
+          <h3 className="text-6xl text-gray-800 mb-3">Our Products</h3>
+          <p className="text-gray-500 text-4xl">
             Innovations developed by GAINT
           </p>
         </div>
@@ -535,7 +535,7 @@ export default function Home() {
           ))}
 
           {/* 👉 LAST 2 CENTERED */}
-          <div className="md:col-span-3 flex flex-col items-center justify-center gap-6 md:flex-row md:gap-20">
+          <div className="md:col-span-3 flex justify-center gap-20">
 
             {[
               {
@@ -560,7 +560,7 @@ export default function Home() {
                 href={product.link}
                 data-aos="zoom-in"
                 data-aos-delay={i * 150}
-                className="group relative w-full max-w-sm backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden"
+                className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden w-full max-w-sm"
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
 
@@ -640,8 +640,8 @@ export default function Home() {
 
       <section className="bg-white py-10 overflow-hidden">
         <div className="text-center mb-8">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl text-gray-800">Our Collaborations</h3>
-          <p className="text-gray-500 text-lg sm:text-2xl md:text-3xl">
+          <h3 className="text-6xl  text-gray-800">Our Collaborations</h3>
+          <p className="text-gray-500 text-4xl">
             Industry, Academia, and Media partnerships powering GAINT
           </p>
         </div>
