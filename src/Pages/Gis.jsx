@@ -175,10 +175,10 @@ export default function Gis() {
       />
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/10"></div>
 
       {/* GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#020024]/95 via-black/90 to-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020024]/95 via-black/50 to-black/50"></div>
 
       {/* CONTENT */}
       <div className="relative z-20 w-full px-6 md:px-16 py-16">
@@ -238,163 +238,76 @@ export default function Gis() {
     </section>
 
 {/*===========pipeline/architecture =================*/}
-<section className="relative w-full min-h-[60vh] overflow-hidden text-white">
+<section className="relative w-full min-h-[70vh] bg-black text-white px-6 md:px-16 py-16">
 
-  {/* BACKGROUND IMAGE */}
-  <div
-    className="absolute inset-0 bg-cover bg-center scale-[0.9] opacity-95"
-    style={{ backgroundImage: "url('/architecture-bg.jpeg')" }}
-  />
+  {/* TITLE */}
+  <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-3">
+    UNIPS System Architecture
+  </h1>
 
-  {/* LIGHT BLACK OVERLAY */}
-  <div className="absolute inset-0 bg-black/40"></div>
+  <p className="text-orange-400 text-lg md:text-xl mb-20">
+    AI is the brain, GIS is the face.
+  </p>
 
-  {/* CONTENT */}
-  <div className="relative z-10 px-6 md:px-16 py-16">
+  {/* MAIN CONTAINER */}
+  <div className="relative flex justify-between items-start">
 
-    {/* TITLE */}
-    <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-3 drop-shadow-lg">
-      UNIPS System Architecture
-    </h1>
+    {/* 🔥 ARROWS (ABSOLUTE LAYER) */}
+    <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
 
-    <p className="text-orange-400 text-lg md:text-xl mb-14 drop-shadow-md">
-      AI is the brain, GIS is the face.
-    </p>
+      {/* LEFT PIPE */}
+      <div className="absolute left-[10%] top-10 w-[2px] h-[220px] bg-indigo-400"></div>
+      <div className="absolute left-[10%] top-[230px] w-[120px] h-[2px] bg-indigo-400"></div>
+      <div className="absolute left-[22%] top-[230px] w-[2px] h-[180px] bg-indigo-400"></div>
 
-    {/* PIPELINE */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+      {/* CENTER PIPE */}
+      <div className="absolute left-[48%] top-10 w-[2px] h-[400px] bg-indigo-400"></div>
 
-      {/* STEP 1 */}
-      <div className="flex flex-col items-center relative">
+      {/* RIGHT PIPE */}
+      <div className="absolute right-[10%] top-10 w-[2px] h-[220px] bg-indigo-400"></div>
+      <div className="absolute right-[10%] top-[230px] w-[120px] h-[2px] bg-indigo-400"></div>
+      <div className="absolute right-[22%] top-[230px] w-[2px] h-[180px] bg-indigo-400"></div>
 
-        <div className="w-4 h-4 bg-indigo-400 rounded-full mb-2"></div>
+      {/* DOTS */}
+      <div className="absolute left-[9.5%] top-10 w-4 h-4 bg-indigo-400 rounded-full"></div>
+      <div className="absolute right-[9.5%] top-10 w-4 h-4 bg-indigo-400 rounded-full"></div>
 
-        {/* CARD 1 */}
-        <div className="relative w-full text-center p-6 rounded-2xl 
-        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
-        
-        transition-all duration-300 ease-in-out
-        hover:scale-105 hover:-translate-y-2 
-        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
-        hover:border-indigo-300/60">
+      {/* ARROW HEADS */}
+      <div className="absolute left-[22%] top-[390px] 
+        border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
 
-          <h3 className="text-xl font-semibold mb-2">
-            Historical Noise
-          </h3>
+      <div className="absolute left-[48%] top-[390px] 
+        border-l-4 border-r-4 border-b-4 border-transparent border-b-indigo-400"></div>
 
-          <p className="text-gray-300 text-sm">
-            Raw sensor and archive data
-          </p>
-
-        </div>
-
-        <div className="w-[2px] h-20 bg-indigo-400 mt-2"></div>
-
-        {/* CARD 2 */}
-        <div className="relative w-full text-center p-6 rounded-2xl 
-        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
-        
-        transition-all duration-300 ease-in-out
-        hover:scale-105 hover:-translate-y-2 
-        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
-        hover:border-indigo-300/60">
-
-          <h3 className="text-lg font-semibold">
-            Python AI Brain
-          </h3>
-
-          <p className="text-gray-400 text-sm">
-            Data processing and modeling
-          </p>
-
-        </div>
-      </div>
-
-      {/* STEP 2 */}
-      <div className="flex flex-col items-center relative">
-
-        {/* CARD 3 */}
-        <div className="relative w-full text-center p-6 rounded-2xl 
-        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
-        
-        transition-all duration-300 ease-in-out
-        hover:scale-105 hover:-translate-y-2 
-        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
-        hover:border-indigo-300/60">
-
-          <h3 className="text-xl font-semibold mb-2">
-            Prediction Engine
-          </h3>
-
-          <p className="text-gray-300 text-sm">
-            Generate forecasts and scores
-          </p>
-
-        </div>
-
-        <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 
-          border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
-        </div>
-
-        {/* CARD 4 */}
-        <div className="relative w-full text-center p-6 rounded-2xl 
-        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
-        
-        transition-all duration-300 ease-in-out
-        hover:scale-105 hover:-translate-y-2 
-        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
-        hover:border-indigo-300/60">
-
-          <h3 className="text-lg font-semibold">
-            GIS Maps (QGIS)
-          </h3>
-
-          <p className="text-gray-400 text-sm">
-            Visualize spatial predictions
-          </p>
-
-        </div>
-      </div>
-
-      {/* STEP 3 */}
-      <div className="flex flex-col items-center relative">
-
-        {/* CARD 5 */}
-        <div className="relative w-full text-center p-6 rounded-2xl 
-        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
-        
-        transition-all duration-300 ease-in-out
-        hover:scale-105 hover:-translate-y-2 
-        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
-        hover:border-indigo-300/60">
-
-          <h3 className="text-xl font-semibold mb-2">
-            Decisions & Planning
-          </h3>
-
-          <p className="text-gray-300 text-sm">
-            Inform policy and enforcement
-          </p>
-
-        </div>
-
-        <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 
-          border-l-4 border-r-4 border-b-4 border-transparent border-b-indigo-400"></div>
-        </div>
-
-        <div className="w-4 h-4 bg-indigo-400 rounded-full mt-2"></div>
-      </div>
+      <div className="absolute right-[22%] top-[390px] 
+        border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
 
     </div>
 
-    {/* FOOT TEXT */}
-    <p className="text-gray-900 text-sm md:text-base mt-16 max-w-4xl drop-shadow-md">
-      The system transforms raw noise data into predictive intelligence through AI processing <br></br>and visualizes it in actionable GIS maps for urban planning and enforcement decisions.
-    </p>
+    {/* CARDS */}
+    <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-10 relative z-10">
+
+      {/* LEFT */}
+      {/* <div className="flex flex-col items-center gap-20">
+        <Card title="Historical Noise" desc="Raw sensor and archive data" />
+        <Card title="Python AI Brain" desc="Data processing and modeling" />
+      </div> */}
+
+      {/* CENTER */}
+      {/* <div className="flex flex-col items-center gap-20">
+        <Card title="Prediction Engine" desc="Generate forecasts and scores" />
+        <Card title="GIS Maps (QGIS)" desc="Visualize spatial predictions" />
+      </div> */}
+
+      {/* RIGHT */}
+      {/* <div className="flex flex-col items-center gap-20">
+        <Card title="Decisions & Planning" desc="Inform policy and enforcement" />
+      </div> */}
+
+    </div>
 
   </div>
+
 </section>
 
 {/*===========graph ai brain =================*/}
@@ -404,7 +317,7 @@ export default function Gis() {
   {/* BACKGROUND IMAGE */}
   <div
     className="absolute inset-0 bg-cover bg-center scale-105 opacity-60"
-    style={{ backgroundImage: "url('/graph-bg.jpg')" }}
+    style={{ backgroundImage: "url('/graph.jpg')" }}
   />
 
   {/* LIGHT GRADIENT (FIXED) */}
@@ -481,7 +394,7 @@ export default function Gis() {
       {/* BACKGROUND GRAPH */}
       <div
         className="absolute inset-0 h bg-cover bg-center scale-115 opacity-80"
-        style={{ backgroundImage: "url('/graph1-bg.JPG')" }}
+        style={{ backgroundImage: "url('/graph-1.png')" }}
       />
 
       {/* DARK + BLUE GRADIENT */}
@@ -530,7 +443,7 @@ export default function Gis() {
         </div>
 
         {/* RIGHT SIDE (FLOATING TABLE) */}
-        <div className="w-full md:w-[40%] flex justify-center md:justify-end items-start">
+        <div className="w-full md:w-[40%] flex justify-center md:justify-end items-start mt-20">
 
           <div className="w-full max-w-md bg-black/60 backdrop-blur-md 
           border border-white/10 rounded-xl overflow-hidden shadow-xl">
