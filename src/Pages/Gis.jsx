@@ -50,37 +50,39 @@ export default function Gis() {
       <Header />
 /*--------------------------------- Hero Section ----------------------------------*/
       <section
-        id="about"
-        ref={heroRef}
-        className="relative flex h-[500px] w-full items-center justify-end overflow-hidden bg-black md:h-[500px]"
-      >
-        <img
-          src="/gis-bg-image.png"
-          alt="Services Background"
-          className="absolute top-0 left-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
+  id="about"
+  ref={heroRef}
+  className="relative flex h-[400px] md:h-[500px] w-full items-center justify-center overflow-hidden bg-black px-4"
+>
+  <img
+    src="/gis-bg-image.png"
+    alt="Services Background"
+    className="absolute top-0 left-0 h-full w-full object-cover"
+  />
 
-        <div className="relative z-10 mx-auto max-w-4xl">
-          <motion.h1
-            className="mb-4 text-4xl text-green-400 sm:text-3xl md:mb-6 md:text-6xl lg:text-6xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            GAINT GIS - Geographic Information Systems
-          </motion.h1>
+  <div className="absolute inset-0 bg-black/60"></div>
 
-          <motion.p
-            className="text-2xl leading-relaxed text-gray-300 sm:text-xl md:text-3xl lg:text-3xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            Empowering spatial intelligence with AI-driven geospatial solutions
-            for smart cities, disaster management, and infrastructure planning.
-          </motion.p>
-        </div>
-      </section>
+  <div className="relative z-10 max-w-4xl text-center">
+    
+    <motion.h1
+      className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-green-400"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      GAINT GIS - Geographic Information Systems
+    </motion.h1>
 
+    <motion.p
+      className="text-sm sm:text-lg md:text-2xl lg:text-3xl leading-relaxed text-gray-300"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      Empowering spatial intelligence with AI-driven geospatial solutions
+      for smart cities, disaster management, and infrastructure planning.
+    </motion.p>
+
+  </div>
+</section>
 {/*===========Problem Section =================*/}
        <section className="relative min-h-[80vh] w-full overflow-hidden text-white">
 

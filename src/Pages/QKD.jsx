@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { CheckCircle, Menu, X } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
@@ -12,19 +12,18 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function QKDPage() {
-
   return (
- <div className="font-sans text-gray-800 scroll-smooth">
-         {/* ---------------- HEADER ---------------- */}
+    <div className="font-sans text-gray-800 scroll-smooth overflow-x-hidden">
+      {/* ---------------- HEADER ---------------- */}
       <Header />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="text-center py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white mt-24">
+      <section className="text-center py-16 md:py-24 bg-gradient-to-r from-indigo-600 to-purple-700 text-white mt-20 px-4 md:px-6">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl  mb-4"
+          className="text-4xl md:text-6xl font-bold mb-6"
         >
           Quantum Key Distribution (QKD)
         </motion.h1>
@@ -32,46 +31,41 @@ export default function QKDPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className=" mx-auto text-3xl"
+          className="max-w-4xl mx-auto text-xl md:text-3xl leading-snug"
         >
-          Building the future of quantum-secure communication through research<br></br>
-          innovation, and Quantum-as-a-Service (QaaS).
+          Building the future of quantum-secure communication through research, innovation, and Quantum-as-a-Service (QaaS).
         </motion.p>
       </section>
 
       {/* ================= ABOUT QKD ================= */}
-      <section className="py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-7xl  mb-6 text-center text-indigo-700">
+      <section className="py-12 md:py-16 px-6 max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-indigo-700">
           About QKD
         </h2>
-        <p className="  text-3xl text-gray-600 leading-relaxed align-center">
-          Quantum Key Distribution (QKD) leverages quantum mechanics principles 
-          superposition and entanglement - to securely exchange encryption keys<br></br>
-          between two parties. Unlike classical cryptography, QKD instantly
-          detects <br></br> eavesdropping attempts, ensuring ultra-secure communication in
-          the<br></br> post-quantum era.
+        <p className="text-xl md:text-3xl text-gray-600 leading-relaxed">
+          Quantum Key Distribution (QKD) leverages quantum mechanics principles—superposition and entanglement—to securely exchange encryption keys between two parties. Unlike classical cryptography, QKD instantly detects eavesdropping attempts, ensuring ultra-secure communication in the post-quantum era.
         </p>
       </section>
 
       {/* ================= R&D ROADMAP ================= */}
-      <section className="py-20 px-6 md:px-16 bg-gray-50">
-        <h2 className="text-6xl  text-center mb-12 text-indigo-700">
+      <section className="py-16 md:py-20 px-6 md:px-16 bg-gray-50">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-indigo-700">
           QKD – R&D & Product Roadmap
         </h2>
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-indigo-500"></div>
+          {/* Timeline Center Line - Hidden on Mobile */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-indigo-500"></div>
 
           {[
             {
-              title: "Phase 1: Research & Knowledge Foundation",
+              title: "Phase 1: Research Foundation",
               duration: "Jan 2026 - June 2026",
               color: "from-indigo-500 to-blue-500",
               points: [
                 "Form Quantum R&D core team",
                 "Study QKD protocols (BB84, E91)",
                 "Simulate using Qiskit & QuNetSim",
-                // "Apply for India Quantum Mission grants",
               ],
             },
             {
@@ -91,7 +85,7 @@ export default function QKDPage() {
               color: "from-pink-500 to-red-500",
               points: [
                 "Build hardware-level prototype",
-                "Establish fiber testbed between GAINT sites",
+                "Establish fiber testbed between sites",
                 "Integrate AI anomaly detection",
                 "Run QaaS internal trials",
               ],
@@ -102,7 +96,7 @@ export default function QKDPage() {
               color: "from-blue-500 to-indigo-700",
               points: [
                 "Launch GAINT QaaS Platform",
-                "Offer QKD for Banks, Defense, Healthcare",
+                "Offer QKD for Banks & Defense",
                 "Create Quantum Cloud integration",
                 "Patent & onboard enterprise clients",
               ],
@@ -110,20 +104,27 @@ export default function QKDPage() {
           ].map((phase, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className={`mb-14 flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center`}
+              className={`mb-10 md:mb-14 flex flex-col md:flex-row items-center w-full ${
+                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
-              <div className="md:w-1/2"></div>
-              <div className="relative md:w-1/2 bg-white shadow-xl p-6 rounded-2xl border-t-4 border-indigo-500 hover:shadow-2xl transition">
+              {/* Desktop Spacer */}
+              <div className="hidden md:block md:w-1/2"></div>
+              
+              {/* Card Container */}
+              <div className="relative w-full md:w-1/2 bg-white shadow-xl p-6 md:p-8 rounded-2xl border-t-4 border-indigo-500 hover:shadow-2xl transition">
                 <div
-                  className={`absolute top-4 ${i % 2 === 0 ? "-left-3" : "-right-3"} w-6 h-6 bg-gradient-to-r ${phase.color} rounded-full shadow-lg`}
+                  className={`absolute top-4 hidden md:block ${
+                    i % 2 === 0 ? "-left-3" : "-right-3"
+                  } w-6 h-6 bg-gradient-to-r ${phase.color} rounded-full shadow-lg`}
                 ></div>
-                <h3 className="text-3xl font-semibold mb-1">{phase.title}</h3>
-                <p className="text-xl text-gray-500 mb-3">{phase.duration}</p>
-                <ul className="list-disc ml-5 text-gray-700 space-y-1 text-xl">
+                <h3 className="text-2xl md:text-3xl font-bold mb-1">{phase.title}</h3>
+                <p className="text-lg md:text-xl text-indigo-500 font-medium mb-3">{phase.duration}</p>
+                <ul className="list-disc ml-5 text-gray-700 space-y-2 text-lg md:text-xl">
                   {phase.points.map((p, idx) => (
                     <li key={idx}>{p}</li>
                   ))}
@@ -136,16 +137,16 @@ export default function QKDPage() {
 
       {/* ================= TARGET SECTORS ================= */}
       <section className="py-16 px-6 md:px-16 bg-gray-100">
-        <h2 className="text-6xl  text-center mb-8 text-indigo-700">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-10 text-indigo-700">
           Target Industry Sectors
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {["Banking & FinTech","Defense & Aerospace","Healthcare","Telecom & Data Centers"].map((sector, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {["Banking & FinTech", "Defense & Aerospace", "Healthcare", "Telecom & Data Centers"].map((sector, i) => (
             <motion.div key={i} whileHover={{ scale: 1.05 }}>
               <Card className="shadow-md border-t-4 border-indigo-400 h-full hover:shadow-lg transition-all">
-                <CardContent className="text-center py-10">
-                  <h3 className="text-2xl font-semibold mb-2 ">{sector}</h3>
-                  <p className="text-gray-600 text-xl">
+                <CardContent className="text-center py-8 md:py-10">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">{sector}</h3>
+                  <p className="text-gray-600 text-lg md:text-xl">
                     Securing critical communications with quantum-grade encryption.
                   </p>
                 </CardContent>
@@ -156,58 +157,31 @@ export default function QKDPage() {
       </section>
 
       {/* ================= QaaS PRICING ================= */}
-      <section className="py-20 bg-white px-6 md:px-16">
-        <h2 className="text-6xl  text-center mb-12 text-indigo-700">
-          Quantum-as-a-Service (QaaS) Pricing
+      <section className="py-16 md:py-20 bg-white px-6 md:px-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-indigo-700">
+          QaaS Pricing
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            {
-              tier: "Starter",
-              price: "₹49,000/mo",
-              features: [
-                "10 Quantum-secure connections",
-                "Basic API Access",
-                "Key refresh every 30s",
-                "Email support",
-              ],
-            },
-            {
-              tier: "Professional",
-              price: "₹99,000/mo",
-              features: [
-                "50 Quantum-secure connections",
-                "Priority API & SDK access",
-                "AI-driven key management dashboard",
-                "24/7 support",
-              ],
-            },
-            {
-              tier: "Enterprise",
-              price: "Custom Pricing",
-              features: [
-                "Unlimited secure connections",
-                "Dedicated quantum channel setup",
-                "Custom encryption algorithms",
-                "On-site deployment & SLA",
-              ],
-            },
+            { tier: "Starter", price: "₹49,000/mo", features: ["10 Quantum-secure connections", "Basic API Access", "Key refresh every 30s", "Email support"] },
+            { tier: "Professional", price: "₹99,000/mo", features: ["50 Quantum-secure connections", "Priority API & SDK access", "AI Dashboard", "24/7 support"] },
+            { tier: "Enterprise", price: "Custom Pricing", features: ["Unlimited secure connections", "Dedicated channel setup", "Custom algorithms", "On-site deployment"] },
           ].map((plan, i) => (
-            <motion.div key={i} whileHover={{ scale: 1.05 }}>
-              <Card className="shadow-xl border-t-4 border-indigo-600 hover:shadow-2xl transition-all">
+            <motion.div key={i} whileHover={{ y: -10 }}>
+              <Card className="shadow-xl border-t-4 border-indigo-600 h-full flex flex-col">
                 <CardHeader className="text-center">
-                  <CardTitle className="text-3xl  mb-1">{plan.tier}</CardTitle>
-                  <p className="text-gray-500 text-2xl">{plan.price}</p>
+                  <CardTitle className="text-2xl md:text-3xl font-bold">{plan.tier}</CardTitle>
+                  <p className="text-indigo-600 text-2xl md:text-3xl font-bold mt-2">{plan.price}</p>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
+                <CardContent className="flex-grow">
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((f, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <CheckCircle className="text-indigo-500 w-5 h-5 mr-2" /> {f}
+                      <li key={idx} className="flex items-start text-gray-700 text-lg md:text-xl">
+                        <CheckCircle className="text-indigo-500 w-6 h-6 mr-3 flex-shrink-0" /> {f}
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-6 w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-all">
+                  <button className="mt-auto w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-md">
                     Get Started
                   </button>
                 </CardContent>
@@ -217,136 +191,59 @@ export default function QKDPage() {
         </div>
       </section>
 
-      {/* ================= IMPORTANCE ================= */}
-      <section className="py-20 px-6 md:px-16 bg-gray-50">
-        <h2 className="text-6xl  text-center mb-8 text-indigo-700">
-          Importance of QKD for Future Security
-        </h2>
-        <div className="max-w-5xl mx-auto text-gray-700 text-2xl space-y-4 leading-relaxed">
-          <p>
-            As quantum computing evolves, classical encryption will soon become vulnerable.
-            QKD offers unbreakable protection grounded in quantum physics itself.
-          </p>
-          <p>
-            GAINT’s investment in QKD establishes it as a pioneer in quantum cybersecurity,
-            enabling Quantum-Key-Distribution-as-a-Service (QaaS) for next-gen secure communication infrastructures.
-          </p>
-        </div>
-      </section>
-
       {/* ================= CTA ================= */}
-      <section className="text-center py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+      <section className="text-center py-16 md:py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white px-6">
         <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl  mb-4 text-century-githic"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-4xl md:text-6xl font-bold mb-6"
         >
           Join GAINT’s Quantum Future
         </motion.h2>
-        <p className="text-3xl mb-8">
+        <p className="text-xl md:text-3xl mb-10 opacity-90">
           Partner with us to build the backbone of tomorrow’s secure quantum internet.
         </p>
-       <Link
+        <Link
           to="/contact"
-          className="inline-block bg-white text-indigo-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-md hover:shadow-lg"
+          className="inline-block bg-white text-indigo-700 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg text-lg"
         >
           Contact GAINT Quantum R&D
         </Link>
-
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
+      <footer className="bg-slate-900 text-gray-300 py-12 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>
-            <ul className="space-y-2">
-              <li><a href="https://www.guvi.in/blog/ai-and-ml-job-opportunities-in-india/" target="_blank" className="hover:text-[#c5a77b]">Career in AI</a></li>
-              <li><a href="https://www.techtarget.com/whatis/definition/quantum-computing" target="_blank" className="hover:text-[#c5a77b]">Quantum Computing</a></li>
-              <li><a href="https://www.stxnext.com/blog/best-machine-learning-blogs-resources" target="_blank" className="hover:text-[#c5a77b]">Machine Learning</a></li>
-              <li><a href="https://learn.rumie.org/jR/bytes/learn-the-basics-of-cloud-computing-in-3-minutes" target="_blank" className="hover:text-[#c5a77b]">Cloud Computing</a></li>
-              <li><a href="/contact" className="hover:text-[#c5a77b]">Contact Us</a></li>
-            </ul>
-          </div>
-         <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
-            <ul className="space-y-2">
-              <li><a href="https://chatgpt.com/" className="hover:text-[#c5a77b]">AI Text Generator</a></li>
-              <li><a href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab" className="hover:text-[#c5a77b]">Resume Builder</a></li>
-              <li><a href="https://www.ilovepdf.com/" className="hover:text-[#c5a77b]">File Converter</a></li>
-              <li><a href="https://jsonformatter.org/" className="hover:text-[#c5a77b]">Data Formatter</a></li>
-              <li><a href="https://www.smallpdf.com/split-pdf" className="hover:text-[#c5a77b]">PDF Split & Merge</a></li>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><a href="#" className="hover:text-indigo-400">Career in AI</a></li>
+              <li><a href="#" className="hover:text-indigo-400">Quantum Computing</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="/about" className="hover:text-[#c5a77b]">About Us</a></li>
-              <li><a href="/service" className="hover:text-[#c5a77b]">Services</a></li>
-              <li><a href="/" className="hover:text-[#c5a77b]">Products</a></li>
-              <li><a href="/career" className="hover:text-[#c5a77b]">Careers</a></li>
-              <li><a href="/contact" className="hover:text-[#c5a77b]">Contact</a></li>
+            <h3 className="text-white font-bold mb-4">Company</h3>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><Link to="/about" className="hover:text-indigo-400">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#c5a77b]">Website Design</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">App Development</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">AI & ML Solutions</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Cloud Integration</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">IT Consulting</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
-              <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
-            </ul>
+          <div className="col-span-2 md:col-span-2">
+            <h3 className="text-white font-bold mb-6 text-center md:text-left">Connect</h3>
+            <div className="flex justify-center md:justify-start gap-6 text-2xl">
+              <a href="https://www.facebook.com/GaintCloutTechnologies" className="hover:text-indigo-400 transition"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/gaintclout/" className="hover:text-indigo-400 transition"><FaInstagram /></a>
+              <a href="https://x.com/Gaintclout" className="hover:text-indigo-400 transition"><FaXTwitter /></a>
+              <a href="https://www.linkedin.com/in/gaintclouttechnologies/" className="hover:text-indigo-400 transition"><FaLinkedinIn /></a>
+            </div>
           </div>
         </div>
-
-        {/* Social Icons */}
-        <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
-          {[
-            { Icon: FaFacebookF, link: "https://www.facebook.com/GaintCloutTechnologies" },
-            { Icon: FaInstagram, link: "https://www.instagram.com/gaintclout/" },
-            { Icon: FaXTwitter, link: "https://x.com/Gaintclout" },
-            { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/gaintclouttechnologies/" },
-          ].map(({ Icon, link }, i) => (
-            <a
-              key={i}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-200 hover:text-[#c5a77b] transition transform hover:scale-110"
-            >
-              <Icon />
-            </a>
-          ))}
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="text-center mt-10">
-          <img
-            src="/gaint-logo.png"
-            alt="GAINT Clout Logo"
-            className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
-          />
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+        <div className="text-center pt-8 border-t border-gray-800">
+           <p className="text-xs md:text-sm">
+            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD.
           </p>
-
-          <div className="mt-3 flex justify-center gap-6 text-xs text-gray-500">
-            <a href="#" className="hover:text-[#c5a77b]">Privacy Policy</a>
-            <a href="#" className="hover:text-[#c5a77b]">Terms & Conditions</a>
-            <a href="#" className="hover:text-[#c5a77b]">Refund Policy</a>
-          </div>
         </div>
-
-        {/* Glow Line */}
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#c5a77b]/40 to-transparent"></div>
       </footer>
     </div>
   );
 }
-
-
-
