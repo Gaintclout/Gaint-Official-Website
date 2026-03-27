@@ -143,9 +143,9 @@ export default function About() {
         {/* Text Overlay */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 md:px-16 max-w-4xl mx-auto">
 
-          <h1
-            className="
-    leading-tight mb-6 animate-fadeInUp
+          <h1 
+            className=" mt-20
+    leading-tight animate-fadeInUp
     text-white font-semibold
     text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl
     drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
