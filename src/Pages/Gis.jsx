@@ -139,7 +139,7 @@ export default function Gis() {
       
 
       <section className="w-full bg-gradient-to-b from-black via-[#ffffff] to-[#] px-6 py-14 text-white md:px-16 md:py-20">
-        <h1 className="mb-6 text-center text-3xl font-light text-white sm:text-4xl md:text-left md:text-5xl lg:text-6xl">
+        <h1 className="mb-6 text-center text-3xl font-light text-black sm:text-4xl md:text-left md:text-5xl lg:text-5xl">
           Why Noise is a Governance Problem
         </h1>
 
@@ -178,7 +178,7 @@ export default function Gis() {
       <div className="absolute inset-0 bg-black/10"></div>
 
       {/* GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#020024]/95 via-black/50 to-black/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020024]/95 via-black/50 to-black/10"></div>
 
       {/* CONTENT */}
       <div className="relative z-20 w-full px-6 md:px-16 py-16">
@@ -407,7 +407,7 @@ export default function Gis() {
         <div className="w-full md:w-[55%]">
 
           {/* TITLE */}
-          <h1 className="text-4xl md:text-6xl font-light text-gray-200 mb-6">
+          <h1 className="text-4xl md:text-5xl font-light text-gray-200 mb-6">
             Accuracy & Validation
           </h1>
 
@@ -773,7 +773,7 @@ export default function Gis() {
       />
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-[#020617]/85 to-[#020024]/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-[#020617]/85 to-[#020024]/10"></div>
 
       {/* CONTENT */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-16">
@@ -784,7 +784,7 @@ export default function Gis() {
         </h2>
 
         {/* MAIN TEXT */}
-        <h1 className="text-4xl md:text-6xl text-orange-400 font-light leading-tight mb-16 max-w-4xl">
+        <h1 className="text-4xl md:text-5xl text-orange-400 font-light leading-tight mb-16 max-w-4xl">
           This map shows tomorrow's problems - today
         </h1>
 

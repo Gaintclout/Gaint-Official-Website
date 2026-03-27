@@ -8,18 +8,18 @@ import {
 
 export default function WhoWillPay() {
   return (
-    <section className="w-full bg-gradient-to-b from-black via-[#020024] to-black text-white py-20">
+    <section className="w-full bg-gradient-to-b from-white via-[#020024] to-white text-white py-20">
 
       {/* CONTAINER (VERY IMPORTANT FIX) */}
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* TITLE */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 tracking-wide">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl font-light text-black mb-4 tracking-wide">
           Who Will Pay
         </h1>
 
         {/* SUBTITLE */}
-        <p className="text-gray-400 mb-14 text-sm md:text-lg max-w-xl leading-relaxed">
+        <p className="text-gray-800 mb-14 text-sm md:text-xl max-w-xl leading-relaxed">
           Key municipal stakeholders ready to invest in urban intelligence solutions.
         </p>
 
