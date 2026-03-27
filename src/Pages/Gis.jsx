@@ -138,8 +138,8 @@ export default function Gis() {
       {/*===========Why Noise is a Governance Problem Section  =================*/}
       
 
-      <section className="w-full bg-gradient-to-b from-black via-[#020617] to-[#020024] px-6 py-14 text-white md:px-16 md:py-20">
-        <h1 className="mb-6 text-center text-3xl font-light text-gray-200 sm:text-4xl md:text-left md:text-5xl lg:text-6xl">
+      <section className="w-full bg-gradient-to-b from-black via-[#ffffff] to-[#] px-6 py-14 text-white md:px-16 md:py-20">
+        <h1 className="mb-6 text-center text-3xl font-light text-white sm:text-4xl md:text-left md:text-5xl lg:text-6xl">
           Why Noise is a Governance Problem
         </h1>
 
@@ -238,149 +238,173 @@ export default function Gis() {
     </section>
 
 {/*===========pipeline/architecture =================*/}
+<section className="relative w-full min-h-[60vh] overflow-hidden text-white">
 
- <section className="relative w-full min-h-[90vh] overflow-hidden text-white">
+  {/* BACKGROUND IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-[0.9] opacity-95"
+    style={{ backgroundImage: "url('/architecture-bg.jpeg')" }}
+  />
 
-      {/* BACKGROUND IMAGE */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105 opacity-30"
-        style={{ backgroundImage: "url('/architecture-bg.png')" }} // replace image
-      />
+  {/* LIGHT BLACK OVERLAY */}
+  <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0b0f2a] to-[#1a1f4a]"></div>
+  {/* CONTENT */}
+  <div className="relative z-10 px-6 md:px-16 py-16">
 
-      {/* CONTENT */}
-      <div className="relative z-10 px-6 md:px-16 py-16">
+    {/* TITLE */}
+    <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-3 drop-shadow-lg">
+      UNIPS System Architecture
+    </h1>
 
-        {/* TITLE */}
-        <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-3">
-          UNIPS System Architecture
-        </h1>
+    <p className="text-orange-400 text-lg md:text-xl mb-14 drop-shadow-md">
+      AI is the brain, GIS is the face.
+    </p>
 
-        <p className="text-orange-400 text-lg md:text-xl mb-14">
-          AI is the brain, GIS is the face.
-        </p>
+    {/* PIPELINE */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
 
-        {/* PIPELINE */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+      {/* STEP 1 */}
+      <div className="flex flex-col items-center relative">
 
-          {/* STEP 1 */}
-          <div className="flex flex-col items-center relative">
+        <div className="w-4 h-4 bg-indigo-400 rounded-full mb-2"></div>
 
-            {/* TOP DOT */}
-            <div className="w-4 h-4 bg-indigo-400 rounded-full mb-2"></div>
+        {/* CARD 1 */}
+        <div className="relative w-full text-center p-6 rounded-2xl 
+        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
+        
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:-translate-y-2 
+        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
+        hover:border-indigo-300/60">
 
-            {/* CARD */}
-            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
-            rounded-2xl p-6 w-full text-center">
+          <h3 className="text-xl font-semibold mb-2">
+            Historical Noise
+          </h3>
 
-              <h3 className="text-xl font-semibold mb-2">
-                Historical Noise
-              </h3>
-
-              <p className="text-gray-300 text-sm">
-                Raw sensor and archive data
-              </p>
-            </div>
-
-            {/* LINE */}
-            <div className="w-[2px] h-20 bg-indigo-400 mt-2"></div>
-
-            {/* BOTTOM */}
-            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
-            rounded-2xl p-6 w-full text-center">
-
-              <h3 className="text-lg font-semibold">
-                Python AI Brain
-              </h3>
-
-              <p className="text-gray-400 text-sm">
-                Data processing and modeling
-              </p>
-            </div>
-          </div>
-
-          {/* STEP 2 */}
-          <div className="flex flex-col items-center relative">
-
-            {/* CARD */}
-            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
-            rounded-2xl p-6 w-full text-center">
-
-              <h3 className="text-xl font-semibold mb-2">
-                Prediction Engine
-              </h3>
-
-              <p className="text-gray-300 text-sm">
-                Generate forecasts and scores
-              </p>
-            </div>
-
-            {/* ARROW */}
-            <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 
-              border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
-            </div>
-
-            {/* BOTTOM */}
-            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
-            rounded-2xl p-6 w-full text-center">
-
-              <h3 className="text-lg font-semibold">
-                GIS Maps (QGIS)
-              </h3>
-
-              <p className="text-gray-400 text-sm">
-                Visualize spatial predictions
-              </p>
-            </div>
-          </div>
-
-          {/* STEP 3 */}
-          <div className="flex flex-col items-center relative">
-
-            {/* CARD */}
-            <div className="border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md 
-            rounded-2xl p-6 w-full text-center">
-
-              <h3 className="text-xl font-semibold mb-2">
-                Decisions & Planning
-              </h3>
-
-              <p className="text-gray-300 text-sm">
-                Inform policy and enforcement
-              </p>
-            </div>
-
-            {/* LINE */}
-            <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 
-              border-l-4 border-r-4 border-b-4 border-transparent border-b-indigo-400"></div>
-            </div>
-
-            {/* DOT */}
-            <div className="w-4 h-4 bg-indigo-400 rounded-full mt-2"></div>
-          </div>
+          <p className="text-gray-300 text-sm">
+            Raw sensor and archive data
+          </p>
 
         </div>
 
-        {/* FOOT TEXT */}
-        <p className="text-gray-400 text-sm md:text-base mt-16 max-w-4xl">
-          The system transforms raw noise data into predictive intelligence through AI processing and visualizes it in actionable GIS maps for urban planning and enforcement decisions.
-        </p>
+        <div className="w-[2px] h-20 bg-indigo-400 mt-2"></div>
 
+        {/* CARD 2 */}
+        <div className="relative w-full text-center p-6 rounded-2xl 
+        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
+        
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:-translate-y-2 
+        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
+        hover:border-indigo-300/60">
+
+          <h3 className="text-lg font-semibold">
+            Python AI Brain
+          </h3>
+
+          <p className="text-gray-400 text-sm">
+            Data processing and modeling
+          </p>
+
+        </div>
       </div>
-    </section>
 
-{/*===========graph  =================*/}
+      {/* STEP 2 */}
+      <div className="flex flex-col items-center relative">
+
+        {/* CARD 3 */}
+        <div className="relative w-full text-center p-6 rounded-2xl 
+        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
+        
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:-translate-y-2 
+        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
+        hover:border-indigo-300/60">
+
+          <h3 className="text-xl font-semibold mb-2">
+            Prediction Engine
+          </h3>
+
+          <p className="text-gray-300 text-sm">
+            Generate forecasts and scores
+          </p>
+
+        </div>
+
+        <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 
+          border-l-4 border-r-4 border-t-4 border-transparent border-t-indigo-400"></div>
+        </div>
+
+        {/* CARD 4 */}
+        <div className="relative w-full text-center p-6 rounded-2xl 
+        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
+        
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:-translate-y-2 
+        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
+        hover:border-indigo-300/60">
+
+          <h3 className="text-lg font-semibold">
+            GIS Maps (QGIS)
+          </h3>
+
+          <p className="text-gray-400 text-sm">
+            Visualize spatial predictions
+          </p>
+
+        </div>
+      </div>
+
+      {/* STEP 3 */}
+      <div className="flex flex-col items-center relative">
+
+        {/* CARD 5 */}
+        <div className="relative w-full text-center p-6 rounded-2xl 
+        border border-indigo-400/40 bg-indigo-900/20 backdrop-blur-md
+        
+        transition-all duration-300 ease-in-out
+        hover:scale-105 hover:-translate-y-2 
+        hover:shadow-[0_0_40px_rgba(99,102,241,0.4)]
+        hover:border-indigo-300/60">
+
+          <h3 className="text-xl font-semibold mb-2">
+            Decisions & Planning
+          </h3>
+
+          <p className="text-gray-300 text-sm">
+            Inform policy and enforcement
+          </p>
+
+        </div>
+
+        <div className="w-[2px] h-20 bg-indigo-400 mt-2 relative">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 
+          border-l-4 border-r-4 border-b-4 border-transparent border-b-indigo-400"></div>
+        </div>
+
+        <div className="w-4 h-4 bg-indigo-400 rounded-full mt-2"></div>
+      </div>
+
+    </div>
+
+    {/* FOOT TEXT */}
+    <p className="text-gray-900 text-sm md:text-base mt-16 max-w-4xl drop-shadow-md">
+      The system transforms raw noise data into predictive intelligence through AI processing <br></br>and visualizes it in actionable GIS maps for urban planning and enforcement decisions.
+    </p>
+
+  </div>
+</section>
+
+{/*===========graph ai brain =================*/}
 
      <section className="relative w-full min-h-[85vh] overflow-hidden text-white">
 
   {/* BACKGROUND IMAGE */}
   <div
     className="absolute inset-0 bg-cover bg-center scale-105 opacity-60"
-    style={{ backgroundImage: "url('/graph-bg.png')" }}
+    style={{ backgroundImage: "url('/graph-bg.jpg')" }}
   />
 
   {/* LIGHT GRADIENT (FIXED) */}
@@ -456,12 +480,12 @@ export default function Gis() {
 
       {/* BACKGROUND GRAPH */}
       <div
-        className="absolute inset-0 bg-cover bg-center scale-105 opacity-40"
-        style={{ backgroundImage: "url('/graph-bg.png')" }}
+        className="absolute inset-0 h bg-cover bg-center scale-115 opacity-80"
+        style={{ backgroundImage: "url('/graph1-bg.JPG')" }}
       />
 
       {/* DARK + BLUE GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#020617] to-[#020024]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black bg-gradient-to-b from-black/50 via-[#020655]/30 to-[#020024]/60"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 px-6 md:px-20 py-16 flex flex-col md:flex-row justify-between gap-10">
@@ -633,14 +657,14 @@ export default function Gis() {
           />
 
           {/* LEGEND */}
-          <div className="absolute top-3 right-3 bg-black/70 px-3 py-2 rounded-md text-xs">
+          {/* <div className="absolute top-3 right-3 bg-black/70 px-3 py-2 rounded-md text-xs">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 bg-blue-500 rounded-full"></span> Residential
             </div>
             <div className="flex items-center gap-2 mt-1">
               <span className="w-3 h-3 bg-orange-400 rounded-sm"></span> Commercial
             </div>
-          </div>
+          </div> */}
 
           {/* DOTS */}
           <div className="absolute inset-0">
