@@ -12,6 +12,7 @@ import {
   Factory,
   LayoutDashboard,
 } from "lucide-react";
+import WhoWillPay from "../components/WhoWillPay";
 
 
 
@@ -142,7 +143,7 @@ export default function Gis() {
           Why Noise is a Governance Problem
         </h1>
 
-        <p className="mb-10 text-center text-lg font-medium text-orange-400 sm:text-xl md:text-left md:text-2xl">
+        <p className="mb-10 text-center text-lg font-medium text-orange-400 sm:text-xl md:text-left md:text-3xl">
           Noise is not just pollution - it&apos;s a governance, health, and
           law-and-order issue.
         </p>
@@ -188,7 +189,7 @@ export default function Gis() {
         </h2>
 
         {/* BIG HEADING */}
-        <h1 className="text-4xl md:text-7xl text-orange-400 font-light leading-tight mb-10">
+        <h1 className="text-4xl md:text-4xl text-orange-400 font-light leading-tight mb-10">
           From noise data to actionable intelligence
         </h1>
 
@@ -826,7 +827,7 @@ export default function Gis() {
 
 
     {/*===========Prediction Maps =================*/}
-<section className="relative w-full h-screen overflow-hidden text-white">
+  <section className="relative w-full min-h-[70vh] overflow-hidden text-white flex items-center">
 
       {/* BACKGROUND */}
       <div
@@ -834,11 +835,11 @@ export default function Gis() {
         style={{ backgroundImage: "url('/map.png')" }}
       />
 
-      {/* DARK OVERLAY (VERY IMPORTANT) */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-[#020617]/85 to-[#020024]/90"></div>
 
       {/* CONTENT */}
-      <div className="relative z-20 px-6 md:px-16 pt-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-16">
 
         {/* TITLE */}
         <h2 className="text-3xl md:text-5xl text-gray-200 mb-4">
@@ -850,124 +851,185 @@ export default function Gis() {
           This map shows tomorrow's problems - today
         </h1>
 
-        {/* 🔥 ARROW FLOW */}
-        <div className="flex items-center">
+        {/* 🔥 ARROWS + TEXT GRID (IMPORTANT FIX) */}
+        <div className="grid grid-cols-3 gap-6 md:gap-10 items-start">
 
           {/* STEP 1 */}
-          <div className="arrow">
-            <Calendar className="icon" />
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center text-white
+              w-[300px] h-[80px]
+              lg:w-[300px] lg:h-[80px]
+              md:w-[240px] md:h-[70px]
+              sm:w-[180px] sm:h-[60px]
+              w-[130px] h-[50px]
+              bg-gradient-to-r from-[#2a2f7a] to-[#2e3aa8]
+              [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%,10%_50%)]
+              hover:scale-105 hover:-translate-y-1 transition-all duration-300
+            ">
+              <Calendar size={24} />
+            </div>
+
+            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+              30-days prediction map
+            </p>
           </div>
 
-          {/* CONNECTOR GAP FIX */}
-          <div className="arrow gap-fix">
-            <Target className="icon" />
+          {/* STEP 2 */}
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center text-white
+              w-[300px] h-[80px]
+              lg:w-[300px] lg:h-[80px]
+              md:w-[240px] md:h-[70px]
+              sm:w-[180px] sm:h-[60px]
+              w-[130px] h-[50px]
+              bg-gradient-to-r from-[#2a2f7a] to-[#2e3aa8]
+              [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%,10%_50%)]
+              hover:scale-105 hover:-translate-y-1 transition-all duration-300
+            ">
+              <Target size={24} />
+            </div>
+
+            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+              Hotspots before they occur
+            </p>
           </div>
 
-          {/* LAST */}
-          <div className="arrow last">
-            <FileText className="icon" />
+          {/* STEP 3 (FIXED SHAPE) */}
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center text-white
+              w-[300px] h-[80px]
+              lg:w-[300px] lg:h-[80px]
+              md:w-[240px] md:h-[70px]
+              sm:w-[180px] sm:h-[60px]
+              w-[130px] h-[50px]
+              bg-gradient-to-r from-[#2a2f7a] to-[#2e3aa8]
+              [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%,10%_50%)]
+              hover:scale-105 hover:-translate-y-1 transition-all duration-300
+            ">
+              <FileText size={24} />
+            </div>
+
+            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+              Policy-ready insights
+            </p>
           </div>
-
-        </div>
-
-        {/* TEXT BELOW */}
-        <div className="flex mt-4 text-gray-300 text-sm md:text-lg">
-
-          <p className="w-1/3 text-left">
-            30-days prediction map
-          </p>
-
-          <p className="w-1/3 text-center">
-            Hotspots before they occur
-          </p>
-
-          <p className="w-1/3 text-right pr-6">
-            Policy-ready insights
-          </p>
 
         </div>
 
       </div>
     </section>
 {/*==========Who Will Pay =================*/}
-<section className="w-full min-h-screen bg-gradient-to-b from-black to-[#020024] text-white px-6 md:px-16 py-16">
 
-      {/* TITLE */}
-      <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
-        Who Will Pay
-      </h1>
+  <WhoWillPay />
 
-      {/* SUBTITLE */}
-      <p className="text-gray-400 mb-12 text-sm md:text-lg max-w-2xl">
-        Key municipal stakeholders ready to invest in urban intelligence solutions.
-      </p>
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+{/*=========== Decision Support =================*/}
 
-        {/* CARD */}
-        <div className="custom-card">
-          <div className="icon-box">
-            <LayoutDashboard size={20} />
+       <section className="relative w-full bg-gradient-to-b from-black via-[#020024] to-black text-white py-20 px-6 md:px-20 overflow-hidden">
+
+      {/* RIGHT SIDE IMAGE */}
+{/* RIGHT SIDE IMAGE */}
+<div className="absolute top-[-40px] right-[-60px] lg:top-[-60px] lg:right-[-80px] w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[20px] rounded-full overflow-hidden border border-yellow-400/40 shadow-[0_0_80px_rgba(250,204,21,0.2)] z-0">
+
+  <img
+    src="/decision-support.jpg"
+    alt="decision"
+    className="w-full h-full object-cover"
+  />
+
+
+</div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* TITLE */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 tracking-wide">
+          Decision Support Examples
+        </h1>
+
+        {/* SUBTITLE */}
+        <p className="text-gray-400 mb-16 max-w-xl text-sm md:text-lg leading-relaxed">
+          Real-world scenarios where intelligence drives better municipal decisions.
+        </p>
+
+        {/* TIMELINE */}
+        <div className="relative">
+
+          {/* LINE */}
+          <div className="hidden md:block absolute top-6 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 opacity-40"></div>
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            {/* CARD 1 */}
+            <div className="relative">
+              <div className="absolute -top-6 left-6 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold shadow-[0_0_25px_rgba(99,102,241,0.6)]">
+                1
+              </div>
+              <div className="relative border border-blue-500/30 rounded-xl p-6 bg-black/40 backdrop-blur-xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute inset-0 rounded-xl shadow-[0_0_40px_rgba(59,130,246,0.2)] pointer-events-none"></div>
+                <h3 className="text-lg font-medium mb-2 text-white">
+                  Festival Permissions
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Assess crowd capacity, traffic impact, and emergency access routes before approving large public events.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="relative">
+              <div className="absolute -top-6 left-6 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold shadow-[0_0_25px_rgba(99,102,241,0.6)]">
+                3
+              </div>
+              <div className="relative border border-blue-500/30 rounded-xl p-6 bg-black/40 backdrop-blur-xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute inset-0 rounded-xl shadow-[0_0_40px_rgba(59,130,246,0.2)] pointer-events-none"></div>
+                <h3 className="text-lg font-medium mb-2 text-white">
+                  Night Enforcement Planning
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Identify high-risk areas and allocate patrol resources effectively during nighttime hours.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="relative">
+              <div className="absolute -top-6 left-6 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold shadow-[0_0_25px_rgba(99,102,241,0.6)]">
+                2
+              </div>
+              <div className="relative border border-blue-500/30 rounded-xl p-6 bg-black/40 backdrop-blur-xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute inset-0 rounded-xl shadow-[0_0_40px_rgba(59,130,246,0.2)] pointer-events-none"></div>
+                <h3 className="text-lg font-medium mb-2 text-white">
+                  Traffic Diversion Planning
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Model traffic flow patterns and optimize detour routes during construction or special events.
+                </p>
+              </div>
+            </div>
+
+            {/* CARD 4 */}
+            <div className="relative">
+              <div className="absolute -top-6 left-6 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold shadow-[0_0_25px_rgba(99,102,241,0.6)]">
+                4
+              </div>
+              <div className="relative border border-blue-500/30 rounded-xl p-6 bg-black/40 backdrop-blur-xl hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300">
+                <div className="absolute inset-0 rounded-xl shadow-[0_0_40px_rgba(59,130,246,0.2)] pointer-events-none"></div>
+                <h3 className="text-lg font-medium mb-2 text-white">
+                  Zoning & Licensing Support
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Analyze land use patterns and demographic data to inform zoning decisions and business licensing.
+                </p>
+              </div>
+            </div>
+
           </div>
-          <h3>Smart City Command Centers</h3>
-          <p>
-            Centralized operations hubs coordinating city-wide initiatives and
-            emergency response.
-          </p>
-        </div>
-
-        {/* CARD */}
-        <div className="custom-card">
-          <div className="icon-box">
-            <Building2 size={20} />
-          </div>
-          <h3>Municipal Corporations</h3>
-          <p>
-            Local government bodies managing infrastructure, services and urban
-            development.
-          </p>
-        </div>
-
-        {/* CARD */}
-        <div className="custom-card">
-          <div className="icon-box">
-            <Shield size={20} />
-          </div>
-          <h3>Traffic & Police Departments</h3>
-          <p>
-            Law enforcement and traffic management agencies ensuring public safety
-            and mobility.
-          </p>
-        </div>
-
-        {/* BOTTOM LEFT */}
-        <div className="custom-card md:col-span-1">
-          <div className="icon-box">
-            <Factory size={20} />
-          </div>
-          <h3>Pollution Control Boards</h3>
-          <p>
-            Environmental agencies monitoring air quality and enforcing
-            environmental regulations.
-          </p>
-        </div>
-
-        {/* BOTTOM RIGHT */}
-        <div className="custom-card md:col-span-2">
-          <div className="icon-box">
-            <Landmark size={20} />
-          </div>
-          <h3>Urban Planning Authorities</h3>
-          <p>
-            Planning commissions designing future city layouts and zoning regulations.
-          </p>
         </div>
 
       </div>
-
     </section>
-
 
 {/*===========footer section  =================*/}
       <footer className="relative w-full overflow-hidden border-t border-gray-700 bg-black/60 py-16 text-gray-300 backdrop-blur-xl">
