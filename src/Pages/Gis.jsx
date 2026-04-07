@@ -13,6 +13,7 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 import WhoWillPay from "../components/WhoWillPay";
+import Footer from "@/components/Footer";
 
 
 
@@ -450,7 +451,7 @@ export default function Gis() {
       />
 
       {/* DARK + BLUE GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black bg-gradient-to-b from-black/50 via-[#020655]/30 to-[#020024]/60"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black bg-gradient-to-b from-black/50 via-[#020655]/30 to-[#020024]/60"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 px-6 md:px-20 py-16 flex flex-col md:flex-row justify-between gap-10">
@@ -1021,155 +1022,8 @@ export default function Gis() {
     </section>
 
 {/*===========footer section  =================*/}
-      <footer className="relative w-full overflow-hidden border-t border-gray-700 bg-black/60 py-16 text-gray-300 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 text-sm sm:grid-cols-2 md:grid-cols-4">
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Popular Links
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Career in AI
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Quantum Computing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Machine Learning
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Cloud Computing
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-[#c5a77b]">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">
-              Free Tools
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  AI Text Generator
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Resume Builder
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  File Converter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Data Formatter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  PDF Tools
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/about" className="hover:text-[#c5a77b]">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/service" className="hover:text-[#c5a77b]">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/" className="hover:text-[#c5a77b]">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="/career" className="hover:text-[#c5a77b]">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-[#c5a77b]">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Website Design
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  App Development
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  AI & ML
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  Cloud
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#c5a77b]">
-                  GIS
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 flex justify-center gap-8 border-t border-gray-700 pt-8 text-2xl">
-          {[FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn].map(
-            (Icon, index) => (
-              <Icon
-                key={index}
-                className="cursor-pointer transition hover:text-[#c5a77b]"
-              />
-            )
-          )}
-        </div>
-
-        <div className="mt-10 text-center">
-          <img src="/gaint-logo.png" alt="GAINT logo" className="mx-auto mb-4 h-12" />
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
+

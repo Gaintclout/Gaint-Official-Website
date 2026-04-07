@@ -10,6 +10,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Footer from "@/components/Footer";
 
 export default function QKDPage() {
   return (
@@ -212,38 +213,7 @@ export default function QKDPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-slate-900 text-gray-300 py-12 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h3 className="text-white font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm md:text-base">
-              <li><a href="#" className="hover:text-indigo-400">Career in AI</a></li>
-              <li><a href="#" className="hover:text-indigo-400">Quantum Computing</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-white font-bold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm md:text-base">
-              <li><Link to="/about" className="hover:text-indigo-400">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-indigo-400">Contact</Link></li>
-            </ul>
-          </div>
-          <div className="col-span-2 md:col-span-2">
-            <h3 className="text-white font-bold mb-6 text-center md:text-left">Connect</h3>
-            <div className="flex justify-center md:justify-start gap-6 text-2xl">
-              <a href="https://www.facebook.com/GaintCloutTechnologies" className="hover:text-indigo-400 transition"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/gaintclout/" className="hover:text-indigo-400 transition"><FaInstagram /></a>
-              <a href="https://x.com/Gaintclout" className="hover:text-indigo-400 transition"><FaXTwitter /></a>
-              <a href="https://www.linkedin.com/in/gaintclouttechnologies/" className="hover:text-indigo-400 transition"><FaLinkedinIn /></a>
-            </div>
-          </div>
-        </div>
-        <div className="text-center pt-8 border-t border-gray-800">
-           <p className="text-xs md:text-sm">
-            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

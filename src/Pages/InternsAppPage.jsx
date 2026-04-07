@@ -19,6 +19,7 @@ import {
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Footer from "@/components/Footer";
 
 export default function InternsAppPage() {
 
@@ -155,115 +156,11 @@ export default function InternsAppPage() {
       </section>
 
       {/* ---------------- FOOTER ---------------- */}
-      <footer className="relative w-full bg-black/80 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
-          {[
-            {
-              title: "Popular Links",
-              links: [
-                ["Career in AI", "https://www.guvi.in/blog/ai-and-ml-job-opportunities-in-india/"],
-                ["Quantum Computing", "https://www.techtarget.com/whatis/definition/quantum-computing"],
-                ["Machine Learning", "https://www.stxnext.com/blog/best-machine-learning-blogs-resources"],
-                ["Cloud Computing", "https://learn.rumie.org/jR/bytes/learn-the-basics-of-cloud-computing-in-3-minutes"],
-                ["Contact Us", "/contact"],
-              ],
-            },
-            {
-              title: "Free Tools",
-              links: [
-                ["AI Text Generator", "https://chatgpt.com/"],
-                ["Resume Builder", "https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab"],
-                ["File Converter", "https://www.ilovepdf.com/"],
-                ["Data Formatter", "https://jsonformatter.org/"],
-                ["PDF Split & Merge", "https://www.smallpdf.com/split-pdf"],
-              ],
-            },
-            {
-              title: "Company",
-              links: [
-                ["About Us", "/About"],
-                ["Services", "/Service"],
-                ["Products", "/"],
-                ["Careers", "/Career"],
-                ["Contact", "/Contact"],
-              ],
-            },
-            {
-              title: "Services",
-              links: [
-                ["Website Design", "#"],
-                ["App Development", "#"],
-                ["AI & ML Solutions", "#"],
-                ["Cloud Integration", "#"],
-                ["IT Consulting", "#"],
-                ["Data Analytics", "#"],
-                ["GIS", "#"]
-              ],
-            },
-          ].map((col, i) => (
-            <div key={i}>
-              <h3 className="text-white font-semibold mb-4 text-lg">{col.title}</h3>
-              <ul className="space-y-2">
-                {col.links.map(([name, href], j) => (
-                  <li key={j}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#007BFF]"
-                    >
-                      {name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Social Icons */}
-        <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
-          {[
-            { Icon: FaFacebookF, link: "https://www.facebook.com/GaintCloutTechnologies" },
-            { Icon: FaInstagram, link: "https://www.instagram.com/gaintclout/" },
-            { Icon: FaXTwitter, link: "https://x.com/Gaintclout" },
-            { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/gaintclouttechnologies/" },
-          ].map(({ Icon, link }, i) => (
-            <a
-              key={i}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-200 hover:text-[#007BFF] transition transform hover:scale-110"
-            >
-              <Icon />
-            </a>
-          ))}
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="text-center mt-10">
-          <img
-            src="/gaint-logo.png"
-            alt="GAINT Clout Logo"
-            className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
-          />
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
-          </p>
-
-          <div className="mt-3 flex justify-center gap-6 text-xs text-gray-500">
-            <a href="#" className="hover:text-[#007BFF]">Privacy Policy</a>
-            <a href="#" className="hover:text-[#007BFF]">Terms & Conditions</a>
-            <a href="#" className="hover:text-[#007BFF]">Refund Policy</a>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#007BFF]/40 to-transparent"></div>
-      </footer>
+      <Footer />
     </div>
   );
 }
+
 
 
 

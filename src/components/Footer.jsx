@@ -4,14 +4,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/
 export default function Footer() {
   return (
     <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
-
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
-
-        {/* Popular Links */}
         <div>
-          <h3 className="text-white font-semibold mb-4 text-lg">
-            Popular Links
-          </h3>
+          <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>
           <ul className="space-y-2">
             <li>
               <a
@@ -61,7 +56,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Free Tools */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Free Tools</h3>
           <ul className="space-y-2">
@@ -71,7 +65,10 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab" className="hover:text-[#c5a77b]">
+              <a
+                href="https://www.overleaf.com/project/69c3ad156ccbb7caf33151ab"
+                className="hover:text-[#c5a77b]"
+              >
                 Resume Builder
               </a>
             </li>
@@ -93,7 +90,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Company */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
           <ul className="space-y-2">
@@ -105,7 +101,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Services */}
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
           <ul className="space-y-2">
@@ -115,28 +110,30 @@ export default function Footer() {
             <li><a href="#" className="hover:text-[#c5a77b]">Cloud Integration</a></li>
             <li><a href="#" className="hover:text-[#c5a77b]">IT Consulting</a></li>
             <li><a href="#" className="hover:text-[#c5a77b]">Data Analytics</a></li>
-            <li><a href="#" className="hover:text-[#c5a77b]">GIS</a></li>
+            <li><a href="/gis" className="hover:text-[#c5a77b]">GIS</a></li>
           </ul>
         </div>
-
       </div>
 
-      {/* Social Icons */}
       <div className="mt-12 flex justify-center gap-8 text-2xl border-t border-gray-700 pt-8">
-        {[FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn].map(
-          (Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="text-gray-400 hover:text-[#c5a77b] transition transform hover:scale-110"
-            >
-              <Icon />
-            </a>
-          )
-        )}
+        {[
+          { Icon: FaFacebookF, link: "https://www.facebook.com/GaintCloutTechnologies" },
+          { Icon: FaInstagram, link: "https://www.instagram.com/gaintclout/" },
+          { Icon: FaXTwitter, link: "https://x.com/Gaintclout" },
+          { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/gaintclouttechnologies/" },
+        ].map(({ Icon, link }, i) => (
+          <a
+            key={i}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-[#c5a77b] transition transform hover:scale-110"
+          >
+            <Icon />
+          </a>
+        ))}
       </div>
 
-      {/* Bottom */}
       <div className="text-center mt-10">
         <img
           src="/gaint-logo.png"
@@ -144,10 +141,9 @@ export default function Footer() {
           className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
         />
         <p className="text-gray-400 text-sm">
-          © {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+          (c) {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
         </p>
-
-        <div className="mt-3 flex justify-center gap-6 text-xs text-gray-500">
+        <div className="mt-3 flex justify-center gap-6 text-xs text-gray-100">
           <a href="#" className="hover:text-[#c5a77b]">Privacy Policy</a>
           <a href="#" className="hover:text-[#c5a77b]">Terms & Conditions</a>
         </div>
