@@ -574,27 +574,32 @@ export default function About() {
         </div>
 
         {/* Right Image */}
-        <div className="relative flex justify-center items-center lg:w-1/2">
-          <div className="absolute -top-6 -left-6 bg-[#fbb040] text-white px-6 py-4 rounded-lg shadow-md rotate-12 transform hover:rotate-0 transition duration-300">
-            <h3 className="font-bold text-2xl leading-tight text-center">
-              Founder <br />&<br></br>
-              <span className="text-3xl"> Chairman</span>
-            </h3>
-          </div>
-          <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
-          <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm"></div>
+        {/* Right Image */}
+<div className="relative flex justify-center items-center lg:w-1/2">
+  {/* Decorative blue squares */}
+  <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
+  <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm shadow-lg"></div>
 
+  {/* Image Container with Tag */}
+  <div className="relative group">
+    {/* Circular Image */}
+    <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+      <img
+        src="/public/Prasad Sir.jpg" 
+        alt="Mr. Prasad Kottamasu"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+    </div>
 
-          <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100 group">
-            {/* Profile Image */}
-            <img
-              src="/public/Prasad Sir.jpg"
-              alt="chairman"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+    {/* The Tag - Positioned below the image */}
+    <div className="absolute mt-4 -bottom-5 left-1/2 -translate-x-1/2 bg-[#3b82f6] text-white px-8 py-2.5 rounded-full shadow-xl border-2 border-white whitespace-nowrap z-10">
+      <p className="text-lg font-bold ">
+        Founder & Chairman
+      </p>
+    </div>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
+            {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
               {[
                 { Icon: FaFacebookF, link: "https://www.facebook.com/" },
                 { Icon: FaInstagram, link: "https://www.instagram.com/" },
@@ -610,78 +615,70 @@ export default function About() {
                 >
                   <Icon />
                 </a>
-              ))}
-            </div>
+              ))} */}
+            {/* </div> */}
           </div>
 
           <div className="absolute -top-12 right-8 flex flex-col items-center text-[#3b82f6]">
-            {/* Animated Atom Icon */}
-
-
           </div>
           <div className="relative">
-            <Atom className="w-10 h-10 animate-spin-slow" />
-            {/* ‘Si’ text inside the atom */}
-            <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-[#3b82f6]">
-              Si
-            </span>
           </div>
         </div>
       </section>
 
       <div className="relative">
-        <Atom className="w-10 h-10 animate-spin-slow" />
-        {/* ‘Si’ text inside the atom */}
-        <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-[#3b82f6]">
-          Si
-        </span>
       </div>
 
 
 
       <section className="relative bg-white py-20 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
         {/* Left Text */}
-
         <div className="relative flex justify-center items-center lg:w-1/2">
-          <div className="absolute -top-6 -left-6 bg-[#fbb040] text-white px-6 py-4 rounded-lg shadow-md rotate-12 transform hover:rotate-0 transition duration-300">
+          {/* <div className="absolute -top-6 -left-6 bg-[#fbb040] text-white px-6 py-4 rounded-lg shadow-md rotate-12 transform hover:rotate-0 transition duration-300">
             <h3 className="font-bold text-2xl leading-tight text-center">
               Founder <br />&<br></br>
               <span className="text-3xl">CEO</span>
             </h3>
 
-          </div>
+          </div> */}
 
           <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
           <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm"></div>
 
 
 
-          <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100 group">
-            {/* Profile Image */}
-            <img
-              src="/public/ceo.jpg"
-              alt="CEO"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <div className="relative group">
+            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
+              {/* Profile Image */}
+              <img
+                src="/public/ceo.jpg"
+                alt="CEO"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
-              {[
-                { Icon: FaFacebookF, link: "https://www.facebook.com/SrinivasaRao.Kolakaluri" },
-                { Icon: FaInstagram, link: "https://www.instagram.com/" },
-                { Icon: FaXTwitter, link: "https://x.com/kolakalurisrinu" },
-                { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/srinivasraokolakaluri/" },
-              ].map(({ Icon, link }, i) => (
-                <a
-                  key={i}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-3xl hover:text-[#c5a77b] transform hover:scale-110 transition-all duration-300"
-                >
-                  <Icon />
-                </a>
-              ))}
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
+                {[
+                  { Icon: FaFacebookF, link: "https://www.facebook.com/SrinivasaRao.Kolakaluri" },
+                  { Icon: FaInstagram, link: "https://www.instagram.com/" },
+                  { Icon: FaXTwitter, link: "https://x.com/kolakalurisrinu" },
+                  { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/srinivasraokolakaluri/" },
+                ].map(({ Icon, link }, i) => (
+                  <a
+                    key={i}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white text-3xl hover:text-[#c5a77b] transform hover:scale-110 transition-all duration-300"
+                  >
+                    <Icon />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="absolute mt-4 -bottom-5 left-1/2 -translate-x-1/2 bg-[#3b82f6] text-white px-8 py-2.5 rounded-full shadow-xl border-2 border-white whitespace-nowrap z-10">
+              <p className="text-lg font-bold">Founder & CEO</p>
             </div>
           </div>
 
@@ -800,16 +797,9 @@ export default function About() {
           >
             {isExpanded ? "Read Less" : "Read More"}
           </button>
-
-
-
         </div>
         <div className="relative">
-          <Atom className="w-10 h-10 animate-spin-slow" />
-          {/* ‘Si’ text inside the atom */}
-          <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-[#3b82f6]">
-            Si
-          </span>
+          {/* <Atom className="w-10 h-10 animate-spin-slow" /> */}
         </div>
       </section>
 
