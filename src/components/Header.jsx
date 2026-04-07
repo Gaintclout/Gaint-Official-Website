@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react"; // Added Chevron for UX
+import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 
 const products = [
   { name: "DonorGO", link: "/Donorgo" },
   { name: "GAINTInternsHub", link: "/internsapp" },
   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
-  { name: "WellNest AI Station", link: "/wellnest" },
+  { name: "WellNest AI Station", link: "/wellnestai" },
   { name: "GIS", link: "/gis" },
   { name: "QKD", link: "/qkd" },
   { name: "PQC", link: "/pqc" },
@@ -16,6 +16,9 @@ const navLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Services", link: "/service" },
+  { name: "Workshops", link: "/workshops" },
+  { name: "Certificates", link: "/certificates" },
+  { name: "Careers", link: "/careers" },
   { name: "Contact", link: "/contact" },
 ];
 
@@ -24,25 +27,27 @@ export default function Header() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black/10 px-6 py-4 shadow-md backdrop-blur-lg md:px-12 border-b border-white/10">
-      <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 z-50 w-full bg-black/20 px-6 py-4 shadow-md backdrop-blur-lg border-b border-white/10">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
+        
+        {/* LEFT SIDE: Logo */}
         <NavLink to="/" className="shrink-0">
           <img
             src="/gaint-logo.png"
             alt="GAINT Clout Technologies"
-            className="h-auto w-32" // Ensures logo is visible on black if it was dark
+            className="h-auto w-28 lg:w-32"
           />
         </NavLink>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden w-full justify-center md:flex">
-          <ul className="flex max-w-fit items-center gap-4 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm shadow-2xl backdrop-blur-xl md:gap-6 md:px-8 lg:gap-10 lg:px-12 lg:text-xl">
+        {/* CENTER: Navigation Links */}
+        <nav className="hidden xl:flex items-center justify-center flex-1">
+          <ul className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-base shadow-2xl backdrop-blur-xl lg:gap-5 xl:text-lg">
             {navLinks.slice(0, 3).map(({ name, link }) => (
               <li key={name} className="group">
                 <NavLink
                   to={link}
                   className={({ isActive }) =>
-                    `relative px-2 py-1 transition duration-300 ${
+                    `relative px-1 transition duration-300 ${
                       isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"
                     }`
                   }
@@ -58,19 +63,12 @@ export default function Header() {
               <span className="flex cursor-pointer items-center gap-1 text-white transition duration-300 hover:text-[#4285F4]">
                 Products <ChevronDown className="w-4 h-4" />
               </span>
-
-              <ul className="invisible absolute left-1/2 z-50 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/90 text-sm opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100 md:text-lg  ">
+              <ul className="invisible absolute left-1/2 z-50 mt-3 w-60 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/95 p-2 text-sm opacity-0 shadow-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100">
                 {products.map((product) => (
                   <li key={product.name}>
                     <NavLink
                       to={product.link}
-                      className={({ isActive }) =>
-                        `block rounded-lg px-5 py-3 transition ${
-                          isActive
-                            ? "bg-white/10 text-[#4285F4]"
-                            : "text-black hover:bg-white/10 hover:text-[#4285F4]"
-                        }`
-                      }
+                      className="block rounded-lg px-4 py-2.5 text-black hover:bg-[#4285F4]/10 hover:text-[#4285F4] transition"
                     >
                       {product.name}
                     </NavLink>
@@ -79,80 +77,106 @@ export default function Header() {
               </ul>
             </li>
 
-            <li className="group">
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `relative px-2 py-1 transition duration-300 ${
-                    isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"
-                  }`
-                }
-              >
-                Contact
-                <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#4285F4] transition-all duration-300 group-hover:w-full shadow-[0_0_10px_#4285F4]"></span>
-              </NavLink>
-            </li>
+            {navLinks.slice(3).map(({ name, link }) => (
+              <li key={name} className="group">
+                <NavLink
+                  to={link}
+                  className={({ isActive }) =>
+                    `relative px-1 transition duration-300 ${
+                      isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"
+                    }`
+                  }
+                >
+                  {name}
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#4285F4] transition-all duration-300 group-hover:w-full shadow-[0_0_10px_#4285F4]"></span>
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* RIGHT SIDE: InternsHub Button */}
+        <div className="hidden md:flex items-center shrink-0">
+          <NavLink
+            to="/internsapp"
+            className="group flex items-center gap-2 rounded-full bg-[#4285F4] px-6 py-2.5 text-sm font-bold text-white shadow-[0_0_20px_rgba(66,133,244,0.3)] transition-all hover:bg-[#3367D6] hover:shadow-[0_0_25px_rgba(66,133,244,0.5)] active:scale-95"
+          >
+            <span>InternsHub</span>
+            <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </NavLink>
+        </div>
+
+        {/* MOBILE MENU TOGGLE */}
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="rounded-md border border-white/30 bg-black/60 p-2 text-white shadow-lg backdrop-blur md:hidden"
-          aria-label="Toggle navigation"
+          className="rounded-full border border-white/20 bg-white/10 p-2.5 text-white shadow-lg backdrop-blur xl:hidden"
         >
           {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* MOBILE MENU OVERLAY */}
       {menuOpen && (
-        <div className="absolute left-4 right-4 top-20 z-50 overflow-hidden rounded-2xl bg-white/90  border border-white/10 py-4 text-center shadow-2xl md:hidden ">
-          {navLinks.slice(0, 3).map(({ name, link }) => (
-            <NavLink
-              key={name}
-              to={link}
-              onClick={() => setMenuOpen(false)}
-              className="block py-3 text-black transition hover:text-[#4285F4]"
-            >
-              {name}
-            </NavLink>
-          ))}
+        <div className="absolute left-4 right-4 top-24 z-50 max-h-[85vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl xl:hidden border border-gray-100">
+          <div className="flex flex-col space-y-1 text-center">
+            {navLinks.slice(0, 3).map(({ name, link }) => (
+              <NavLink
+                key={name}
+                to={link}
+                onClick={() => setMenuOpen(false)}
+                className="block py-3 text-lg font-semibold text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
+              >
+                {name}
+              </NavLink>
+            ))}
 
-          {/* Mobile Accordion for Products */}
-          <div className="border-y border-white/10">
-            <button
-              onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-              className="flex w-full items-center justify-center gap-2 py-3  text-black transition hover:text-[#4285F4]"
-            >
-              Products
-              <ChevronDown className={`w-4 h-4 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
-            </button>
-            
-            {mobileProductsOpen && (
-              <div className="bg-white/5 py-2">
-                {products.map((product) => (
-                  <NavLink
-                    key={product.name}
-                    to={product.link}
-                    onClick={() => setMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-black transition hover:text-[#4285F4]"
-                  >
-                    {product.name}
-                  </NavLink>
-                ))}
-              </div>
-            )}
+            <div className="py-2 border-b border-gray-50">
+              <button
+                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                className="flex w-full items-center justify-center gap-2 py-2 text-lg font-semibold text-gray-800"
+              >
+                Products
+                <ChevronDown className={`w-5 h-5 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileProductsOpen && (
+                <div className="mt-2 grid grid-cols-1 gap-1 rounded-2xl bg-gray-50 p-2">
+                  {products.map((product) => (
+                    <NavLink
+                      key={product.name}
+                      to={product.link}
+                      onClick={() => setMenuOpen(false)}
+                      className="block px-4 py-2 text-sm text-gray-600 font-medium hover:text-[#4285F4]"
+                    >
+                      {product.name}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {navLinks.slice(3).map(({ name, link }) => (
+              <NavLink
+                key={name}
+                to={link}
+                onClick={() => setMenuOpen(false)}
+                className="block py-3 text-lg font-semibold text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
+              >
+                {name}
+              </NavLink>
+            ))}
+
+            <div className="pt-6">
+              <NavLink
+                to="/internsapp"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-2xl bg-[#4285F4] py-4 text-xl font-bold text-white shadow-lg"
+              >
+                Visit InternsHub
+                <ExternalLink className="w-5 h-5" />
+              </NavLink>
+            </div>
           </div>
-
-          <NavLink
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="block py-3 text-black transition hover:text-[#4285F4]"
-          >
-            Contact
-          </NavLink>
         </div>
       )}
     </header>
