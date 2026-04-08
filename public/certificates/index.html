@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gaint Clout | Certificates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .certificate-list {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gaint Clout - Certificate Portal</h1>
+  <p>Enter your code below to view your certificate.</p>
+
+  <div class="certificate-list">
+    <input type="text" id="codeInput" placeholder="Enter your certificate code">
+    <button onclick="openCertificate()">Open Certificate</button>
+  </div>
+
+  <script>
+    function openCertificate() {
+      const code = document.getElementById('codeInput').value.trim();
+      
+      // 🔐 Certificate code mapping (use unique codes)
+      const certificates = {
+        "GAINT-INT0101ERN": "Kadha Suryakiran.html",
+        "GAINT-INT0102ERN": "Sreeja.html",
+        "GAINT-INT0103ERN": "Visalya-Manogna.html",
+        "GAINT-INT0104ERN": "Rapaka Anusri.html",
+        "GAINT-INT0105ERN": "Bharath.html",
+        "GAINT-INT0106ERN": "vyuhitha.html",
+        "GAINT-INT0107ERN": "Jithendra.html",
+        "GAINT-INT0108ERN": "Ravi kishore.html",
+        "GAINT-INT0109ERN": "janvika.html",
+        "GAINT-INT0110ERN": "srivarsha.html",
+        "GAINT-INT0011ERN": "Basaveswara.html",
+        "GAINT-INT0112ERN": "Meghana.html",
+        "GAINT-INT0113ERN": "Chalasani Nandan.html",
+        "GAINT-INT0114ERN": "Arshad.html",
+        "GAINT-INT0115ERN": "Harshini.html",
+        "GAINT-INT0116ERN": "Manchineni Bhuvana Sree.html",
+        "GAINT-INT0117ERN": "Sadhu Teja Sai.html",
+        "GAINT-INT0118ERN": "Indukuri Aashritha.html",
+        "GAINT-INT0119ERN": "Koduru Vanditha Sai.html",
+        "GAINT-INT0120ERN": "Yalamanchili Haindavi.html",
+        "GAINT-INT0121ERN": "Anantha Shrishill.html",
+        "GAINT-INT0122ERN": "Movva Sai Sushmitha Chowdary.html",
+        "GAINT-INT0123ERN": "Poojith Vardhan.html",
+        "GAINT-INT0124ERN": "Anne lahari.html",
+        "GAINT-INT0125ERN": "Dileep Venkata Sai.html",
+        "GAINT-INT0126ERN": "Rushik Sai.html",
+        "GAINT-INT0127ERN": "Rehan Hamid.html",
+        "GAINT-INT0128ERN": "Manaswini Ganta.html",
+        "GAINT-INT0129ERN": "Namrata Varshini.html",
+
+      };
+
+      if (certificates[code]) {
+        window.open(certificates[code], "_blank");
+      } else {
+        alert("❌ Invalid code. Please check your certificate ID and try again.");
+      }
+    }
+  </script>
+</body>
+</html>

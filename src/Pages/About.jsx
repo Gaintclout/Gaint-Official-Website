@@ -8,22 +8,17 @@ import {
   TrendingUp,
   Lightbulb,
   Workflow,
-  Menu,
-  X,
   Eye,
   HeartHandshake,
-  Cpu,
   MessageSquare,
   ChevronDown,
   Rocket,
   GraduationCap,
-  Handshake,
   BrainCircuit,
   Diamond,
   Clock4,
   Hand,
   Heart,
-  Quote,
   Globe,
 } from "lucide-react";
 import {
@@ -575,7 +570,6 @@ export default function About() {
         </div>
 
         {/* Right Image */}
-        {/* Right Image */}
 <div className="relative flex justify-center items-center lg:w-1/2">
   {/* Decorative blue squares */}
   <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
@@ -586,9 +580,9 @@ export default function About() {
     {/* Circular Image */}
     <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
       <img
-        src="/public/Prasad Sir.jpg" 
+        src="/prasad-sir.jpg" 
         alt="Mr. Prasad Kottamasu"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
       />
     </div>
 
@@ -652,9 +646,9 @@ export default function About() {
             <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
               {/* Profile Image */}
               <img
-                src="/public/ceo.jpg"
+                src="/srinivas-sir.jpeg"
                 alt="CEO"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full  object-cover object-[center_10%] scale-x-[-1] transition-transform duration-500"
               />
 
               {/* Overlay */}
