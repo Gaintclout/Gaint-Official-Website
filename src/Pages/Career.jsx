@@ -1,9 +1,10 @@
 import React from "react";
 import { MapPin, Clock, Building2, Users, Laptop, FileCheck, Phone, Mail, Globe } from "lucide-react";
-
+import ScrollToTop from "@/components/ScrollToTop";
 export default function CareerPage() {
   return (
     <div className="bg-gray-50 text-gray-800">
+  
       {/* Header */}
       <header className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-16 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">Career Opportunity</h1>
@@ -11,7 +12,7 @@ export default function CareerPage() {
           Join Gaint Clout Technologies under our <span className="font-semibold">Skill Development Initiative</span>
         </p>
       </header>
-
+<ScrollToTop />
       {/* Job Overview */}
       <section className="max-w-5xl mx-auto px-6 py-12">
         <h2 className="text-2xl font-bold mb-4">Associate Software Engineer</h2>

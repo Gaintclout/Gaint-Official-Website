@@ -11,12 +11,14 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function QKDPage() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth overflow-x-hidden">
       {/* ---------------- HEADER ---------------- */}
       <Header />
+      <ScrollToTop />
 
       {/* ================= HERO SECTION ================= */}
       <section className="text-center py-16 md:py-24 bg-gradient-to-r from-indigo-600 to-purple-700 text-white mt-20 px-4 md:px-6">

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import WhoWillPay from "../components/WhoWillPay";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 
@@ -49,6 +50,8 @@ export default function Gis() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
       <Header />
+      <ScrollToTop />
+
 /*--------------------------------- Hero Section ----------------------------------*/
       <section
   id="about"
@@ -451,7 +454,7 @@ export default function Gis() {
       />
 
       {/* DARK + BLUE GRADIENT */}
-      <div className="absolute inset-0 bg-linear-to-b from-black bg-gradient-to-b from-black/50 via-[#020655]/30 to-[#020024]/60"></div>
+      <div className="absolute inset-0 bg-linear-to-b  bg-gradient-to-b from-black/50 via-[#020655]/30 to-[#020024]/60"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 px-6 md:px-20 py-16 flex flex-col md:flex-row justify-between gap-10">
@@ -847,7 +850,6 @@ export default function Gis() {
           {/* STEP 1 */}
           <div className="flex flex-col items-center">
             <div className="flex items-center justify-center text-white
-              w-[300px] h-[80px]
               lg:w-[300px] lg:h-[80px]
               md:w-[240px] md:h-[70px]
               sm:w-[180px] sm:h-[60px]
@@ -859,7 +861,7 @@ export default function Gis() {
               <Calendar size={24} />
             </div>
 
-            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+            <p className="mt-4 text-center text-black text-sm md:text-lg">
               30-days prediction map
             </p>
           </div>
@@ -871,7 +873,6 @@ export default function Gis() {
               lg:w-[300px] lg:h-[80px]
               md:w-[240px] md:h-[70px]
               sm:w-[180px] sm:h-[60px]
-              w-[130px] h-[50px]
               bg-gradient-to-r from-[#2a2f7a] to-[#2e3aa8]
               [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%,10%_50%)]
               hover:scale-105 hover:-translate-y-1 transition-all duration-300
@@ -879,7 +880,7 @@ export default function Gis() {
               <Target size={24} />
             </div>
 
-            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+            <p className="mt-4 text-center text-black text-sm md:text-lg">
               Hotspots before they occur
             </p>
           </div>
@@ -891,7 +892,6 @@ export default function Gis() {
               lg:w-[300px] lg:h-[80px]
               md:w-[240px] md:h-[70px]
               sm:w-[180px] sm:h-[60px]
-              w-[130px] h-[50px]
               bg-gradient-to-r from-[#2a2f7a] to-[#2e3aa8]
               [clip-path:polygon(0_0,90%_0,100%_50%,90%_100%,0_100%,10%_50%)]
               hover:scale-105 hover:-translate-y-1 transition-all duration-300
@@ -899,7 +899,7 @@ export default function Gis() {
               <FileText size={24} />
             </div>
 
-            <p className="mt-4 text-center text-gray-300 text-sm md:text-lg">
+            <p className="mt-4 text-center text-black text-sm md:text-lg">
               Policy-ready insights
             </p>
           </div>

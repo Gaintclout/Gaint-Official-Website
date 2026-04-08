@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-black/60 backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
+    <footer className="relative w-full bg-[#202A44;] backdrop-blur-xl text-gray-300 border-t border-gray-700 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6 text-sm">
         <div>
           <h3 className="text-white font-semibold mb-4 text-lg">Popular Links</h3>

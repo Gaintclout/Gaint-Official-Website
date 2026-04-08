@@ -20,6 +20,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { Globe2 } from "lucide-react";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // -------------------- Services Data --------------------
 const services = [
@@ -86,7 +87,7 @@ export default function ServicesOffered() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
       <Header />
-
+      <ScrollToTop />
 
       {/* ---------------- HERO / ABOUT SECTION ---------------- */}
       <section

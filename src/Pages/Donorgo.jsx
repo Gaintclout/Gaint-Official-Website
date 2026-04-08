@@ -20,11 +20,13 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { Globe2 } from "lucide-react";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function DonorGOPage() {
 
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
+      <ScrollToTop />
          {/* ---------------- HEADER ---------------- */}
       <Header />
 

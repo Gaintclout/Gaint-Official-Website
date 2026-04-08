@@ -35,6 +35,7 @@ import {
 import { motion } from "framer-motion";
 import { Atom } from "lucide-react";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 
@@ -123,7 +124,7 @@ export default function About() {
   return (
     <div className="font-sans text-gray-800 scroll-smooth">
       <Header />
-
+<ScrollToTop />
       <section
         id="about"
         className="relative min-h-[60vh] w-full flex items-center justify-end overflow-hidden"

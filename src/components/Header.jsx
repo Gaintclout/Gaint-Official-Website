@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
+import { Menu, X, ChevronDown, Users } from "lucide-react";
 
 const products = [
   { name: "DonorGO", link: "/Donorgo" },
@@ -18,7 +18,7 @@ const navLinks = [
   { name: "Services", link: "/service" },
   { name: "Workshops", link: "/workshops" },
   { name: "Certificates", link: "/certificates" },
-  { name: "Careers", link: "/careers" },
+  { name: "Careers", link: "/career" },
   { name: "Contact", link: "/contact" },
 ];
 
@@ -29,7 +29,6 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-black/20 px-6 py-4 shadow-md backdrop-blur-lg border-b border-white/10">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
-        
         {/* LEFT SIDE: Logo */}
         <NavLink to="/" className="shrink-0">
           <img
@@ -48,7 +47,9 @@ export default function Header() {
                   to={link}
                   className={({ isActive }) =>
                     `relative px-1 transition duration-300 ${
-                      isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"
+                      isActive
+                        ? "text-[#4285F4]"
+                        : "text-white hover:text-[#4285F4]"
                     }`
                   }
                 >
@@ -83,7 +84,9 @@ export default function Header() {
                   to={link}
                   className={({ isActive }) =>
                     `relative px-1 transition duration-300 ${
-                      isActive ? "text-[#4285F4]" : "text-white hover:text-[#4285F4]"
+                      isActive
+                        ? "text-[#4285F4]"
+                        : "text-white hover:text-[#4285F4]"
                     }`
                   }
                 >
@@ -96,14 +99,25 @@ export default function Header() {
         </nav>
 
         {/* RIGHT SIDE: InternsHub Button */}
-        <div className="hidden md:flex items-center shrink-0">
-          <NavLink
-            to="/internsapp"
-            className="group flex items-center gap-2 rounded-full bg-[#4285F4] px-6 py-2.5 text-sm font-bold text-white shadow-[0_0_20px_rgba(66,133,244,0.3)] transition-all hover:bg-[#3367D6] hover:shadow-[0_0_25px_rgba(66,133,244,0.5)] active:scale-95"
+        <div className="flex items-center">
+          <a
+            href="https://interns.gaintclout.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white overflow-hidden"
           >
-            <span>InternsHub</span>
-            <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </NavLink>
+            {/* Background Gradient */}
+            <span className="absolute inset-0 bg-gradient-to-r from-red-400 via-blue-500 to-yellow-400 transition-all duration-400 group-hover:scale-110"></span>
+
+            {/* Glow Effect */}
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 transition duration-500"></span>
+
+            {/* Button Content */}
+            <span className="relative z-10 flex items-center gap-2">
+              InternsHub
+              <Users className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+            </span>
+          </a>  
         </div>
 
         {/* MOBILE MENU TOGGLE */}
@@ -137,7 +151,9 @@ export default function Header() {
                 className="flex w-full items-center justify-center gap-2 py-2 text-lg font-semibold text-gray-800"
               >
                 Products
-                <ChevronDown className={`w-5 h-5 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`}
+                />
               </button>
               {mobileProductsOpen && (
                 <div className="mt-2 grid grid-cols-1 gap-1 rounded-2xl bg-gray-50 p-2">
@@ -165,17 +181,6 @@ export default function Header() {
                 {name}
               </NavLink>
             ))}
-
-            <div className="pt-6">
-              <NavLink
-                to="/internsapp"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-2xl bg-[#4285F4] py-4 text-xl font-bold text-white shadow-lg"
-              >
-                Visit InternsHub
-                <ExternalLink className="w-5 h-5" />
-              </NavLink>
-            </div>
           </div>
         </div>
       )}

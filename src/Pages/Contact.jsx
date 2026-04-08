@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 import {
@@ -49,6 +50,7 @@ ${name}`
     <div className="font-sans text-gray-800 scroll-smooth">
       {/* ======= HEADER ======= */}
       <Header />
+      <ScrollToTop />
 
       {/* ======= HERO SECTION ======= */}
       <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-24 md:mt-32">

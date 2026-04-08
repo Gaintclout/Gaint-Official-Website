@@ -30,6 +30,7 @@ import { Atom } from "lucide-react";
 import Header from "@/components/Header";
 import { NavLink } from "react-router-dom";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 
 
@@ -78,19 +79,20 @@ export default function Home() {
 
   {/* Scrolling logos */ }
   const logos = [
-    "/public/Aims.png",
-    "/Public/btb.png",
-    "/public/sun.png",
-    "/Public/Datafabric.png",
-    "/public/xsdata.png",
-    "/public/vedha.png",
-    "/public/trust.png",
+    "/Aims.png",
+    "/btb.png",
+    "/sun.png",
+    "/Datafabric.png",
+    "/XSdata.png",
+    "/vedha.png",
+    "/trust.png",
 
   ];
   return (
     <div className="font-century gothic text-gray-800 scroll-smooth">
       {/* ---------------- HEADER ---------------- */}
       <Header />
+      <ScrollToTop />
 
 {/* ---------------- HERO / ABOUT ---------------- */}
       <section

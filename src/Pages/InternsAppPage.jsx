@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function InternsAppPage() {
 
@@ -27,6 +28,7 @@ export default function InternsAppPage() {
     <div className="font-sans text-gray-800 scroll-smooth">
       {/* ---------------- HEADER ---------------- */}
       <Header />
+      <ScrollToTop />
     
 
       {/* ---------------- HERO SECTION ---------------- */}
