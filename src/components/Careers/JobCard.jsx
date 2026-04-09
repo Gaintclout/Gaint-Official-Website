@@ -3,12 +3,12 @@ import { Briefcase, MapPin, ExternalLink } from "lucide-react"; // Optional: Usi
 
 const JobCard = ({ job, onClick }) => {
   return (
-    <div className="group bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div className="flex justify-between items-start">
+    <div className="group bg-red-200 border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <div className="flex justify-between items-start bg-green-100 p-4 rounded-lg shadow">
         <div className="flex-1">
           {/* Company Name / Small Label */}
           <span className="text-xs font-bold text-blue-600 mb-1 block">
-            {job.company || "Hiring Company"}
+            {job.company || "Gaint Clout"}
           </span>
           
           <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
@@ -22,19 +22,19 @@ const JobCard = ({ job, onClick }) => {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
+      <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-900">
         <div className="flex items-center gap-1.5">
-          <MapPin size={16} className="text-gray-400" />
+          <MapPin size={16} className="text-gray-900" />
           {job.location}
         </div>
         <div className="flex items-center gap-1.5">
-          <Briefcase size={16} className="text-gray-400" />
+          <Briefcase size={16} className="text-gray-900" />
           <span className="capitalize">{job.type}</span>
         </div>
       </div>
 
       {/* Description Snippet */}
-      <p className="mt-4 text-gray-600 text-sm line-clamp-2 leading-relaxed">
+      <p className="mt-4 text-gray-900 text-sm line-clamp-2 leading-relaxed">
         {job.description || "Join our team to help build the future of technology in a fast-paced environment..."}
       </p>
 
