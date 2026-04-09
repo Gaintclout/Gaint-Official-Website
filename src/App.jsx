@@ -6,7 +6,6 @@ import Contact from "./Pages/Contact.jsx";
 import DonorGO from "./Pages/DonorGO.jsx"; 
 import WellNestAI from "./Pages/Wellnestai.jsx";
 import ImmuneIQ from "./Pages/ImmuneIQ.jsx";
-import Career from "./Pages/Career.jsx";
 import Service from "./Pages/Service.jsx";
 import Demo from "./Pages/Home.jsx";
 import InternsAppPage from "./Pages/InternsAppPage.jsx";
@@ -14,7 +13,8 @@ import QKDPage from "./Pages/Qkd.jsx";
 import PQC from "./Pages/PQC.jsx"; 
 import GIS from "./Pages/Gis";
 import Certificates from "./Pages/Certificates.jsx";
-
+import Workshop from "./Pages/Workshop.jsx";
+import Career from "./Pages/Career.jsx";
 
 
 
@@ -29,8 +29,7 @@ function App() {
       <Route path="/donorgo" element={<DonorGO />} />
       <Route path="/wellnestai" element={<WellNestAI/>} />
       <Route path="/immuneiq" element={<ImmuneIQ/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path ="/career" element={<Career/>} />
+      <Route path="/career" element={<Career/>} />
       <Route path ="/service" element={<Service/>} />
       <Route path ="/demo" element={<Demo/>} />
       <Route path ="/internsapp" element={<InternsAppPage/>} />
@@ -38,7 +37,7 @@ function App() {
       <Route path="/pqc" element={<PQC />} />
       <Route path="/gis" element={<GIS />} />
       <Route path="/certificates" element={<Certificates />} />
-      
+      <Route path="/workshop" element={<Workshop />} />
     </Routes>
   );
 }
