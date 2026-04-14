@@ -31,6 +31,8 @@ import { motion } from "framer-motion";
 import { Atom } from "lucide-react";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import EmployeeList from "@/components/Employees/EmployeeList";
+
 
 
 
@@ -799,7 +801,7 @@ export default function About() {
       </section>
 
 
-
+<EmployeeList />
       <Footer />
 
 
