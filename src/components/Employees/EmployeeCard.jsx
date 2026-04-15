@@ -6,8 +6,11 @@ export default function EmployeeCard({ employee }) {
     >
       {/* 🔹 Cover */}
       <div
-        className="h-36 w-full bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${employee.cover})` }}
+        className="h-36 w-full bg-cover bg-no-repeat relative"
+        style={{
+          backgroundImage: `url(${employee.cover})`,
+          backgroundPosition: employee.coverStyle?.position || "center",
+        }}
       >
         {/* 🔹 Profile Image */}
         <div className="absolute -bottom-14 left-6">

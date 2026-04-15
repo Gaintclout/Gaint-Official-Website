@@ -34,7 +34,7 @@ const employees = [
     role: "Frontend Developer",
     description:
       "Passionate frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
-    image: "/umar.jpg",
+    image: "/umar.jpeg",
     cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
 
   },
@@ -45,8 +45,10 @@ const employees = [
     description:
       "Experienced leader in AI program management, driving innovation and strategic initiatives in artificial intelligence projects.",
     image: "/Premji.jpeg",
-    cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-
+  cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
+  coverStyle: {
+      position: "center 30%",
+    },
   },
   {
     id: 6,
@@ -55,8 +57,7 @@ const employees = [
     description:
       "Skilled professional in investor relations, managing stakeholder communications, and fostering strong investor relationships.",
     image: "/narendra-thari.jpg",
-    cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-
+  cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
   }
 ];
 
