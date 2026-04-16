@@ -8,7 +8,8 @@
       font-family: Arial, sans-serif;
       background-color: #f0f2f5;
       text-align: center;
-      padding: 50px;
+      margin: 0;
+      padding: 24px;
     }
     h1 {
       color: #333;
@@ -37,9 +38,25 @@
     button:hover {
       background-color: #0056b3;
     }
+    .back-btn {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      padding: 10px 12px;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #111;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .back-btn:hover {
+      background: #fff;
+    }
   </style>
 </head>
 <body>
+  <button class="back-btn" onclick="goHome()" aria-label="Back to home">← Back</button>
   <h1>Gaint Clout - Certificate Portal</h1>
   <p>Enter your code below to view your certificate.</p>
 
@@ -49,6 +66,12 @@
   </div>
 
   <script>
+    function goHome() {
+      // If this page is inside an iframe (SPA route), navigate the top-level window.
+      const target = window.top && window.top !== window ? window.top : window;
+      target.location.href = "/";
+    }
+
     function openCertificate() {
       const code = document.getElementById('codeInput').value.trim();
       

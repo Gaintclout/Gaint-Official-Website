@@ -1,0 +1,18 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\Gaint projects\Gaint-Official-Website\.npmrc
+5 silly config load:file:E:\Gaint projects\Gaint-Official-Website\.appdata\npm\etc\npmrc
+6 verbose title npm run build
+7 verbose argv "run" "build"
+8 verbose logfile logs-max:10 dir:E:\Gaint projects\Gaint-Official-Website\.npm-cache\_logs\2026-04-16T09_44_45_359Z-
+9 verbose logfile E:\Gaint projects\Gaint-Official-Website\.npm-cache\_logs\2026-04-16T09_44_45_359Z-debug-0.log
+10 silly logfile done cleaning log files
+11 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with EACCES
+12 verbose cwd E:\Gaint projects\Gaint-Official-Website
+13 verbose os Windows_NT 10.0.19045
+14 verbose node v22.14.0
+15 verbose npm  v10.9.2
+16 verbose exit 1
+17 verbose code 1

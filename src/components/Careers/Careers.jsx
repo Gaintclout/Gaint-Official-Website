@@ -24,9 +24,11 @@ const Careers = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       {/* HEADER */}
+      <a href="/" className="text-blue-500 hover:underline">&larr; Go Back</a>
       <h1 className="text-3xl font-bold text-center text-blue-700 mb-10">
         Careers at Gaint Clout
       </h1>
+      
 
       {/* JOB LIST */}
       {!selectedJob && (
