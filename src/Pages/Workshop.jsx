@@ -41,8 +41,7 @@ const accordionSections = [
 export default function Workshop() {
   const [openIndex, setOpenIndex] = useState(0);
   const bgStyle = {
-    backgroundImage:
-      "linear-gradient(rgba(31,39,43,0.86), rgba(31,39,43,0.86)), url('/apply-bg.jpg')",
+    backgroundImage: "url('/apply-bg.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

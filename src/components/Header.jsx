@@ -120,7 +120,7 @@ export default function Header() {
                 key={name}
                 to={link}
                 onClick={() => setMenuOpen(false)}
-                className="block py-3 text-lg font-semibold text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
+                className="block py-3 text-lg text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
               >
                 {name}
               </NavLink>
@@ -129,7 +129,7 @@ export default function Header() {
             <div className="py-2 border-b border-gray-50">
               <button
                 onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                className="flex w-full items-center justify-center gap-2 py-2 text-lg font-semibold text-gray-800"
+                className="flex w-full items-center justify-center gap-2 py-2 text-lg text-gray-800"
               >
                 Products
                 <ChevronDown
@@ -143,7 +143,7 @@ export default function Header() {
                       key={product.name}
                       to={product.link}
                       onClick={() => setMenuOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-600 font-medium hover:text-[#4285F4]"
+                      className="block px-4 py-2 text-sm text-gray-600  hover:text-[#4285F4]"
                     >
                       {product.name}
                     </NavLink>
@@ -157,7 +157,7 @@ export default function Header() {
                 key={name}
                 to={link}
                 onClick={() => setMenuOpen(false)}
-                className="block py-3 text-lg font-semibold text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
+                className="block py-3 text-lg  text-gray-800 border-b border-gray-50 hover:text-[#4285F4]"
               >
                 {name}
               </NavLink>

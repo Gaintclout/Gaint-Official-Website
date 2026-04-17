@@ -59,6 +59,7 @@ export default {
       fontFamily: {
         // 🧠 Professional sans-serif font pairing
         sans: ["Inter", "Poppins", "system-ui", "sans-serif"],
+        gothic: ["Century Gothic", "CenturyGothic", "AppleGothic", "sans-serif"],
       },
     },
   },

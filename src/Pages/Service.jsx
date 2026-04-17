@@ -81,7 +81,7 @@ export default function ServicesOffered() {
   const heroRef = useRef(null);
 
   return (
-    <div className="font-sans text-gray-800 scroll-smooth">
+    <div className="font-gothic text-gray-800 scroll-smooth">
       <Header />
       <ScrollToTop />
 
@@ -105,7 +105,7 @@ export default function ServicesOffered() {
         <div className="relative z-10 flex flex-col items-end text-right text-white px-8 md:px-24 max-w-4xl">
        <h1
               className=" 
-        font-semibold leading-none mb-6 animate-fadeInUp
+         leading-none mb-6 animate-fadeInUp
         bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
         text-[100px] sm:text-[150px] md:text-[180px] lg:text-[200px] xl:text-[120px]
         drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
@@ -136,8 +136,7 @@ export default function ServicesOffered() {
    Our Services
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-3xl">
-        WE PROVIDE END-TO-END TECHNOLOGY SOLUTIONS THAT MERGE INTELLIGENCE,
-        SCALABILITY, AND CREATIVE DESIGN FOR BUSINESSES WORLDWIDE 
+        we provide end-to-end technology solutions that merge intelligence, scalability, and creative design for businesses worldwide
 
                   </p>
         </div>
@@ -154,7 +153,7 @@ export default function ServicesOffered() {
                 <div className="-rotate-45">{service.icon}</div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-2xl  text-gray-900 mb-3">
                 {service.title}
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -180,13 +179,13 @@ export default function ServicesOffered() {
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="/contact"
-                className="px-5 py-2.5 rounded-xl bg-white text-gray-900 font-semibold shadow hover:shadow-md"
+                className="px-5 py-2.5 rounded-xl bg-white text-gray-900  shadow hover:shadow-md"
               >
                 Contact Us
               </a>
               <a
                 href="#case-studies"
-                className="px-5 py-2.5 rounded-xl border border-white/40 text-white font-semibold hover:bg-white/10"
+                className="px-5 py-2.5 rounded-xl border border-white/40 text-white  hover:bg-white/10"
               >
                 View Case Studies
               </a>

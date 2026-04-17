@@ -173,16 +173,16 @@ export default function Home() {
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12 sm:py-16 text-center">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div data-aos="fade-up">
-            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px] font-extrabold mb-2">{clients}+</h3>
+            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px] mb-2">{clients}+</h3>
             <p className="text-lg sm:text-xl md:text-[28px]">Happy Clients</p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200">
-            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px] font-bold mb-2">{projects}+</h3>
+            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px]  mb-2">{projects}+</h3>
             <p className="text-lg sm:text-xl md:text-[28px]">AI Projects Delivered</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="400">
-            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px] font-bold mb-2">{awards}</h3>
+            <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px]  mb-2">{awards}</h3>
             <p className="text-lg sm:text-xl md:text-[28px]">Awards & Recognitions</p>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function Home() {
       <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h3 className="text-3xl md:text-5xl  text-gray-800 mb-4">
             Industries We Service
           </h3>
           <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
 
               {/* Content */}
-              <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
+              <h4 className=" text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
                 {industry.title}
               </h4>
               <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow overflow-hidden">
@@ -295,8 +295,8 @@ export default function Home() {
       <section id="products" className="py-20 bg-transparent backdrop-blur-0">
         {/* Heading */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h3 className="text-3xl sm:text-4xl md:text-6xl text-gray-800 mb-3">Our Products</h3>
-          <p className="text-gray-500 text-xl sm:text-2xl md:text-4xl">
+          <h3 className="text-2xl sm:text-4xl md:text-5xl text-gray-800 mb-3">Our Products</h3>
+          <p className="text-gray-500 text-xl sm:text-2xl md:text-2xl">
             Innovations developed by GAINT
           </p>
         </div>
@@ -331,7 +331,7 @@ export default function Home() {
             },
             {
               icon: <Cpu className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              name: "Unips",
+              name: "UNIPS",
               desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
               link: "/gis",
             },
@@ -349,7 +349,7 @@ export default function Home() {
                 {product.icon}
               </div>
 
-              <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
+              <h4 className=" text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
                 {product.name}
               </h4>
 
@@ -419,8 +419,8 @@ export default function Home() {
 
       <section className="bg-white py-10 overflow-hidden">
         <div className="text-center mb-8">
-          <h3 className="text-3xl sm:text-4xl md:text-6xl text-gray-800">Our Collaborations</h3>
-          <p className="text-gray-500 text-xl sm:text-2xl md:text-4xl">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl text-gray-800">Our Collaborations</h3>
+          <p className="text-gray-500 text-xl sm:text-2xl md:text-2xl mt-4">
             Industry, Academia, and Media partnerships powering GAINT
           </p>
         </div>

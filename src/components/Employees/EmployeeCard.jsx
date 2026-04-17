@@ -15,7 +15,7 @@ export default function EmployeeCard({ employee }) {
     : Object.keys(icons).map((key) => [key, null]);
 
   return (
-    <div className="bg-white w-full max-w-[260px] mx-auto rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center px-6 py-8 flex flex-col h-full">
+    <div className="bg-white w-full max-w-[260px] mx-auto rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center px-6 py-6 flex flex-col h-full">
       
       {/* Profile Image */}
       <div className="flex justify-center">
@@ -28,24 +28,24 @@ export default function EmployeeCard({ employee }) {
       </div>
 
       {/* Name */}
-      <h2 className="mt-5 text-[17px] font-semibold text-gray-800">
+      <h2 className="mt-3 text-[17px] font-normal text-gray-800">
         {employee.name}
       </h2>
 
       {/* Description */}
-      <p className="text-[13px] text-gray-500 mt-3 leading-relaxed px-2">
+      <p className="text-[13px] text-gray-500 mt-2 leading-relaxed px-2">
         {employee.description}
       </p>
 
       {/* Role */}
-   <div className="mt-4">
-  <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
-    {employee.role}
-  </span>
-</div>
+      <div className="mt-3">
+        <span className="inline-block bg-blue-50 text-blue-600 text-xs font-normal px-3 py-1 rounded-full">
+          {employee.role}
+        </span>
+      </div>
 
       {/* Social Icons */}
-      <div className="flex justify-center gap-4 mt-auto pt-5 text-gray-700 text-sm">
+      <div className="flex justify-center gap-4 mt-auto pt-3 text-gray-700 text-sm">
         {socialEntries.map(([key, link]) => {
           const iconClass = icons[key];
 
