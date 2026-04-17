@@ -492,7 +492,7 @@ export default function About() {
               viewport={{ once: true }}
               className="max-w-sm mt-8 text-gray-600 text-center leading-relaxed text-2xl"
             >
-            Gaint Clout combines deep technical expertise, ai innovation, and customer-centric design to create sustainable value for every partner.
+            Gaint Clout combines deep technical expertise, AI innovation, and customer-centric design to create sustainable value for every partner.
             </motion.p>
           </motion.div>
 

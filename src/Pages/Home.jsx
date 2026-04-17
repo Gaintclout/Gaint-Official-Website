@@ -265,7 +265,7 @@ export default function Home() {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 50}
-              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] min-h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
+              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
             >
               {/* Blue Glow Layer */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
@@ -279,7 +279,7 @@ export default function Home() {
               <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
                 {industry.title}
               </h4>
-              <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow">
+              <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow overflow-hidden">
                 {industry.desc}
               </p>
             </div>
@@ -302,100 +302,62 @@ export default function Home() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 px-6 md:px-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 px-6 md:px-12 lg:px-20 place-items-center">
 
-          {/* 👉 FIRST 3 CARDS */}
           {[
             {
-              icon: <Heart className="w-12 h-12 text-[#4285F4]" />,
+              icon: <Heart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "DonorGO",
               desc: "Smart blood donation and emergency request system integrating donors, hospitals, and NGOs.",
               link: "/donorgo",
             },
             {
-              icon: <GraduationCap className="w-12 h-12 text-[#4285F4]" />,
+              icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "GAINT InternHub",
               desc: "AI-driven internship & training platform with projects, code evaluation, and job placement.",
               link: "/internsapp",
             },
             {
-              icon: (
-                <LineChart className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-              ),
+              icon: <LineChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "GAINT ImmuneIQ",
               desc: "AI-fintech dashboard for investment analytics, trading insights, and market prediction.",
               link: "/Immuneiq",
+            },
+            {
+              icon: <HeartPulse className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              name: "WellNest AI Station",
+              desc: "AI-powered smart healthcare kiosk integrating vitals monitoring, telemedicine, and real-time diagnostics for rural and urban health ecosystems.",
+              link: "/wellnestai",
+            },
+            {
+              icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              name: "Unips",
+              desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
+              link: "/gis",
             },
           ].map((product, i) => (
             <a
               key={i}
               href={product.link}
-              data-aos="zoom-in"
-              data-aos-delay={i * 150}
-              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay={i * 50}
+              className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md w-full max-w-[280px] h-[320px] text-center p-6 md:p-8 hover:scale-105 hover:shadow-blue-300/50 transition-all duration-300 overflow-hidden flex flex-col items-center"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl bg-[#4285F4]/10 pointer-events-none"></div>
 
-              <div className="flex justify-center mb-4 relative z-10 animate-float">
+              <div className="flex justify-center mb-4 relative z-10">
                 {product.icon}
               </div>
 
-              <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
+              <h4 className="font-bold text-xl md:text-2xl mb-3 text-gray-800 relative z-10 leading-tight">
                 {product.name}
               </h4>
 
-              <p className="text-gray-700 text-xl relative z-10 text-century gothic">
+              <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow overflow-hidden">
                 {product.desc}
               </p>
             </a>
           ))}
-
-          {/* 👉 LAST 2 CENTERED */}
-          <div className="md:col-span-3 flex flex-col sm:flex-row flex-wrap justify-center gap-8 sm:gap-12 md:gap-20">
-
-            {[
-              {
-                icon: (
-                  <HeartPulse className="w-12 h-12 text-[#4285F4] animate-pulse drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-                ),
-                name: "WellNest AI Station",
-                desc: "AI-powered smart healthcare kiosk integrating vitals monitoring, telemedicine, and real-time diagnostics for rural and urban health ecosystems.",
-                link: "/wellnestai",
-              },
-              {
-                icon: (
-                  <Building2 className="w-12 h-12 text-[#4285F4] animate-bounce drop-shadow-[0_0_15px_rgba(66,133,244,0.5)]" />
-                ),
-                
-                name: "Unips",
-                desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
-                link: "/gis",
-              },
-            ].map((product, i) => (
-              <a
-                key={i}
-                href={product.link}
-                data-aos="zoom-in"
-                data-aos-delay={i * 150}
-                className="group relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl shadow-md p-8 text-center hover:scale-105 hover:shadow-blue-300 transition-all overflow-hidden w-full max-w-sm"
-              >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-2xl bg-[#4285F4]/25"></div>
-
-                <div className="flex justify-center mb-4 relative z-10 animate-float">
-                  {product.icon}
-                </div>
-
-                <h4 className="font-semibold text-2xl mb-2 text-gray-800 relative z-10 text-century gothic">
-                  {product.name}
-                </h4>
-
-                <p className="text-gray-700 text-xl relative z-10 text-century gothic">
-                  {product.desc}
-                </p>
-              </a>
-            ))}
-
-          </div>
 
         </div>
       </section>

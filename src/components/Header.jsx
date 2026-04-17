@@ -17,9 +17,8 @@ const navLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Services", link: "/service" },
-  { name: "Workshops", link: "/Workshop" },
-  { name: "Certificates", link: "/certificates" },
   { name: "Careers", link: "/career" },
+  { name: "Workshops", link: "/Workshop" },
   { name: "Contact", link: "/contact" },
 ];
 
