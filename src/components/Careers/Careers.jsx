@@ -9,7 +9,7 @@ const Careers = () => {
   const jobs = [
     {
       title: "Associate Software Engineer",
-      location: "Hyderabad",
+      location: "Andhra Pradesh",
       type: "Full-Time",
       component: "ASE",
     },
@@ -22,7 +22,7 @@ const Careers = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 px-6 py-10">
+    <div className="min-h-screen bg-gradient-to-br bg-white px-6 py-10">
       
       {/* HEADER */}
       <div className="max-w-6xl mx-auto mb-10">

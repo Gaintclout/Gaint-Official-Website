@@ -47,7 +47,7 @@ ${name}`
   };
 
   return (
-    <div className="font-sans text-gray-800 scroll-smooth">
+    <div className="font-gothic text-gray-800 scroll-smooth">
       {/* ======= HEADER ======= */}
       <Header />
       <ScrollToTop />
@@ -84,7 +84,7 @@ ${name}`
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl  text-gray-900 mb-6">
               Contact Information
             </h2>
 
@@ -94,7 +94,7 @@ ${name}`
                 <Mail size={22} />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Email Us</h4>
+                <h4 className=" text-gray-900">Email Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">info@gaintclout.com</p>
               </div>
             </div>
@@ -105,7 +105,7 @@ ${name}`
                 <Phone size={22} />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Call Us</h4>
+                <h4 className=" text-gray-900">Call Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">+91 88972 38849</p>
               </div>
             </div>
@@ -116,7 +116,7 @@ ${name}`
                 <MapPin size={22} />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Visit Us</h4>
+                <h4 className=" text-gray-900">Visit Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">
                   Awfis Elite 4th Floor, Orbit Building, Knowledge City,
                   Hyderabad
@@ -133,7 +133,7 @@ ${name}`
             viewport={{ once: true }}
             className="bg-white shadow-lg rounded-2xl p-6 sm:p-8"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl sm:text-3xl text-gray-900 mb-6">
               Send us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">

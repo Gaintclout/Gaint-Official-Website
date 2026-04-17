@@ -24,6 +24,7 @@ export default function EmployeeCard({ employee }) {
           alt={employee.name}
           onError={(e) => (e.target.src = "https://picsum.photos/100")}
           className="w-28 h-28 rounded-full border-[3px] border-orange-300 object-cover"
+          style={employee.photoStyle || {}}
         />
       </div>
 

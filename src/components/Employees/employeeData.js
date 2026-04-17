@@ -54,12 +54,12 @@ const employees = [
     role: "Frontend Developer",
     description:
       "Passionate frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
-    image: "/umar.jpeg",
+    image: "/umar.png",
     cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-
+    photoStyle: { objectPosition: "center 5%", transform: "scale(1.0)" },
   },{
     id: 7,
-    name: "Rohini",
+    name: "Rohini Reddy",
     role: "Backend Developer",
     description:
       "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",

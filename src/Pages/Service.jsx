@@ -10,9 +10,9 @@ import {
   Atom,
   Palette,
   TrendingUp,
-  Map,          
-  Laptop,       
-  Shield,      
+  MapPinned,          
+  MonitorSmartphone,
+  ChevronsLeftRightEllipsis,   
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -32,12 +32,12 @@ const services = [
     desc: "Build intelligent systems with Machine Learning, Deep Learning, NLP, and Computer Vision.",
   },
   {
-    icon: <Laptop className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ better than Code
+    icon: < ChevronsLeftRightEllipsis className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ better than Code
     title: "Mobile & Web Development",
     desc: "Design responsive websites, scalable apps, and cross-platform mobile applications.",
   },
   {
-    icon: <Cpu className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
+    icon: <MonitorSmartphone className="w-12 h-12 text-indigo-600 animate-pulse" />,
     title: "Software Development",
     desc: "Custom software, outsourcing, testing, migration, and .NET consulting.",
   },
@@ -47,18 +47,18 @@ const services = [
     desc: "Encryption, firewalls, threat detection, penetration testing, and compliance.",
   },
   {
-    icon: <Atom className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
+    icon: <Atom className="w-12 h-12 text-indigo-600 animate-pulse" />,
     title: "R&D On Post-Quantum Cryptography & QKD",
     desc: "Quantum-safe encryption and next-gen cybersecurity research.",
   },
   {
-    icon: <Map className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ NOW VALID
+    icon: <MapPinned className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ NOW VALID
     title: "Geographic Information System (GIS)",
     desc: "Spatial data analysis, mapping, smart city planning, and geospatial intelligence.",
     link: "/gis",
   },
   {
-    icon: <Palette className="w-12 h-12 text-indigo-600 animate-bounce" />, // ✅ correct
+    icon: <Palette className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ correct
     title: "Creative Designing",
     desc: "Logos, branding, UI/UX, graphic design, and marketing creatives.",
   },
@@ -68,7 +68,7 @@ const services = [
     desc: "SEO, PPC, SMO, branding, and lead generation strategies.",
   },
   {
-    icon: <MessageCircle className="w-12 h-12 text-indigo-600 animate-bounce" />, // ✅ correct
+    icon: <MessageCircle className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ correct
     title: "Consultation",
     desc: "Expert guidance on technology, business strategy, and digital transformation.",
   },
@@ -131,68 +131,42 @@ export default function ServicesOffered() {
       {/* ---------------- SERVICES GRID ---------------- */}
       <section className="bg-gray-50 py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-6xl  text-gray-900 mb-4">
+          <h2 className="text-4xl  text-gray-900 mb-4">
    
    Our Services
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-3xl">
+          <p className="text-gray-600 max-w-3xl mx-auto text-2xl">
         we provide end-to-end technology solutions that merge intelligence, scalability, and creative design for businesses worldwide
 
                   </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`p-8 bg-white rounded-xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-2 text-center relative ${
-                index % 2 === 1 ? "md:translate-y-8" : ""
-              }`}
-            >
-              <div className="w-12 h-12 flex items-center justify-center text-white rounded-md rotate-45 mx-auto mb-6 shadow-lg bg-gradient-to-r from-white-600 to-white-600">
-                <div className="-rotate-45">{service.icon}</div>
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="p-5 sm:p-6 md:p-8 bg-white rounded-xl shadow-md hover:shadow-2xl 
+      transition transform hover:-translate-y-2 text-center"
+    >
+      {/* ICON */}
+      <div className="w-12 h-12 flex items-center justify-center rounded-md mx-auto mb-5 shadow-md bg-indigo-50">
+        {service.icon}
+      </div>
 
-              <h3 className="text-2xl  text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+      {/* TITLE */}
+      <h3 className="text-lg sm:text-xl md:text-2xl  text-gray-900 mb-2">
+        {service.title}
+      </h3>
+
+      {/* DESCRIPTION */}
+      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+        {service.desc}
+      </p>
+    </div>
+  ))}
+</div>
       </section>
 
-      {/* ---------------- CTA SECTION ---------------- */}
-      {/* <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="relative overflow-hidden rounded-2xl p-8 md:p-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.15)_0,transparent_40%),radial-gradient(circle_at_80%_40%,rgba(255,255,255,0.2)_0,transparent_45%)]" />
-          <div className="relative">
-            <h3 className="text-3xl font-bold">
-              Let’s Build the Future with AI
-            </h3>
-            <p className="mt-2 text-white/90 max-w-2xl">
-              From strategy to deployment, GAINT partners with you to automate
-              processes, enhance security, and deliver intelligent products.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="/contact"
-                className="px-5 py-2.5 rounded-xl bg-white text-gray-900  shadow hover:shadow-md"
-              >
-                Contact Us
-              </a>
-              <a
-                href="#case-studies"
-                className="px-5 py-2.5 rounded-xl border border-white/40 text-white  hover:bg-white/10"
-              >
-                View Case Studies
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* ---------------- FOOTER ---------------- */}
       <Footer />
