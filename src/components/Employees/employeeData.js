@@ -41,7 +41,7 @@ const employees = [
   {
     id: 5,
     name: "Manikanta",
-    role: "Backend Developer",
+    role: "Investor Relations",
     description:
       "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
     image: "/manikanta.jpeg",

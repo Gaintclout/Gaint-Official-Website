@@ -4,13 +4,15 @@ import { Link } from "react-router-dom";
 import {
   Cpu,
   BrainCircuit,
-  Bot,
-  Workflow,
-  Network,
-  Database,
-  MessageSquare,
-  Handshake,
+  MessageCircle,
+  Code,
+  ShieldCheck,
   Atom,
+  Palette,
+  TrendingUp,
+  Map,          
+  Laptop,       
+  Shield,      
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -27,58 +29,52 @@ const services = [
   {
     icon: <BrainCircuit className="w-12 h-12 text-indigo-600 animate-pulse" />,
     title: "AI Development",
-    desc: "Build intelligent systems with Machine Learning, Deep Learning, Natural Language Processing, and Computer Vision. Focus on model design, training, optimization, and deployment for solving complex real-world problems.",
+    desc: "Build intelligent systems with Machine Learning, Deep Learning, NLP, and Computer Vision.",
   },
   {
-    icon: <Bot className="w-12 h-12 text-indigo-600 animate-bounce" />,
+    icon: <Laptop className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ better than Code
     title: "Mobile & Web Development",
-    desc: "Design and build responsive websites, scalable web apps, and cross-platform mobile applications. Deliver enterprise portals, eCommerce platforms (B2B/B2C), and seamless integrations with social and cloud services.",
+    desc: "Design responsive websites, scalable apps, and cross-platform mobile applications.",
   },
   {
     icon: <Cpu className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
     title: "Software Development",
-    desc: "Custom Software Development, Software Outsourcing, Software Testing & QA Services, Migration & Re-Engineering, and .NET Consulting.",
+    desc: "Custom software, outsourcing, testing, migration, and .NET consulting.",
   },
   {
-    icon: <Network className="w-12 h-12 text-indigo-600 animate-bounce" />,
+    icon: <ShieldCheck className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ correct
     title: "Cyber Security",
-    desc: "Encryption, Firewalls, Threat Detection, Penetration Testing, Authentication, Malware Protection, Forensics, Risk Management, and Compliance.",
+    desc: "Encryption, firewalls, threat detection, penetration testing, and compliance.",
   },
-    {
-  icon: <Atom className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
-  title: "R&D On Post-Quantum Cryptography & Quantum Key Distribution",
-  desc: "Research and development focused on quantum-safe encryption methods and QKD to ensure next-generation cybersecurity resilience in the post-quantum era.",
-},
-{
-  icon: (
-    <Globe2 className="w-12 h-12 text-indigo-600 animate-spin-slow" />
-  ),
-  title: "Geographic Information System (GIS)",
-  desc: "Advanced GIS platform for spatial data analysis, mapping, and real-time decision-making. Enables smart city planning, land management, disaster monitoring, and geospatial intelligence for enterprises and governments.",
-  link: "/gis",
-},
-
   {
-    icon: <Database className="w-12 h-12 text-indigo-600 animate-pulse" />,
+    icon: <Atom className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
+    title: "R&D On Post-Quantum Cryptography & QKD",
+    desc: "Quantum-safe encryption and next-gen cybersecurity research.",
+  },
+  {
+    icon: <Map className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ NOW VALID
+    title: "Geographic Information System (GIS)",
+    desc: "Spatial data analysis, mapping, smart city planning, and geospatial intelligence.",
+    link: "/gis",
+  },
+  {
+    icon: <Palette className="w-12 h-12 text-indigo-600 animate-bounce" />, // ✅ correct
     title: "Creative Designing",
-    desc: "Logo, Brochure, Corporate Identity, Graphic Design, Flash Animations, Website Layouts, Newsletters, and Print Collateral.",
+    desc: "Logos, branding, UI/UX, graphic design, and marketing creatives.",
   },
   {
-    icon: <Workflow className="w-12 h-12 text-indigo-600 animate-spin-slow" />,
+    icon: <TrendingUp className="w-12 h-12 text-indigo-600 animate-pulse" />, // ✅ correct
     title: "SEO & Digital Marketing",
-    desc: "Search Engine Optimization (SEO), PPC, SMO, Brand Reputation, Internet Marketing, and Lead Generation Strategies.",
+    desc: "SEO, PPC, SMO, branding, and lead generation strategies.",
   },
-   
-{
-  icon: <MessageSquare className="w-12 h-12 text-indigo-600 animate-bounce" />,
-  title: "Consultation",
-  desc: "Search Engine Optimization (SEO), PPC, SMO, Brand Reputation, Internet Marketing, and Lead Generation Strategies.",
-},
-
-
-
-
+  {
+    icon: <MessageCircle className="w-12 h-12 text-indigo-600 animate-bounce" />, // ✅ correct
+    title: "Consultation",
+    desc: "Expert guidance on technology, business strategy, and digital transformation.",
+  },
 ];
+
+
 
 // -------------------- Component --------------------
 export default function ServicesOffered() {

@@ -45,32 +45,32 @@ export default function About() {
 
   const strengths = [
     {
-      icon: <Users className="w-9 h-9" />,
+      icon: <Users className="w-7 h-7" />,
       title: "Single Point of Contact",
       desc: "One partner for strategy design engineering deployment and support",
     },
     {
-      icon: <ShieldCheck className="w-9 h-9" />,
+      icon: <GraduationCap className="w-7 h-7" />,
       title: "Dedicated Experts",
       desc: "A focused multidisciplinary team committed to outcomes",
     },
     {
-      icon: <Target className="w-9 h-9" />,
+      icon: <Target className="w-7 h-7" />,
       title: "Quality & Value",
       desc: "We measure success by reliability security and real business value",
     },
     {
-      icon: <Lightbulb className="w-9 h-9" />,
+      icon: <BrainCircuit className="w-7 h-7" />,
       title: "Domain Depth",
       desc: "Experience across multiple industries",
     },
     {
-      icon: <TrendingUp className="w-9 h-9" />,
+      icon: <TrendingUp className="w-7 h-7" />,
       title: "Competitive Pricing",
       desc: "Transparent India-first pricing",
     },
     {
-      icon: <Workflow className="w-9 h-9" />,
+      icon: <Rocket className="w-7 h-7" />,
       title: "Always Upgrading",
       desc: "Continuous adoption of new technologies",
     },
@@ -81,7 +81,7 @@ export default function About() {
 
   const reasons = [
     {
-      icon: <Diamond className="w-6 h-6 text-white" />,
+      icon: <Lightbulb className="w-6 h-6 text-white" />,
       title: "Excellence in Innovation",
       desc: "We deliver cutting-edge AI and digital solutions tailored to your goals.",
       color: "from-[#6D28D9] to-[#9333EA]",
@@ -93,13 +93,13 @@ export default function About() {
       color: "from-[#3B82F6] to-[#06B6D4]",
     },
     {
-      icon: <Hand className="w-6 h-6 text-white" />,
+      icon: <HeartHandshake className="w-6 h-6 text-white" />,
       title: "Client-Centric Approach",
       desc: "We collaborate closely with clients to build scalable, human-centered tech.",
       color: "from-[#14B8A6] to-[#0EA5E9]",
     },
     {
-      icon: <Heart className="w-6 h-6 text-white" />,
+      icon: <ShieldCheck className="w-6 h-6 text-white" />,
       title: "Trusted Partnerships",
       desc: "Our success is built on integrity, transparency, and long-term relationships.",
       color: "from-[#F43F5E] to-[#EC4899]",
@@ -310,7 +310,7 @@ export default function About() {
                 </div>
                 <h3 className="text-3xl font-semibold">{s.title}</h3>
               </div>
-              <p className="mt-3 text-gray-600 text-2xl">{s.desc}</p>
+              <p className="mt-3 text-gray-600 text-2xl text-center">{s.desc}</p>
             </motion.div>
           ))}
         </div>

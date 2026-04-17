@@ -38,9 +38,11 @@ export default function EmployeeCard({ employee }) {
       </p>
 
       {/* Role */}
-      <p className="mt-4 text-[12px] font-semibold text-gray-700 tracking-wide">
-        {employee.role}
-      </p>
+   <div className="mt-4">
+  <span className="inline-block bg-blue-50 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
+    {employee.role}
+  </span>
+</div>
 
       {/* Social Icons */}
       <div className="flex justify-center gap-4 mt-auto pt-5 text-gray-700 text-sm">

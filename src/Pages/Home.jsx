@@ -318,7 +318,7 @@ export default function Home() {
               link: "/internsapp",
             },
             {
-              icon: <LineChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              icon: <Banknote className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "GAINT ImmuneIQ",
               desc: "AI-fintech dashboard for investment analytics, trading insights, and market prediction.",
               link: "/Immuneiq",
@@ -330,7 +330,7 @@ export default function Home() {
               link: "/wellnestai",
             },
             {
-              icon: <Building2 className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              icon: <Cpu className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "Unips",
               desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
               link: "/gis",
