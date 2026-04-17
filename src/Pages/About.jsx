@@ -20,6 +20,9 @@ import {
   Hand,
   Heart,
   Globe,
+  Building2,
+  Microscope,
+  Trophy,
 } from "lucide-react";
 import {
   FaFacebookF,
@@ -326,10 +329,8 @@ export default function About() {
           <div className="bg-white shadow-2xl rounded-3xl border border-gray-100 p-10 backdrop-blur-sm">
             <div className="text-center mb-10">
               <div className="flex justify-center mb-4">
-                <MessageSquare className="w-10 h-10 text-[#34A853]" />
                 {/* <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div> */}
                 <div className="absolute -top-12 right-8 text-[#3b82f6]">
-                  <Atom className="w-10 h-10 animate-spin-slow" />
                 </div>
               </div>
 
@@ -346,28 +347,38 @@ export default function About() {
             <div className="divide-y divide-gray-200">
               {[
                 {
-                  icon: <Target className="w-6 h-6 text-[#34A853]" />,
+                  Icon: Building2,
+                  accentText: "text-[#34A853]",
+                  accentBg: "bg-[#34A853]/10",
                   q: "Year 1: Foundation & Growth?",
                   a: "Focus Areas: Branding Product Development, Prototyping Market Penetration, Brand Awareness, Networking, Team Building & Infrastructure, Establish Gaint Clout Technologies as a leader in AI, cybersecurity, and emerging tech.",
                 },
                 {
-                  icon: <Rocket className="w-6 h-6 text-[#EA4335]" />,
+                  Icon: Rocket,
+                  accentText: "text-[#EA4335]",
+                  accentBg: "bg-[#EA4335]/10",
                   q: "Year 2: Innovation, Productization & Expansion",
                   a: "Focus Areas: Build AI-based products, Start PQC prototype development, GIS for Smart Cities Using AI Intelligence, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
                 },
                 {
-                  icon: <GraduationCap className="w-6 h-6 text-[#FBBC05]" />,
+                  Icon: Trophy,
+                  accentText: "text-[#FBBC05]",
+                  accentBg: "bg-[#FBBC05]/10",
                   q: "Year 3: Market Leadership & Diversification?",
                   a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion Al Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
                 },
                 {
-                  icon: <Atom className="w-6 h-6 text-[#4285F4]" />,
+                  Icon: Microscope,
+                  accentText: "text-[#4285F4]",
+                  accentBg: "bg-[#4285F4]/10",
                   q: "Year 4: R&D Strength National Leadership",
                   a: "Focus Areas: Become known for AI + Quantum Security, Establish GAINT R&D Lab (AI + PQC + QC), Start PQC pilot projects, Work with government / defense / enterprises, Telecom, Research institutions.",
                 },
 
                 {
-                  icon: <Globe className="w-6 h-6 text-[#34A853]" />,
+                  Icon: Globe,
+                  accentText: "text-[#34A853]",
+                  accentBg: "bg-[#34A853]/10",
                   q: "Year 5: Global Expansion Ecosystem",
                   a: "Focus Areas: Enter International market, Middle East, Southeast Asia, Enterprise Quantum-Safe Security Suite.",
                 },
@@ -392,12 +403,16 @@ export default function About() {
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <summary className="flex justify-between items-center text-3xl  text-gray-800 hover:text-[#34A853] transition list-none ">
-                    <div className="flex items-center gap-3 ">
-                      <div className="p-2 bg-gray-100 rounded-lg">{faq.icon}</div>
-                      {faq.q}
+                  <summary className="flex justify-between items-center text-3xl transition list-none">
+                    <div className="flex items-center gap-3">
+                      <div className={`p-3 rounded-lg ${faq.accentBg} ${faq.accentText}`}>
+                        <faq.Icon className="w-8 h-8" />
+                      </div>
+                      <span className={faq.accentText}>{faq.q}</span>
                     </div>
-                    <ChevronDown className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-300" />
+                    <ChevronDown
+                      className={`w-6 h-6 ${faq.accentText} group-open:rotate-180 transition-transform duration-300`}
+                    />
                   </summary>
                   <p className="text-gray-500 mt-3 ml-11 leading-relaxed text-xl">
                     {faq.a}

@@ -3,24 +3,17 @@ import EmployeeCard from "./EmployeeCard";
 
 export default function EmployeeList() {
   return (
-    <section className="py-16 bg-[#5f5297] min-h-screen">
+    <section className="py-20 bg-[#f3f3f3] min-h-screen">
       
-      {/* 🔹 Header */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl font-bold text-white">
-          Our Team
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-semibold text-orange-500">
+          Meet Our Team
         </h2>
-
-        <p className="text-white mt-3 max-w-xl mx-auto text-m">
-          Meet the talented people behind our company who work passionately 
-          to deliver the best experience.
-        </p>
-
-        <div className="w-16 h-1 bg-[#03bfbc] mx-auto mt-4 rounded"></div>
       </div>
 
-      {/* 🔹 Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-10">
         {employees.map((emp) => (
           <EmployeeCard key={emp.id} employee={emp} />
         ))}

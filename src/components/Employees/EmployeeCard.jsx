@@ -1,53 +1,79 @@
 export default function EmployeeCard({ employee }) {
+  const icons = {
+    facebook: "fab fa-facebook-f",
+    twitter: "fab fa-twitter",
+    instagram: "fab fa-instagram",
+  };
+
+  const providedSocials =
+    employee.socials && Object.keys(employee.socials).length > 0
+      ? employee.socials
+      : null;
+
+  const socialEntries = providedSocials
+    ? Object.entries(providedSocials)
+    : Object.keys(icons).map((key) => [key, null]);
+
   return (
-    <div
-      className="bg-[#231e39] text-[#b3b8cd] w-full max-w-sm rounded-lg shadow-lg mx-auto overflow-hidden 
-      transform transition duration-500 ease-in-out hover:scale-105 hover:-translate-y-2 hover:shadow-2xl"
-    >
-      {/* 🔹 Cover */}
-      <div
-        className="h-36 w-full bg-cover bg-no-repeat relative"
-        style={{
-          backgroundImage: `url(${employee.cover})`,
-          backgroundPosition: employee.coverStyle?.position || "center",
-        }}
-      >
-        {/* 🔹 Profile Image */}
-        <div className="absolute -bottom-14 left-6">
-          <img
-            src={employee.image}
-            alt={employee.name}
-            onError={(e) => (e.target.src = "https://picsum.photos/100")}
-            className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-[#4d2ae9] object-cover shadow-lg"
-          />
-        </div>
+    <div className="bg-white w-full max-w-[260px] mx-auto rounded-2xl shadow-md hover:shadow-xl transition duration-300 text-center px-6 py-8 flex flex-col h-full">
+      
+      {/* Profile Image */}
+      <div className="flex justify-center">
+        <img
+          src={employee.image}
+          alt={employee.name}
+          onError={(e) => (e.target.src = "https://picsum.photos/100")}
+          className="w-28 h-28 rounded-full border-[3px] border-orange-300 object-cover"
+        />
       </div>
 
-      {/* 🔹 Content */}
-      <div className="pt-16 pb-5 px-5 text-left">
-        {/* Name */}
-        <h2 className="text-lg sm:text-xl font-bold text-white tracking-wide">
-          {employee.name}
-        </h2>
+      {/* Name */}
+      <h2 className="mt-5 text-[17px] font-semibold text-gray-800">
+        {employee.name}
+      </h2>
 
-        {/* Role */}
-        <div className="mt-2">
-          <span className="inline-block px-3 py-1 text-s font-medium bg-[#03bfbc]/20 text-[#03bfbc] rounded-full">
-            {employee.role}
-          </span>
-        </div>
+      {/* Description */}
+      <p className="text-[13px] text-gray-500 mt-3 leading-relaxed px-2">
+        {employee.description}
+      </p>
 
-        {/* Description */}
-        <p className="mt-3 text-sm text-gray-300 leading-relaxed">
-          {employee.description}
-        </p>
+      {/* Role */}
+      <p className="mt-4 text-[12px] font-semibold text-gray-700 tracking-wide">
+        {employee.role}
+      </p>
 
-        {/* Experience */}
-        {employee.experience && (
-          <span className="inline-block mt-4 px-3 py-1 text-xs bg-[#2f2947] text-[#03bfbc] rounded-full">
-            {employee.experience}
-          </span>
-        )}
+      {/* Social Icons */}
+      <div className="flex justify-center gap-4 mt-auto pt-5 text-gray-700 text-sm">
+        {socialEntries.map(([key, link]) => {
+          const iconClass = icons[key];
+
+          if (!iconClass) return null;
+
+          if (link) {
+            return (
+              <a
+                key={key}
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={key}
+                className="hover:text-orange-400 transition"
+              >
+                <i className={iconClass}></i>
+              </a>
+            );
+          }
+
+          return (
+            <span
+              key={key}
+              aria-hidden="true"
+              className="opacity-60 cursor-not-allowed"
+            >
+              <i className={iconClass}></i>
+            </span>
+          );
+        })}
       </div>
     </div>
   );
