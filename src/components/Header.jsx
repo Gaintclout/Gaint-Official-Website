@@ -100,26 +100,7 @@ export default function Header() {
         </nav>
 
         {/* RIGHT SIDE: InternsHub Button */}
-        <div className="flex items-center">
-          <a
-            href="https://interns.gaintclout.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-white overflow-hidden"
-          >
-            {/* Background Gradient */}
-            <span className="absolute inset-0 bg-gradient-to-r from-red-400 via-blue-500 to-yellow-400 transition-all duration-400 group-hover:scale-110"></span>
-
-            {/* Glow Effect */}
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 transition duration-500"></span>
-
-            {/* Button Content */}
-            <span className="relative z-10 flex items-center gap-2">
-              InternsHub
-              <Users className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
-            </span>
-          </a>  
-        </div>
+       
 
         {/* MOBILE MENU TOGGLE */}
         <button
