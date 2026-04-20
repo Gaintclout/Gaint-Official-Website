@@ -35,17 +35,19 @@ const employees = [
     role: "UI/UX Graphic Designer",
     description:
       "Creative designer specializing in user-centered design, branding, and visually engaging digital experiences.",
-    image: "/elisha.jpg",
+    image: "/Elisha.jpeg",
     cover: "https://images.unsplash.com/photo-1545235617-9465d2a55698",
+    photoStyle: {objectPosition: "center 20%", transform: "scale(1.0)" },
   },
   {
     id: 5,
     name: "Manikanta",
-    role: "Investor Relations",
+    role: "Cloud Engineer",
     description:
-      "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
-    image: "/manikanta.jpeg",
+      "Skilled cloud engineer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
+    image: "/Manikanta.jpeg",
     cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+    photoStyle: { objectPosition: "center 15%", transform: "scale(1.0)" },
 
   },
   {
@@ -56,7 +58,8 @@ const employees = [
       "Passionate frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
     image: "/umar.png",
     cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    photoStyle: { objectPosition: "center 5%", transform: "scale(1.0)" },
+    photoStyle: { objectPosition: "center 5%", transform: "scale(1.0)",objectFit: "cover",  },
+    
   },{
     id: 7,
     name: "Rohini Reddy",
@@ -65,6 +68,7 @@ const employees = [
       "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
     image: "/rohini.jpeg",
     cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+     photoStyle: { objectPosition: "center 60%", transform: "scale(1.0)" },
 
   },
   {
@@ -73,10 +77,10 @@ const employees = [
     role: "Backend Developer",
     description:
       "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
-    image: "/harshitha-reddy.jpeg",
+    image: "/HarshithaReddy.png",
   cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
-  coverStyle: {
-      position: "center 30%",
+     photoStyle: { objectPosition: "center 5%", transform: "scale(1.0)" },
+    coverStyle: {
     },
   },
   {
@@ -93,7 +97,7 @@ const employees = [
     role: "Data Analyst",
     description:
       "Skilled professional in data analysis, managing stakeholder communications, and fostering strong data-driven decision-making.",
-    image: "/maheshwari.jpg",
+    image: "/maheshwari.jpeg",
   cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
   }
 ];
