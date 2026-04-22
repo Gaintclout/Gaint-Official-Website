@@ -162,12 +162,8 @@ export default function Home() {
           </div>
         </div>
 
+
       </section>
-
-
-
-
-
 
 
       {/* ---------------- COUNTERS ---------------- */} 
@@ -192,6 +188,7 @@ export default function Home() {
       {/* ---------------- SERVICES ---------------- */}
       {/* ---------------- INDUSTRIES WE SERVICE (BLUE THEME) ---------------- */}
       <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
+       <h2 className="ml-20" ><span className="text-3xl rotate-2">⟨ψ|φ⟩</span></h2>
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
           <h3 className="text-3xl md:text-5xl  text-gray-800 mb-4">
@@ -229,7 +226,7 @@ export default function Home() {
             {
               icon: <MapPinned className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               title: "GIS",
-              desc: "GIS system enabling accurate mapping and spatial insights for smarter infrastructure, resource management, and urban development."
+              desc: "Geographic Information System (GIS) for mapping and data-driven insights.Includes base map layers from cadastral maps and digitization.",
             },
             {
               icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,

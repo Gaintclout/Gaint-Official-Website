@@ -140,10 +140,10 @@ export default function Footer() {
           alt="GAINT Clout Logo"
           className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
         />
-        <p className="text-gray-400 text-sm">
-          (c) {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+        <p className="text-gray-400 text-m">
+          &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
         </p>
-        <div className="mt-3 flex justify-center gap-6 text-xs text-gray-100">
+        <div className="mt-3 flex justify-center gap-6 text-s text-gray-100">
           <a href="/privacy-policy" className="hover:text-[#c5a77b]">Privacy Policy</a>
           <a href="/terms" className="hover:text-[#c5a77b]">Terms & Conditions</a>
         </div>
