@@ -189,10 +189,7 @@ export default function About() {
 ">
             Our Core Foundation
           </h2>
-          <div className="flex items-center gap-2">
-            {/* <Cpu className="w-8 h-8 text-[#34A853] animate-pulse" /> */}
-            <BrainCircuit className="w-8 h-8 text-[#EA4335] animate-bounce " />
-          </div>
+          
 
 
           <p className="
@@ -200,7 +197,7 @@ export default function About() {
   text-xl sm:text-2xl md:text-3xl lg:text-4xl
   leading-relaxed tracking-wide text-center
 ">
-            building a sustainable, intelligent, and inclusive india through innovation.
+            Building a sustainable, intelligent and inclusive India through Innovation.
           </p>
         </div>
 
@@ -292,14 +289,14 @@ export default function About() {
      <section className="max-w-7xl mx-auto px-6 py-16">
   
   {/* HEADER */}
-  <div className="flex items-center gap-4 mb-12">
-    <div className="p-3 rounded-xl bg-[#4285F4]/10">
-      <ShieldCheck className="w-8 h-8 text-[#4285F4]" />
-    </div>
-    <h2 className="text-3xl md:text-5xl  text-gray-800">
-      Our Strengths
-    </h2>
+  <div className="flex items-center justify-center gap-4 mb-12">
+  <div className="p-3 rounded-xl bg-[#4285F4]/10">
+    <ShieldCheck className="w-8 h-8 text-[#4285F4]" />
   </div>
+  <h2 className="text-3xl md:text-5xl text-gray-800">
+    Our Strengths
+  </h2>
+</div>
 
   {/* CARDS */}
   <div className="grid md:grid-cols-3 gap-8">
@@ -352,7 +349,7 @@ export default function About() {
       
       {/* HEADER */}
       <div className="text-center mb-10">
-        <h2 className="text-5xl text-[#34A853]">
+        <h2 className="text-5xl text-[#34A853] font-type:century-gothic tracking-tight">
           Future Plans of GAINT
         </h2>
       </div>
@@ -364,7 +361,7 @@ export default function About() {
             Icon: Building2,
             accentText: "text-[#34A853]",
             accentBg: "bg-[#34A853]/10",
-            q: "Year 1: Foundation & Growth?",
+            q: "Year 1: Foundation & Growth",
             a: "Focus Areas: Branding Product Development, Prototyping Market Penetration, Brand Awareness, Networking, Team Building & Infrastructure, Establish Gaint Clout Technologies as a leader in AI, cybersecurity, and emerging tech.",
           },
           {
@@ -378,7 +375,7 @@ export default function About() {
             Icon: Trophy,
             accentText: "text-[#FBBC05]",
             accentBg: "bg-[#FBBC05]/10",
-            q: "Year 3: Market Leadership & Diversification?",
+            q: "Year 3: Market Leadership & Diversification",
             a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion AI Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
           },
           {
@@ -530,9 +527,9 @@ export default function About() {
           <div className="flex flex-col items-start gap-10 text-2xl">
             {[
               "A Flexible Pricing Model ",
-              "Standardize And Automate Processes",
+              "Standardize and Automate Processes",
               "Enhance Public Service Delivery",
-              "Empower Staff With Knowledge",
+              "Empower Staff with Knowledge",
               "Effective Program Monitoring",
             ].map((title, i) => (
               <motion.div

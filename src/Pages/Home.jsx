@@ -12,6 +12,7 @@ import {
   Rocket,
   Cpu,
   Heart,
+  MapPinned,
   Banknote,
   GraduationCap,
   HeartPulse,
@@ -226,9 +227,9 @@ export default function Home() {
               desc: "Smart governance, digital citizen services, and policy analytics using AI.",
             },
             {
-              icon: <Map className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
+              icon: <MapPinned className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               title: "GIS",
-              desc: "AI-driven exploration, pipeline monitoring, and energy optimization systems.",
+              desc: "GIS system enabling accurate mapping and spatial insights for smarter infrastructure, resource management, and urban development."
             },
             {
               icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
@@ -313,7 +314,7 @@ export default function Home() {
             },
             {
               icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
-              name: "GAINT InternHub",
+              name: "GAINT InternsHub",
               desc: "AI-driven internship & training platform with projects, code evaluation, and job placement.",
               link: "/internsapp",
             },
@@ -332,7 +333,7 @@ export default function Home() {
             {
               icon: <Cpu className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               name: "UNIPS",
-              desc: "Unified Intelligent Business System for enterprise automation, analytics, and decision-making across finance, operations, and customer management.",
+              desc: "(Urban Noise Intelligence & Processing System)UNIPS is an AI-based platform for monitoring urban noise levels, analyzing environmental data, and supporting smart city decision-making.",
               link: "/gis",
             },
           ].map((product, i) => (
@@ -363,65 +364,13 @@ export default function Home() {
       </section>
 
 
-      {/* ---------------- TESTIMONIALS ---------------- */}
-      {/* <section id="testimonials" className="py-20 bg-gray-50">
-        <div className="text-center mb-12" data-aos="fade-up">
-          <h3 className="text-6xl  mb-2">Testimonials</h3>
-          <p className="text-gray-500 text-4xl">What our clients say about us</p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-8 px-6 md:px-20">
-  {[
-    {
-      name: "Sarah Taylor",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
-      quote:
-        "GAINT’s AI solutions revolutionized our operations. Their innovation and professionalism are unmatched.",
-    },
-    {
-      name: "Michael Anderson",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
-      quote:
-        "Working with GAINT was a game-changer. Their team brought real intelligence and automation to our business processes.",
-    },
-    {
-      name: "Priya Nair",
-      img: "https://randomuser.me/api/portraits/women/68.jpg",
-      quote:
-        "GAINT’s approach to AI and analytics is cutting-edge. They truly understand how to turn data into decisions.",
-    },
-  ].map((client, index) => (
-    <div
-      key={index}
-      data-aos="zoom-in"
-      className="bg-white rounded-3xl shadow-lg w-80 p-6 text-center hover:shadow-2xl transition-all"
-    >
-      <img
-        src={client.img}
-        alt={client.name}
-        className="w-16 h-16 rounded-full mx-auto mb-4"
-      />
-      <h4 className="font-semibold mb-2 text-2xl text-century gothic">{client.name}</h4>
-      <p className="text-gray-500 text-xl mb-4 text-century gothic">“{client.quote}”</p>
-      <div className="flex justify-center gap-4 text-gray-500 text-2xl">
-        <FaFacebookF className="hover:text-green-600" />
-        <FaInstagram className="hover:text-green-600" />
-        <FaLinkedinIn className="hover:text-green-600" />
-      </div>
-    </div>
-  ))}
-</div>
-
-      </section> */}
-
-
       {/* Scrolling logos */}
 
       <section className="bg-white py-10 overflow-hidden">
         <div className="text-center mb-8">
           <h3 className="text-3xl sm:text-4xl md:text-5xl text-gray-800">Our Collaborations</h3>
           <p className="text-gray-500 text-xl sm:text-2xl md:text-2xl mt-4">
-            Industry, Academia, and Media partnerships powering GAINT
+            Industry, Academia and Media partnerships powering GAINT
           </p>
         </div>
 

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown, Users } from "lucide-react";
 
-
 const products = [
   { name: "DonorGO", link: "/Donorgo" },
   { name: "GAINTInternsHub", link: "/internsapp" },
@@ -40,7 +39,15 @@ export default function Header() {
 
         {/* CENTER: Navigation Links */}
         <nav className="hidden xl:flex items-center justify-center flex-1">
-          <ul className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-base shadow-2xl backdrop-blur-xl lg:gap-5 xl:text-lg">
+          <ul
+            className="flex items-center 
+gap-4 lg:gap-6 
+rounded-full border border-white/10 bg-white/5 
+px-6 lg:px-8 py-3 
+text-lg lg:text-xl xl:text-2xl 
+shadow-2xl backdrop-blur-xl"
+          >
+            {" "}
             {navLinks.slice(0, 3).map(({ name, link }) => (
               <li key={name} className="group">
                 <NavLink
@@ -58,7 +65,6 @@ export default function Header() {
                 </NavLink>
               </li>
             ))}
-
             {/* Desktop Products Dropdown */}
             <li className="relative group">
               <span className="flex cursor-pointer items-center gap-1 text-white transition duration-300 hover:text-[#4285F4]">
@@ -77,7 +83,6 @@ export default function Header() {
                 ))}
               </ul>
             </li>
-
             {navLinks.slice(3).map(({ name, link }) => (
               <li key={name} className="group">
                 <NavLink
@@ -99,7 +104,6 @@ export default function Header() {
         </nav>
 
         {/* RIGHT SIDE: InternsHub Button */}
-       
 
         {/* MOBILE MENU TOGGLE */}
         <button

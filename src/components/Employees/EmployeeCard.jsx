@@ -29,7 +29,7 @@ export default function EmployeeCard({ employee }) {
       </div>
 
       {/* Name */}
-      <h2 className="mt-3 text-[17px] font-normal text-gray-800">
+      <h2 className="mt-3 text-[17px] font-bold text-gray-800">
         {employee.name}
       </h2>
 
@@ -40,7 +40,7 @@ export default function EmployeeCard({ employee }) {
 
       {/* Role */}
       <div className="mt-3">
-        <span className="inline-block bg-blue-50 text-blue-600 text-xs font-normal px-3 py-1 rounded-full">
+        <span className="inline-block bg-blue-50 text-blue-600 text-s font-bold px-3 py-1 rounded-full">
           {employee.role}
         </span>
       </div>

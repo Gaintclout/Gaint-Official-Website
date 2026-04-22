@@ -14,6 +14,7 @@ import PQC from "./Pages/PQC.jsx";
 import GIS from "./Pages/Gis";
 import Workshop from "./Pages/Workshop.jsx";
 import Career from "./Pages/Career.jsx";
+import Terms from "./Pages/Terms.jsx";
 
 
 
@@ -36,6 +37,7 @@ function App() {
       <Route path="/pqc" element={<PQC />} />
       <Route path="/gis" element={<GIS />} />
       <Route path="/workshop" element={<Workshop />} />
+      <Route path="/terms" element={<Terms />} />
     </Routes>
   );
 }
