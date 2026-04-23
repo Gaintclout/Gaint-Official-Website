@@ -261,7 +261,7 @@ export default function Gis() {
         UNIPS System Architecture
       </h1>
       <p className="text-orange-400 text-lg">
-        AI is the brain, GIS is the face.
+        (Urban Noise Intelligence & Processing System) AI is the brain, GIS is the face.
       </p>
     </div>
 

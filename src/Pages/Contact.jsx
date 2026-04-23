@@ -53,25 +53,42 @@ ${name}`
       <ScrollToTop />
 
       {/* ======= HERO SECTION ======= */}
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-16 md:mt-20">
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl md:text-6xl mb-4"
-        >
-          Get in Touch
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto"
-        >
-          Let’s collaborate to create cutting-edge AI and Quantum-driven
-          innovations that redefine the future.
-        </motion.p>
-      </section>
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-16 md:mt-20">
+
+  {/* Quantum Notation */}
+  <span className="absolute top-10 left-10 z-0 pointer-events-none text-white/20 text-5xl md:text-7xl rotate-[-12deg]">
+    ⟨ψ|H|ψ⟩
+  </span>
+
+  
+
+  <span className="absolute top-1/2 right-16 -translate-y-1/2 z-0 pointer-events-none text-white/10 text-6xl md:text-8xl font-thin">
+    ⟨x|ψ⟩
+  </span>
+
+  {/* Hero Content */}
+  <div className="relative z-10">
+    <motion.h1
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-4xl sm:text-5xl md:text-6xl mb-4"
+    >
+      Get in Touch
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+      className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto"
+    >
+      Let’s collaborate to create cutting-edge AI and Quantum-driven
+      innovations that redefine the future.
+    </motion.p>
+  </div>
+
+</section>
 
       {/* ======= CONTACT SECTION ======= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">

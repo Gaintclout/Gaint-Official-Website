@@ -144,7 +144,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
         </p>
         <div className="mt-3 flex justify-center gap-6 text-s text-gray-100">
-          <a href="/privacy-policy" className="hover:text-[#c5a77b]">Privacy Policy</a>
+          <a href="/privacy" className="hover:text-[#c5a77b]">Privacy Policy</a>
           <a href="/terms" className="hover:text-[#c5a77b]">Terms & Conditions</a>
         </div>
       </div>

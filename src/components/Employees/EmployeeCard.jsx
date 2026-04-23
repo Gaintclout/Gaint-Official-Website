@@ -34,7 +34,7 @@ export default function EmployeeCard({ employee }) {
       </h2>
       <div className="mt-3">
       {/* Role */}
-        <span className="inline-block bg-blue-50 text-blue-600 text-s font-bold px-3 py-1 rounded-full">
+        <span className="inline-block bg-blue-50 text-blue-600 text-[12px] font-bold px-3 py-1 rounded-full">
           {employee.role}
         </span>
       </div>

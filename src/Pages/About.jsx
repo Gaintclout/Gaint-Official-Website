@@ -36,9 +36,6 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import EmployeeList from "@/components/Employees/EmployeeList";
 
-
-
-
 // ========================== NAVBAR ==========================
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -75,9 +72,6 @@ export default function About() {
       desc: "Continuous adoption of new technologies",
     },
   ];
-
-
-
 
   const reasons = [
     {
@@ -120,11 +114,10 @@ export default function About() {
   // const [menuOpen, setMenuOpen] = useState(false);
   // const heroRef = useRef(null);
 
-
   return (
     <div className="font-gothic text-gray-800 scroll-smooth">
       <Header />
-<ScrollToTop />
+      <ScrollToTop />
       <section
         id="about"
         className="relative min-h-[60vh] w-full flex items-center justify-end overflow-hidden"
@@ -135,17 +128,16 @@ export default function About() {
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center scale-105 blur-[1px]"
           style={{ backgroundImage: "url('/about-bg.png')" }}
         />
-
+        <span className="absolute bottom-60 left-60 text-white/25 text-5xl md:text-9xl font-light">
+          ⟨x|ψ⟩
+        </span>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-
-
         {/* Text Overlay */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 md:px-16 max-w-4xl mx-auto">
-
-          <h1 
+          <h1
             className=" mt-20
     leading-tight animate-fadeInUp
     text-white 
@@ -167,42 +159,49 @@ export default function About() {
     mt-4
   "
           >
-  Founded in 2024, Gaint is an AI-driven startup based in India. We design and build intelligent systems that automate workflows, augment decision-making, and unlock measurable growth across industries.
+            Founded in 2024, Gaint is an AI-driven startup based in India. We
+            design and build intelligent systems that automate workflows,
+            augment decision-making, and unlock measurable growth across
+            industries.
           </p>
-
         </div>
       </section>
-
-
 
       {/* ===== VISION / MISSION / VALUES ===== */}
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white overflow-hidden py-28 font-century gothic"
         style={{ backgroundImage: "url('/assets/vision-bg-transparent.png')" }}
       >
-
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
+      
+<div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
+
+  {/* Quantum notation background layer */}
+
         <div className="relative z-10 text-center mb-20">
-          <h2 className="
+          
+          <h2
+            className="
   text-3xl sm:text-4xl md:text-5xl lg:text-5xl
    text-center text-black tracking-tight
-">
+"
+          >
             Our Core Foundation
           </h2>
-          
 
-
-          <p className="
+          <p
+            className="
   text-black/80 mt-4 max-w-2xl mx-auto
   text-xl sm:text-2xl md:text-3xl lg:text-4xl
   leading-relaxed tracking-wide text-center
-">
-            Building a sustainable, intelligent and inclusive India through Innovation.
+"
+          >
+            Building a sustainable, intelligent and inclusive India through
+            Innovation.
           </p>
         </div>
 
         <div className="relative z-10 grid md:grid-cols-3 gap-10 px-10 lg:px-24">
-
           {/* Vision */}
           <motion.div
             variants={fadeUp}
@@ -211,13 +210,10 @@ export default function About() {
             viewport={{ once: true }}
             className="backdrop-blur-xl bg-white/10 border border-black/10 rounded-3xl p-10 hover:scale-[1.03] hover:bg-white/20 hover:shadow-[0_0_25px_#FBBC05] transition-all"
           >
-
             {/* Icon + Title */}
             <div className="flex items-center justify-center gap-3 mb-6">
               <Eye className="w-10 h-10 text-[#FBBC05] animate-pulse" />
-              <h3 className="text-3xl  text-black">
-                Vision
-              </h3>
+              <h3 className="text-3xl  text-black">Vision</h3>
             </div>
 
             <p className="text-black/80 text-center leading-relaxed text-xl">
@@ -228,7 +224,6 @@ export default function About() {
             </p>
           </motion.div>
 
-
           {/* Mission */}
           <motion.div
             variants={fadeUp}
@@ -238,13 +233,10 @@ export default function About() {
             viewport={{ once: true }}
             className="backdrop-blur-xl bg-white/10 border border-black/10 rounded-3xl p-10 hover:scale-[1.03] hover:bg-white/20 hover:shadow-[0_0_25px_#34A853] transition-all"
           >
-
             {/* Icon + Title */}
             <div className="flex items-center justify-center gap-3 mb-6">
               <Target className="w-10 h-10 text-[#34A853] animate-pulse" />
-              <h3 className="text-3xl  text-black">
-                Mission
-              </h3>
+              <h3 className="text-3xl  text-black">Mission</h3>
             </div>
 
             <p className="text-black/80 text-center leading-relaxed text-xl">
@@ -255,7 +247,6 @@ export default function About() {
             </p>
           </motion.div>
 
-
           {/* Values */}
           <motion.div
             variants={fadeUp}
@@ -265,180 +256,164 @@ export default function About() {
             viewport={{ once: true }}
             className="backdrop-blur-xl bg-white/10 border border-black/10 rounded-3xl p-10 hover:scale-[1.03] hover:bg-white/20 hover:shadow-[0_0_25px_#EA4335] transition-all"
           >
-
             {/* Icon + Title */}
             <div className="flex items-center justify-center gap-3 mb-6">
               <HeartHandshake className="w-10 h-10 text-[#EA4335] animate-pulse" />
-              <h3 className="text-3xl  text-black">
-                Values
-              </h3>
+              <h3 className="text-3xl  text-black">Values</h3>
             </div>
 
             <p className="text-black/80 text-center leading-relaxed text-xl">
               Integrity, Collaboration, Innovation, and Respect are the core
               values that guide us. We believe in acting with honesty, working
-              together to achieve shared goals, driving creativity, and fostering
-              a culture of mutual respect.
+              together to achieve shared goals, driving creativity, and
+              fostering a culture of mutual respect.
             </p>
           </motion.div>
-
         </div>
       </section>
 
       {/* ===== OUR STRENGTHS ===== */}
-     <section className="max-w-7xl mx-auto px-6 py-16">
-  
-  {/* HEADER */}
-  <div className="flex items-center justify-center gap-4 mb-12">
-  <div className="p-3 rounded-xl bg-[#4285F4]/10">
-    <ShieldCheck className="w-8 h-8 text-[#4285F4]" />
-  </div>
-  <h2 className="text-3xl md:text-5xl text-gray-800">
-    Our Strengths
-  </h2>
-</div>
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        {/* HEADER */}
+        <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="p-3 rounded-xl bg-[#4285F4]/10">
+            <ShieldCheck className="w-8 h-8 text-[#4285F4]" />
+          </div>
+          <h2 className="text-3xl md:text-5xl text-gray-800">Our Strengths</h2>
+        </div>
+ 
 
-  {/* CARDS */}
-  <div className="grid md:grid-cols-3 gap-8">
-    {strengths.map((s, i) => (
-      <motion.div
-        key={i}
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="p-6 bg-white rounded-2xl border border-gray-200 
+        {/* CARDS */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {strengths.map((s, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="p-6 bg-white rounded-2xl border border-gray-200 
         shadow-md hover:shadow-xl hover:-translate-y-1 
         transition-all duration-300 flex flex-col h-full"
-      >
-        
-        {/* ICON + TITLE */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#4285F4]/10 text-[#4285F4]">
-            {s.icon}
-          </div>
-
-          <h3 className="text-lg md:text-xl  text-gray-800">
-            {s.title}
-          </h3>
-        </div>
-
-        {/* DESCRIPTION */}
-        <p className="mt-4 text-gray-600 text-m leading-relaxed">
-          {s.desc}
-        </p>
-
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-      {/* ===== FAQ ===== */}
-     <section className="relative overflow-hidden py-20">
-  {/* Background Gradient */}
-  <div className="absolute inset-0 bg-gradient-to-br from-[#34A853]/10 via-[#4285F4]/10 to-transparent blur-3xl"></div>
-
-  <motion.div
-    initial={{ opacity: 0, y: 60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    viewport={{ once: true }}
-    className="relative max-w-6xl mx-auto px-6"
-  >
-    <div className="bg-white shadow-2xl rounded-3xl border border-gray-100 p-10 backdrop-blur-sm">
-      
-      {/* HEADER */}
-      <div className="text-center mb-10">
-        <h2 className="text-5xl text-[#34A853] font-type:century-gothic tracking-tight">
-          Future Plans of GAINT
-        </h2>
-      </div>
-
-      {/* CONTENT */}
-      <div className="divide-y divide-gray-200">
-        {[
-          {
-            Icon: Building2,
-            accentText: "text-[#34A853]",
-            accentBg: "bg-[#34A853]/10",
-            q: "Year 1: Foundation & Growth",
-            a: "Focus Areas: Branding Product Development, Prototyping Market Penetration, Brand Awareness, Networking, Team Building & Infrastructure, Establish Gaint Clout Technologies as a leader in AI, cybersecurity, and emerging tech.",
-          },
-          {
-            Icon: Rocket,
-            accentText: "text-[#EA4335]",
-            accentBg: "bg-[#EA4335]/10",
-            q: "Year 2: Innovation, Productization & Expansion",
-            a: "Focus Areas: Build AI-based products, Start PQC prototype development, GIS for Smart Cities Using AI Intelligence, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
-          },
-          {
-            Icon: Trophy,
-            accentText: "text-[#FBBC05]",
-            accentBg: "bg-[#FBBC05]/10",
-            q: "Year 3: Market Leadership & Diversification",
-            a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion AI Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
-          },
-          {
-            Icon: Microscope,
-            accentText: "text-[#4285F4]",
-            accentBg: "bg-[#4285F4]/10",
-            q: "Year 4: R&D Strength National Leadership",
-            a: "Focus Areas: Become known for AI + Quantum Security, Establish GAINT R&D Lab (AI + PQC + QC), Start PQC pilot projects, Work with government / defense / enterprises, Telecom, Research institutions.",
-          },
-          {
-            Icon: Globe,
-            accentText: "text-[#34A853]",
-            accentBg: "bg-[#34A853]/10",
-            q: "Year 5: Global Expansion Ecosystem",
-            a: "Focus Areas: Enter International market, Middle East, Southeast Asia, Enterprise Quantum-Safe Security Suite.",
-          },
-        ].map((faq, i) => (
-          <motion.details
-            key={i}
-            className="group py-5 cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            viewport={{ once: true }}
-          >
-            {/* SUMMARY */}
-            <summary className="flex justify-between items-center text-3xl list-none">
-              
-              <div className="flex items-center gap-3">
-                
-                {/* ICON (Hover effect only here) */}
-                <div
-                  className={`p-3 rounded-lg ${faq.accentBg} ${faq.accentText}
-                  group-hover:scale-110 group-hover:shadow-md transition duration-300`}
-                >
-                  <faq.Icon className="w-8 h-8" />
+            >
+              {/* ICON + TITLE */}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#4285F4]/10 text-[#4285F4]">
+                  {s.icon}
                 </div>
 
-                {/* TEXT (Always black) */}
-                <span className="text-gray-900">
-                  {faq.q}
-                </span>
+                <h3 className="text-lg md:text-xl  text-gray-800">{s.title}</h3>
               </div>
 
-              {/* ARROW */}
-              <ChevronDown
-                className="w-6 h-6 text-gray-500 group-open:rotate-180 transition-transform duration-300"
-              />
-            </summary>
+              {/* DESCRIPTION */}
+              <p className="mt-4 text-gray-600 text-m leading-relaxed">
+                {s.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-            {/* ANSWER */}
-            <p className="text-gray-500 mt-3 ml-11 leading-relaxed text-xl">
-              {faq.a}
-            </p>
-          </motion.details>
-        ))}
-      </div>
-    </div>
-  </motion.div>
-</section>
+      {/* ===== FAQ ===== */}
+      <section className="relative overflow-hidden py-20">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#34A853]/10 via-[#4285F4]/10 to-transparent blur-3xl"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative max-w-6xl mx-auto px-6"
+        >
+          <div className="bg-white shadow-2xl rounded-3xl border border-gray-100 p-10 backdrop-blur-sm">
+            {/* HEADER */}
+            <div className="text-center mb-10">
+              <h2 className="text-5xl text-[#34A853] font-type:century-gothic tracking-tight">
+                Future Plans of GAINT
+              </h2>
+            </div>
+
+            {/* CONTENT */}
+            <div className="divide-y divide-gray-200">
+              {[
+                {
+                  Icon: Building2,
+                  accentText: "text-[#34A853]",
+                  accentBg: "bg-[#34A853]/10",
+                  q: "Year 1: Foundation & Growth",
+                  a: "Focus Areas: Branding Product Development, Prototyping Market Penetration, Brand Awareness, Networking, Team Building & Infrastructure, Establish Gaint Clout Technologies as a leader in AI, cybersecurity, and emerging tech.",
+                },
+                {
+                  Icon: Rocket,
+                  accentText: "text-[#EA4335]",
+                  accentBg: "bg-[#EA4335]/10",
+                  q: "Year 2: Innovation, Productization & Expansion",
+                  a: "Focus Areas: Build AI-based products, Start PQC prototype development, GIS for Smart Cities Using AI Intelligence, Expand across South India, Scaling Operations, Diversification Product Refinement, Scaling Customer Acquisition, Expansion Partnerships, Collaborations, Revenue Growth, Funding, Integrate AI-powered features, Develop a custom AI-powered LMS for online learning and targeting Indian students.",
+                },
+                {
+                  Icon: Trophy,
+                  accentText: "text-[#FBBC05]",
+                  accentBg: "bg-[#FBBC05]/10",
+                  q: "Year 3: Market Leadership & Diversification",
+                  a: "Focus Areas: AI Innovation, Market Leadership, Global Expansion AI Innovation, R&D Global Market Leadership, Sustainability, Quantum computing research initiatives for AI and cybersecurity, and grow Gaint Clout Technologies into a trusted brand in AI & ML, AI Agent and Agentic AI",
+                },
+                {
+                  Icon: Microscope,
+                  accentText: "text-[#4285F4]",
+                  accentBg: "bg-[#4285F4]/10",
+                  q: "Year 4: R&D Strength National Leadership",
+                  a: "Focus Areas: Become known for AI + Quantum Security, Establish GAINT R&D Lab (AI + PQC + QC), Start PQC pilot projects, Work with government / defense / enterprises, Telecom, Research institutions.",
+                },
+                {
+                  Icon: Globe,
+                  accentText: "text-[#34A853]",
+                  accentBg: "bg-[#34A853]/10",
+                  q: "Year 5: Global Expansion Ecosystem",
+                  a: "Focus Areas: Enter International market, Middle East, Southeast Asia, Enterprise Quantum-Safe Security Suite.",
+                },
+              ].map((faq, i) => (
+                <motion.details
+                  key={i}
+                  className="group py-5 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {/* SUMMARY */}
+                  <summary className="flex justify-between items-center text-3xl list-none">
+                    <div className="flex items-center gap-3">
+                      {/* ICON (Hover effect only here) */}
+                      <div
+                        className={`p-3 rounded-lg ${faq.accentBg} ${faq.accentText}
+                  group-hover:scale-110 group-hover:shadow-md transition duration-300`}
+                      >
+                        <faq.Icon className="w-8 h-8" />
+                      </div>
+
+                      {/* TEXT (Always black) */}
+                      <span className="text-gray-900">{faq.q}</span>
+                    </div>
+<span className="absolute top-20 left-6 sm:left-20 z-0 pointer-events-none text-gray-200 text-4xl sm:text-5xl md:text-6xl rotate-[-12deg]">
+    ⟨ψ|H|ψ⟩
+  </span>
+                    {/* ARROW */}
+                    <ChevronDown className="w-6 h-6 text-gray-500 group-open:rotate-180 transition-transform duration-300" />
+                  </summary>
+
+                  {/* ANSWER */}
+                  <p className="text-gray-500 mt-3 ml-11 leading-relaxed text-xl">
+                    {faq.a}
+                  </p>
+                </motion.details>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* ===== WHY CHOOSE US ===== */}
-
 
       <section className="relative overflow-hidden py-24 bg-gradient-to-br from-white via-[#f9fafb] to-white">
         {/* Background Glow */}
@@ -489,8 +464,6 @@ export default function About() {
             ))}
           </div>
 
-
-
           {/* Center Circle */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -519,7 +492,9 @@ export default function About() {
               viewport={{ once: true }}
               className="max-w-sm mt-8 text-gray-600 text-center leading-relaxed text-2xl"
             >
-            Gaint Clout combines deep technical expertise, AI innovation, and customer-centric design to create sustainable value for every partner.
+              Gaint Clout combines deep technical expertise, AI innovation, and
+              customer-centric design to create sustainable value for every
+              partner.
             </motion.p>
           </motion.div>
 
@@ -560,13 +535,8 @@ export default function About() {
               </motion.div>
             ))}
           </div>
-
-
         </motion.div>
       </section>
-
-
-
 
       {/* ===== MEET OUR CEO ===== */}
       <section className="relative bg-white py-20 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
@@ -575,9 +545,7 @@ export default function About() {
           <div className="flex flex-col items-start gap-2 mb-6">
             {/* Title Row */}
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-4xl  text-gray-900">
-                Mr. PRASAD KOTTAMASU
-              </h2>
+              <h2 className="text-4xl  text-gray-900">Mr. PRASAD KOTTAMASU</h2>
             </div>
 
             {/* Name */}
@@ -587,40 +555,43 @@ export default function About() {
           </div>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            At Giant Clout, we aim to become more than just a technology company; we want to be a catalyst for education, innovation, and transformation across sectors.
-            Our roadmap is clear:<br></br>
-            • Empower the next generation of innovators through education and mentoring.<br></br>• Drive R&D in AI, quantum computing, and cybersecurity.<br></br>
-            • Develop smart platforms for healthcare, education, media, and public services.
+            At Giant Clout, we aim to become more than just a technology
+            company; we want to be a catalyst for education, innovation, and
+            transformation across sectors. Our roadmap is clear:<br></br>•
+            Empower the next generation of innovators through education and
+            mentoring.<br></br>• Drive R&D in AI, quantum computing, and
+            cybersecurity.<br></br>• Develop smart platforms for healthcare,
+            education, media, and public services.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mt-6">
-            We believe in strategic partnerships and building a creative, inclusive culture. The future lies in making technology more human-centric and accessible for all.
-            Together, we are shaping a better tomorrow with purposeful innovation.
+            We believe in strategic partnerships and building a creative,
+            inclusive culture. The future lies in making technology more
+            human-centric and accessible for all. Together, we are shaping a
+            better tomorrow with purposeful innovation.
           </p>
         </div>
 
         {/* Right Image */}
-<div className="relative flex justify-center items-center lg:w-1/2">
-  {/* Decorative blue squares */}
-  <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
-  <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm shadow-lg"></div>
+        <div className="relative flex justify-center items-center lg:w-1/2">
+          {/* Decorative blue squares */}
+          <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
+          <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm shadow-lg"></div>
 
-  {/* Image Container with Tag */}
-  <div className="relative group">
-    {/* Circular Image */}
-    <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-      <img
-        src="/prasad-sir.jpg" 
-        alt="Mr. Prasad Kottamasu"
-        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-      />
-    </div>
+          {/* Image Container with Tag */}
+          <div className="relative group">
+            {/* Circular Image */}
+            <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+              <img
+                src="/prasad-sir.jpg"
+                alt="Mr. Prasad Kottamasu"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
 
-    {/* The Tag - Positioned below the image */}
-    <div className="absolute mt-4 -bottom-5 left-1/2 -translate-x-1/2 bg-[#3b82f6] text-white px-8 py-2.5 rounded-full shadow-xl border-2 border-white whitespace-nowrap z-10">
-      <p className="text-lg  ">
-        Founder & Chairman
-      </p>
-    </div>
+            {/* The Tag - Positioned below the image */}
+            <div className="absolute mt-4 -bottom-5 left-1/2 -translate-x-1/2 bg-[#3b82f6] text-white px-8 py-2.5 rounded-full shadow-xl border-2 border-white whitespace-nowrap z-10">
+              <p className="text-lg  ">Founder & Chairman</p>
+            </div>
 
             {/* Overlay */}
             {/* <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
@@ -643,17 +614,12 @@ export default function About() {
             {/* </div> */}
           </div>
 
-          <div className="absolute -top-12 right-8 flex flex-col items-center text-[#3b82f6]">
-          </div>
-          <div className="relative">
-          </div>
+          <div className="absolute -top-12 right-8 flex flex-col items-center text-[#3b82f6]"></div>
+          <div className="relative"></div>
         </div>
       </section>
 
-      <div className="relative">
-      </div>
-
-
+      <div className="relative"></div>
 
       <section className="relative bg-white py-20 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
         {/* Left Text */}
@@ -669,8 +635,6 @@ export default function About() {
           <div className="absolute -top-6 right-10 w-8 h-8 bg-[#3b82f6] rotate-45 rounded-sm"></div>
           <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm"></div>
 
-
-
           <div className="relative group">
             <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
               {/* Profile Image */}
@@ -683,10 +647,16 @@ export default function About() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-6">
                 {[
-                  { Icon: FaFacebookF, link: "https://www.facebook.com/SrinivasaRao.Kolakaluri" },
+                  {
+                    Icon: FaFacebookF,
+                    link: "https://www.facebook.com/SrinivasaRao.Kolakaluri",
+                  },
                   { Icon: FaInstagram, link: "https://www.instagram.com/" },
                   { Icon: FaXTwitter, link: "https://x.com/kolakalurisrinu" },
-                  { Icon: FaLinkedinIn, link: "https://www.linkedin.com/in/srinivasraokolakaluri/" },
+                  {
+                    Icon: FaLinkedinIn,
+                    link: "https://www.linkedin.com/in/srinivasraokolakaluri/",
+                  },
                 ].map(({ Icon, link }, i) => (
                   <a
                     key={i}
@@ -705,8 +675,6 @@ export default function About() {
               <p className="text-lg ">Founder & CEO</p>
             </div>
           </div>
-
-
         </div>
 
         {/* Right Image */}
@@ -731,14 +699,17 @@ export default function About() {
 
           {/* Description */}
           <p
-            className={`text-gray-600 text-lg leading-relaxed transition-all duration-500 ${isExpanded ? "max-h-full" : "max-h-48 overflow-hidden"
-              }`}
+            className={`text-gray-600 text-lg leading-relaxed transition-all duration-500 ${
+              isExpanded ? "max-h-full" : "max-h-48 overflow-hidden"
+            }`}
           >
-            With over a decade of experience in the IT industry, I bring a unique blend of
-            technical expertise, leadership, and a futuristic vision to the table. I hold
-            a <b>B.Tech</b> and <b>M.Tech</b> in <b>Computer Science & Engineering</b> and have
-            strengthened my knowledge through global certifications in:
-            <br /><br />
+            With over a decade of experience in the IT industry, I bring a
+            unique blend of technical expertise, leadership, and a futuristic
+            vision to the table. I hold a <b>B.Tech</b> and <b>M.Tech</b> in{" "}
+            <b>Computer Science & Engineering</b> and have strengthened my
+            knowledge through global certifications in:
+            <br />
+            <br />
             • Data Science - IIT Madras
             <br />
             • Machine Learning (ML) - Stanford University
@@ -746,66 +717,78 @@ export default function About() {
             • Data Analytics - Google
             <br />
             • Quantum Computing (Qiskit) - IBM &
+            <br />• Membership In{" "}
+            <b>
+              International Association of Engineers (IAENG) Member Number
+              -557555{" "}
+            </b>
             <br />
-            • Membership In <b>International Association of Engineers (IAENG) Member Number -557555 </b>
+            <br />
+            Driven by a deep passion for Artificial Intelligence, my focus is to
+            lead Innovation in AI until <b>2030</b> and beyond. From AI-driven
+            healthcare platforms to agentic AI systems and quantum
+            computing-based research, I am committed to building technologies
+            that create real-world impact.
             <br />
             <br />
-
-
-            Driven by a deep passion for Artificial Intelligence, my focus is to lead
-            Innovation in AI until <b>2030</b> and beyond. From AI-driven healthcare platforms to
-            agentic AI systems and quantum computing-based research, I am committed to
-            building technologies that create real-world impact.
-            <br /><br />
             <b>My Vision</b>
             <br />
-            To transform industries through AI-first thinking and quantum-powered
-            innovation while making emerging technologies accessible, impactful, and
-            ethical — especially for India at large.
-            <br /><br />
-            <b>Visionary Tech Entrepreneur:</b> On a mission to revolutionize India’s
-            future — one AI-powered solution at a time. From mentoring students in AI/ML
-            to building healthcare platforms with quantum computing.
-            <br /><br />
-            <b>The Innovator:</b> Blending bleeding-edge tech like GPT, MedPaLM, and
-            quantum computing with grounded use cases — whether it’s a VR-powered med
-            school tutor or a real-time blood donor app saving lives.
-            <br /><br />
-            <b>The Strategist:</b> Not just building, but planning — breaking complex
-            roadmaps into MVPs, growth strategies, legal frameworks, and marketing
-            blueprints — all while guiding trainees, running workshops, and drafting
-            investor plans.
-            <br /><br />
-            <b>The Brand Builder:</b> Through <b>Giant Clout Technologies</b>, launching
-            everything from cybersecurity courses to a media network (GiantTV) to digital
-            training platforms — all with bold, regional impact and global ambition.
-            <br /><br />
+            To transform industries through AI-first thinking and
+            quantum-powered innovation while making emerging technologies
+            accessible, impactful, and ethical — especially for India at large.
+            <br />
+            <br />
+            <b>Visionary Tech Entrepreneur:</b> On a mission to revolutionize
+            India’s future — one AI-powered solution at a time. From mentoring
+            students in AI/ML to building healthcare platforms with quantum
+            computing.
+            <br />
+            <br />
+            <b>The Innovator:</b> Blending bleeding-edge tech like GPT, MedPaLM,
+            and quantum computing with grounded use cases — whether it’s a
+            VR-powered med school tutor or a real-time blood donor app saving
+            lives.
+            <br />
+            <br />
+            <b>The Strategist:</b> Not just building, but planning — breaking
+            complex roadmaps into MVPs, growth strategies, legal frameworks, and
+            marketing blueprints — all while guiding trainees, running
+            workshops, and drafting investor plans.
+            <br />
+            <br />
+            <b>The Brand Builder:</b> Through <b>Giant Clout Technologies</b>,
+            launching everything from cybersecurity courses to a media network
+            (GiantTV) to digital training platforms — all with bold, regional
+            impact and global ambition.
+            <br />
+            <br />
             <b>The Impact Driver:</b> Whether it’s fake news detection, finance
-            automation, or public sector innovations, my focus always comes back to one
-            thing — real-world change using technology, especially for underserved
-            communities.
-            <br /><br />
-            <b>Digital Presence Strategy:</b> Through Giant Clout, I’m creating a
-            digital-first brand ecosystem — combining training, AI agent services,
-            workshops, digital marketing, and YouTube broadcasting to educate, innovate,
-            and inspire.
-            <br /><br />
+            automation, or public sector innovations, my focus always comes back
+            to one thing — real-world change using technology, especially for
+            underserved communities.
+            <br />
+            <br />
+            <b>Digital Presence Strategy:</b> Through Giant Clout, I’m creating
+            a digital-first brand ecosystem — combining training, AI agent
+            services, workshops, digital marketing, and YouTube broadcasting to
+            educate, innovate, and inspire.
+            <br />
+            <br />
             <b>Key Projects & Focus Areas:</b>
             <br />
-            • Giant Clout Technologies Pvt. Ltd. — Pioneering AI solutions for healthcare,
-            education, cybersecurity, and more.
+            • Giant Clout Technologies Pvt. Ltd. — Pioneering AI solutions for
+            healthcare, education, cybersecurity, and more.
             <br />
-            • AI for Medicos & Doctors — Tutoring systems, diagnosis support, and hospital
-            automation.
+            • AI for Medicos & Doctors — Tutoring systems, diagnosis support,
+            and hospital automation.
             <br />
-            • AI-Driven Public Platforms — From DonorGO (Blood Donation App) to GiantTV
-            (Media & Awareness Channel).
+            • AI-Driven Public Platforms — From DonorGO (Blood Donation App) to
+            GiantTV (Media & Awareness Channel).
             <br />
-            • R&D in Quantum Computing — Exploring quantum-powered applications across
-            pharma, finance, and national infrastructure.
-            <br />
-            • Cybersecurity Education & Training — Equipping the next generation through
-            hands-on, industry-grade courses.
+            • R&D in Quantum Computing — Exploring quantum-powered applications
+            across pharma, finance, and national infrastructure.
+            <br />• Cybersecurity Education & Training — Equipping the next
+            generation through hands-on, industry-grade courses.
           </p>
 
           <h4 className="text-2xl  text-[#34A853] tracking-wide">
@@ -827,16 +810,8 @@ export default function About() {
         </div>
       </section>
 
-
-<EmployeeList />
+      <EmployeeList />
       <Footer />
-
-
     </div>
-
   );
 }
-
-
-
-

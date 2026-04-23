@@ -128,6 +128,9 @@ export default function ServicesOffered() {
 
       {/* ---------------- SERVICES GRID ---------------- */}
       <section className="bg-gray-50 py-16 px-6 md:px-12">
+        <span className="absolute bottom-10 left-6 sm:left-20 z-0 pointer-events-none text-gray-200 text-5xl sm:text-5xl md:text-8xl rotate-[-12deg]">
+    ⟨ψ|H|ψ⟩
+  </span>
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-4xl  text-gray-900 mb-4">Our Services</h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-2xl">
