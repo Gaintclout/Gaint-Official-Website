@@ -53,7 +53,7 @@ ${name}`
       <ScrollToTop />
 
       {/* ======= HERO SECTION ======= */}
-      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-16 md:mt-20">
+      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-20 md:py-32 px-4 sm:px-6 text-center mt-16 md:mt-0">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
