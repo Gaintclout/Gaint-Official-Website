@@ -96,78 +96,130 @@ export default function Home() {
       <ScrollToTop />
 
 {/* ---------------- HERO / ABOUT ---------------- */}
-      <section
-        id="about"
-        ref={heroRef}
-        className="relative min-h-screen w-full flex items-center justify-center md:justify-end"
+<section
+  id="about"
+  ref={heroRef}
+  className="relative min-h-screen w-full flex items-center justify-center md:justify-end overflow-hidden"
+>
+  {/* 🔹 Fullscreen Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/hero-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* 🔹 Left background slit image */}
+  <img
+    src="/slit.png"
+    alt="Quantum slit"
+    className="
+      absolute left-1 sm:left-2 md:left-6 lg:left-10
+      top-1/2 -translate-y-1/2
+      z-[1]
+      w-[180px] sm:w-[260px] md:w-[420px] lg:w-[600px] xl:w-[750px]
+      opacity-10 object-contain rounded-3xl
+    "
+  />
+
+  {/* 🔹 Quantum notation 1 */}
+  <span
+    className="
+      absolute z-[3]
+      top-[42%] left-2 sm:left-4 md:left-0
+      -translate-y-1/2
+      text-white/20
+      text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl
+      font-thin rotate-[-15deg]
+      pointer-events-none
+    "
+  >
+    ⟨H⟩
+  </span>
+
+  {/* 🔹 Quantum notation 2 */}
+  <span
+    className="
+      absolute z-[3]
+      bottom-16 left-20 sm:left-32 md:left-48 lg:left-72 xl:left-80
+      text-white/25
+      text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:text-7xl
+      font-light rotate-[15deg]
+      pointer-events-none
+    "
+  >
+    |Ψ⟩
+  </span>
+
+  {/* 🔹 Quantum notation 3 */}
+  <div
+    className="
+      absolute z-[3] pointer-events-none
+      top-[68%] left-[18%]
+      sm:left-[20%]
+      md:left-[22%]
+      lg:left-[26%]
+      xl:left-[30%]
+      -translate-y-1/2
+    "
+  >
+    <span className="text-white/20 text-2xl sm:text-3xl md:text-4xl lg:text-[52px] xl:text-[60px] font-thin tracking-widest">
+      ⟨x|ψ⟩
+    </span>
+  </div>
+
+  {/* 🔹 Overlay */}
+  <div className="absolute inset-0 bg-white/20"></div>
+
+  {/* 🔹 Right-aligned text overlay */}
+  <div className="relative z-10 w-full flex flex-col items-center md:items-end text-center md:text-left text-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-24">
+    <div className="bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-6 sm:p-8 md:p-10 lg:p-12 xl:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] max-w-[95%] sm:max-w-[90%] md:max-w-3xl lg:max-w-4xl">
+      {/* Heading */}
+      <h1
+        className="
+          font-semibold leading-none mb-4 sm:mb-5 md:mb-6 animate-fadeInUp
+          bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent
+          text-[52px] sm:text-[72px] md:text-[110px] lg:text-[150px] xl:text-[190px]
+          drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
+        "
       >
-        {/* 🔹 Fullscreen Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/hero-bg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        GAINT
+      </h1>
 
-        {/* 🔹 Subtle dark overlay for readability */}
-        <div className="absolute inset-0 bg-white/20"></div>
+      {/* Subtext */}
+      <p
+        className="
+          text-base sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl
+          bg-gradient-to-r from-[#ffffff] to-[#ffff00]
+          bg-clip-text text-transparent
+          max-w-[700px]
+          leading-[1.35] md:leading-[1.2]
+          tracking-wide
+          animate-fadeIn
+          font-extrabold italic
+        "
+      >
+        Driving the Next <br />
 
-        {/* 🔹 Right-aligned text overlay */}
-        <div className="relative z-10 flex flex-col items-center md:items-end text-center md:text-left text-white px-6 sm:px-8 md:px-24 max-w-4xl">
-          {/* Glassmorphic Transparent Card */}
-          <div className="bg-white/0 backdrop-blur-lg border border-white/10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] p-10 md:p-14 transition-all hover:bg-white/20 hover:shadow-[0_10px_40px_rgba(0,0,0,0.4)] ">
+        <span>
+          Generation Through <br />
+        </span>
 
-            {/* Heading */}
-            <h1
-              className=" 
-        font-semibold leading-none mb-6 animate-fadeInUp
-        bg-gradient-to-r from-[#ffffff] to-[#ffffff] bg-clip-text text-transparent        
-        text-[64px] sm:text-[96px] md:text-[140px] lg:text-[180px] xl:text-[200px]
-        drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
-      "
-            >
-              GAINT
-            </h1>
+        <span>
+          INNOVATION in <br />
+        </span>
 
-            {/* Subtext */}
-            <p className="
-  text-xl sm:text-2xl md:text-4xl lg:text-5xl
-  bg-gradient-to-r from-[#ffffff] to-[#ffff00]
-  bg-clip-text text-transparent
-  max-w-[700px]
-  leading-[1.3] md:leading-[1.2]
-  tracking-wide
-  animate-fadeIn
-  font-extrabold italic
-">
-              Driving the Next <br />
-
-              <span>
-                Generation Through <br />
-              </span>
-
-              <span>
-                INNOVATION in <br />
-              </span>
-
-              <span className="bg-gradient-to-r from-[#ffffff] to-[#ffff00] bg-clip-text text-transparent whitespace-nowrap century gothic">
-                AI <span className="mx-0">&</span> Quantum Computing
-              </span>
-            </p>
-
-          </div>
-        </div>
-
-      </section>
-
-
-
-
-
+        <span className="bg-gradient-to-r from-[#ffffff] to-[#ffff00] bg-clip-text text-transparent whitespace-normal sm:whitespace-nowrap century gothic">
+          AI <span className="mx-0">&</span> Quantum Computing
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
 
 
       {/* ---------------- COUNTERS ---------------- */} 
@@ -177,6 +229,7 @@ export default function Home() {
             <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px] mb-2">{clients}+</h3>
             <p className="text-lg sm:text-xl md:text-[28px]">Happy Clients</p>
           </div>
+    
 
           <div data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-5xl sm:text-6xl md:text-[90px] lg:text-[100px]  mb-2">{projects}+</h3>
@@ -192,6 +245,7 @@ export default function Home() {
       {/* ---------------- SERVICES ---------------- */}
       {/* ---------------- INDUSTRIES WE SERVICE (BLUE THEME) ---------------- */}
       <section id="services" className="py-12 md:py-20 bg-transparent backdrop-blur-0">
+       <h2 className="ml-20" ><span className="text-8xl text-gray-200 rotate-2">⟨ψ⟩</span></h2>
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16 px-4" data-aos="fade-up">
           <h3 className="text-3xl md:text-5xl  text-gray-800 mb-4">
@@ -200,6 +254,7 @@ export default function Home() {
           <p className="text-lg md:text-2xl text-gray-500 max-w-3xl mx-auto">
             Empowering every sector through AI-driven transformation and automation.
           </p>
+            
         </div>
 
         {/* Industries Grid */}
@@ -229,7 +284,7 @@ export default function Home() {
             {
               icon: <MapPinned className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
               title: "GIS",
-              desc: "GIS system enabling accurate mapping and spatial insights for smarter infrastructure, resource management, and urban development."
+              desc: "Geographic Information System (GIS) for mapping and data-driven insights.Includes base map layers from cadastral maps and digitization.",
             },
             {
               icon: <BarChart className="w-10 h-10 md:w-12 md:h-12 text-[#4285F4] transition-transform duration-300 group-hover:scale-110 group-hover:text-blue-500" />,
@@ -357,7 +412,9 @@ export default function Home() {
               <p className="text-gray-600 text-sm md:text-base relative z-10 flex-grow overflow-hidden">
                 {product.desc}
               </p>
+              
             </a>
+            
           ))}
 
         </div>

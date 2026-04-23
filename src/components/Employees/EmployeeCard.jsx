@@ -32,20 +32,23 @@ export default function EmployeeCard({ employee }) {
       <h2 className="mt-3 text-[17px] font-bold text-gray-800">
         {employee.name}
       </h2>
+      <div className="mt-3">
+      {/* Role */}
+        <span className="inline-block bg-blue-50 text-blue-600 text-[12px] font-bold px-3 py-1 rounded-full">
+          {employee.role}
+        </span>
+      </div>
+
 
       {/* Description */}
       <p className="text-[13px] text-gray-500 mt-2 leading-relaxed px-2">
         {employee.description}
       </p>
 
-      {/* Role */}
-      <div className="mt-3">
-        <span className="inline-block bg-blue-50 text-blue-600 text-s font-bold px-3 py-1 rounded-full">
-          {employee.role}
-        </span>
-      </div>
+ 
 
-      {/* Social Icons */}
+      {/* ❌ Social Icons (commented out) */}
+      {/*
       <div className="flex justify-center gap-4 mt-auto pt-3 text-gray-700 text-sm">
         {socialEntries.map(([key, link]) => {
           const iconClass = icons[key];
@@ -78,6 +81,7 @@ export default function EmployeeCard({ employee }) {
           );
         })}
       </div>
+      */}
     </div>
   );
 }
