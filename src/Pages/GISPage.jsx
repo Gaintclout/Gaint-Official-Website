@@ -44,7 +44,8 @@ const servicesData = [
     title: "AI + GIS Analytics",
     icon: Brain,
     image: "/s6.png",
-  },
+    imageClass: "objec  t-center bg-white p-2" ,
+    },
 ];
 
 export default function GaintGISWebsite() {
@@ -117,32 +118,45 @@ export default function GaintGISWebsite() {
 
             return (
               <Card
-                key={index}
-                className="flex h-full flex-col overflow-hidden border-0 shadow-none transition duration-300"
-              >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-64 w-full object-cover object-center sm:h-72 md:h-80"
-                />
+  key={index}
+  className="group h-full overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+>
+  <div className="relative h-64 overflow-hidden bg-gray-100 sm:h-72 md:h-80">
+    <img
+      src={service.image}
+      alt={service.title}
+      className={`h-full w-full transition-transform duration-700 group-hover:scale-110 ${
+        service.imageClass || "object-cover object-center"
+      }`}
+    />
 
-                <CardContent className="flex flex-grow flex-col p-5 sm:p-6">
-                  <div className="mb-2 flex items-start gap-3">
-                    <div className="shrink-0 bg-blue-100 p-2">
-                      <Icon className="text-blue-600" size={20} />
-                    </div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-                    <h3 className="text-lg leading-snug text-gray-900 sm:text-xl md:text-2xl">
-                      {service.title}
-                    </h3>
-                  </div>
+    <div className="absolute left-5 top-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/90 shadow-lg backdrop-blur">
+      <Icon className="text-blue-600" size={28} />
+    </div>
 
-                  <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-                    High-quality geospatial solutions tailored for real-world
-                    applications.
-                  </p>
-                </CardContent>
-              </Card>
+    <h3 className="absolute bottom-5 left-5 right-5 text-left text-2xl font-semibold leading-snug text-white drop-shadow-md">
+      {service.title}
+    </h3>
+  </div>
+
+  <CardContent className="flex flex-grow flex-col p-6">
+    <p className="text-base leading-relaxed text-gray-600">
+      High-quality geospatial solutions tailored for real-world applications.
+    </p>
+
+    <div className="mt-5 flex items-center justify-between">
+      <span className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
+        GIS Solution
+      </span>
+
+      <span className="text-xl text-blue-600 transition-transform duration-300 group-hover:translate-x-1">
+        →
+      </span>
+    </div>
+  </CardContent>
+</Card>
             );
           })}
         </div>
