@@ -17,6 +17,7 @@ import Workshop from "./Pages/Workshop.jsx";
 import Career from "./Pages/Career.jsx";
 import Terms from "./Pages/Terms.jsx";
 import Privacy from "./Pages/Privacy.jsx";
+import GISPage from "./Pages/GISPage.jsx"
 function App() {
   return (
     <Routes>
@@ -36,6 +37,7 @@ function App() {
       <Route path="/workshop" element={<Workshop />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
+      <Route path="/gispage" element={<GISPage />} />
     </Routes>
   );
 }

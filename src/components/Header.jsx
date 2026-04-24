@@ -7,7 +7,7 @@ const products = [
   { name: "GAINTInternsHub", link: "/internsapp" },
   { name: "GAINTImmuneIQ", link: "/Immuneiq" },
   { name: "WellNest AI Station", link: "/wellnestai" },
-  { name: "GIS", link: "/gis" },
+  { name: "UNIPS", link: "/gis" },
   { name: "QKD", link: "/qkd" },
   { name: "PQC", link: "/pqc" },
 ];
@@ -16,6 +16,7 @@ const navLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Services", link: "/service" },
+  {name: "GIS", link: "/gispage" },
   { name: "Careers", link: "/career" },
   { name: "Workshops", link: "/Workshop" },
   { name: "Contact", link: "/contact" },
