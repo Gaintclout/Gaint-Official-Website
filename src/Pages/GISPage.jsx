@@ -221,8 +221,9 @@ export default function GaintGISWebsite() {
             (tech, i) => (
               <div
                 key={i}
-                className="rounded-xl bg-white px-4 py-2 text-sm text-gray-800 shadow-sm sm:px-6 sm:py-3 sm:text-lg md:text-xl"
-              >
+                // className="rounded-xl bg-white px-4 py-2 text-sm text-gray-800 shadow-sm sm:px-6 sm:py-3 sm:text-lg md:text-xl"
+                 className="inline-block bg-blue-50 text-blue-600 text-[30px]  px-3 py-1 rounded-full">
+              
                 {tech}
               </div>
             )
@@ -232,7 +233,7 @@ export default function GaintGISWebsite() {
 
       {/* CTA Section */}
       <section className="bg-black px-4 py-16 text-center text-white sm:px-6 sm:py-20">
-        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+        <h2 className="mb-4 text-3xl  sm:text-4xl md:text-5xl">
           Ready to Build the Future with GIS?
         </h2>
       </section>
