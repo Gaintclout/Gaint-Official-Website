@@ -55,251 +55,184 @@ export default function GaintGISWebsite() {
       <Header />
 
       {/* Hero Section */}
-<section
-  className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/GISbg.png')",
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
-
-  {/* Content */}
-  <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-6 md:px-16 max-w-4xl mx-auto">
-    <motion.h1
-      className="
-        leading-tight
-        text-white
-        text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl
-        drop-shadow-[0_0_20px_rgba(0,0,0,0.4)]
-        mt-10
-      "
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-    >
-      Transforming India with Geospatial Intelligence
-    </motion.h1>
-
-    <p
-      className="
-        text-base sm:text-xl md:text-2xl lg:text-3xl
-        text-gray-200
-        max-w-[850px]
-        leading-relaxed
-        mt-4
-        font-[Century_Gothic]
-      "
-    >
-      AI-powered GIS solutions for smart cities, infrastructure, and
-      data-driven governance.
-    </p>
-
-    <div className="flex flex-wrap gap-4 justify-center mt-8">
-      <Button
-        className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 text-base"
-        onClick={() => navigate('/gis')}
+      <section
+        className="relative flex min-h-[560px] items-center justify-center overflow-hidden bg-cover bg-center px-4 pb-16 pt-28 text-center sm:min-h-[620px] sm:px-6 sm:pt-32 lg:min-h-[700px] lg:px-8"
+        style={{
+          backgroundImage: "url('/GISbg.png')",
+        }}
       >
-        Explore Solutions
-      </Button>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
 
-      <Button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 text-base">
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-2 text-center text-white sm:px-6 md:px-10">
+          <motion.h1
+            className="mt-6 text-3xl leading-tight text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.4)] sm:text-4xl md:mt-10 md:text-5xl lg:text-6xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            Transforming India with Geospatial Intelligence
+          </motion.h1>
+
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-200 sm:text-lg md:text-xl lg:text-2xl font-[Century_Gothic]">
+            AI-powered GIS solutions for smart cities, infrastructure, and
+            data-driven governance.
+          </p>
+
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
+            <Button
+              className="w-full max-w-xs bg-blue-500 px-6 py-2 text-base text-white hover:bg-blue-600 sm:w-auto"
+              onClick={() => navigate("/gis")}
+            >
+              Explore Solutions
+            </Button>
+
+            {/* <Button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 text-base">
         Request Demo
-      </Button>
-    </div>
-  </div>
-</section>
+      </Button> */}
+          </div>
+        </div>
+      </section>
       {/* Services Section */}
-     <section className="py-16 px-6 relative">
-  <span className="absolute bottom-10 left-0 top-8 sm:left-20 z-0 pointer-events-none text-gray-200 text-5xl sm:text-5xl md:text-8xl rotate-[-12deg]">
-    ⟨ψ|H|ψ⟩
-  </span>
+      <section className="relative px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+        <span className="pointer-events-none absolute left-2 top-6 z-0 rotate-[-12deg] text-4xl text-gray-200 sm:left-16 sm:text-5xl md:text-7xl">
+          ⟨ψ|H|ψ⟩
+        </span>
 
-  <div className="max-w-7xl mx-auto text-center mb-12 relative z-10">
+        <div className="relative z-10 mx-auto mb-10 max-w-7xl text-center sm:mb-12">
+          <h2 className="mb-4 text-3xl tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+            GAINT GIS Services
+          </h2>
 
-  <h2
-    className="
-      text-3xl sm:text-4xl md:text-5xl lg:text-5xl
-      text-center text-gray-900 tracking-tight
-      mb-4
-    "
-  >
-    GAINT GIS Services
-  </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed tracking-normal text-gray-600 sm:text-lg md:text-2xl lg:text-3xl">
+            We provide end-to-end geospatial intelligence solutions combining
+            GIS, AI, infrastructure planning and data-driven governance for
+            smarter decision-making.
+          </p>
+        </div>
 
-  <p
-    className="
-      text-gray-600 mt-4 max-w-3xl mx-auto
-      text-xl sm:text-2xl md:text-3xl lg:text-4xl
-      leading-relaxed tracking-wide text-center
-    "
-  >
-    We provide end-to-end geospatial intelligence solutions combining GIS,
-    AI, infrastructure planning, and data-driven governance for smarter
-    decision-making.
-  </p>
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {servicesData.map((service, index) => {
+            const Icon = service.icon;
 
-</div>
-  <div className="grid md:grid-cols-3 gap-6">
-    {servicesData.map((service, index) => {
-      const Icon = service.icon;
+            return (
+              <Card
+                key={index}
+                className="flex h-full flex-col overflow-hidden border-0 shadow-none transition duration-300"
+              >
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="h-64 w-full object-cover object-center sm:h-72 md:h-80"
+                />
 
-      return (
-        <Card
-          key={index}
-          className="border-0 shadow-none overflow-hidden transition duration-300 h-full flex flex-col"
-        >
-          <img
-            src={service.image}
-            alt={service.title}
-            className="w-full h-[340px] md:h-[380px] object-cover object-center"
-          />
+                <CardContent className="flex flex-grow flex-col p-5 sm:p-6">
+                  <div className="mb-2 flex items-start gap-3">
+                    <div className="shrink-0 bg-blue-100 p-2">
+                      <Icon className="text-blue-600" size={20} />
+                    </div>
 
-          <CardContent className="p-6 flex flex-col flex-grow">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="bg-blue-100 p-2">
-                <Icon className="text-blue-600" size={20} />
+                    <h3 className="text-lg leading-snug text-gray-900 sm:text-xl md:text-2xl">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
+                    High-quality geospatial solutions tailored for real-world
+                    applications.
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* GIS Work Process */}
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto mb-12 max-w-7xl text-center sm:mb-14">
+          <h2 className="mb-4 text-3xl tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+            Our GIS Workflow
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed tracking-normal text-gray-600 sm:text-lg md:text-2xl lg:text-3xl">
+            From consultation to dashboard delivery, we follow a structured
+            process to convert geospatial data into powerful business
+            intelligence.
+          </p>
+        </div>
+
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {[
+            "Consultation",
+            "Data Collection",
+            "GIS Mapping",
+            "AI Analytics",
+            "Dashboard Delivery",
+            "Ongoing Support",
+          ].map((step, index) => (
+            <div
+              key={index}
+              className="relative rounded-2xl border border-gray-200 bg-gray-50 p-5 text-center shadow-md transition duration-300 hover:shadow-xl sm:p-6"
+            >
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white sm:h-14 sm:w-14 sm:text-xl">
+                {index + 1}
               </div>
 
-              <h3 className="text-lg sm:text-xl md:text-2xl text-gray-900">
-                {service.title}
+              <h3 className="text-base font-semibold text-gray-900 sm:text-lg">
+                {step}
               </h3>
+
+              {index !== 5 && (
+                <div className="absolute -right-4 top-12 hidden text-3xl text-blue-500 xl:block">
+                  →
+                </div>
+              )}
             </div>
+          ))}
+        </div>
+      </section>
+      {/* About Section */}
+      <section className="bg-white px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8">
+        <div className="mx-auto mb-10 max-w-7xl text-center sm:mb-12">
+          <h2 className="mb-4 text-3xl tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+            About GAINT GIS
+          </h2>
 
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              High-quality geospatial solutions tailored for real-world
-              applications.
-            </p>
-          </CardContent>
-        </Card>
-      );
-    })}
-  </div>
-</section>
-
-{/* GIS Work Process */}
-<section className="py-20 px-6 bg-white">
-  <div className="max-w-7xl mx-auto text-center mb-14">
-    <h2
-      className="
-        text-3xl sm:text-4xl md:text-5xl lg:text-5xl
-        text-center text-gray-900 tracking-tight mb-4
-      "
-    >
-      Our GIS Workflow
-    </h2>
-
-    <p
-      className="
-        text-gray-600 mt-4 max-w-4xl mx-auto
-        text-xl sm:text-2xl md:text-3xl lg:text-4xl
-        leading-relaxed tracking-wide text-center
-      "
-    >
-      From consultation to dashboard delivery, we follow a structured process
-      to convert geospatial data into powerful business intelligence.
-    </p>
-  </div>
-
-  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
-    {[
-      "Consultation",
-      "Data Collection",
-      "GIS Mapping",
-      "AI Analytics",
-      "Dashboard Delivery",
-      "Ongoing Support",
-    ].map((step, index) => (
-      <div
-        key={index}
-        className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
-      >
-        <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-bold">
-          {index + 1}
+          <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed tracking-normal text-gray-600 sm:text-lg md:text-2xl lg:text-3xl">
+            GAINT delivers advanced geospatial intelligence by combining GIS,
+            artificial intelligence, and real-time analytics to empower
+            governments and enterprises.
+          </p>
         </div>
 
-        <h3 className="text-lg font-semibold text-gray-900">
-          {step}
-        </h3>
-
-        {index !== 5 && (
-          <div className="hidden lg:block absolute top-12 -right-4 text-3xl text-blue-500">
-            →
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-</section>
-      {/* About Section */}
-   <section className="py-16 bg-white px-6 text-center">
-
-  <div className="max-w-7xl mx-auto text-center mb-12">
-
-    <h2
-      className="
-        text-3xl sm:text-4xl md:text-5xl lg:text-5xl
-        text-center text-gray-900 tracking-tight
-        mb-4
-      "
-    >
-      About GAINT GIS
-    </h2>
-
-    <p
-      className="
-        text-gray-600 mt-4 max-w-4xl mx-auto
-        text-xl sm:text-2xl md:text-3xl lg:text-4xl
-        leading-relaxed tracking-wide text-center
-      "
-    >
-      GAINT delivers advanced geospatial intelligence by combining GIS,
-      artificial intelligence, and real-time analytics to empower
-      governments and enterprises.
-    </p>
-
-  </div>
-
-</section>
+      </section>
 
       {/* Technology Stack */}
-     <section className="py-16 px-6">
-
-  <div className="max-w-7xl mx-auto text-center mb-12">
-
-    <h2
-      className="
-        text-3xl sm:text-4xl md:text-5xl lg:text-5xl
-        text-center text-gray-900 tracking-tight
-        mb-4
-      "
-    >
-      Technology Stack
-    </h2>
-
-  </div>
-
-  <div className="flex flex-wrap justify-center gap-4">
-    {["ArcGIS", "QGIS", "Python", "PostGIS", "React", "AWS"].map(
-      (tech, i) => (
-        <div
-          key={i}
-          className="
-            px-6 py-3 bg-white shadow-sm rounded-xl
-            text-lg sm:text-xl md:text-2xl
-            text-gray-800
-          "
-        >
-          {tech}
+      <section className="px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+        <div className="mx-auto mb-10 max-w-7xl text-center sm:mb-12">
+          <h2 className="mb-4 text-3xl tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+            Technology Stack
+          </h2>
         </div>
-      )
-    )}
-  </div>
 
-</section>
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-3 sm:gap-4">
+          {["ArcGIS", "QGIS", "Python", "PostGIS", "React", "AWS", "Power BI"].map(
+            (tech, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-white px-4 py-2 text-sm text-gray-800 shadow-sm sm:px-6 sm:py-3 sm:text-lg md:text-xl"
+              >
+                {tech}
+              </div>
+            )
+          )}
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-black text-white text-center">
-        <h2 className="text-4xl font-bold mb-4">
+      <section className="bg-black px-4 py-16 text-center text-white sm:px-6 sm:py-20">
+        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
           Ready to Build the Future with GIS?
         </h2>
       </section>
