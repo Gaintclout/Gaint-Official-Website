@@ -555,7 +555,7 @@ export default function About() {
           </div>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            At Giant Clout, we aim to become more than just a technology
+            At Gaint Clout, we aim to become more than just a technology
             company; we want to be a catalyst for education, innovation, and
             transformation across sectors. Our roadmap is clear:<br></br>•
             Empower the next generation of innovators through education and
@@ -641,7 +641,7 @@ export default function About() {
               <img
                 src="/srinivas-sir.jpeg"
                 alt="CEO"
-                className="w-full h-full  object-cover object-[center_10%] scale-x-[-1] transition-transform duration-500"
+                className="w-full h-full object-cover object-[center_10%] scale-x-[-1] transition-transform duration-500"
               />
 
               {/* Overlay */}
