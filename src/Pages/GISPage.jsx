@@ -19,33 +19,45 @@ const servicesData = [
     title: "GIS Mapping & Digitization",
     icon: MapPinned,
     image: "/s1.jfif",
+    description:
+      "Accurate spatial mapping, cadastral digitization, and base map preparation for planning and land management.",
   },
   {
     title: "Smart City GIS",
     icon: Building2,
     image: "/s2.jfif",
+    description:
+      "Integrated GIS solutions for urban planning, utilities, traffic systems, and smart governance platforms.",
   },
   {
     title: "Agriculture Intelligence",
     icon: Leaf,
     image: "/s3.jpg",
+    description:
+      "AI-powered agricultural insights using satellite imagery, crop monitoring, soil analysis, and yield prediction.",
   },
   {
     title: "Infrastructure GIS",
     icon: Construction,
     image: "/s4.jpg",
+    description:
+      "Geospatial planning for roads, buildings, utilities, and infrastructure lifecycle management with precision.",
   },
   {
     title: "Disaster Management",
     icon: AlertTriangle,
     image: "/s5.jpg",
+    description:
+      "Flood, fire, and disaster risk monitoring with real-time GIS tracking for emergency response and planning.",
   },
   {
     title: "AI + GIS Analytics",
     icon: Brain,
     image: "/s6.png",
-    imageClass: "objec  t-center bg-white p-2" ,
-    },
+    imageClass: "object-center bg-white p-2",
+    description:
+      "Advanced AI models with GIS analytics for predictive insights, anomaly detection, and smart decision-making.",
+  },
 ];
 
 export default function GaintGISWebsite() {
@@ -143,9 +155,8 @@ export default function GaintGISWebsite() {
 
   <CardContent className="flex flex-grow flex-col p-6">
     <p className="text-base leading-relaxed text-gray-600">
-      High-quality geospatial solutions tailored for real-world applications.
-    </p>
-
+  {service.description}
+</p>
     <div className="mt-5 flex items-center justify-between">
       <span className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
         GIS Solution

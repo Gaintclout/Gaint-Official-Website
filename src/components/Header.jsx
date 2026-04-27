@@ -16,6 +16,7 @@ const navLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Services", link: "/service" },
+  {name: "GIS", link: "/gispage" },
   { name: "Careers", link: "/career" },
   { name: "Workshops", link: "/Workshop" },
   { name: "Contact", link: "/contact" },
