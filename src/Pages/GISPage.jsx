@@ -158,14 +158,13 @@ export default function GaintGISWebsite() {
   {service.description}
 </p>
     <div className="mt-5 flex items-center justify-between">
-      <span className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
-        GIS Solution
-      </span>
-
-      <span className="text-xl text-blue-600 transition-transform duration-300 group-hover:translate-x-1">
-        →
-      </span>
-    </div>
+  <button
+    onClick={() => navigate("/gis")}
+    className="rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 hover:bg-blue-100 transition duration-300"
+  >
+    GIS Solution
+  </button>
+</div>
   </CardContent>
 </Card>
             );
@@ -226,7 +225,7 @@ export default function GaintGISWebsite() {
 
           <p className="mx-auto mt-4 max-w-4xl text-base leading-relaxed tracking-normal text-gray-600 sm:text-lg md:text-2xl lg:text-3xl">
             GAINT delivers advanced geospatial intelligence by combining GIS,
-            artificial intelligence, and real-time analytics to empower
+            Artificial Intelligence, and real-time analytics to empower
             governments and enterprises.
           </p>
         </div>
@@ -259,7 +258,7 @@ export default function GaintGISWebsite() {
       {/* CTA Section */}
       <section className="bg-black px-4 py-16 text-center text-white sm:px-6 sm:py-20">
         <h2 className="mb-4 text-3xl  sm:text-4xl md:text-5xl">
-          Ready to Build the Future with GIS?
+          Ready to Build the Future with GIS
         </h2>
       </section>
 
