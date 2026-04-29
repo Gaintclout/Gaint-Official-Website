@@ -94,7 +94,7 @@ ${name}`
                 <Mail size={22} />
               </div>
               <div>
-                <h4 className=" text-gray-900">Email Us</h4>
+                <h4 className=" text-gray-900 font-bold">Email Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">info@gaintclout.com</p>
               </div>
             </div>
@@ -105,7 +105,7 @@ ${name}`
                 <Phone size={22} />
               </div>
               <div>
-                <h4 className=" text-gray-900">Call Us</h4>
+                <h4 className=" text-gray-900 font-bold">Call Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">+91 88972 38849</p>
               </div>
             </div>
@@ -116,7 +116,7 @@ ${name}`
                 <MapPin size={22} />
               </div>
               <div>
-                <h4 className=" text-gray-900">Visit Us</h4>
+                <h4 className=" text-gray-900 font-bold">Visit Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">
                   Awfis Elite 4th Floor, Orbit Building, Knowledge City,
                   Hyderabad
