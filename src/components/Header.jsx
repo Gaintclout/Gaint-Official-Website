@@ -27,14 +27,14 @@ export default function Header() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black/20 px-6 py-4 shadow-md backdrop-blur-lg border-b border-white/10">
-      <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
+    <header className="fixed top-0 left-0 z-50 w-full bg-black/20 px-3 py-4 shadow-md backdrop-blur-lg border-b border-white/10 sm:px-6">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-2 sm:gap-4">
         {/* LEFT SIDE: Logo */}
         <NavLink to="/" className="shrink-0">
           <img
             src="/gaint-logo.png"
             alt="GAINT Clout Technologies"
-            className="h-auto w-28 lg:w-32"
+            className="h-auto w-20 sm:w-28 lg:w-32"
           />
         </NavLink>
 
@@ -104,7 +104,14 @@ shadow-2xl backdrop-blur-xl"
           </ul>
         </nav>
 
-        {/* RIGHT SIDE: InternsHub Button */}
+        {/* RIGHT SIDE: Attendance Button */}
+        <a
+          href="https://attendance.gaintclout.com"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-green-400/70 bg-green-600 px-3 py-2 text-xs font-semibold text-white shadow-lg shadow-green-600/25 transition duration-300 hover:-translate-y-0.5 hover:bg-green-700 hover:shadow-green-600/40 sm:gap-2 sm:px-5 sm:py-3 sm:text-sm"
+        >
+          <Users className="h-4 w-4 sm:h-5 sm:w-5" />
+          Employee Login
+        </a>
 
         {/* MOBILE MENU TOGGLE */}
         <button
