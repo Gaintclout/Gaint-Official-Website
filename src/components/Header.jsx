@@ -107,10 +107,10 @@ shadow-2xl backdrop-blur-xl"
         {/* RIGHT SIDE: Attendance Button */}
         <a
           href="https://attendance.gaintclout.com"
-          className="hidden shrink-0 items-center gap-2 rounded-full border bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#4285F4]/25 transition duration-300 hover:-translate-y-0.5  hover:shadow-[#4285F4]/40 xl:inline-flex"
+          className="hidden shrink-0 items-center gap-2 rounded-full border bg-green-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#4285F4]/25 transition duration-300 hover:-translate-y-0.5  hover:shadow-[#4285F4]/40 xl:inline-flex"
         >
           <Users className="h-5 w-5" />
-          Employee Log
+          Employee Login
         </a>
 
         {/* MOBILE MENU TOGGLE */}
