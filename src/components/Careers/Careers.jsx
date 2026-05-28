@@ -55,12 +55,23 @@ const Careers = () => {
       {/* HEADER */}
       <div className="max-w-6xl mx-auto mb-10">
 
-        <a
-          href="/"
-          className="inline-block text-sm text-blue-600 hover:text-blue-800 mb-4"
-        >
-          ← Go Back
-        </a>
+        
+
+<a
+  href="/"
+  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full
+  bg-white/80 backdrop-blur-md
+  border border-gray-200 shadow-md
+  text-gray-700 font-semibold text-sm
+  hover:bg-blue-600 hover:text-white
+  hover:shadow-lg hover:scale-105
+  transition-all duration-300"
+>
+  ← Go Back
+</a>
+
+
+
 
         <h1 className="text-4xl font-extrabold text-center text-gray-800">
           Careers at <span className="text-blue-600">Gaint Clout</span>
