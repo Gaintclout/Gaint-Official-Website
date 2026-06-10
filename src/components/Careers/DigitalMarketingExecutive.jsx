@@ -5,10 +5,11 @@ import {
   Building2,
   Users,
   Mail,
+  Phone,
   ExternalLink,
 } from "lucide-react";
 
-const DigitalMarketingExecutive = ({ goBack }) => {
+const DigitalMarketingExecutive = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
 
@@ -32,7 +33,7 @@ const DigitalMarketingExecutive = ({ goBack }) => {
 
         <div className="grid md:grid-cols-2 gap-4 mt-5 text-sm">
           <p className="flex items-center gap-2">
-            <MapPin size={18} /> Remote
+            <MapPin size={18} /> Hyderabad
           </p>
 
           <p className="flex items-center gap-2">
@@ -44,7 +45,7 @@ const DigitalMarketingExecutive = ({ goBack }) => {
           </p>
 
           <p className="flex items-center gap-2">
-            <Building2 size={18} /> IT Talent Hub
+            <Building2 size={18} /> Gaint Clout Technologies
           </p>
         </div>
       </div>
@@ -102,7 +103,7 @@ const DigitalMarketingExecutive = ({ goBack }) => {
         {
           title: "Benefits",
           data: [
-            "Remote work flexibility",
+            "Hyderabad-based work opportunity",
             "Career growth opportunities",
             "Creative work environment",
             "Exposure to digital branding projects",
@@ -138,19 +139,33 @@ const DigitalMarketingExecutive = ({ goBack }) => {
       <div className="bg-indigo-600 text-white mt-8 p-6 rounded-2xl shadow-lg text-center">
         <h3 className="text-xl font-bold mb-3">Apply Now</h3>
 
-        <a
-          href="https://lnkd.in/eZ3RXGVV"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
-            Apply <ExternalLink size={16} />
+        {isOpen ? (
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeHrmKfFM_U89tgx3IquGWgUpjCnuNDNXJGBwpaoiEd1RLi2g/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
+              Apply <ExternalLink size={16} />
+            </button>
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="bg-gray-200 text-gray-500 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto cursor-not-allowed"
+          >
+            Position Closed
           </button>
-        </a>
+        )}
 
-        <div className="mt-4 text-sm">
+        <div className="mt-4 text-sm space-y-1">
           <p className="flex justify-center gap-2">
-            <Mail size={16} /> info@ittalenthub.co.uk
+            <Mail size={16} /> info@gaintclout.com
+          </p>
+
+          <p className="flex justify-center gap-2">
+            <Phone size={16} /> +91 8897238849
           </p>
         </div>
       </div>
@@ -159,4 +174,3 @@ const DigitalMarketingExecutive = ({ goBack }) => {
 };
 
 export default DigitalMarketingExecutive;
-

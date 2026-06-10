@@ -17,8 +17,8 @@ const JobCard = ({ job, onClick }) => {
           </h2>
         </div>
 
-        <div className="bg-blue-50 text-blue-600 text-xs font-medium px-3 py-1 rounded-full">
-          {job.salary || "Competitive"}
+        <div className="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-600">
+          Explore Role
         </div>
       </div>
 

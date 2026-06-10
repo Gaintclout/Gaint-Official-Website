@@ -9,7 +9,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const AIProjectLead = ({ goBack }) => {
+const AIProjectLead = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
       
@@ -45,7 +45,7 @@ const AIProjectLead = ({ goBack }) => {
           </p>
 
           <p className="flex items-center gap-2">
-            <Building2 size={18} /> IT Talent Hub
+            <Building2 size={18} /> Gaint Clout Technologies
           </p>
         </div>
       </div>
@@ -57,7 +57,7 @@ const AIProjectLead = ({ goBack }) => {
         </h3>
 
         <p className="text-gray-700">
-          IT Talent Hub is hiring an experienced AI Engineer (Project Lead)
+          Gaint Clout Technologies is hiring an experienced AI Engineer (Project Lead)
           to work on advanced AI projects. The role involves building scalable
           AI solutions, leading projects, and collaborating closely with clients
           to deliver innovative AI-powered applications.
@@ -146,23 +146,33 @@ const AIProjectLead = ({ goBack }) => {
       <div className="bg-indigo-600 text-white mt-8 p-6 rounded-2xl shadow-lg text-center">
         <h3 className="text-xl font-bold mb-3">Apply Now</h3>
 
-        <a
-          href="https://forms.gle/YrsGTaQgsmpovmBH7"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
-            Apply <ExternalLink size={16} />
+        {isOpen ? (
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeHrmKfFM_U89tgx3IquGWgUpjCnuNDNXJGBwpaoiEd1RLi2g/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
+              Apply <ExternalLink size={16} />
+            </button>
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="bg-gray-200 text-gray-500 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto cursor-not-allowed"
+          >
+            Position Closed
           </button>
-        </a>
+        )}
 
         <div className="mt-4 text-sm space-y-1">
           <p className="flex justify-center gap-2">
-            <Mail size={16} /> info@ittalenthub.co.uk
+            <Mail size={16} /> info@gaintclout.com
           </p>
 
           <p className="flex justify-center gap-2">
-            <Phone size={16} /> +44 7453 289655
+            <Phone size={16} /> +91 8897238849
           </p>
         </div>
       </div>
@@ -171,4 +181,3 @@ const AIProjectLead = ({ goBack }) => {
 };
 
 export default AIProjectLead;
-

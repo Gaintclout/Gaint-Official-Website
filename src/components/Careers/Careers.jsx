@@ -18,6 +18,7 @@ const Careers = () => {
       location: "Andhra Pradesh",
       type: "Full-Time",
       component: "ASE",
+      isOpen: true,
     },
 
     {
@@ -25,6 +26,7 @@ const Careers = () => {
       location: "Chennai",
       type: "Contract",
       component: "GIS",
+      isOpen: true,
     },
 
     {
@@ -32,22 +34,28 @@ const Careers = () => {
       location: "Remote",
       type: "Freelancer",
       component: "AI_engineer",
+      isOpen: true,
     },
 
     {
       title: "Sales Executive – AI Training Programs",
-      location: "Remote",
+      location: "Hyderabad",
       type: "Full-Time",
       component: "SalesExecutive",
+      isOpen: true,
     },
 
     {
       title: "Digital Marketing Executive",
-      location: "Remote",
+      location: "Hyderabad",
       type: "Full-Time",
       component: "DigitalMarketingExecutive",
+      isOpen: true,
     },
   ];
+
+  const selectedJobDetails = jobs.find((job) => job.component === selectedJob);
+  const selectedJobIsOpen = selectedJobDetails?.isOpen !== false;
 
   return (
     <div className="min-h-screen bg-gradient-to-br bg-white px-6 py-10">
@@ -93,7 +101,10 @@ const Careers = () => {
               onClick={() => setSelectedJob(job.component)}
               className="cursor-pointer transform transition duration-300 hover:scale-105"
             >
-              <JobCard job={job} />
+              <JobCard
+                job={job}
+                onClick={() => setSelectedJob(job.component)}
+              />
             </div>
           ))}
 
@@ -104,24 +115,37 @@ const Careers = () => {
       <div className="max-w-4xl mx-auto mt-10">
 
         {selectedJob === "ASE" && (
-          <ASE goBack={() => setSelectedJob(null)} />
+          <ASE
+            goBack={() => setSelectedJob(null)}
+            isOpen={selectedJobIsOpen}
+          />
         )}
 
         {selectedJob === "GIS" && (
-          <GIS goBack={() => setSelectedJob(null)} />
+          <GIS
+            goBack={() => setSelectedJob(null)}
+            isOpen={selectedJobIsOpen}
+          />
         )}
 
         {selectedJob === "AI_engineer" && (
-          <AI_engineer goBack={() => setSelectedJob(null)} />
+          <AI_engineer
+            goBack={() => setSelectedJob(null)}
+            isOpen={selectedJobIsOpen}
+          />
         )}
 
         {selectedJob === "SalesExecutive" && (
-          <SalesExecutive goBack={() => setSelectedJob(null)} />
+          <SalesExecutive
+            goBack={() => setSelectedJob(null)}
+            isOpen={selectedJobIsOpen}
+          />
         )}
 
         {selectedJob === "DigitalMarketingExecutive" && (
           <DigitalMarketingExecutive
             goBack={() => setSelectedJob(null)}
+            isOpen={selectedJobIsOpen}
           />
         )}
 

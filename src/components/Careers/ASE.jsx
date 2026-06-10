@@ -9,7 +9,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const ASE = ({ goBack }) => {
+const ASE = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
       
@@ -127,14 +127,25 @@ const ASE = ({ goBack }) => {
       <div className="bg-indigo-600 text-white mt-8 p-6 rounded-2xl shadow-lg text-center">
         <h3 className="text-xl font-bold mb-3">Apply Now</h3>
 
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeJVI083H7QZ1PFFp0DQnUYlelXjQjHBaK8FJnk6kx5ie212g/viewform"
-          target="_blank"
-        >
-          <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
-            Apply <ExternalLink size={16} />
+        {isOpen ? (
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeJVI083H7QZ1PFFp0DQnUYlelXjQjHBaK8FJnk6kx5ie212g/viewform"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
+              Apply <ExternalLink size={16} />
+            </button>
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="bg-gray-200 text-gray-500 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto cursor-not-allowed"
+          >
+            Position Closed
           </button>
-        </a>
+        )}
 
         <div className="mt-4 text-sm space-y-1">
           <p className="flex justify-center gap-2">

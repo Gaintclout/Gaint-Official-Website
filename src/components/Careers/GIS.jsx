@@ -9,7 +9,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const GIS = ({ goBack }) => {
+const GIS = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
 
@@ -105,11 +105,25 @@ const GIS = ({ goBack }) => {
       <div className="bg-indigo-600 text-white mt-8 p-6 rounded-2xl text-center shadow-lg">
         <h3 className="text-xl font-bold mb-3">Apply Now</h3>
 
-        <a href="https://forms.gle/QfrUUhQw6DrE8Zc58" target="_blank">
-          <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
-            Apply <ExternalLink size={16} />
+        {isOpen ? (
+          <a
+            href="https://forms.gle/QfrUUhQw6DrE8Zc58"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto hover:scale-105 transition">
+              Apply <ExternalLink size={16} />
+            </button>
+          </a>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="bg-gray-200 text-gray-500 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 mx-auto cursor-not-allowed"
+          >
+            Position Closed
           </button>
-        </a>
+        )}
 
         <div className="mt-4 text-sm space-y-1">
           <p className="flex justify-center gap-2">
