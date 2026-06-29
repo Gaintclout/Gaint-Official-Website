@@ -141,7 +141,7 @@ export default function Footer() {
           className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
         />
         <p className="text-gray-400 text-m">
-          &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved.
+          &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD. All rights reserved. | CIN: U62013TS2024PTCC186957
         </p>
         <div className="mt-3 flex justify-center gap-6 text-s text-gray-100">
           <a href="/privacy" className="hover:text-[#c5a77b]">Privacy Policy</a>

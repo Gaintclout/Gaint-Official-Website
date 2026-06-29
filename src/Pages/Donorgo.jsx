@@ -31,12 +31,17 @@ export default function DonorGOPage() {
       <Header />
 
       {/* ---------------- HERO SECTION ---------------- */}
-      <section className="bg-gradient-to-r from-red-600 to-pink-500 text-white py-32 px-6 text-center mt-24">
-        <h1 className="text-7xl  mb-4">DonorGO</h1>
-        <p className="text-3xl mb-6 max-w-2xl mx-auto">
-          Make Giving Transparent, Simple, and Impactful with AI & Blockchain
+      <section className="bg-gradient-to-r mt-0 bg-red-50 text-white py-32 px-6 text-center">
+        <img
+          src="/Donorgo_logo.png"
+          alt="DonorGO logo"
+          className="mx-auto mb-6  h-40 w-auto max-w-full object-contain sm:h-48"
+        />
+        <h1 className="text-7xl  mb-4 text-red-600 font-gothic">DonorGO</h1>
+        <p className="text-3xl mb-6 max-w-2xl mx-auto text-black font-gothic" >
+          Make Giving Transparent, Simple, and Impactful with AI 
         </p>
-        <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-200">
+        <Button size="lg" className="bg-purple-600 text-white hover:bg-purple-600">
           Request Investor Deck
         </Button>
       </section>

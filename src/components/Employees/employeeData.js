@@ -56,7 +56,7 @@ const employees = [
   {
     id: 6,
     name: "Mohammad Umar",
-    role: "Frontend Developer",
+    role: "Associate Software Engineer",
     description:
       "Passionate Frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
     image: "/umar.png",
@@ -66,9 +66,9 @@ const employees = [
   }, {
     id: 7,
     name: "Rohini Reddy",
-    role: "Backend Developer",
+    role: "Jr.AI Engineer",
     description:
-      "Skilled backend developer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
+      "Skilled AI engineer with expertise in building intelligent systems, machine learning models, and data-driven solutions.",
     image: "/rohini.jpeg",
     cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
     photoStyle: { objectPosition: "center 60%", transform: "scale(1.2)" },
@@ -77,9 +77,9 @@ const employees = [
   {
     id: 8,
     name: "Harshitha Reddy",
-    role: "Backend Developer",
+    role: "Jr.AI Engineer",
     description:
-      "Designs and implements backend services that handle core application logic, integrations, and data operations.",
+      "Skilled AI engineer with expertise in building intelligent systems, machine learning models, and data-driven solutions.",
     image: "/HarshithaReddy.png",
     cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
     photoStyle: { objectPosition: "center 5%", transform: "scale(1.2)" },
