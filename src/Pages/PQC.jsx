@@ -47,8 +47,8 @@ export default function PQCProductPage() {
           <motion.img
             src="/KAVACH-Q logo with TM.png"
             alt="KAVACH-Q logo"
-            className="mx-auto mb-8 h-36 w-56 max-w-full rounded-2xl object-contain transition-all duration-500 ease-out
-            hover:scale-110 hover:-translate-y-2 hover:drop-shadow-[0_0_40px_rgba(34,211,238,0.8)] sm:h -44 md:h-56"
+            className="mx-auto mb-8 h-36 w-auto max-w-full rounded-2xl object-contain transition-all duration-500 ease-out
+            hover:scale-110 hover:-translate-y-2 hover:drop-shadow-[0_0_40px_rgba(34,211,238,0.8)] sm:h-44 md:h-56"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.15 }}
@@ -81,13 +81,13 @@ export default function PQCProductPage() {
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* PQC Card */}
-            <div className="p-6 bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
-              <h3 className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-cyan-300">
-                <Atom className="w-6 h-6 text-cyan-300 drop-shadow-[0_0_8px_#06b6d4]" />
+            <div className="p-6 text-left bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-cyan-700 shadow-lg hover:shadow-cyan-500/30 transition">
+              <h3 className="flex items-start gap-3 text-xl md:text-2xl mb-4 text-cyan-300 leading-tight">
+                <Atom className="mt-1 w-6 h-6 shrink-0 text-cyan-300 drop-shadow-[0_0_8px_#06b6d4]" />
                 Post-Quantum Cryptography (PQC)
               </h3>
 
-              <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
+              <ul className="list-disc list-outside pl-6 text-gray-300 space-y-2 text-sm md:text-base leading-relaxed">
                 <li>Software-based quantum-safe security for existing networks.</li>
                 <li>Relies on mathematically hard lattice-based algorithms.</li>
                 <li>
@@ -98,14 +98,14 @@ export default function PQCProductPage() {
             </div>
 
             {/* QKD Card */}
-            <div className="p-6 bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
-              <h3 className="flex items-center gap-2 text-xl md:text-2xl mb-3 text-violet-300">
-                <Sparkles className="w-6 h-6 text-violet-300 drop-shadow-[0_0_8px_#a855f7]" />
+            <div className="p-6 text-left bg-gray-900/70 backdrop-blur-lg rounded-2xl border border-violet-700 shadow-lg hover:shadow-violet-500/30 transition">
+              <h3 className="flex items-start gap-3 text-xl md:text-2xl mb-4 text-violet-300 leading-tight">
+                <Sparkles className="mt-1 w-6 h-6 shrink-0 text-violet-300 drop-shadow-[0_0_8px_#a855f7]" />
                 Quantum Key Distribution (QKD)
               </h3>
 
-              <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm md:text-base">
-                <li>
+              <ul className="list-disc list-outside pl-6 text-gray-300 space-y-2 text-sm md:text-base leading-relaxed">
+                  <li>
                   Hardware-based physical layer encryption using quantum
                   photons.
                 </li>
