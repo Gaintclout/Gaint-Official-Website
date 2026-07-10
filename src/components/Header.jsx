@@ -16,7 +16,7 @@ const navLinks = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Services", link: "/service" },
-  {name: "GIS", link: "/gispage" },
+  { name: "GIS", link: "/gispage" },
   { name: "Careers", link: "/career" },
   { name: "Workshops", link: "/Workshop" },
   { name: "Contact", link: "/contact" },
@@ -29,17 +29,29 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-black/20 px-6 py-4 shadow-md backdrop-blur-lg border-b border-white/10">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
-        {/* LEFT SIDE: Logo */}
-        <NavLink to="/" className="shrink-0">
-          <img
-            src="/gaint-logo.png"
-            alt="GAINT Clout Technologies"
-            className="h-auto w-28 lg:w-32"
-          />
-          <h2 className="mt-4 inline-flex items-center justify-center rounded-full border border-cyan-400/30 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.2em] text-cyan-200 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.2)] text-center whitespace-nowrap">
-  ISO/IEC 9001:2015 CERTIFIED
-</h2>
-        </NavLink>
+        {/* LEFT SIDE: Logo and certification */}
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <NavLink to="/" className="shrink-0">
+            <img
+              src="/gaint-logo.png"
+              alt="GAINT Clout Technologies"
+              className="h-auto w-20 sm:w-28 lg:w-32"
+            />
+          </NavLink>
+          <div className="flex flex-col gap-1.5">
+            {[
+              "ISO/IEC 9001:2015 Certified",
+              "ISO/IEC 27001:2022 Kavach-Q™ certified",
+            ].map((badge) => (
+              <h2
+                key={badge}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-cyan-400/30 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 px-2 py-1.5 text-center text-[8px] font-semibold tracking-[0.04em] text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.2)] backdrop-blur-md sm:px-3 sm:py-2 sm:text-[10px] sm:tracking-[0.08em] md:px-4 md:text-xs md:tracking-[0.12em]"
+              >
+                {badge}
+              </h2>
+            ))}
+          </div>
+        </div>
 
         {/* CENTER: Navigation Links */}
         <nav className="hidden xl:flex items-center justify-center flex-1">
