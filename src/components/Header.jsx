@@ -36,6 +36,9 @@ export default function Header() {
             alt="GAINT Clout Technologies"
             className="h-auto w-28 lg:w-32"
           />
+          <h2 className="mt-4 inline-flex items-center justify-center rounded-full border border-cyan-400/30 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.2em] text-cyan-200 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.2)] text-center whitespace-nowrap">
+  ISO/IEC 9001:2015 CERTIFIED
+</h2>
         </NavLink>
 
         {/* CENTER: Navigation Links */}

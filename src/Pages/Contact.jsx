@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import ScrollToTop from "@/components/ScrollToTop";
 
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,10 +12,8 @@ import {
 } from "react-icons/fa6";
 import Footer from "@/components/Footer";
 
-
 export default function ContactPage() {
   const [message, setMessage] = useState("");
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,12 +34,12 @@ Message:
 ${message}
 
 Regards,
-${name}`
+${name}`,
     );
 
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=gaintclout@gmail.com&su=${subject}&body=${body}`,
-      "_blank"
+      "_blank",
     );
   };
 
@@ -95,7 +92,9 @@ ${name}`
               </div>
               <div>
                 <h4 className=" text-gray-900 font-bold">Email Us</h4>
-                <p className="text-gray-600 text-sm sm:text-base">info@gaintclout.com</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  info@gaintclout.com
+                </p>
               </div>
             </div>
 
@@ -106,7 +105,9 @@ ${name}`
               </div>
               <div>
                 <h4 className=" text-gray-900 font-bold">Call Us</h4>
-                <p className="text-gray-600 text-sm sm:text-base">+91 88972 38849</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  +91 88972 38849
+                </p>
               </div>
             </div>
 
@@ -118,8 +119,9 @@ ${name}`
               <div>
                 <h4 className=" text-gray-900 font-bold">Visit Us</h4>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  Awfis Elite 4th Floor, Orbit Building, Knowledge City,
-                  Hyderabad
+                  GAINT Clout Technologies Private Limited, Sy No 83/1, Plot No:
+                  30/C, Knowledge City , Rai Durg, Panmaktha, Hyderabad,
+                  Telangana-500032
                 </p>
               </div>
             </div>
@@ -137,7 +139,6 @@ ${name}`
               Send us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
-
               <input
                 type="text"
                 name="user_name"
@@ -154,20 +155,20 @@ ${name}`
                 className="w-full border border-gray-300 rounded-lg px-4 py-3"
               />
 
-           <textarea
-  name="message"
-  rows="5"
-  placeholder="Your Message"
-  required
-  maxLength={500}
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
-  className="w-full border border-gray-300 rounded-lg px-4 py-3"
-></textarea>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+                maxLength={500}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3"
+              ></textarea>
 
-<p className="text-sm text-gray-500 text-right">
-  {message.length}/500 characters
-</p>
+              <p className="text-sm text-gray-500 text-right">
+                {message.length}/500 characters
+              </p>
 
               <button
                 type="submit"
@@ -175,7 +176,6 @@ ${name}`
               >
                 Send Message
               </button>
-
             </form>
           </motion.div>
         </div>
@@ -206,10 +206,3 @@ ${name}`
     </div>
   );
 }
-
-
-
-
-
-
-
