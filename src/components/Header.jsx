@@ -54,18 +54,13 @@ export default function Header() {
         </div>
 
         {/* CENTER: Navigation Links */}
-        <nav className="hidden xl:flex items-center justify-center flex-1">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center xl:flex">
           <ul
-            className="flex items-center 
-gap-4 lg:gap-6 
-rounded-full border border-white/10 bg-white/5 
-px-6 lg:px-8 py-3 
-text-lg lg:text-xl xl:text-2xl 
-shadow-2xl backdrop-blur-xl"
+            className="flex items-center gap-3 whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-5 py-3 text-lg shadow-2xl backdrop-blur-xl 2xl:gap-5 2xl:px-7 2xl:text-xl"
           >
             {" "}
             {navLinks.slice(0, 3).map(({ name, link }) => (
-              <li key={name} className="group">
+              <li key={name} className="group shrink-0">
                 <NavLink
                   to={link}
                   className={({ isActive }) =>
@@ -82,7 +77,7 @@ shadow-2xl backdrop-blur-xl"
               </li>
             ))}
             {/* Desktop Products Dropdown */}
-            <li className="relative group">
+            <li className="group relative shrink-0">
               <span className="flex cursor-pointer items-center gap-1 text-white transition duration-300 hover:text-[#4285F4]">
                 Products <ChevronDown className="w-4 h-4" />
               </span>
@@ -100,7 +95,7 @@ shadow-2xl backdrop-blur-xl"
               </ul>
             </li>
             {navLinks.slice(3).map(({ name, link }) => (
-              <li key={name} className="group">
+              <li key={name} className="group shrink-0">
                 <NavLink
                   to={link}
                   className={({ isActive }) =>

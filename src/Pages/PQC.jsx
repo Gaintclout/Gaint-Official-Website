@@ -231,9 +231,12 @@ export default function PQCProductPage() {
           Collaborate with us in advancing PQC research, integration, and
           deployment across national and global security networks.
         </p>
-        <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-400/30 transition">
+        <a
+          href="https://kavachq.com"
+          className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-400/30 transition"
+        >
           Connect with GAINT R&D
-        </button>
+        </a>
       </section>
 
       {/* FOOTER */}
