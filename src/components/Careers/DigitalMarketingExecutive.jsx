@@ -12,20 +12,14 @@ import {
 const DigitalMarketingExecutive = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
-
       {/* Back */}
-      <button
-        onClick={goBack}
-        className="mb-6 text-blue-600 hover:underline"
-      >
+      <button onClick={goBack} className="mb-6 text-blue-600 hover:underline">
         ← Back
       </button>
 
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-bold">
-          Digital Marketing Executive
-        </h1>
+        <h1 className="text-3xl font-bold">Digital Marketing Executive</h1>
 
         <p className="mt-2 opacity-90">
           Join our marketing team and drive impactful digital campaigns
@@ -58,8 +52,8 @@ const DigitalMarketingExecutive = ({ goBack, isOpen = true }) => {
 
         <p className="text-gray-700">
           Assist the marketing department in creating content, running
-          advertising campaigns, generating leads, and managing social
-          media platforms.
+          advertising campaigns, generating leads, and managing social media
+          platforms.
         </p>
       </div>
 

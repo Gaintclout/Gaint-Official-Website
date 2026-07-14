@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown, Users } from "lucide-react";
 
 const products = [
-  { name: "DonorGO", link: "/Donorgo" },
-  { name: "GAINTInternsHub", link: "/internsapp" },
-  { name: "GAINTImmuneIQ", link: "/Immuneiq" },
   { name: "WellNest AI Station", link: "/wellnestai" },
+  { name: "KavachQ", link: "/pqc" },
+  { name: "DonorGO", link: "/Donorgo" },
+  { name: "GAINT InternsHub", link: "/internsapp" },
   { name: "UNIPS", link: "/gis" },
+  { name: "GAINT ImmuneIQ", link: "/Immuneiq" },
   { name: "QKD", link: "/qkd" },
-  { name: "PQC", link: "/pqc" },
 ];
 
 const navLinks = [
@@ -38,7 +38,7 @@ export default function Header() {
               className="h-auto w-20 sm:w-28 lg:w-32"
             />
           </NavLink>
-          <div className="flex flex-col gap-1.5">
+          {/* <div className="flex flex-col gap-1.5">
             {[
               "ISO/IEC 9001:2015 Certified",
               "ISO/IEC 27001:2022 Kavach-Q™ certified",
@@ -50,14 +50,12 @@ export default function Header() {
                 {badge}
               </h2>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* CENTER: Navigation Links */}
         <nav className="hidden min-w-0 flex-1 items-center justify-center xl:flex">
-          <ul
-            className="flex items-center gap-3 whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-5 py-3 text-lg shadow-2xl backdrop-blur-xl 2xl:gap-5 2xl:px-7 2xl:text-xl"
-          >
+          <ul className="flex items-center gap-3 whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-5 py-3 text-lg shadow-2xl backdrop-blur-xl 2xl:gap-5 2xl:px-7 2xl:text-xl">
             {" "}
             {navLinks.slice(0, 3).map(({ name, link }) => (
               <li key={name} className="group shrink-0">

@@ -70,7 +70,10 @@ export default function PQCProductPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            GAINT's Post-Quantum Cryptography (PQC) initiative secures organizations against future quantum threats by delivering scalable, standards-based, and AI-driven cryptographic security frameworks built for the quantum era.
+            GAINT's Post-Quantum Cryptography (PQC) initiative secures
+            organizations against future quantum threats by delivering scalable,
+            standards-based, and AI-driven cryptographic security frameworks
+            built for the quantum era.
           </motion.p>
 
           {/* Section Title */}
@@ -88,7 +91,9 @@ export default function PQCProductPage() {
               </h3>
 
               <ul className="list-disc list-outside pl-6 text-gray-300 space-y-2 text-sm md:text-base leading-relaxed">
-                <li>Software-based quantum-safe security for existing networks.</li>
+                <li>
+                  Software-based quantum-safe security for existing networks.
+                </li>
                 <li>Relies on mathematically hard lattice-based algorithms.</li>
                 <li>
                   Scalable and deployable on existing internet infrastructure.
@@ -105,7 +110,7 @@ export default function PQCProductPage() {
               </h3>
 
               <ul className="list-disc list-outside pl-6 text-gray-300 space-y-2 text-sm md:text-base leading-relaxed">
-                  <li>
+                <li>
                   Hardware-based physical layer encryption using quantum
                   photons.
                 </li>
@@ -235,7 +240,7 @@ export default function PQCProductPage() {
           href="https://kavachq.com"
           className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-cyan-400/30 transition"
         >
-          Connect with GAINT R&D
+          Connect with GAINT Team
         </a>
       </section>
 

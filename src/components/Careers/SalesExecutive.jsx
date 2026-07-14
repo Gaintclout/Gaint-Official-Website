@@ -12,12 +12,8 @@ import {
 const SalesExecutive = ({ goBack, isOpen = true }) => {
   return (
     <div className="max-w-5xl mx-auto p-6">
-
       {/* Back */}
-      <button
-        onClick={goBack}
-        className="mb-6 text-blue-600 hover:underline"
-      >
+      <button onClick={goBack} className="mb-6 text-blue-600 hover:underline">
         ← Back
       </button>
 
@@ -57,9 +53,9 @@ const SalesExecutive = ({ goBack, isOpen = true }) => {
         </h3>
 
         <p className="text-gray-700">
-          We are looking for a motivated and result-driven Sales Executive
-          to generate leads, nurture prospects, and convert them into
-          enrollments for our AI training programs.
+          We are looking for a motivated and result-driven Sales Executive to
+          generate leads, nurture prospects, and convert them into enrollments
+          for our AI training programs.
         </p>
       </div>
 

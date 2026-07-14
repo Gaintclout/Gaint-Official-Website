@@ -173,13 +173,12 @@ export default function About() {
         style={{ backgroundImage: "url('/assets/vision-bg-transparent.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
-      
-<div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
 
-  {/* Quantum notation background layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
+
+        {/* Quantum notation background layer */}
 
         <div className="relative z-10 text-center mb-20">
-          
           <h2
             className="
   text-3xl sm:text-4xl md:text-5xl lg:text-5xl
@@ -281,7 +280,6 @@ export default function About() {
           </div>
           <h2 className="text-3xl md:text-5xl text-gray-800">Our Strengths</h2>
         </div>
- 
 
         {/* CARDS */}
         <div className="grid md:grid-cols-3 gap-8">
@@ -395,9 +393,9 @@ export default function About() {
                       {/* TEXT (Always black) */}
                       <span className="text-gray-900">{faq.q}</span>
                     </div>
-<span className="absolute top-20 left-6 sm:left-20 z-0 pointer-events-none text-gray-200 text-4xl sm:text-5xl md:text-6xl rotate-[-12deg]">
-    ⟨ψ|H|ψ⟩
-  </span>
+                    <span className="absolute top-20 left-6 sm:left-20 z-0 pointer-events-none text-gray-200 text-4xl sm:text-5xl md:text-6xl rotate-[-12deg]">
+                      ⟨ψ|H|ψ⟩
+                    </span>
                     {/* ARROW */}
                     <ChevronDown className="w-6 h-6 text-gray-500 group-open:rotate-180 transition-transform duration-300" />
                   </summary>
