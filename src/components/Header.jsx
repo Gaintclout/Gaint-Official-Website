@@ -4,10 +4,14 @@ import { Menu, X, ChevronDown, Users } from "lucide-react";
 
 const products = [
   { name: "WellNest AI Station", link: "/wellnestai" },
-  { name: "KavachQ", link: "/pqc" },
+  { name: "KavachQ (PQC)", link: "/pqc" },
   { name: "DonorGO", link: "/Donorgo" },
   { name: "GAINT InternsHub", link: "/internsapp" },
-  { name: "UNIPS", link: "/gis" },
+  {
+    name: "UNIPS",
+    subtitle: "Urban Noise Intelligence & Prediction System",
+    link: "/gis",
+  },
   { name: "GAINT ImmuneIQ", link: "/Immuneiq" },
   { name: "QKD", link: "/qkd" },
 ];
@@ -86,7 +90,12 @@ export default function Header() {
                       to={product.link}
                       className="block rounded-lg px-4 py-2.5 text-black hover:bg-[#4285F4]/10 hover:text-[#4285F4] transition"
                     >
-                      {product.name}
+                      <span className="block">{product.name}</span>
+                      {product.subtitle && (
+                        <span className="mt-0.5 block text-[10px] leading-tight text-gray-500">
+                          {product.subtitle}
+                        </span>
+                      )}
                     </NavLink>
                   </li>
                 ))}
@@ -163,9 +172,14 @@ export default function Header() {
                       key={product.name}
                       to={product.link}
                       onClick={() => setMenuOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-600  hover:text-[#4285F4]"
+                      className="block px-4 py-2 text-sm text-gray-600 hover:text-[#4285F4]"
                     >
-                      {product.name}
+                      <span className="block">{product.name}</span>
+                      {product.subtitle && (
+                        <span className="mt-0.5 block text-[10px] leading-tight text-gray-500">
+                          {product.subtitle}
+                        </span>
+                      )}
                     </NavLink>
                   ))}
                 </div>
