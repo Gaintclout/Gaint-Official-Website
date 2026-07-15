@@ -9,7 +9,6 @@ const products = [
   { name: "GAINT InternsHub", link: "/internsapp" },
   {
     name: "UNIPS",
-    subtitle: "Urban Noise Intelligence & Prediction System",
     link: "/gis",
   },
   { name: "GAINT ImmuneIQ", link: "/Immuneiq" },
