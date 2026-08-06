@@ -576,15 +576,15 @@ export default function About() {
           <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm shadow-lg"></div>
 
           {/* Image Container with Tag */}
-          <div className="relative group">
-            {/* Circular Image */}
-            <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-              <img
-                src="/prasad-sir.jpg"
-                alt="Mr. Prasad Kottamasu"
-                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
+ <div className="relative group">
+  {/* Image with rounded corners */}
+  <div className="w-96 h-96 overflow-hidden rounded-3xl shadow-2xl border-2 border-white">
+    <img
+      src="/prasad-sir.png"
+      alt="Mr. Prasad Kottamasu"
+      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+    />
+  </div>
 
             {/* The Tag - Positioned below the image */}
             <div className="absolute mt-4 -bottom-5 left-1/2 -translate-x-1/2 bg-[#3b82f6] text-white px-8 py-2.5 rounded-full shadow-xl border-2 border-white whitespace-nowrap z-10">
@@ -634,12 +634,12 @@ export default function About() {
           <div className="absolute bottom-0 left-8 w-6 h-6 bg-[#3b82f6] rotate-45 rounded-sm"></div>
 
           <div className="relative group">
-            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
+            <div className="relative w-96 h-[26rem] rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
               {/* Profile Image */}
               <img
-                src="/srinivas-sir.jpeg"
+                src="/srinivas-sir.png"
                 alt="CEO"
-                className="w-full h-full object-cover object-[center_10%] scale-x-[-1] transition-transform duration-500"
+                className="w-full h-[115%] object-cover object-center -translate-y-6 scale-x-[-1] transition-transform duration-500"
               />
 
               {/* Overlay */}

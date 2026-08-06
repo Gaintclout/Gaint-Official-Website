@@ -22,8 +22,19 @@ const employees = [
     cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
 
-  }, {
+  },
+  {
     id: 3,
+    name: "Shakthi Sharma",
+    role: "Chartered Engineer(India)",
+    description:
+      "Certified engineering professional providing technical evaluation, engineering validation, project certification, and compliance consultancy.",
+    image: "/Shakti-sharma.png",
+    cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+     photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
+
+  }, {
+    id: 4,
     name: "Narendra Thari",
     role: "Investor Relations",
     description:
@@ -33,7 +44,7 @@ const employees = [
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   },
   {
-    id: 4,
+    id: 5,
     name: "Elisha",
     role: "UI/UX Graphic Designer",
     description:
@@ -43,7 +54,7 @@ const employees = [
     photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   },
   {
-    id: 5,
+    id: 6,
     name: "Manikanta",
     role: "Cloud Engineer",
     description:
@@ -54,7 +65,7 @@ const employees = [
 
   },
   {
-    id: 6,
+    id: 7,
     name: "Mohammad Umar",
     role: "Associate Software Engineer",
     description:
@@ -64,7 +75,7 @@ const employees = [
     photoStyle: { objectPosition: "center 5%", transform: "scale(1.2)", objectFit: "cover", },
 
   }, {
-    id: 7,
+    id: 8,
     name: "Rohini Reddy",
     role: "Jr.AI Engineer",
     description:
@@ -75,7 +86,7 @@ const employees = [
 
   },
   {
-    id: 8,
+    id: 9,
     name: "Harshitha Reddy",
     role: "Jr.AI Engineer",
     description:
@@ -87,7 +98,7 @@ const employees = [
     },
   },
   {
-    id: 9,
+    id: 10,
     name: "Harika",
     role: "Data Analyst",
     description:
@@ -96,7 +107,7 @@ const employees = [
     cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   }, {
-    id: 10,
+    id: 11,
     name: "Maheshwari",
     role: "Data Analyst",
     description:
