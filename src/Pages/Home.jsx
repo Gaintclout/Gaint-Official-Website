@@ -84,6 +84,8 @@ export default function Home() {
     "/XSdata.png",
     "/vedha.png",
     "/trust.png",
+    "/ITTH.png",
+
   ];
   return (
     <div className="font-century gothic text-gray-800 scroll-smooth">
