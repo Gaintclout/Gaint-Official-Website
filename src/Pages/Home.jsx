@@ -82,9 +82,11 @@ export default function Home() {
     "/sun.png",
     "/Datafabric.png",
     "/XSdata.png",
+    "/klu.png" ,
     "/vedha.png",
     "/trust.png",
     "/ITTH.png",
+    "/klh.png",
 
   ];
   return (

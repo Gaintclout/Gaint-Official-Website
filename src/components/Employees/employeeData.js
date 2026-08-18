@@ -34,7 +34,7 @@ const employees = [
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
 
   }, {
-    id: 4,
+    id: 4,  
     name: "Narendra Thari",
     role: "Investor Relations",
     description:
