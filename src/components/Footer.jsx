@@ -94,7 +94,7 @@ export default function Footer() {
           <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
           <ul className="space-y-2">
             <li><a href="/about" className="hover:text-[#c5a77b]">About Us</a></li>
-            <li><a href="/service" className="hover:text-[#c5a77b]">Services</a></li>
+            <li><a href="/services" className="hover:text-[#c5a77b]">Services</a></li>
             <li><a href="/" className="hover:text-[#c5a77b]">Products</a></li>
             <li><a href="/career" className="hover:text-[#c5a77b]">Careers</a></li>
             <li><a href="/contact" className="hover:text-[#c5a77b]">Contact</a></li>
@@ -136,7 +136,7 @@ export default function Footer() {
 
       <div className="text-center mt-10">
         <img
-          src="/gaint-logo.png"
+          src="/images/gaint-logo.png"
           alt="GAINT Clout Logo"
           className="mx-auto h-12 w-auto mb-4 opacity-90 hover:opacity-100 transition-all duration-300"
         />

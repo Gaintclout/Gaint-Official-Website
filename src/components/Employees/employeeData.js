@@ -5,7 +5,7 @@ const employees = [
     role: "Digital Program Head-AI",
     description:
       "Experienced leader in AI program management, driving innovation and strategic initiatives in artificial intelligence projects.",
-    image: "/Premji.jpeg",
+    image: "/images/Premji.jpeg",
     cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
     coverStyle: {
@@ -18,7 +18,7 @@ const employees = [
     role: "HR Manager",
     description:
       "Experienced HR professional focused on talent acquisition, employee engagement, and building a positive workplace culture.",
-    image: "/HR.jpg",
+    image: "/images/HR.jpg",
     cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
 
@@ -29,7 +29,7 @@ const employees = [
     role: "Chartered Engineer(India)",
     description:
       "Certified engineering professional providing technical evaluation, engineering validation, project certification, and compliance consultancy.",
-    image: "/Shakti-sharma.png",
+    image: "/images/Shakti-sharma.png",
     cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
 
@@ -39,7 +39,7 @@ const employees = [
     role: "Investor Relations",
     description:
       "Skilled professional in investor relations, managing stakeholder communications, and fostering strong investor relationships.",
-    image: "/narendra-thari.jpg",
+    image: "/images/narendra-thari.jpg",
     cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   },
@@ -49,7 +49,7 @@ const employees = [
     role: "UI/UX Graphic Designer",
     description:
       "Creative designer specializing in user-centered design, branding, and visually engaging digital experiences.",
-    image: "/Elisha.jpeg",
+    image: "/images/Elisha.jpeg",
     cover: "https://images.unsplash.com/photo-1545235617-9465d2a55698",
     photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   },
@@ -59,7 +59,7 @@ const employees = [
     role: "Cloud Engineer",
     description:
       "Skilled cloud engineer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
-    image: "/Manikanta.jpeg",
+    image: "/images/Manikanta.jpeg",
     cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
     photoStyle: { objectPosition: "center 15%", transform: "scale(1.2)" },
 
@@ -70,7 +70,7 @@ const employees = [
     role: "Associate Software Engineer",
     description:
       "Passionate Frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
-    image: "/umar.png",
+    image: "/images/umar.png",
     cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     photoStyle: { objectPosition: "center 5%", transform: "scale(1.2)", objectFit: "cover", },
 
@@ -80,7 +80,7 @@ const employees = [
     role: "Jr.AI Engineer",
     description:
       "Skilled AI engineer with expertise in building intelligent systems, machine learning models, and data-driven solutions.",
-    image: "/rohini.jpeg",
+    image: "/images/rohini.jpeg",
     cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
     photoStyle: { objectPosition: "center 60%", transform: "scale(1.2)" },
 
@@ -91,7 +91,7 @@ const employees = [
     role: "Jr.AI Engineer",
     description:
       "Skilled AI engineer with expertise in building intelligent systems, machine learning models, and data-driven solutions.",
-    image: "/HarshithaReddy.png",
+    image: "/images/HarshithaReddy.png",
     cover: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
     photoStyle: { objectPosition: "center 5%", transform: "scale(1.2)" },
     coverStyle: {
@@ -103,7 +103,7 @@ const employees = [
     role: "Data Analyst",
     description:
       "Skilled professional in data analysis, managing stakeholder communications, and fostering strong data-driven decision-making.",
-    image: "/Harika.png",
+    image: "/images/Harika.png",
     cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
      photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
   }, {
@@ -112,7 +112,7 @@ const employees = [
     role: "Data Analyst",
     description:
       "Skilled professional in data analysis, managing stakeholder communications, and fostering strong data-driven decision-making.",
-    image: "/maheshwari.jpeg",
+    image: "/images/maheshwari.jpeg",
     cover: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
          photoStyle: { objectPosition: "center%", transform: "scale(1.2)" },
 

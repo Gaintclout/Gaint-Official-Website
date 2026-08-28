@@ -91,7 +91,7 @@ export default function ServicesOffered() {
       >
         {/* Background Video */}
         <img
-          src="/service-1.jpeg"
+          src="/images/service-1.jpeg"
           alt="Services Background"
           className="absolute top-0 left-0 w-full h-full object-cover"
         />

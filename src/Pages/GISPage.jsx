@@ -18,42 +18,42 @@ const servicesData = [
   {
     title: "GIS Mapping & Digitization",
     icon: MapPinned,
-    image: "/s1.jfif",
+    image: "/images/s1.jfif",
     description:
       "Accurate spatial mapping, cadastral digitization, and base map preparation for planning and land management.",
   },
   {
     title: "Smart City GIS",
     icon: Building2,
-    image: "/s2.jfif",
+    image: "/images/s2.jfif",
     description:
       "Integrated GIS solutions for urban planning, utilities, traffic systems, and smart governance platforms.",
   },
   {
     title: "Agriculture Intelligence",
     icon: Leaf,
-    image: "/s3.jpg",
+    image: "/images/s3.jpg",
     description:
       "AI-powered agricultural insights using satellite imagery, crop monitoring, soil analysis, and yield prediction.",
   },
   {
     title: "Infrastructure GIS",
     icon: Construction,
-    image: "/s4.jpg",
+    image: "/images/s4.jpg",
     description:
       "Geospatial planning for roads, buildings, utilities, and infrastructure lifecycle management with precision.",
   },
   {
     title: "Disaster Management",
     icon: AlertTriangle,
-    image: "/s5.jpg",
+    image: "/images/s5.jpg",
     description:
       "Flood, fire, and disaster risk monitoring with real-time GIS tracking for emergency response and planning.",
   },
   {
     title: "AI + GIS Analytics",
     icon: Brain,
-    image: "/s6.png",
+    image: "/images/s6.png",
     imageClass: "object-center bg-white p-2",
     description:
       "Advanced AI models with GIS analytics for predictive insights, anomaly detection, and smart decision-making.",
@@ -71,7 +71,7 @@ export default function GaintGISWebsite() {
       <section
         className="relative flex min-h-[560px] items-center justify-center overflow-hidden bg-cover bg-center px-4 pb-16 pt-28 text-center sm:min-h-[620px] sm:px-6 sm:pt-32 lg:min-h-[700px] lg:px-8"
         style={{
-          backgroundImage: "url('/GISbg.png')",
+          backgroundImage: "url('/images/GISbg.png')",
         }}
       >
         {/* Overlay */}

@@ -77,16 +77,16 @@ export default function Home() {
     /* Scrolling logos */
   }
   const logos = [
-    "/Aims.png",
-    "/btb.png",
-    "/sun.png",
-    "/Datafabric.png",
-    "/XSdata.png",
-    "/klu.png" ,
-    "/vedha.png",
-    "/trust.png",
-    "/ITTH.png",
-    "/klh.png",
+    "/images/Aims.png",
+    "/images/btb.png",
+    "/images/sun.png",
+    "/images/Datafabric.png",
+    "/images/XSdata.png",
+    "/images/klu.png" ,
+    "/images/vedha.png",
+    "/images/trust.png",
+    "/images/ITTH.png",
+    "/images/klh.png",
 
   ];
   return (
@@ -115,7 +115,7 @@ export default function Home() {
 
         {/* 🔹 Left background slit image */}
         <img
-          src="/slit.png"
+          src="/images/slit.png"
           alt="Quantum slit"
           className="
       absolute left-1 sm:left-2 md:left-6 lg:left-10

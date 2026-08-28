@@ -14,9 +14,9 @@ export default function WhoWillPay() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* TITLE */}
-        <h1 className="text-4xl md:text-5xl lg:text-5xl font-light text-black mb-4 tracking-wide">
+        <h2 className="text-4xl md:text-5xl lg:text-5xl font-light text-black mb-4 tracking-wide">
           Who Will Pay
-        </h1>
+        </h2>
 
         {/* SUBTITLE */}
         <p className="text-gray-800 mb-14 text-sm md:text-xl max-w-xl leading-relaxed">

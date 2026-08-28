@@ -38,14 +38,14 @@ export default function PQCProductPage() {
       {/* ================= HERO ================= */}
       <section
         className="relative text-center py-20 md:py-28 px-4 md:px-6 bg-cover bg-center mt-20"
-        style={{ backgroundImage: "url('/Web.jpg')" }}
+        style={{ backgroundImage: "url('/images/Web.jpg')" }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <motion.img
-            src="/KAVACH-Q logo with TM.png"
+            src="/images/KAVACH-Q logo with TM.png"
             alt="KAVACH-Q logo"
             className="mx-auto mb-8 h-36 w-auto max-w-full rounded-2xl object-contain transition-all duration-500 ease-out
             hover:scale-110 hover:-translate-y-2 hover:drop-shadow-[0_0_40px_rgba(34,211,238,0.8)] sm:h-44 md:h-56"

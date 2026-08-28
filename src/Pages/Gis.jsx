@@ -57,7 +57,7 @@ export default function Gis() {
         className="relative flex h-[400px] md:h-[500px] w-full items-center justify-center overflow-hidden bg-black px-4"
       >
         <img
-          src="/gis-bg-image.png"
+          src="/images/gis-bg-image.png"
           alt="Services Background"
           className="absolute top-0 left-0 h-full w-full object-cover"
         />
@@ -88,7 +88,7 @@ export default function Gis() {
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: "url('/the-problem.png')" }}
+          style={{ backgroundImage: "url('/images/the-problem.png')" }}
         />
 
         {/* FRONT BLUR */}
@@ -105,9 +105,9 @@ export default function Gis() {
         shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
           >
             {/* TITLE */}
-            <h1 className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-light text-gray-200">
+            <h2 className="mb-4 text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-light text-gray-200">
               The Problem
-            </h1>
+            </h2>
 
             {/* SUBTITLE */}
             <p className="mb-6 text-md sm:text-base md:text-2xl lg:text-xl text-orange-400 font-medium leading-relaxed">
@@ -137,9 +137,9 @@ export default function Gis() {
       </section>
       {/*===========Why Noise is a Governance Problem Section  =================*/}
       <section className="w-full bg-gradient-to-b from-black via-[#ffffff] to-[#] px-6 py-14 text-white md:px-16 md:py-20">
-        <h1 className="mb-6 text-center text-3xl font-light text-black sm:text-4xl md:text-left md:text-5xl lg:text-5xl">
+        <h2 className="mb-6 text-center text-3xl font-light text-black sm:text-4xl md:text-left md:text-5xl lg:text-5xl">
           Why Noise is a Governance Problem
-        </h1>
+        </h2>
 
         <p className="mb-10 text-center text-lg font-medium text-orange-400 sm:text-xl md:text-left md:text-3xl">
           Noise is not just pollution - it&apos;s a governance, health, and
@@ -166,7 +166,7 @@ export default function Gis() {
         {/* BACKGROUND */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: "url('/map.png')" }}
+          style={{ backgroundImage: "url('/images/map.png')" }}
         />
 
         {/* DARK OVERLAY */}
@@ -183,9 +183,9 @@ export default function Gis() {
           </h2>
 
           {/* BIG HEADING */}
-          <h1 className="text-4xl md:text-4xl text-orange-400 font-light leading-tight mb-10">
+          <h2 className="text-4xl md:text-4xl text-orange-400 font-light leading-tight mb-10">
             From noise data to actionable intelligence
-          </h1>
+          </h2>
 
           {/* SUBTITLE */}
           <p className="text-yellow-300 text-2xl mb-8">UNIPS provides:</p>
@@ -230,16 +230,16 @@ export default function Gis() {
         {/* BACKGROUND */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: "url('/architecture-bg.jpeg')" }}
+          style={{ backgroundImage: "url('/images/architecture-bg.jpeg')" }}
         />
         <div className="absolute inset-0 bg-black/70" />
 
         <div className="relative z-10 w-full flex flex-col items-center px-6">
           {/* TITLE */}
           <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-5xl font-light mb-2">
+            <h2 className="text-3xl md:text-5xl font-light mb-2">
               UNIPS System Architecture
-            </h1>
+            </h2>
             <p className="text-orange-400 text-lg">
               (Urban Noise Intelligence & Prediction System) AI is the brain,
               GIS is the face.
@@ -444,7 +444,7 @@ export default function Gis() {
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105 opacity-60"
-          style={{ backgroundImage: "url('/graph.jpg')" }}
+          style={{ backgroundImage: "url('/images/graph.jpg')" }}
         />
 
         {/* LIGHT GRADIENT (FIXED) */}
@@ -457,9 +457,9 @@ export default function Gis() {
         <div className="relative z-10 px-6 md:px-16 py-14 flex flex-col md:flex-row gap-10">
           {/* LEFT SIDE */}
           <div className="w-full md:w-1/2">
-            <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
+            <h2 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
               The AI "Brain"
-            </h1>
+            </h2>
 
             <p className="text-orange-400 text-lg md:text-xl mb-6">
               Key Differentiator
@@ -514,7 +514,7 @@ export default function Gis() {
         {/* BACKGROUND GRAPH */}
         <div
           className="absolute inset-0 h bg-cover bg-center scale-115 opacity-80"
-          style={{ backgroundImage: "url('/graph-1.png')" }}
+          style={{ backgroundImage: "url('/images/graph-1.png')" }}
         />
 
         {/* DARK + BLUE GRADIENT */}
@@ -525,9 +525,9 @@ export default function Gis() {
           {/* LEFT SIDE */}
           <div className="w-full md:w-[55%]">
             {/* TITLE */}
-            <h1 className="text-4xl md:text-5xl font-light text-gray-200 mb-6">
+            <h2 className="text-4xl md:text-5xl font-light text-gray-200 mb-6">
               Accuracy & Validation
-            </h1>
+            </h2>
 
             {/* SUBTITLE */}
             <p className="text-orange-400 text-xl md:text-2xl mb-8">
@@ -594,9 +594,9 @@ export default function Gis() {
       {/*===========Night Noise Maps  =================*/}
       <section className="relative w-full min-h-[90vh] bg-black text-white px-6 md:px-16 py-16">
         {/* TITLE */}
-        <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
+        <h2 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
           Day vs Night Noise Maps
-        </h1>
+        </h2>
 
         {/* SUBTITLE */}
         <p className="text-orange-400 text-lg md:text-xl mb-12">
@@ -633,7 +633,7 @@ export default function Gis() {
           {/* CARD 1 */}
           <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
             <img
-              src="/map-day.png"
+              src="/images/map-day.png"
               alt="day map"
               className="w-full h-[350px] object-cover"
             />
@@ -649,7 +649,7 @@ export default function Gis() {
           {/* CARD 2 */}
           <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
             <img
-              src="/map-night.png"
+              src="/images/map-night.png"
               alt="night map"
               className="w-full h-[350px] object-cover brightness-75"
             />
@@ -665,7 +665,7 @@ export default function Gis() {
           {/* CARD 3 */}
           <div className="relative rounded-3xl overflow-hidden border-2 border-yellow-400">
             <img
-              src="/map-impact.png"
+              src="/images/map-impact.png"
               alt="impact map"
               className="w-full h-[350px] object-cover brightness-75"
             />
@@ -691,9 +691,9 @@ export default function Gis() {
       {/*===========Heatmaps & Hotspots =================*/}
       <section className="w-full min-h-[100vh] bg-black text-white px-6 md:px-16 py-16">
         {/* TITLE */}
-        <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
+        <h2 className="text-3xl md:text-5xl font-light text-gray-200 mb-4">
           Heatmaps & Hotspots
-        </h1>
+        </h2>
 
         {/* SUBTITLE */}
         <p className="text-orange-400 text-lg md:text-xl mb-12">
@@ -738,7 +738,7 @@ export default function Gis() {
           {/* MAP 1 */}
           <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
             <img
-              src="/Hotspots-1.jpg"
+              src="/images/Hotspots-1.jpg"
               alt="hotspots"
               className="w-full h-[300px] object-cover"
             />
@@ -747,7 +747,7 @@ export default function Gis() {
           {/* MAP 2 */}
           <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
             <img
-              src="/Hotspots-2.jpg"
+              src="/images/Hotspots-2.jpg"
               alt="hotspots"
               className="w-full h-[300px] object-cover"
             />
@@ -756,7 +756,7 @@ export default function Gis() {
           {/* MAP 3 */}
           <div className="rounded-xl overflow-hidden border border-indigo-400/20 shadow-lg">
             <img
-              src="/Hotspots-3.jpg"
+              src="/images/Hotspots-3.jpg"
               alt="hotspots"
               className="w-full h-[300px] object-cover"
             />
@@ -768,7 +768,7 @@ export default function Gis() {
         {/* MAP BACKGROUND */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: "url('/map.png')" }}
+          style={{ backgroundImage: "url('/images/map.png')" }}
         />
 
         {/* DARK OVERLAY */}
@@ -776,9 +776,9 @@ export default function Gis() {
 
         {/* TITLE */}
         <div className="relative z-10 px-6 md:px-16 py-12">
-          <h1 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
+          <h2 className="text-3xl md:text-5xl font-light text-gray-200 mb-2">
             Noise Range db for Governance Solution
-          </h1>
+          </h2>
 
           <p className="text-gray-300 text-lg font-semibold">
             Hyderabad Telangana
@@ -848,7 +848,7 @@ export default function Gis() {
         {/* BACKGROUND */}
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
-          style={{ backgroundImage: "url('/map.png')" }}
+          style={{ backgroundImage: "url('/images/map.png')" }}
         />
 
         {/* OVERLAY */}
@@ -862,9 +862,9 @@ export default function Gis() {
           </h2>
 
           {/* MAIN TEXT */}
-          <h1 className="text-4xl md:text-5xl text-orange-400 font-light leading-tight mb-16 max-w-4xl">
+          <h2 className="text-4xl md:text-5xl text-orange-400 font-light leading-tight mb-16 max-w-4xl">
             This map shows tomorrow's problems - today
-          </h1>
+          </h2>
 
           {/* 🔥 ARROWS + TEXT GRID (IMPORTANT FIX) */}
           <div className="grid grid-cols-3 gap-6 md:gap-10 items-start">
@@ -941,7 +941,7 @@ export default function Gis() {
         {/* RIGHT SIDE IMAGE */}
         <div className="absolute top-[-40px] right-[-60px] lg:top-[-60px] lg:right-[-80px] w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[20px] rounded-full overflow-hidden border border-yellow-400/40 shadow-[0_0_80px_rgba(250,204,21,0.2)] z-0">
           <img
-            src="/decision-support.jpg"
+            src="/images/decision-support.jpg"
             alt="decision"
             className="w-full h-full object-cover"
           />
@@ -949,9 +949,9 @@ export default function Gis() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* TITLE */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 tracking-wide">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 tracking-wide">
             Decision Support Examples
-          </h1>
+          </h2>
 
           {/* SUBTITLE */}
           <p className="text-gray-400 mb-16 max-w-xl text-sm md:text-lg leading-relaxed">

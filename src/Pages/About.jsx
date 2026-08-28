@@ -126,7 +126,7 @@ export default function About() {
         {/* Background Video */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-cover bg-center scale-105 blur-[1px]"
-          style={{ backgroundImage: "url('/about-bg.png')" }}
+          style={{ backgroundImage: "url('/images/about-bg.png')" }}
         />
         <span className="absolute bottom-60 left-60 text-white/25 text-5xl md:text-9xl font-light">
           ⟨x|ψ⟩
@@ -580,7 +580,7 @@ export default function About() {
   {/* Image with rounded corners */}
   <div className="w-96 h-96 overflow-hidden rounded-3xl shadow-2xl border-2 border-white">
     <img
-      src="/prasad-sir.png"
+      src="/images/prasad-sir.png"
       alt="Mr. Prasad Kottamasu"
       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
     />
@@ -637,7 +637,7 @@ export default function About() {
             <div className="relative w-96 h-[26rem] rounded-full overflow-hidden shadow-xl border-4 border-gray-100">
               {/* Profile Image */}
               <img
-                src="/srinivas-sir.png"
+                src="/images/srinivas-sir.png"
                 alt="CEO"
                 className="w-full h-[115%] object-cover object-center -translate-y-6 scale-x-[-1] transition-transform duration-500"
               />

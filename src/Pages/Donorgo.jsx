@@ -33,7 +33,7 @@ export default function DonorGOPage() {
       {/* ---------------- HERO SECTION ---------------- */}
       <section className="bg-gradient-to-r mt-0 bg-red-50 text-white py-32 px-6 text-center">
         <img
-          src="/Donorgo_logo.png"
+          src="/images/Donorgo_logo.png"
           alt="DonorGO logo"
           className="mx-auto mb-6  h-40 w-auto max-w-full object-contain sm:h-48"
         />

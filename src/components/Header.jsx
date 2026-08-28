@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <NavLink to="/" className="shrink-0">
             <img
-              src="/gaint-logo.png"
+              src="/images/gaint-logo.png"
               alt="GAINT Clout Technologies"
               className="h-auto w-20 sm:w-28 lg:w-32"
             />

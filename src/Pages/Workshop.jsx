@@ -41,7 +41,7 @@ const accordionSections = [
 export default function Workshop() {
   const [openIndex, setOpenIndex] = useState(0);
   const bgStyle = {
-    backgroundImage: "url('/apply-bg.jpg')",
+    backgroundImage: "url('/images/apply-bg.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -54,7 +54,7 @@ export default function Workshop() {
     >
       <section className="max-w-6xl mx-auto">
         <img
-          src="/gaint-logo.png"
+          src="/images/gaint-logo.png"
           alt="Gaint Logo"
           className="h-10 w-auto mb-6"
         />
