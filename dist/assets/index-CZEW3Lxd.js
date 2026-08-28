@@ -77,7 +77,7 @@ Please change the parent <Route path="${k}"> to <Route path="${k==="/"?"*":`${k}
     animate-fadeIn\r
     font-[Century_Gothic]\r
     mt-4\r
-  `,children:"Founded in 2024, Gaint is an AI-driven startup based in India. We design and build intelligent systems that automate workflows, augment decision-making, and unlock measurable growth across industries."})]})]}),c.jsxs("section",{className:"relative bg-cover bg-center bg-no-repeat text-white overflow-hidden py-28 font-century gothic",style:{backgroundImage:"url('/assets/vision-bg-transparent.png')"},children:[c.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"}),c.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"}),c.jsxs("div",{className:"relative z-10 text-center mb-20",children:[c.jsx("h2",{className:`\r
+  `,children:"Founded in 2024, Gaint is an AI-driven startup based in India. We design and build intelligent systems that automate workflows, augment decision-making, and unlock measurable growth across industries."})]})]}),c.jsxs("section",{className:"relative bg-cover bg-center bg-no-repeat text-white overflow-hidden py-28 font-century gothic",style:{backgroundImage:"url('/images/about-bg.png')"},children:[c.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"}),c.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"}),c.jsxs("div",{className:"relative z-10 text-center mb-20",children:[c.jsx("h2",{className:`\r
   text-3xl sm:text-4xl md:text-5xl lg:text-5xl\r
    text-center text-black tracking-tight\r
 `,children:"Our Core Foundation"}),c.jsx("p",{className:`\r

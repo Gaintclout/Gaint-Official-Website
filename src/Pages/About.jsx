@@ -170,7 +170,7 @@ export default function About() {
       {/* ===== VISION / MISSION / VALUES ===== */}
       <section
         className="relative bg-cover bg-center bg-no-repeat text-white overflow-hidden py-28 font-century gothic"
-        style={{ backgroundImage: "url('/assets/vision-bg-transparent.png')" }}
+        style={{ backgroundImage: "url('/images/about-bg.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/70"></div>
 
