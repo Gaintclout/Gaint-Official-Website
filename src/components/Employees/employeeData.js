@@ -18,7 +18,7 @@ const employees = [
   },
   {
     id: 2,
-    name: "Ganta Swami",
+    name: "Ganta Swamy",
     role: "Vice President",
     description:
       "Experienced business leader overseeing strategic initiatives, organizational growth, operations, and long-term business development.",
