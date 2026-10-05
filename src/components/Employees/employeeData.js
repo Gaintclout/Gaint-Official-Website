@@ -37,8 +37,7 @@ const employees = [
     description:
       "Experienced HR professional focused on talent acquisition, employee engagement, and building a positive workplace culture.",
     image: "/images/HR.jpg",
-    cover:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    cover: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
     photoStyle: {
       objectPosition: "center",
       transform: "scale(1.2)",
@@ -65,8 +64,7 @@ const employees = [
     description:
       "Creative designer specializing in user-centered design, branding, and visually engaging digital experiences.",
     image: "/images/Elisha.jpeg",
-    cover:
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698",
+    cover: "https://images.unsplash.com/photo-1545235617-9465d2a55698",
     photoStyle: {
       objectPosition: "center",
       transform: "scale(1.2)",
@@ -79,8 +77,7 @@ const employees = [
     description:
       "Skilled cloud engineer with expertise in building secure APIs, managing databases, and scalable server-side systems.",
     image: "/images/Manikanta.jpeg",
-    cover:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+    cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
     photoStyle: {
       objectPosition: "center 15%",
       transform: "scale(1.2)",
@@ -93,8 +90,7 @@ const employees = [
     description:
       "Passionate frontend developer focused on building responsive, high-performance UI using React and modern web technologies.",
     image: "/images/umar.png",
-    cover:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    cover: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     photoStyle: {
       objectPosition: "center 5%",
       transform: "scale(1.2)",
@@ -108,8 +104,7 @@ const employees = [
     description:
       "Skilled AI engineer with expertise in building intelligent systems, machine learning models, and data-driven solutions.",
     image: "/images/rohini.jpeg",
-    cover:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+    cover: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
     photoStyle: {
       objectPosition: "center 60%",
       transform: "scale(1.2)",
@@ -145,7 +140,7 @@ const employees = [
   },
   {
     id: 11,
-    name: "Maheshwari",
+    name: "Uma Maheshwari",
     role: "Data Analyst",
     description:
       "Skilled professional in data analysis, managing stakeholder communications, and fostering strong data-driven decision-making.",
