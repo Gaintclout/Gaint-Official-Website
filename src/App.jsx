@@ -1,14 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./Pages/Home.jsx";
+import HomePage from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import DonorGO from "./Pages/Donorgo.jsx";
 import WellNestAI from "./Pages/Wellnestai.jsx";
 import ImmuneIQ from "./Pages/Immuneiq.jsx";
 import Service from "./Pages/Service.jsx";
-import Demo from "./Pages/Home.jsx";
 import InternsAppPage from "./Pages/InternsAppPage.jsx";
 import QKDPage from "./Pages/QKD.jsx";
 import PQC from "./Pages/PQC.jsx";
@@ -22,27 +21,30 @@ import NotFound from "./Pages/NotFound.jsx";
 import SEO from "./components/SEO.jsx";
 function App() {
   return (
-    <><SEO /><Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/donorgo" element={<DonorGO />} />
-      <Route path="/wellnestai" element={<WellNestAI />} />
-      <Route path="/immuneiq" element={<ImmuneIQ />} />
-      <Route path="/career" element={<Career />} />
-      <Route path="/service" element={<Service />} />
-      <Route path="/services" element={<Service />} />
-      <Route path="/demo" element={<Demo />} />
-      <Route path="/internsapp" element={<InternsAppPage />} />
-      <Route path="/qkd" element={<QKDPage />} />
-      <Route path="/pqc" element={<PQC />} />
-      <Route path="/gis" element={<GIS />} />
-      <Route path="/workshop" element={<Workshop />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/gispage" element={<GISPage />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes></>
+    <>
+      <SEO />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/donorgo" element={<DonorGO />} />
+        <Route path="/wellnestai" element={<WellNestAI />} />
+        <Route path="/immuneiq" element={<ImmuneIQ />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/demo" element={<HomePage />} />
+        <Route path="/internsapp" element={<InternsAppPage />} />
+        <Route path="/qkd" element={<QKDPage />} />
+        <Route path="/pqc" element={<PQC />} />
+        <Route path="/gis" element={<GIS />} />
+        <Route path="/workshop" element={<Workshop />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/gispage" element={<GISPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

@@ -51,7 +51,7 @@ function useCounter(target, duration = 2000) {
   return count;
 }
 
-export default function Home() {
+function Home() {
   const heroRef = useRef(null);
 
   // ✅ Initialize AOS + Parallax Scroll
@@ -181,7 +181,7 @@ export default function Home() {
             {/* Certification badges above the hero box */}
             <div className="mb-3 flex flex-col items-center gap-2 sm:flex-row sm:flex-wrap md:justify-start">
               {[
-                "ISO/IEC 9001:2015 Certified",
+                "ISO 9001:2015 Certified",
                 "ISO/IEC 27001:2022 Certified",
               ].map((badge) => (
                 <span
@@ -517,3 +517,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
