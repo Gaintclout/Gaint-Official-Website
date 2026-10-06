@@ -207,7 +207,7 @@ export default function Footer() {
 
         <p className="text-gray-400 text-sm">
           &copy; {new Date().getFullYear()} GAINT CLOUT TECHNOLOGIES PVT LTD.
-          All rights reserved. | CIN: U62013TS2024PTCC186957 | ISO/IEC 9001:2015
+          All rights reserved. | CIN: U62013TS2024PTC186957 | ISO 9001:2015
           Certified
         </p>
 
