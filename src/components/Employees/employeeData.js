@@ -45,6 +45,20 @@ const employees = [
   },
   {
     id: 4,
+    name: "D.N.S Bhagath Viswas",
+    role: "Security Consultant",
+    description:
+      "Security consultant focused on identifying risks, strengthening security controls, and helping organizations protect their digital assets.",
+    image: "/images/deva.jpeg",
+    cover:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop",
+    photoStyle: {
+      objectPosition: "center",
+      transform: "scale(1.2)",
+    },
+  },
+  {
+    id: 5,
     name: "Narendra Thari",
     role: "Investor Relations",
     description:
@@ -58,7 +72,7 @@ const employees = [
     },
   },
   {
-    id: 5,
+    id: 6,
     name: "Elisha",
     role: "UI/UX Graphic Designer",
     description:
@@ -71,7 +85,7 @@ const employees = [
     },
   },
   {
-    id: 6,
+    id: 7,
     name: "Manikanta",
     role: "Cloud Engineer",
     description:
@@ -84,7 +98,7 @@ const employees = [
     },
   },
   {
-    id: 7,
+    id: 8,
     name: "Mohammad Umar",
     role: "Associate Software Engineer",
     description:
@@ -98,7 +112,7 @@ const employees = [
     },
   },
   {
-    id: 8,
+    id: 9,
     name: "Rohini Reddy",
     role: "Jr. AI Engineer",
     description:
@@ -111,7 +125,7 @@ const employees = [
     },
   },
   {
-    id: 9,
+    id: 10,
     name: "Harshitha Reddy",
     role: "Jr. AI Engineer",
     description:
@@ -125,7 +139,7 @@ const employees = [
     },
   },
   {
-    id: 10,
+    id: 11,
     name: "Harika",
     role: "Data Analyst",
     description:
@@ -139,7 +153,7 @@ const employees = [
     },
   },
   {
-    id: 11,
+    id: 12,
     name: "Uma Maheshwari",
     role: "Data Analyst",
     description:
